@@ -1,0 +1,234 @@
+[00:00:01.617] Server  LOG     
+[00:00:01.617] Server  LOG        We detected TypeScript in your project and reconfigured your tsconfig.json file for you.
+[00:00:01.617] Server  LOG        The following suggested values were added to your tsconfig.json. These values can be changed to fit your project's needs:
+
+[00:00:01.617] Server  LOG        	- include was updated to add '.next/dev/types/**/*.ts'
+[00:00:01.618] Server  LOG     
+[00:00:01.618] Server  LOG        The following mandatory changes were made to your tsconfig.json:
+
+[00:00:01.618] Server  LOG        	- jsx was set to react-jsx (next.js uses the React automatic runtime)
+[00:00:01.618] Server  LOG     
+[00:00:01.721] Server  LOG      ✓ Ready in 1503ms
+[00:00:13.376] Server  ERROR    ⨯ ./node_modules/recharts/es6/util/ReactUtils.js:3:1
+Module not found: Can't resolve 'react-is'
+  1 | import get from 'es-toolkit/compat/get';
+  2 | import { Children } from 'react';
+> 3 | import { isFragment } from 'react-is';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { isNullish } from './DataUtils';
+  5 | export var SCALE_TYPES = ['auto', 'linear', 'pow', 'sqrt', 'log', 'identity', 'time', 'band', 'point', 'ordinal', 'quantile', 'quantize', 'utc', 'sequential', 'threshold'];
+  6 |
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/recharts/es6/util/ReactUtils.js [Client Component Browser]
+    ./node_modules/recharts/es6/cartesian/Line.js [Client Component Browser]
+    ./components/expense-chart.tsx [Client Component Browser]
+    ./app/dashboard/page.tsx [Client Component Browser]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/recharts/es6/util/ReactUtils.js [Client Component SSR]
+    ./node_modules/recharts/es6/cartesian/Line.js [Client Component SSR]
+    ./components/expense-chart.tsx [Client Component SSR]
+    ./app/dashboard/page.tsx [Client Component SSR]
+    ./app/dashboard/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:13.503] Browser ERROR   ./node_modules/recharts/es6/util/ReactUtils.js:3:1
+Module not found: Can't resolve 'react-is'
+  1 | import get from 'es-toolkit/compat/get';
+  2 | import { Children } from 'react';
+> 3 | import { isFragment } from 'react-is';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { isNullish } from './DataUtils';
+  5 | export var SCALE_TYPES = ['auto', 'linear', 'pow', 'sqrt', 'log', 'identity', 'time', 'band', 'point', 'ordinal', 'quantile', 'quantize', 'utc', 'sequential', 'threshold'];
+  6 |
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/recharts/es6/util/ReactUtils.js [Client Component Browser]
+    ./node_modules/recharts/es6/cartesian/Line.js [Client Component Browser]
+    ./components/expense-chart.tsx [Client Component Browser]
+    ./app/dashboard/page.tsx [Client Component Browser]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/recharts/es6/util/ReactUtils.js [Client Component SSR]
+    ./node_modules/recharts/es6/cartesian/Line.js [Client Component SSR]
+    ./components/expense-chart.tsx [Client Component SSR]
+    ./app/dashboard/page.tsx [Client Component SSR]
+    ./app/dashboard/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:13.912] Browser ERROR   ./node_modules/recharts/es6/util/ReactUtils.js:3:1
+Module not found: Can't resolve 'react-is'
+  1 | import get from 'es-toolkit/compat/get';
+  2 | import { Children } from 'react';
+> 3 | import { isFragment } from 'react-is';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { isNullish } from './DataUtils';
+  5 | export var SCALE_TYPES = ['auto', 'linear', 'pow', 'sqrt', 'log', 'identity', 'time', 'band', 'point', 'ordinal', 'quantile', 'quantize', 'utc', 'sequential', 'threshold'];
+  6 |
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/recharts/es6/util/ReactUtils.js [Client Component Browser]
+    ./node_modules/recharts/es6/cartesian/Line.js [Client Component Browser]
+    ./components/expense-chart.tsx [Client Component Browser]
+    ./app/dashboard/page.tsx [Client Component Browser]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/recharts/es6/util/ReactUtils.js [Client Component SSR]
+    ./node_modules/recharts/es6/cartesian/Line.js [Client Component SSR]
+    ./components/expense-chart.tsx [Client Component SSR]
+    ./app/dashboard/page.tsx [Client Component SSR]
+    ./app/dashboard/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:13.917] Browser ERROR   ./node_modules/recharts/es6/util/ReactUtils.js:3:1
+Module not found: Can't resolve 'react-is'
+  1 | import get from 'es-toolkit/compat/get';
+  2 | import { Children } from 'react';
+> 3 | import { isFragment } from 'react-is';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { isNullish } from './DataUtils';
+  5 | export var SCALE_TYPES = ['auto', 'linear', 'pow', 'sqrt', 'log', 'identity', 'time', 'band', 'point', 'ordinal', 'quantile', 'quantize', 'utc', 'sequential', 'threshold'];
+  6 |
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/recharts/es6/util/ReactUtils.js [Client Component Browser]
+    ./node_modules/recharts/es6/cartesian/Line.js [Client Component Browser]
+    ./components/expense-chart.tsx [Client Component Browser]
+    ./app/dashboard/page.tsx [Client Component Browser]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/recharts/es6/util/ReactUtils.js [Client Component SSR]
+    ./node_modules/recharts/es6/cartesian/Line.js [Client Component SSR]
+    ./components/expense-chart.tsx [Client Component SSR]
+    ./app/dashboard/page.tsx [Client Component SSR]
+    ./app/dashboard/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:13.934] Server  ERROR    ⨯ ./node_modules/recharts/es6/util/ReactUtils.js:3:1
+Module not found: Can't resolve 'react-is'
+  1 | import get from 'es-toolkit/compat/get';
+  2 | import { Children } from 'react';
+> 3 | import { isFragment } from 'react-is';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { isNullish } from './DataUtils';
+  5 | export var SCALE_TYPES = ['auto', 'linear', 'pow', 'sqrt', 'log', 'identity', 'time', 'band', 'point', 'ordinal', 'quantile', 'quantize', 'utc', 'sequential', 'threshold'];
+  6 |
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/recharts/es6/util/ReactUtils.js [Client Component Browser]
+    ./node_modules/recharts/es6/cartesian/Line.js [Client Component Browser]
+    ./components/expense-chart.tsx [Client Component Browser]
+    ./app/dashboard/page.tsx [Client Component Browser]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/recharts/es6/util/ReactUtils.js [Client Component SSR]
+    ./node_modules/recharts/es6/cartesian/Line.js [Client Component SSR]
+    ./components/expense-chart.tsx [Client Component SSR]
+    ./app/dashboard/page.tsx [Client Component SSR]
+    ./app/dashboard/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:14.102] Browser ERROR   uncaughtError: Error: ./node_modules/recharts/es6/util/ReactUtils.js:3:1
+Module not found: Can't resolve 'react-is'
+  1 | import get from 'es-toolkit/compat/get';
+  2 | import { Children } from 'react';
+> 3 | import { isFragment } from 'react-is';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { isNullish } from './DataUtils';
+  5 | export var SCALE_TYPES = ['auto', 'linear', 'pow', 'sqrt', 'log', 'identity', 'time', 'band', 'point', 'ordinal', 'quantile', 'quantize', 'utc', 'sequential', 'threshold'];
+  6 |
+
+
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/recharts/es6/util/ReactUtils.js [Client Component Browser]
+    ./node_modules/recharts/es6/cartesian/Line.js [Client Component Browser]
+    ./components/expense-chart.tsx [Client Component Browser]
+    ./app/dashboard/page.tsx [Client Component Browser]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/recharts/es6/util/ReactUtils.js [Client Component SSR]
+    ./node_modules/recharts/es6/cartesian/Line.js [Client Component SSR]
+    ./components/expense-chart.tsx [Client Component SSR]
+    ./app/dashboard/page.tsx [Client Component SSR]
+    ./app/dashboard/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:14.204] Browser ERROR   ./node_modules/recharts/es6/util/ReactUtils.js:3:1
+Module not found: Can't resolve 'react-is'
+  1 | import get from 'es-toolkit/compat/get';
+  2 | import { Children } from 'react';
+> 3 | import { isFragment } from 'react-is';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { isNullish } from './DataUtils';
+  5 | export var SCALE_TYPES = ['auto', 'linear', 'pow', 'sqrt', 'log', 'identity', 'time', 'band', 'point', 'ordinal', 'quantile', 'quantize', 'utc', 'sequential', 'threshold'];
+  6 |
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/recharts/es6/util/ReactUtils.js [Client Component Browser]
+    ./node_modules/recharts/es6/cartesian/Line.js [Client Component Browser]
+    ./components/expense-chart.tsx [Client Component Browser]
+    ./app/dashboard/page.tsx [Client Component Browser]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/recharts/es6/util/ReactUtils.js [Client Component SSR]
+    ./node_modules/recharts/es6/cartesian/Line.js [Client Component SSR]
+    ./components/expense-chart.tsx [Client Component SSR]
+    ./app/dashboard/page.tsx [Client Component SSR]
+    ./app/dashboard/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:14.325] Browser ERROR   ./node_modules/recharts/es6/util/ReactUtils.js:3:1
+Module not found: Can't resolve 'react-is'
+  1 | import get from 'es-toolkit/compat/get';
+  2 | import { Children } from 'react';
+> 3 | import { isFragment } from 'react-is';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { isNullish } from './DataUtils';
+  5 | export var SCALE_TYPES = ['auto', 'linear', 'pow', 'sqrt', 'log', 'identity', 'time', 'band', 'point', 'ordinal', 'quantile', 'quantize', 'utc', 'sequential', 'threshold'];
+  6 |
+
+Import traces:
+  Client Component Browser:
+    ./node_modules/recharts/es6/util/ReactUtils.js [Client Component Browser]
+    ./node_modules/recharts/es6/cartesian/Line.js [Client Component Browser]
+    ./components/expense-chart.tsx [Client Component Browser]
+    ./app/dashboard/page.tsx [Client Component Browser]
+    ./app/dashboard/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./node_modules/recharts/es6/util/ReactUtils.js [Client Component SSR]
+    ./node_modules/recharts/es6/cartesian/Line.js [Client Component SSR]
+    ./components/expense-chart.tsx [Client Component SSR]
+    ./app/dashboard/page.tsx [Client Component SSR]
+    ./app/dashboard/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:37.460] Server  LOG      ✓ Compiled in 166ms
+[00:00:49.941] Browser LOG     Logout clicked
+[00:00:52.276] Browser LOG     Logout clicked
