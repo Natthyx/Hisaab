@@ -124,4 +124,37 @@
   body {
     @apply bg-background text-foreground;
   }
+  
+  /* Ensure all text is white in dark mode */
+  .dark {
+    color-scheme: dark;
+  }
+  
+  .dark text,
+  .dark tspan,
+  .dark .recharts-text,
+  .dark .recharts-cartesian-axis-tick-value,
+  .dark .recharts-tooltip-label,
+  .dark .recharts-tooltip-item,
+  .dark .recharts-legend-item-text {
+    fill: white !important;
+    color: white !important;
+  }
+  
+  .dark .recharts-cartesian-axis-line,
+  .dark .recharts-cartesian-axis-tick-line,
+  .dark .recharts-cartesian-grid line {
+    stroke: #444444 !important;
+  }
+}
+
+@layer utilities {
+  /* Add custom utilities for dark mode if needed */
+  .dark\:fill-white {
+    fill: white !important;
+  }
+  
+  .dark\:text-white {
+    color: white !important;
+  }
 }

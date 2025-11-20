@@ -13,6 +13,7 @@ import {
   CartesianGrid,
 } from "recharts"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { useTheme } from "next-themes"
 
 interface ChartData {
   [key: string]: string | number
@@ -33,6 +34,12 @@ export function ExpenseChart({
   dataKeys,
   xAxisKey,
 }: ExpenseChartProps) {
+  const { theme } = useTheme()
+  
+  // Define chart colors based on theme
+  const textColor = theme === 'dark' ? '#ffffff' : '#000000'
+  const gridColor = theme === 'dark' ? '#444444' : '#e5e7eb'
+  
   const ChartComponent = type === "line" ? LineChart : BarChart
   const DataComponent = type === "line" ? Line : Bar
 
@@ -46,24 +53,29 @@ export function ExpenseChart({
       <CardContent>
         <ResponsiveContainer width="100%" height={300}>
           <ChartComponent data={data}>
-            <CartesianGrid strokeDasharray="3 3" className="stroke-muted" />
+            <CartesianGrid strokeDasharray="3 3" stroke={gridColor} />
             <XAxis
               dataKey={xAxisKey}
               className="text-xs"
-              tick={{ fill: "hsl(var(--muted-foreground))" }}
+              tick={{ fill: textColor }}
+              axisLine={{ stroke: gridColor }}
             />
             <YAxis
               className="text-xs"
-              tick={{ fill: "hsl(var(--muted-foreground))" }}
+              tick={{ fill: textColor }}
+              axisLine={{ stroke: gridColor }}
             />
             <Tooltip
               contentStyle={{
-                backgroundColor: "hsl(var(--card))",
-                border: "1px solid hsl(var(--border))",
+                backgroundColor: theme === 'dark' ? '#1f2937' : '#ffffff',
+                borderColor: theme === 'dark' ? '#374151' : '#e5e7eb',
                 borderRadius: "var(--radius)",
+                color: textColor
               }}
             />
-            <Legend />
+            <Legend 
+              wrapperStyle={{ color: textColor }}
+            />
             {dataKeys.map((item) => (
               <DataComponent
                 key={item.key}

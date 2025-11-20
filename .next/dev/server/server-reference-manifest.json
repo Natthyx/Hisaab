@@ -1,5 +1,42 @@
 {
-  "node": {},
+  "node": {
+    "003bcca4a51b319a0ba085a33cb487729c61d7fe01": {
+      "workers": {
+        "app/add/page": {
+          "moduleId": "[project]/.next-internal/server/app/add/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "signOut",
+          "filename": "lib/actions/auth.ts"
+        },
+        "app/analytics/page": {
+          "moduleId": "[project]/.next-internal/server/app/analytics/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "signOut",
+          "filename": "lib/actions/auth.ts"
+        },
+        "app/dashboard/page": {
+          "moduleId": "[project]/.next-internal/server/app/dashboard/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "signOut",
+          "filename": "lib/actions/auth.ts"
+        },
+        "app/transactions/page": {
+          "moduleId": "[project]/.next-internal/server/app/transactions/page/actions.js { ACTIONS_MODULE0 => \"[project]/lib/actions/auth.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "signOut",
+          "filename": "lib/actions/auth.ts"
+        }
+      },
+      "layer": {
+        "app/add/page": "action-browser",
+        "app/analytics/page": "action-browser",
+        "app/dashboard/page": "action-browser",
+        "app/transactions/page": "action-browser"
+      },
+      "filename": "lib/actions/auth.ts",
+      "exportedName": "signOut"
+    }
+  },
   "edge": {},
   "encryptionKey": "cTyKe7T9S8K4KKuQVomjsxxaRHeyP6jkACycDjKnU5w="
 }

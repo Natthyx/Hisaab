@@ -1,9 +1,11 @@
 {
   "/add/page": "app/add/page.js",
-  "/analytics/daily/page": "app/analytics/daily/page.js",
+  "/analytics/page": "app/analytics/page.js",
+  "/api/transactions/create/route": "app/api/transactions/create/route.js",
+  "/api/transactions/delete/[id]/route": "app/api/transactions/delete/[id]/route.js",
+  "/api/transactions/update/[id]/route": "app/api/transactions/update/[id]/route.js",
   "/dashboard/page": "app/dashboard/page.js",
   "/login/page": "app/login/page.js",
-  "/page": "app/page.js",
-  "/setup/page": "app/setup/page.js",
+  "/signup/page": "app/signup/page.js",
   "/transactions/page": "app/transactions/page.js"
 }

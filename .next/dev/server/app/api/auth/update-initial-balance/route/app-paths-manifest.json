@@ -1,0 +1,3 @@
+{
+  "/api/auth/update-initial-balance/route": "app/api/auth/update-initial-balance/route.js"
+}
