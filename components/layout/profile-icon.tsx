@@ -10,9 +10,8 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import { AccountSelector } from "@/components/account-selector"
+import { AccountSelector } from "@/components/accounts/account-selector"
 import { useRouter } from 'next/navigation'
-import { signOut } from '@/lib/actions/auth'
 
 interface Account {
   id: string
@@ -127,7 +126,12 @@ export function ProfileIcon() {
   }, [supabase, defaultAccountId])
 
   const handleSignOut = async () => {
-    await signOut()
+    // Use fetch to call the signout API route instead of importing server-side function
+    await fetch('/api/auth/signout', {
+      method: 'POST',
+    })
+    // Redirect to login page
+    router.push('/login')
   }
 
   return (

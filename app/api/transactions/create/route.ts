@@ -1,6 +1,12 @@
-import { createClient } from '@/lib/supabase/server'
-import { NextResponse } from 'next/server'
 import { z } from 'zod'
+import { 
+  getUserFromRequest, 
+  createSuccessResponse, 
+  createErrorResponse,
+  validateFormData
+} from '@/lib/api/index'
+import { createTransaction } from '@/lib/transactions/service'
+import { getUserDefaultAccount, getUserAccounts } from '@/lib/accounts/service'
 
 const transactionSchema = z.object({
   amount: z.string(), // Changed to string since FormData sends strings
@@ -13,79 +19,39 @@ const transactionSchema = z.object({
 
 export async function POST(request: Request) {
   try {
-    const supabase = await createClient()
+    // Get the current user
+    const { user, error: userError } = await getUserFromRequest(request)
+    
+    if (userError || !user) {
+      return createErrorResponse('Unauthorized', 401)
+    }
     
     // Get form data
     const formData = await request.formData()
     
-    // Convert FormData to object
-    const body = {
-      amount: formData.get('amount') as string,
-      reason: formData.get('reason') as string || undefined,
-      type: formData.get('type') as string,
-      category: formData.get('category') as string || undefined,
-      date: formData.get('date') as string || undefined,
-      accountId: formData.get('accountId') as string || undefined,
-    }
-    
     // Validate the request body
-    const parsed = transactionSchema.safeParse(body)
-    if (!parsed.success) {
-      return NextResponse.json(
-        { error: 'Invalid request body', details: parsed.error.flatten() },
-        { status: 400 }
-      )
+    const validation = validateFormData(formData, transactionSchema)
+    if (!validation.isValid) {
+      return createErrorResponse('Invalid request body', 400)
     }
     
-    const { amount, reason, type, category, date, accountId } = parsed.data
-    
-    // Get the current user
-    const { data: { user }, error: userError } = await supabase.auth.getUser()
-    
-    if (userError || !user) {
-      return NextResponse.json(
-        { error: 'Unauthorized' },
-        { status: 401 }
-      )
-    }
+    const { amount, reason, type, category, date, accountId } = validation.data
     
     // Get the account ID - either provided or use user's default account
     let transactionAccountId = accountId;
     
     if (!transactionAccountId) {
-      // Get user's default account
-      const { data: userData, error: userError } = await supabase
-        .from('users')
-        .select('default_account_id')
-        .eq('id', user.id)
-        .single()
-      
-      if (userError) {
-        return NextResponse.json(
-          { error: 'Failed to get user data' },
-          { status: 500 }
-        )
-      }
-      
+      // Get user's default account using the service function
+      const userData = await getUserDefaultAccount(user.id)
       transactionAccountId = userData?.default_account_id;
       
       // If no default account, get the first account for this user
       if (!transactionAccountId) {
-        const { data: accountData, error: accountError } = await supabase
-          .from('accounts')
-          .select('id')
-          .eq('user_id', user.id)
-          .limit(1)
-          .single()
-        
-        if (accountError) {
-          return NextResponse.json(
-            { error: 'User has no accounts. Please create an account first.' },
-            { status: 400 }
-          )
+        const accounts = await getUserAccounts(user.id)
+        if (!accounts || accounts.length === 0) {
+          return createErrorResponse('User has no accounts. Please create an account first.', 400)
         }
-        
-        transactionAccountId = accountData.id;
+        transactionAccountId = accounts[0].id;
       }
     }
     
@@ -105,32 +71,21 @@ export async function POST(request: Request) {
       transactionDate = new Date();
     }
     
-    // Insert the transaction
-    const { data, error: insertError } = await supabase
-      .from('transactions')
-      .insert({
-        account_id: transactionAccountId,
-        amount: parseFloat(amount), // Convert string to number
-        reason: reason || '',
-        type,
-        category: category || 'general',
-        date: transactionDate.toISOString(),
-      })
-      .select()
-      .single()
-    
-    if (insertError) {
-      return NextResponse.json(
-        { error: insertError.message },
-        { status: 500 }
-      )
+    // Create the transaction using the service function
+    const transactionData = {
+      account_id: transactionAccountId,
+      amount: parseFloat(amount), // Convert string to number
+      reason: reason || '',
+      type,
+      category: category || 'general',
+      date: transactionDate.toISOString(),
     }
     
-    return NextResponse.json({ success: true, data })
-  } catch (error) {
-    return NextResponse.json(
-      { error: 'An unexpected error occurred' },
-      { status: 500 }
-    )
+    const data = await createTransaction(transactionData)
+    
+    return createSuccessResponse(data)
+  } catch (error: any) {
+    console.error('Error creating transaction:', error)
+    return createErrorResponse(error.message || 'An unexpected error occurred', 500)
   }
 }

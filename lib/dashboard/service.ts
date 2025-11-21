@@ -1,0 +1,177 @@
+import { getAccountTransactions } from "@/lib/transactions/service"
+import { getUserAccounts, getUserDefaultAccount } from "@/lib/accounts/service"
+
+// Helper function to format dates for daily chart
+const formatDailyDate = (dateString: string) => {
+  const date = new Date(dateString)
+  const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+  return days[date.getDay()]
+}
+
+// Helper function to format dates for weekly chart
+const formatWeeklyDate = (dateString: string, index: number) => {
+  return `Week ${index + 1}`
+}
+
+// Helper function to format dates for monthly chart
+const formatMonthlyDate = (dateString: string) => {
+  const date = new Date(dateString)
+  const months = ['Sep', 'Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug']
+  return months[date.getMonth()]
+}
+
+export async function getDashboardData(userId: string, accountId?: string) {
+  // Get user's accounts
+  const accounts = await getUserAccounts(userId)
+  
+  // Determine which account to show
+  let selectedAccountId = accountId
+  
+  // If no account specified, use user's default account or first account
+  if (!selectedAccountId && accounts && accounts.length > 0) {
+    // Get user's default account
+    const userData = await getUserDefaultAccount(userId)
+    
+    if (userData?.default_account_id) {
+      selectedAccountId = userData.default_account_id
+    } else {
+      selectedAccountId = accounts[0].id
+    }
+  }
+  
+  // Get selected account details
+  const selectedAccount = accounts?.find(account => account.id === selectedAccountId) || accounts?.[0]
+  
+  // Get transactions for the selected account
+  const transactions = selectedAccountId 
+    ? await getAccountTransactions(selectedAccountId) 
+    : []
+  
+  // Calculate income and expense
+  let totalIncome = 0
+  let totalExpense = 0
+  
+  transactions?.forEach(transaction => {
+    if (transaction.type === 'income') {
+      totalIncome += transaction.amount
+    } else {
+      totalExpense += transaction.amount
+    }
+  })
+  
+  const balance = (selectedAccount?.initial_balance || 0) + totalIncome - totalExpense
+  
+  // Generate daily chart data (Mon-Sun)
+  const dailyData = []
+  const now = new Date()
+  const firstDayOfWeek = new Date(now)
+  firstDayOfWeek.setDate(now.getDate() - now.getDay())
+  
+  for (let i = 0; i < 7; i++) {
+    const day = new Date(firstDayOfWeek)
+    day.setDate(firstDayOfWeek.getDate() + i)
+    
+    const dayStart = new Date(day.getFullYear(), day.getMonth(), day.getDate())
+    const dayEnd = new Date(day.getFullYear(), day.getMonth(), day.getDate(), 23, 59, 59, 999)
+    
+    let dayIncome = 0
+    let dayExpense = 0
+    
+    transactions?.forEach(transaction => {
+      const transactionDate = new Date(transaction.date)
+      if (transactionDate >= dayStart && transactionDate <= dayEnd) {
+        if (transaction.type === 'income') {
+          dayIncome += transaction.amount
+        } else {
+          dayExpense += transaction.amount
+        }
+      }
+    })
+    
+    dailyData.push({
+      day: formatDailyDate(dayStart.toISOString()),
+      income: dayIncome,
+      expense: dayExpense
+    })
+  }
+  
+  // Generate weekly chart data (Week 1 - Week 4)
+  const weeklyData = []
+  const startOfMonth = new Date(now.getFullYear(), now.getMonth(), 1)
+  const endOfMonth = new Date(now.getFullYear(), now.getMonth() + 1, 0, 23, 59, 59, 999)
+  
+  const weeksInMonth = Math.ceil((endOfMonth.getDate() - startOfMonth.getDate() + 1) / 7)
+  
+  for (let i = 0; i < Math.min(weeksInMonth, 4); i++) { // Limit to 4 weeks
+    const weekStart = new Date(startOfMonth)
+    weekStart.setDate(startOfMonth.getDate() + (i * 7))
+    
+    const weekEnd = new Date(weekStart)
+    weekEnd.setDate(weekStart.getDate() + 6)
+    if (weekEnd > endOfMonth) weekEnd.setTime(endOfMonth.getTime())
+    
+    const weekTransactions = transactions?.filter(t => 
+      new Date(t.date) >= weekStart && new Date(t.date) <= weekEnd
+    ) || []
+    
+    let weekIncome = 0
+    let weekExpense = 0
+    
+    weekTransactions.forEach(transaction => {
+      if (transaction.type === 'income') {
+        weekIncome += transaction.amount
+      } else {
+        weekExpense += transaction.amount
+      }
+    })
+    
+    weeklyData.push({
+      week: formatWeeklyDate(weekStart.toISOString(), i),
+      income: weekIncome,
+      expense: weekExpense
+    })
+  }
+  
+  // Generate monthly chart data (Sep - Aug)
+  const monthlyData = []
+  const startOfYear = new Date(now.getFullYear(), 0, 1)
+  
+  for (let i = 0; i < 12; i++) {
+    const monthStart = new Date(startOfYear.getFullYear(), i, 1)
+    const monthEnd = new Date(startOfYear.getFullYear(), i + 1, 0, 23, 59, 59, 999)
+    
+    const monthTransactions = transactions?.filter(t => 
+      new Date(t.date) >= monthStart && new Date(t.date) <= monthEnd
+    ) || []
+    
+    let monthIncome = 0
+    let monthExpense = 0
+    
+    monthTransactions.forEach(transaction => {
+      if (transaction.type === 'income') {
+        monthIncome += transaction.amount
+      } else {
+        monthExpense += transaction.amount
+      }
+    })
+    
+    monthlyData.push({
+      month: formatMonthlyDate(monthStart.toISOString()),
+      income: monthIncome,
+      expense: monthExpense
+    })
+  }
+  
+  return {
+    accounts,
+    selectedAccount,
+    selectedAccountId,
+    transactions,
+    totalIncome,
+    totalExpense,
+    balance,
+    dailyData,
+    weeklyData,
+    monthlyData
+  }
+}

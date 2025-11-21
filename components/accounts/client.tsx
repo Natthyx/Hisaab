@@ -1,13 +1,12 @@
 "use client"
 
-import { useState, useEffect, useRef } from "react"
+import { useState, useRef } from "react"
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { toast } from "sonner"
 import { PlusIcon, TrashIcon } from 'lucide-react'
-import { createClient } from '@/lib/supabase/client'
 import { useRouter } from 'next/navigation'
 import {
   Dialog,
@@ -17,144 +16,50 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog"
-
-interface Account {
-  id: string
-  name: string
-  initial_balance: number
-  created_at: string
-}
+import { useAccounts } from "@/hooks/useAccounts"
+import { validateAccountForm } from "@/utils/validation"
+import { Account } from "@/types"
 
 export function AccountsClient({ accounts: initialAccounts, defaultAccountId: initialDefaultAccountId }: { accounts: Account[], defaultAccountId: string | null }) {
   const router = useRouter()
-  const supabase = createClient()
-  const [accounts, setAccounts] = useState<Account[]>(initialAccounts)
-  const [defaultAccountId, setDefaultAccountId] = useState<string | null>(initialDefaultAccountId)
-  const [isCreating, setIsCreating] = useState(false)
-  const [isSettingDefault, setIsSettingDefault] = useState<string | null>(null)
   const [deleteConfirmation, setDeleteConfirmation] = useState<{ open: boolean; accountId: string | null }>({ open: false, accountId: null })
   const [errors, setErrors] = useState<{name?: string, initial_balance?: string}>({})
   const formRef = useRef<HTMLFormElement>(null)
-
-  // Listen for account changes
-  useEffect(() => {
-    const channel = supabase
-      .channel('accounts-changes')
-      .on(
-        'postgres_changes',
-        {
-          event: 'INSERT',
-          schema: 'public',
-          table: 'accounts',
-        },
-        (payload) => {
-          // Add new account to the list
-          const newAccount = payload.new as Account
-          setAccounts(prev => [...prev, newAccount])
-        }
-      )
-      .on(
-        'postgres_changes',
-        {
-          event: 'DELETE',
-          schema: 'public',
-          table: 'accounts',
-        },
-        (payload) => {
-          // Remove deleted account from the list
-          const deletedAccountId = payload.old.id
-          setAccounts(prev => prev.filter(account => account.id !== deletedAccountId))
-          // If this was the default account, clear the default
-          if (defaultAccountId === deletedAccountId) {
-            setDefaultAccountId(null)
-          }
-        }
-      )
-      .on(
-        'postgres_changes',
-        {
-          event: 'UPDATE',
-          schema: 'public',
-          table: 'users',
-        },
-        (payload) => {
-          // Update default account if changed
-          if (payload.new.default_account_id !== defaultAccountId) {
-            setDefaultAccountId(payload.new.default_account_id)
-          }
-        }
-      )
-      .subscribe()
-
-    return () => {
-      supabase.removeChannel(channel)
-    }
-  }, [supabase, defaultAccountId])
+  
+  const {
+    accounts,
+    defaultAccountId,
+    isCreating,
+    isSettingDefault,
+    createAccount,
+    deleteAccount,
+    setDefaultAccount,
+    setAccounts,
+    setDefaultAccountId
+  } = useAccounts(initialAccounts, initialDefaultAccountId)
 
   // Validate form inputs
   const validateForm = (formData: FormData) => {
-    const newErrors: {name?: string, initial_balance?: string} = {}
-    
-    // Name validation
-    const name = formData.get('name') as string
-    if (!name?.trim()) {
-      newErrors.name = "Account name is required"
-    }
-    
-    // Initial balance validation
-    const initialBalance = formData.get('initial_balance') as string
-    if (initialBalance) {
-      const balance = parseFloat(initialBalance)
-      if (isNaN(balance) || balance < 0) {
-        newErrors.initial_balance = "Please enter a valid positive number"
-      }
-    }
-    
-    setErrors(newErrors)
-    return Object.keys(newErrors).length === 0
+    const validation = validateAccountForm(formData)
+    setErrors(validation.errors)
+    return validation.isValid
   }
 
   const handleCreateAccount = async (formData: FormData) => {
-    if (isCreating) return // Prevent multiple clicks
-    
     // Validate form before submission
     if (!validateForm(formData)) {
       toast.error("Please fix the errors below")
       return
     }
     
-    setIsCreating(true)
-    try {
-      const response = await fetch('/api/accounts/create', {
-        method: 'POST',
-        body: formData,
-      })
-      
-      const result = await response.json()
-      
-      if (!response.ok || !result.success) {
-        toast.error(result.error || 'Failed to create account')
-        setIsCreating(false)
-        return
-      }
-      
-      toast.success('Account created successfully')
-      // Update the accounts list immediately
-      setAccounts(prev => [...prev, result.data])
-      // If this is the first account, set it as default
-      if (accounts.length === 0) {
-        setDefaultAccountId(result.data.id)
-      }
-      
+    const result = await createAccount(formData)
+    
+    if (result && result.success) {
       // Reset form
       if (formRef.current) {
         formRef.current.reset()
         setErrors({})
       }
-    } catch (error) {
-      toast.error('An unexpected error occurred')
-    } finally {
-      setIsCreating(false)
     }
   }
 
@@ -162,62 +67,18 @@ export function AccountsClient({ accounts: initialAccounts, defaultAccountId: in
     const accountId = deleteConfirmation.accountId
     if (!accountId) return
     
-    try {
-      const formData = new FormData()
-      formData.append('accountId', accountId)
-      
-      const response = await fetch('/api/accounts/delete', {
-        method: 'POST',
-        body: formData,
-      })
-      
-      const result = await response.json()
-      
-      if (!response.ok || !result.success) {
-        toast.error(result.error || 'Failed to delete account')
-        return
-      }
-      
-      toast.success('Account deleted successfully')
-      // Update the accounts list immediately
-      setAccounts(prev => prev.filter(account => account.id !== accountId))
-      // If this was the default account, clear the default
-      if (defaultAccountId === accountId) {
-        setDefaultAccountId(null)
-      }
-    } catch (error) {
-      toast.error('An unexpected error occurred')
-    } finally {
+    const result = await deleteAccount(accountId)
+    
+    if (result && result.success) {
       setDeleteConfirmation({ open: false, accountId: null })
     }
   }
 
   const handleSetDefaultAccount = async (accountId: string) => {
-    if (isSettingDefault === accountId) return // Prevent multiple clicks
+    const result = await setDefaultAccount(accountId)
     
-    setIsSettingDefault(accountId)
-    try {
-      const formData = new FormData()
-      formData.append('accountId', accountId)
-      
-      const response = await fetch('/api/accounts/set-default', {
-        method: 'POST',
-        body: formData,
-      })
-      
-      const result = await response.json()
-      
-      if (!response.ok || !result.success) {
-        toast.error(result.error || 'Failed to set default account')
-        return
-      }
-      
-      toast.success('Default account updated successfully')
-      setDefaultAccountId(accountId)
-    } catch (error) {
-      toast.error('An unexpected error occurred')
-    } finally {
-      setIsSettingDefault(null)
+    if (result && result.success) {
+      // Success handled in hook
     }
   }
 
@@ -235,7 +96,7 @@ export function AccountsClient({ accounts: initialAccounts, defaultAccountId: in
                 <div>
                   <h3 className="font-medium">{account.name}</h3>
                   <p className="text-sm text-muted-foreground">
-                    Initial Balance: ${account.initial_balance.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                    Initial Balance: ${(account.initial_balance || 0).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                   </p>
                   {account.id === defaultAccountId && (
                     <span className="inline-flex items-center rounded-full bg-indigo-100 px-2.5 py-0.5 text-xs font-medium text-indigo-800">

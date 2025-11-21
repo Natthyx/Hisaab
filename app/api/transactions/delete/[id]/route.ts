@@ -1,60 +1,44 @@
-import { createClient } from '@/lib/supabase/server'
 import { NextResponse } from 'next/server'
+import { 
+  getUserFromRequest, 
+  createSuccessResponse, 
+  createErrorResponse
+} from '@/lib/api/index'
+import { deleteTransaction, doesTransactionBelongToUserAccounts } from '@/lib/transactions/service'
+import { getUserAccounts } from '@/lib/accounts/service'
 
 export async function DELETE(
   request: Request,
   { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    const supabase = await createClient()
-    
     // Await the params promise to get the actual params
     const { id } = await params
     
     // Get the current user
-    const { data: { user }, error: userError } = await supabase.auth.getUser()
+    const { user, error: userError } = await getUserFromRequest(request)
     
     if (userError || !user) {
-      return NextResponse.json(
-        { error: 'Unauthorized' },
-        { status: 401 }
-      )
+      return createErrorResponse('Unauthorized', 401)
     }
     
-    // Get user's accounts
-    const { data: accounts, error: accountsError } = await supabase
-      .from('accounts')
-      .select('id')
-      .eq('user_id', user.id)
-    
-    if (accountsError) {
-      return NextResponse.json(
-        { error: 'Failed to get user accounts' },
-        { status: 500 }
-      )
-    }
+    // Get user's accounts using the service function
+    const accounts = await getUserAccounts(user.id)
     
     const accountIds = accounts.map(account => account.id)
     
-    // Delete the transaction only if it belongs to one of the user's accounts
-    const { error: deleteError } = await supabase
-      .from('transactions')
-      .delete()
-      .eq('id', id)
-      .in('account_id', accountIds)
-    
-    if (deleteError) {
-      return NextResponse.json(
-        { error: deleteError.message },
-        { status: 500 }
-      )
+    // Verify that the transaction belongs to one of the user's accounts
+    const transactionBelongsToUser = await doesTransactionBelongToUserAccounts(id, accountIds)
+    if (!transactionBelongsToUser) {
+      return createErrorResponse('Transaction not found or unauthorized', 404)
     }
     
-    return NextResponse.json({ success: true })
-  } catch (error) {
-    return NextResponse.json(
-      { error: 'An unexpected error occurred' },
-      { status: 500 }
-    )
+    // Delete the transaction using the service function
+    await deleteTransaction(id)
+    
+    return createSuccessResponse()
+  } catch (error: any) {
+    console.error('Error deleting transaction:', error)
+    return createErrorResponse(error.message || 'An unexpected error occurred', 500)
   }
 }

@@ -1,5 +1,6 @@
-import { createClient } from '@/lib/supabase/server'
 import { NextResponse } from 'next/server'
+import { updateUserProfile } from '@/lib/auth/service'
+import { createClient } from '@/lib/supabase/server'
 
 export async function POST(request: Request) {
   try {
@@ -18,23 +19,14 @@ export async function POST(request: Request) {
     const formData = await request.formData()
     const fullName = formData.get('full_name') as string
     
-    // Update the user's full name
-    const { error: updateError } = await supabase
-      .from('users')
-      .update({ full_name: fullName || null })
-      .eq('id', user.id)
-    
-    if (updateError) {
-      return NextResponse.json(
-        { error: updateError.message },
-        { status: 500 }
-      )
-    }
+    // Update the user's full name using the service function
+    await updateUserProfile(user.id, { full_name: fullName || null })
     
     return NextResponse.json({ success: true })
-  } catch (error) {
+  } catch (error: any) {
+    console.error('Error updating user profile:', error)
     return NextResponse.json(
-      { error: 'An unexpected error occurred' },
+      { error: error.message || 'An unexpected error occurred' },
       { status: 500 }
     )
   }

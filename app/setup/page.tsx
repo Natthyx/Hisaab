@@ -8,6 +8,8 @@ import { Label } from "@/components/ui/label"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { createClient } from '@/lib/supabase/client'
 import { toast } from "sonner"
+import { validateSetupForm } from "@/lib/setup/validation"
+import { setupUserAccount } from "@/lib/accounts/service"
 
 export default function SetupPage() {
   const router = useRouter()
@@ -18,30 +20,13 @@ export default function SetupPage() {
 
   const supabase = createClient()
 
-  // Validate form inputs
-  const validateForm = () => {
-    const newErrors: {accountName?: string, initialBalance?: string} = {}
-    
-    // Account name validation
-    if (!accountName.trim()) {
-      newErrors.accountName = "Account name is required"
-    }
-    
-    // Initial balance validation
-    const balance = parseFloat(initialBalance)
-    if (initialBalance && (isNaN(balance) || balance < 0)) {
-      newErrors.initialBalance = "Please enter a valid positive number"
-    }
-    
-    setErrors(newErrors)
-    return Object.keys(newErrors).length === 0
-  }
-
   const handleSetup = async (e: React.FormEvent) => {
     e.preventDefault()
     
     // Validate form before submission
-    if (!validateForm()) {
+    const validation = validateSetupForm(accountName, initialBalance)
+    if (!validation.isValid) {
+      setErrors(validation.errors)
       toast.error("Please fix the errors below")
       return
     }
@@ -57,39 +42,17 @@ export default function SetupPage() {
         return
       }
 
-      // Create the initial account
-      const { data: accountData, error: accountError } = await supabase
-        .from('accounts')
-        .insert({
-          user_id: user.id,
-          name: accountName,
-          initial_balance: parseFloat(initialBalance) || 0,
-        })
-        .select()
-        .single()
-
-      if (accountError) {
-        toast.error(accountError.message)
-        setLoading(false)
-        return
-      }
-
-      // Set this as the default account
-      const { error: updateError } = await supabase
-        .from('users')
-        .update({ default_account_id: accountData.id })
-        .eq('id', user.id)
-
-      if (updateError) {
-        toast.error(updateError.message)
-        setLoading(false)
-        return
-      }
+      // Setup the user account using the service function
+      await setupUserAccount(
+        user.id, 
+        accountName, 
+        parseFloat(initialBalance) || 0
+      )
 
       toast.success("Account setup completed successfully")
       router.push("/dashboard")
-    } catch (error) {
-      toast.error("An unexpected error occurred")
+    } catch (error: any) {
+      toast.error(error.message || "An unexpected error occurred")
       setLoading(false)
     }
   }

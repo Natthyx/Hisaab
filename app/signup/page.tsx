@@ -8,6 +8,8 @@ import { Label } from "@/components/ui/label"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { createClient } from '@/lib/supabase/client'
 import { toast } from "sonner"
+import { validateSignupForm } from "@/lib/auth/validation"
+import { signUpWithEmailAndPassword } from "@/lib/auth/client-service"
 
 export default function SignupPage() {
   const router = useRouter()
@@ -20,40 +22,13 @@ export default function SignupPage() {
 
   const supabase = createClient()
 
-  // Validate form inputs
-  const validateForm = () => {
-    const newErrors: {email?: string, password?: string, confirmPassword?: string} = {}
-    
-    // Email validation
-    if (!email) {
-      newErrors.email = "Email is required"
-    } else if (!/\S+@\S+\.\S+/.test(email)) {
-      newErrors.email = "Email address is invalid"
-    }
-    
-    // Password validation
-    if (!password) {
-      newErrors.password = "Password is required"
-    } else if (password.length < 6) {
-      newErrors.password = "Password must be at least 6 characters"
-    }
-    
-    // Confirm password validation
-    if (!confirmPassword) {
-      newErrors.confirmPassword = "Please confirm your password"
-    } else if (password !== confirmPassword) {
-      newErrors.confirmPassword = "Passwords do not match"
-    }
-    
-    setErrors(newErrors)
-    return Object.keys(newErrors).length === 0
-  }
-
   const handleSignup = async (e: React.FormEvent) => {
     e.preventDefault()
     
     // Validate form before submission
-    if (!validateForm()) {
+    const validation = validateSignupForm(email, password, confirmPassword)
+    if (!validation.isValid) {
+      setErrors(validation.errors)
       toast.error("Please fix the errors below")
       return
     }
@@ -61,38 +36,7 @@ export default function SignupPage() {
     setLoading(true)
     
     try {
-      const { data, error } = await supabase.auth.signUp({
-        email,
-        password,
-      })
-
-      if (error) {
-        toast.error(error.message)
-        setLoading(false)
-        return
-      }
-
-      // After successful signup, create the user profile using service role
-      if (data.user) {
-        const response = await fetch("/api/auth/create-profile", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            userId: data.user.id,
-            email: data.user.email,
-          }),
-        })
-
-        const result = await response.json()
-        
-        if (!response.ok || !result.success) {
-          toast.error(result.error || "Failed to create user profile")
-          setLoading(false)
-          return
-        }
-      }
+      await signUpWithEmailAndPassword(email, password)
 
       // Show success message
       toast.success("Account created successfully! Please check your email for confirmation.")
@@ -100,8 +44,8 @@ export default function SignupPage() {
       // Show confirmation message instead of redirecting immediately
       setShowConfirmationMessage(true)
       setLoading(false)
-    } catch (error) {
-      toast.error("An unexpected error occurred. Please try again.")
+    } catch (error: any) {
+      toast.error(error.message || "An unexpected error occurred. Please try again.")
       setLoading(false)
     }
   }

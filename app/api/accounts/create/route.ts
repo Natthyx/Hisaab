@@ -1,6 +1,10 @@
-import { createClient } from '@/lib/supabase/server'
-import { NextResponse } from 'next/server'
 import { z } from 'zod'
+import { 
+  getUserFromRequest, 
+  createSuccessResponse, 
+  createErrorResponse
+} from '@/lib/api/index'
+import { createAccount, setDefaultAccount, doesUserHaveAccounts } from '@/lib/accounts/service'
 
 const createAccountSchema = z.object({
   name: z.string().min(1, 'Account name is required'),
@@ -9,16 +13,11 @@ const createAccountSchema = z.object({
 
 export async function POST(request: Request) {
   try {
-    const supabase = await createClient()
-    
     // Get the current user
-    const { data: { user }, error: userError } = await supabase.auth.getUser()
+    const { user, error: userError } = await getUserFromRequest(request)
     
     if (userError || !user) {
-      return NextResponse.json(
-        { error: 'Unauthorized' },
-        { status: 401 }
-      )
+      return createErrorResponse('Unauthorized', 401)
     }
     
     const formData = await request.formData()
@@ -32,57 +31,30 @@ export async function POST(request: Request) {
     })
     
     if (!parsed.success) {
-      return NextResponse.json(
-        { error: 'Invalid request data', details: parsed.error.flatten() },
-        { status: 400 }
-      )
+      return createErrorResponse('Invalid request data', 400)
     }
     
-    // Check if user has any existing accounts
-    const { data: existingAccounts, error: countError } = await supabase
-      .from('accounts')
-      .select('id')
-      .eq('user_id', user.id)
+    // Check if user already has accounts
+    const userHasAccounts = await doesUserHaveAccounts(user.id)
     
-    const isFirstAccount = !countError && (!existingAccounts || existingAccounts.length === 0)
-    
-    // Create the account
-    const { data, error: insertError } = await supabase
-      .from('accounts')
-      .insert({
-        user_id: user.id,
-        name: parsed.data.name,
-        initial_balance: parseFloat(parsed.data.initial_balance || '0') || 0,
-      })
-      .select()
-      .single()
-    
-    if (insertError) {
-      return NextResponse.json(
-        { error: insertError.message },
-        { status: 500 }
-      )
+    // Create the account using the service function
+    const accountData = {
+      user_id: user.id,
+      name: parsed.data.name,
+      initial_balance: parseFloat(parsed.data.initial_balance || '0') || 0,
     }
+    
+    const data = await createAccount(accountData)
     
     // If this is the user's first account, set it as default
-    if (isFirstAccount) {
-      // This is the first account, set it as default
-      const { error: updateError } = await supabase
-        .from('users')
-        .update({ default_account_id: data.id })
-        .eq('id', user.id)
-      
-      if (updateError) {
-        console.error('Error setting default account:', updateError)
-      }
+    if (!userHasAccounts) {
+      await setDefaultAccount(user.id, data.id)
     }
     
-    // Return success response like transaction APIs
-    return NextResponse.json({ success: true, data })
-  } catch (error) {
-    return NextResponse.json(
-      { error: 'An unexpected error occurred' },
-      { status: 500 }
-    )
+    // Return success response
+    return createSuccessResponse(data)
+  } catch (error: any) {
+    console.error('Error creating account:', error)
+    return createErrorResponse(error.message || 'An unexpected error occurred', 500)
   }
 }

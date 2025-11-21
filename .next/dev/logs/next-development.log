@@ -1,92 +1,2112 @@
-[00:00:00.897] Server  WARN     ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
-[00:00:00.993] Server  LOG      ✓ Ready in 767ms
-[00:06:39.955] Server  LOG        Reload env: .env
-[00:06:40.422] Server  LOG        Reload env: .env
-[00:06:40.523] Server  LOG        Reload env: .env
-[00:06:40.623] Server  LOG        Reload env: .env
-[00:06:40.682] Server  LOG        Reload env: .env
-[00:06:40.774] Server  LOG        Reload env: .env
-[00:06:40.875] Server  LOG        Reload env: .env
-[00:06:40.928] Server  LOG        Reload env: .env
-[00:06:41.078] Server  LOG        Reload env: .env
-[00:06:41.231] Server  LOG        Reload env: .env
-[00:06:41.385] Server  LOG        Reload env: .env
-[00:06:41.486] Server  LOG        Reload env: .env
-[00:06:41.638] Server  LOG        Reload env: .env
-[00:06:41.791] Server  LOG        Reload env: .env
-[00:06:41.944] Server  LOG        Reload env: .env
-[00:06:42.097] Server  LOG        Reload env: .env
-[00:06:42.249] Server  LOG        Reload env: .env
-[00:06:42.577] Server  LOG        Reload env: .env
-[00:06:42.884] Server  LOG        Reload env: .env
-[00:07:51.337] Server  LOG        Reload env: .env
-[00:11:48.718] Browser ERROR   Error fetching user data: {"code":"PGRST116","details":"The result contains 0 rows","hint":null,"message":"Cannot coerce the result to a single JSON object"}
-[00:15:15.448] Server  LOG      ✓ Compiled in 165ms
-[00:15:22.129] Server  LOG      ✓ Compiled in 122ms
-[00:16:21.451] Server  LOG      ✓ Compiled in 50ms
-[00:18:22.465] Server  LOG      ✓ Compiled in 74ms
-[00:19:24.437] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+[00:00:00.749] Server  WARN     ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:00:00.833] Server  LOG      ✓ Ready in 634ms
+[00:00:04.854] Server  LOG      ○ Compiling /transactions ...
+[00:00:15.624] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
        please check the style of container, or the props width(100%) and height(100%),
        or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
        height and width.
-[00:19:24.437] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+[00:00:15.624] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
        please check the style of container, or the props width(100%) and height(100%),
        or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
        height and width.
-[00:19:24.437] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+[00:00:15.624] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
        please check the style of container, or the props width(100%) and height(100%),
        or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
        height and width.
-[00:19:24.437] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+[00:00:15.624] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
        please check the style of container, or the props width(100%) and height(100%),
        or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
        height and width.
-[00:19:24.437] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+[00:00:15.624] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
        please check the style of container, or the props width(100%) and height(100%),
        or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
        height and width.
-[00:19:24.437] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+[00:00:15.624] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
        please check the style of container, or the props width(100%) and height(100%),
        or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
        height and width.
-[00:19:24.437] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+[00:00:15.624] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
        please check the style of container, or the props width(100%) and height(100%),
        or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
        height and width.
-[00:19:24.437] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+[00:00:15.624] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
        please check the style of container, or the props width(100%) and height(100%),
        or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
        height and width.
-[00:19:27.446] Server  LOG      ✓ Compiled in 96ms
-[00:21:32.745] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+[00:00:31.960] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:00:31.960] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:01:58.609] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
        please check the style of container, or the props width(100%) and height(100%),
        or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
        height and width.
-[00:21:32.745] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+[00:01:58.609] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
        please check the style of container, or the props width(100%) and height(100%),
        or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
        height and width.
-[00:21:32.745] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+[00:01:58.609] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
        please check the style of container, or the props width(100%) and height(100%),
        or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
        height and width.
-[00:21:32.745] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+[00:01:58.609] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
        please check the style of container, or the props width(100%) and height(100%),
        or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
        height and width.
-[00:21:32.745] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+[00:01:58.609] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
        please check the style of container, or the props width(100%) and height(100%),
        or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
        height and width.
-[00:21:32.745] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+[00:01:58.609] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
        please check the style of container, or the props width(100%) and height(100%),
        or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
        height and width.
-[00:21:32.745] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+[00:01:58.609] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
        please check the style of container, or the props width(100%) and height(100%),
        or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
        height and width.
-[00:21:32.745] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+[00:01:58.609] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
        please check the style of container, or the props width(100%) and height(100%),
        or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
        height and width.
+[00:02:30.019] Server  ERROR    ⨯ ./app/profile/page.tsx:3:1
+Module not found: Can't resolve '@/components/navigation'
+  1 | "use client"
+  2 |
+> 3 | import { Navigation } from "@/components/navigation"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { ThemeToggle } from '@/components/theme-toggle'
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+
+Import map: aliased to relative './components/navigation' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./app/profile/page.tsx:4:1
+Module not found: Can't resolve '@/components/theme-toggle'
+  2 |
+  3 | import { Navigation } from "@/components/navigation"
+> 4 | import { ThemeToggle } from '@/components/theme-toggle'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Import map: aliased to relative './components/theme-toggle' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:30.137] Browser ERROR   ./app/profile/page.tsx:3:1
+Module not found: Can't resolve '@/components/navigation'
+  1 | "use client"
+  2 |
+> 3 | import { Navigation } from "@/components/navigation"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { ThemeToggle } from '@/components/theme-toggle'
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+
+Import map: aliased to relative './components/navigation' inside of [project]/
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:02:30.138] Browser ERROR   ./app/profile/page.tsx:4:1
+Module not found: Can't resolve '@/components/theme-toggle'
+  2 |
+  3 | import { Navigation } from "@/components/navigation"
+> 4 | import { ThemeToggle } from '@/components/theme-toggle'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Import map: aliased to relative './components/theme-toggle' inside of [project]/
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:02:30.548] Browser ERROR   ./app/profile/page.tsx:3:1
+Module not found: Can't resolve '@/components/navigation'
+  1 | "use client"
+  2 |
+> 3 | import { Navigation } from "@/components/navigation"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { ThemeToggle } from '@/components/theme-toggle'
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+
+Import map: aliased to relative './components/navigation' inside of [project]/
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:02:30.548] Browser ERROR   ./app/profile/page.tsx:4:1
+Module not found: Can't resolve '@/components/theme-toggle'
+  2 |
+  3 | import { Navigation } from "@/components/navigation"
+> 4 | import { ThemeToggle } from '@/components/theme-toggle'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Import map: aliased to relative './components/theme-toggle' inside of [project]/
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:02:30.548] Browser ERROR   ./app/profile/page.tsx:3:1
+Module not found: Can't resolve '@/components/navigation'
+  1 | "use client"
+  2 |
+> 3 | import { Navigation } from "@/components/navigation"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { ThemeToggle } from '@/components/theme-toggle'
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+
+Import map: aliased to relative './components/navigation' inside of [project]/
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:02:30.548] Browser ERROR   ./app/profile/page.tsx:4:1
+Module not found: Can't resolve '@/components/theme-toggle'
+  2 |
+  3 | import { Navigation } from "@/components/navigation"
+> 4 | import { ThemeToggle } from '@/components/theme-toggle'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Import map: aliased to relative './components/theme-toggle' inside of [project]/
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:02:30.553] Browser ERROR   ./app/profile/page.tsx:3:1
+Module not found: Can't resolve '@/components/navigation'
+  1 | "use client"
+  2 |
+> 3 | import { Navigation } from "@/components/navigation"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { ThemeToggle } from '@/components/theme-toggle'
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+
+Import map: aliased to relative './components/navigation' inside of [project]/
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:02:30.553] Browser ERROR   ./app/profile/page.tsx:4:1
+Module not found: Can't resolve '@/components/theme-toggle'
+  2 |
+  3 | import { Navigation } from "@/components/navigation"
+> 4 | import { ThemeToggle } from '@/components/theme-toggle'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Import map: aliased to relative './components/theme-toggle' inside of [project]/
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:02:30.592] Server  ERROR    ⨯ ./app/profile/page.tsx:3:1
+Module not found: Can't resolve '@/components/navigation'
+  1 | "use client"
+  2 |
+> 3 | import { Navigation } from "@/components/navigation"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { ThemeToggle } from '@/components/theme-toggle'
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+
+Import map: aliased to relative './components/navigation' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./app/profile/page.tsx:4:1
+Module not found: Can't resolve '@/components/theme-toggle'
+  2 |
+  3 | import { Navigation } from "@/components/navigation"
+> 4 | import { ThemeToggle } from '@/components/theme-toggle'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Import map: aliased to relative './components/theme-toggle' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:30.827] Browser ERROR   uncaughtError: Error: ./app/profile/page.tsx:3:1
+Module not found: Can't resolve '@/components/navigation'
+  1 | "use client"
+  2 |
+> 3 | import { Navigation } from "@/components/navigation"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { ThemeToggle } from '@/components/theme-toggle'
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+
+Import map: aliased to relative './components/navigation' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:31.002] Browser ERROR   ./app/profile/page.tsx:3:1
+Module not found: Can't resolve '@/components/navigation'
+  1 | "use client"
+  2 |
+> 3 | import { Navigation } from "@/components/navigation"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { ThemeToggle } from '@/components/theme-toggle'
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+
+Import map: aliased to relative './components/navigation' inside of [project]/
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:02:31.002] Browser ERROR   ./app/profile/page.tsx:4:1
+Module not found: Can't resolve '@/components/theme-toggle'
+  2 |
+  3 | import { Navigation } from "@/components/navigation"
+> 4 | import { ThemeToggle } from '@/components/theme-toggle'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Import map: aliased to relative './components/theme-toggle' inside of [project]/
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:02:31.002] Browser ERROR   ./app/profile/page.tsx:3:1
+Module not found: Can't resolve '@/components/navigation'
+  1 | "use client"
+  2 |
+> 3 | import { Navigation } from "@/components/navigation"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { ThemeToggle } from '@/components/theme-toggle'
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+
+Import map: aliased to relative './components/navigation' inside of [project]/
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:02:31.002] Browser ERROR   ./app/profile/page.tsx:4:1
+Module not found: Can't resolve '@/components/theme-toggle'
+  2 |
+  3 | import { Navigation } from "@/components/navigation"
+> 4 | import { ThemeToggle } from '@/components/theme-toggle'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Import map: aliased to relative './components/theme-toggle' inside of [project]/
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:02:46.545] Server  ERROR    ⨯ ./app/profile/page.tsx:3:1
+Module not found: Can't resolve '@/components/lanavigation'
+  1 | "use client"
+  2 |
+> 3 | import { Navigation } from "@/components/lanavigation"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { ThemeToggle } from '@/components/theme-toggle'
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+
+Import map: aliased to relative './components/lanavigation' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:46.546] Server  ERROR    ⨯ ./app/profile/page.tsx:3:1
+Module not found: Can't resolve '@/components/lanavigation'
+  1 | "use client"
+  2 |
+> 3 | import { Navigation } from "@/components/lanavigation"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { ThemeToggle } from '@/components/theme-toggle'
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+
+Import map: aliased to relative './components/lanavigation' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:46.548] Server  ERROR    ⨯ ./app/profile/page.tsx:3:1
+Module not found: Can't resolve '@/components/lanavigation'
+  1 | "use client"
+  2 |
+> 3 | import { Navigation } from "@/components/lanavigation"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { ThemeToggle } from '@/components/theme-toggle'
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+
+Import map: aliased to relative './components/lanavigation' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:46.548] Server  ERROR    ⨯ ./app/profile/page.tsx:3:1
+Module not found: Can't resolve '@/components/lanavigation'
+  1 | "use client"
+  2 |
+> 3 | import { Navigation } from "@/components/lanavigation"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { ThemeToggle } from '@/components/theme-toggle'
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+
+Import map: aliased to relative './components/lanavigation' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:46.550] Server  ERROR    ⨯ ./app/profile/page.tsx:4:1
+Module not found: Can't resolve '@/components/theme-toggle'
+  2 |
+  3 | import { Navigation } from "@/components/lanavigation"
+> 4 | import { ThemeToggle } from '@/components/theme-toggle'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Import map: aliased to relative './components/theme-toggle' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:46.552] Server  ERROR    ⨯ ./app/profile/page.tsx:4:1
+Module not found: Can't resolve '@/components/theme-toggle'
+  2 |
+  3 | import { Navigation } from "@/components/lanavigation"
+> 4 | import { ThemeToggle } from '@/components/theme-toggle'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Import map: aliased to relative './components/theme-toggle' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:46.553] Server  ERROR    ⨯ ./app/profile/page.tsx:4:1
+Module not found: Can't resolve '@/components/theme-toggle'
+  2 |
+  3 | import { Navigation } from "@/components/lanavigation"
+> 4 | import { ThemeToggle } from '@/components/theme-toggle'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Import map: aliased to relative './components/theme-toggle' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:46.555] Server  ERROR    ⨯ ./app/profile/page.tsx:4:1
+Module not found: Can't resolve '@/components/theme-toggle'
+  2 |
+  3 | import { Navigation } from "@/components/lanavigation"
+> 4 | import { ThemeToggle } from '@/components/theme-toggle'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Import map: aliased to relative './components/theme-toggle' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:46.741] Browser ERROR   ./app/profile/page.tsx:3:1
+Module not found: Can't resolve '@/components/lanavigation'
+  1 | "use client"
+  2 |
+> 3 | import { Navigation } from "@/components/lanavigation"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { ThemeToggle } from '@/components/theme-toggle'
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+
+Import map: aliased to relative './components/lanavigation' inside of [project]/
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:02:46.741] Browser ERROR   ./app/profile/page.tsx:4:1
+Module not found: Can't resolve '@/components/theme-toggle'
+  2 |
+  3 | import { Navigation } from "@/components/lanavigation"
+> 4 | import { ThemeToggle } from '@/components/theme-toggle'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Import map: aliased to relative './components/theme-toggle' inside of [project]/
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:02:47.054] Server  ERROR    ⨯ ./app/profile/page.tsx:3:1
+Module not found: Can't resolve '@/components/layonavigation'
+  1 | "use client"
+  2 |
+> 3 | import { Navigation } from "@/components/layonavigation"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { ThemeToggle } from '@/components/theme-toggle'
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+
+Import map: aliased to relative './components/layonavigation' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:47.056] Server  ERROR    ⨯ ./app/profile/page.tsx:3:1
+Module not found: Can't resolve '@/components/layonavigation'
+  1 | "use client"
+  2 |
+> 3 | import { Navigation } from "@/components/layonavigation"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { ThemeToggle } from '@/components/theme-toggle'
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+
+Import map: aliased to relative './components/layonavigation' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:47.057] Server  ERROR    ⨯ ./app/profile/page.tsx:3:1
+Module not found: Can't resolve '@/components/layonavigation'
+  1 | "use client"
+  2 |
+> 3 | import { Navigation } from "@/components/layonavigation"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { ThemeToggle } from '@/components/theme-toggle'
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+
+Import map: aliased to relative './components/layonavigation' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:47.058] Server  ERROR    ⨯ ./app/profile/page.tsx:3:1
+Module not found: Can't resolve '@/components/layonavigation'
+  1 | "use client"
+  2 |
+> 3 | import { Navigation } from "@/components/layonavigation"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { ThemeToggle } from '@/components/theme-toggle'
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+
+Import map: aliased to relative './components/layonavigation' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:47.058] Server  ERROR    ⨯ ./app/profile/page.tsx:4:1
+Module not found: Can't resolve '@/components/theme-toggle'
+  2 |
+  3 | import { Navigation } from "@/components/layonavigation"
+> 4 | import { ThemeToggle } from '@/components/theme-toggle'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Import map: aliased to relative './components/theme-toggle' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:47.061] Server  ERROR    ⨯ ./app/profile/page.tsx:4:1
+Module not found: Can't resolve '@/components/theme-toggle'
+  2 |
+  3 | import { Navigation } from "@/components/layonavigation"
+> 4 | import { ThemeToggle } from '@/components/theme-toggle'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Import map: aliased to relative './components/theme-toggle' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:47.062] Server  ERROR    ⨯ ./app/profile/page.tsx:4:1
+Module not found: Can't resolve '@/components/theme-toggle'
+  2 |
+  3 | import { Navigation } from "@/components/layonavigation"
+> 4 | import { ThemeToggle } from '@/components/theme-toggle'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Import map: aliased to relative './components/theme-toggle' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:47.063] Server  ERROR    ⨯ ./app/profile/page.tsx:4:1
+Module not found: Can't resolve '@/components/theme-toggle'
+  2 |
+  3 | import { Navigation } from "@/components/layonavigation"
+> 4 | import { ThemeToggle } from '@/components/theme-toggle'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Import map: aliased to relative './components/theme-toggle' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:47.395] Server  ERROR    ⨯ ./app/profile/page.tsx:3:1
+Module not found: Can't resolve '@/components/layoutnavigation'
+  1 | "use client"
+  2 |
+> 3 | import { Navigation } from "@/components/layoutnavigation"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { ThemeToggle } from '@/components/theme-toggle'
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+
+Import map: aliased to relative './components/layoutnavigation' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:47.396] Server  ERROR    ⨯ ./app/profile/page.tsx:3:1
+Module not found: Can't resolve '@/components/layoutnavigation'
+  1 | "use client"
+  2 |
+> 3 | import { Navigation } from "@/components/layoutnavigation"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { ThemeToggle } from '@/components/theme-toggle'
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+
+Import map: aliased to relative './components/layoutnavigation' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:47.397] Server  ERROR    ⨯ ./app/profile/page.tsx:3:1
+Module not found: Can't resolve '@/components/layoutnavigation'
+  1 | "use client"
+  2 |
+> 3 | import { Navigation } from "@/components/layoutnavigation"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { ThemeToggle } from '@/components/theme-toggle'
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+
+Import map: aliased to relative './components/layoutnavigation' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:47.398] Server  ERROR    ⨯ ./app/profile/page.tsx:3:1
+Module not found: Can't resolve '@/components/layoutnavigation'
+  1 | "use client"
+  2 |
+> 3 | import { Navigation } from "@/components/layoutnavigation"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { ThemeToggle } from '@/components/theme-toggle'
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+
+Import map: aliased to relative './components/layoutnavigation' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:47.399] Server  ERROR    ⨯ ./app/profile/page.tsx:4:1
+Module not found: Can't resolve '@/components/theme-toggle'
+  2 |
+  3 | import { Navigation } from "@/components/layoutnavigation"
+> 4 | import { ThemeToggle } from '@/components/theme-toggle'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Import map: aliased to relative './components/theme-toggle' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:47.401] Server  ERROR    ⨯ ./app/profile/page.tsx:4:1
+Module not found: Can't resolve '@/components/theme-toggle'
+  2 |
+  3 | import { Navigation } from "@/components/layoutnavigation"
+> 4 | import { ThemeToggle } from '@/components/theme-toggle'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Import map: aliased to relative './components/theme-toggle' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:47.403] Server  ERROR    ⨯ ./app/profile/page.tsx:4:1
+Module not found: Can't resolve '@/components/theme-toggle'
+  2 |
+  3 | import { Navigation } from "@/components/layoutnavigation"
+> 4 | import { ThemeToggle } from '@/components/theme-toggle'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Import map: aliased to relative './components/theme-toggle' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:47.403] Server  ERROR    ⨯ ./app/profile/page.tsx:4:1
+Module not found: Can't resolve '@/components/theme-toggle'
+  2 |
+  3 | import { Navigation } from "@/components/layoutnavigation"
+> 4 | import { ThemeToggle } from '@/components/theme-toggle'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Import map: aliased to relative './components/theme-toggle' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:47.740] Browser ERROR   ./app/profile/page.tsx:3:1
+Module not found: Can't resolve '@/components/layonavigation'
+  1 | "use client"
+  2 |
+> 3 | import { Navigation } from "@/components/layonavigation"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { ThemeToggle } from '@/components/theme-toggle'
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+
+Import map: aliased to relative './components/layonavigation' inside of [project]/
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:02:47.740] Browser ERROR   ./app/profile/page.tsx:4:1
+Module not found: Can't resolve '@/components/theme-toggle'
+  2 |
+  3 | import { Navigation } from "@/components/layonavigation"
+> 4 | import { ThemeToggle } from '@/components/theme-toggle'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Import map: aliased to relative './components/theme-toggle' inside of [project]/
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:02:47.740] Browser ERROR   ./app/profile/page.tsx:3:1
+Module not found: Can't resolve '@/components/layoutnavigation'
+  1 | "use client"
+  2 |
+> 3 | import { Navigation } from "@/components/layoutnavigation"
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { ThemeToggle } from '@/components/theme-toggle'
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+
+Import map: aliased to relative './components/layoutnavigation' inside of [project]/
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:02:47.740] Browser ERROR   ./app/profile/page.tsx:4:1
+Module not found: Can't resolve '@/components/theme-toggle'
+  2 |
+  3 | import { Navigation } from "@/components/layoutnavigation"
+> 4 | import { ThemeToggle } from '@/components/theme-toggle'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Import map: aliased to relative './components/theme-toggle' inside of [project]/
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:02:47.914] Server  ERROR    ⨯ ./app/profile/page.tsx:4:1
+Module not found: Can't resolve '@/components/theme-toggle'
+  2 |
+  3 | import { Navigation } from "@/components/layout/navigation"
+> 4 | import { ThemeToggle } from '@/components/theme-toggle'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Import map: aliased to relative './components/theme-toggle' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:47.915] Server  ERROR    ⨯ ./app/profile/page.tsx:4:1
+Module not found: Can't resolve '@/components/theme-toggle'
+  2 |
+  3 | import { Navigation } from "@/components/layout/navigation"
+> 4 | import { ThemeToggle } from '@/components/theme-toggle'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Import map: aliased to relative './components/theme-toggle' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:47.917] Server  ERROR    ⨯ ./app/profile/page.tsx:4:1
+Module not found: Can't resolve '@/components/theme-toggle'
+  2 |
+  3 | import { Navigation } from "@/components/layout/navigation"
+> 4 | import { ThemeToggle } from '@/components/theme-toggle'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Import map: aliased to relative './components/theme-toggle' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:47.918] Server  ERROR    ⨯ ./app/profile/page.tsx:4:1
+Module not found: Can't resolve '@/components/theme-toggle'
+  2 |
+  3 | import { Navigation } from "@/components/layout/navigation"
+> 4 | import { ThemeToggle } from '@/components/theme-toggle'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Import map: aliased to relative './components/theme-toggle' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:48.739] Browser ERROR   ./app/profile/page.tsx:4:1
+Module not found: Can't resolve '@/components/theme-toggle'
+  2 |
+  3 | import { Navigation } from "@/components/layout/navigation"
+> 4 | import { ThemeToggle } from '@/components/theme-toggle'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Import map: aliased to relative './components/theme-toggle' inside of [project]/
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:02:50.606] Server  ERROR    ⨯ ./app/profile/page.tsx:4:1
+Module not found: Can't resolve '@/components/ltheme-toggle'
+  2 |
+  3 | import { Navigation } from "@/components/layout/navigation"
+> 4 | import { ThemeToggle } from '@/components/ltheme-toggle'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Import map: aliased to relative './components/ltheme-toggle' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:50.609] Server  ERROR    ⨯ ./app/profile/page.tsx:4:1
+Module not found: Can't resolve '@/components/ltheme-toggle'
+  2 |
+  3 | import { Navigation } from "@/components/layout/navigation"
+> 4 | import { ThemeToggle } from '@/components/ltheme-toggle'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Import map: aliased to relative './components/ltheme-toggle' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:50.610] Server  ERROR    ⨯ ./app/profile/page.tsx:4:1
+Module not found: Can't resolve '@/components/ltheme-toggle'
+  2 |
+  3 | import { Navigation } from "@/components/layout/navigation"
+> 4 | import { ThemeToggle } from '@/components/ltheme-toggle'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Import map: aliased to relative './components/ltheme-toggle' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:50.611] Server  ERROR    ⨯ ./app/profile/page.tsx:4:1
+Module not found: Can't resolve '@/components/ltheme-toggle'
+  2 |
+  3 | import { Navigation } from "@/components/layout/navigation"
+> 4 | import { ThemeToggle } from '@/components/ltheme-toggle'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Import map: aliased to relative './components/ltheme-toggle' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:50.712] Server  ERROR    ⨯ ./app/profile/page.tsx:4:1
+Module not found: Can't resolve '@/components/latheme-toggle'
+  2 |
+  3 | import { Navigation } from "@/components/layout/navigation"
+> 4 | import { ThemeToggle } from '@/components/latheme-toggle'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Import map: aliased to relative './components/latheme-toggle' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:50.713] Server  ERROR    ⨯ ./app/profile/page.tsx:4:1
+Module not found: Can't resolve '@/components/latheme-toggle'
+  2 |
+  3 | import { Navigation } from "@/components/layout/navigation"
+> 4 | import { ThemeToggle } from '@/components/latheme-toggle'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Import map: aliased to relative './components/latheme-toggle' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:50.714] Server  ERROR    ⨯ ./app/profile/page.tsx:4:1
+Module not found: Can't resolve '@/components/latheme-toggle'
+  2 |
+  3 | import { Navigation } from "@/components/layout/navigation"
+> 4 | import { ThemeToggle } from '@/components/latheme-toggle'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Import map: aliased to relative './components/latheme-toggle' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:50.715] Server  ERROR    ⨯ ./app/profile/page.tsx:4:1
+Module not found: Can't resolve '@/components/latheme-toggle'
+  2 |
+  3 | import { Navigation } from "@/components/layout/navigation"
+> 4 | import { ThemeToggle } from '@/components/latheme-toggle'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Import map: aliased to relative './components/latheme-toggle' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:50.861] Server  ERROR    ⨯ ./app/profile/page.tsx:4:1
+Module not found: Can't resolve '@/components/laytheme-toggle'
+  2 |
+  3 | import { Navigation } from "@/components/layout/navigation"
+> 4 | import { ThemeToggle } from '@/components/laytheme-toggle'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Import map: aliased to relative './components/laytheme-toggle' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:50.862] Server  ERROR    ⨯ ./app/profile/page.tsx:4:1
+Module not found: Can't resolve '@/components/laytheme-toggle'
+  2 |
+  3 | import { Navigation } from "@/components/layout/navigation"
+> 4 | import { ThemeToggle } from '@/components/laytheme-toggle'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Import map: aliased to relative './components/laytheme-toggle' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:50.863] Server  ERROR    ⨯ ./app/profile/page.tsx:4:1
+Module not found: Can't resolve '@/components/laytheme-toggle'
+  2 |
+  3 | import { Navigation } from "@/components/layout/navigation"
+> 4 | import { ThemeToggle } from '@/components/laytheme-toggle'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Import map: aliased to relative './components/laytheme-toggle' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:50.864] Server  ERROR    ⨯ ./app/profile/page.tsx:4:1
+Module not found: Can't resolve '@/components/laytheme-toggle'
+  2 |
+  3 | import { Navigation } from "@/components/layout/navigation"
+> 4 | import { ThemeToggle } from '@/components/laytheme-toggle'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Import map: aliased to relative './components/laytheme-toggle' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:51.335] Server  ERROR    ⨯ ./app/profile/page.tsx:4:1
+Module not found: Can't resolve '@/components/layout'
+  2 |
+  3 | import { Navigation } from "@/components/layout/navigation"
+> 4 | import { ThemeToggle } from '@/components/layout'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Import map: aliased to relative './components/layout' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:51.336] Server  ERROR    ⨯ ./app/profile/page.tsx:4:1
+Module not found: Can't resolve '@/components/layout'
+  2 |
+  3 | import { Navigation } from "@/components/layout/navigation"
+> 4 | import { ThemeToggle } from '@/components/layout'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Import map: aliased to relative './components/layout' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:51.338] Server  ERROR    ⨯ ./app/profile/page.tsx:4:1
+Module not found: Can't resolve '@/components/layout'
+  2 |
+  3 | import { Navigation } from "@/components/layout/navigation"
+> 4 | import { ThemeToggle } from '@/components/layout'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Import map: aliased to relative './components/layout' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:51.339] Server  ERROR    ⨯ ./app/profile/page.tsx:4:1
+Module not found: Can't resolve '@/components/layout'
+  2 |
+  3 | import { Navigation } from "@/components/layout/navigation"
+> 4 | import { ThemeToggle } from '@/components/layout'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Import map: aliased to relative './components/layout' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:51.740] Browser ERROR   ./app/profile/page.tsx:4:1
+Module not found: Can't resolve '@/components/ltheme-toggle'
+  2 |
+  3 | import { Navigation } from "@/components/layout/navigation"
+> 4 | import { ThemeToggle } from '@/components/ltheme-toggle'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Import map: aliased to relative './components/ltheme-toggle' inside of [project]/
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:02:51.740] Browser ERROR   ./app/profile/page.tsx:4:1
+Module not found: Can't resolve '@/components/latheme-toggle'
+  2 |
+  3 | import { Navigation } from "@/components/layout/navigation"
+> 4 | import { ThemeToggle } from '@/components/latheme-toggle'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Import map: aliased to relative './components/latheme-toggle' inside of [project]/
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:02:51.740] Browser ERROR   ./app/profile/page.tsx:4:1
+Module not found: Can't resolve '@/components/laytheme-toggle'
+  2 |
+  3 | import { Navigation } from "@/components/layout/navigation"
+> 4 | import { ThemeToggle } from '@/components/laytheme-toggle'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Import map: aliased to relative './components/laytheme-toggle' inside of [project]/
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:02:51.740] Browser ERROR   ./app/profile/page.tsx:4:1
+Module not found: Can't resolve '@/components/layout'
+  2 |
+  3 | import { Navigation } from "@/components/layout/navigation"
+> 4 | import { ThemeToggle } from '@/components/layout'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Import map: aliased to relative './components/layout' inside of [project]/
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:02:52.178] Server  ERROR    ⨯ ./app/profile/page.tsx:4:1
+Module not found: Can't resolve '@/components/layout/'
+  2 |
+  3 | import { Navigation } from "@/components/layout/navigation"
+> 4 | import { ThemeToggle } from '@/components/layout/'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Import map: aliased to relative './components/layout/' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:52.179] Server  ERROR    ⨯ ./app/profile/page.tsx:4:1
+Module not found: Can't resolve '@/components/layout/'
+  2 |
+  3 | import { Navigation } from "@/components/layout/navigation"
+> 4 | import { ThemeToggle } from '@/components/layout/'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Import map: aliased to relative './components/layout/' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:52.180] Server  ERROR    ⨯ ./app/profile/page.tsx:4:1
+Module not found: Can't resolve '@/components/layout/'
+  2 |
+  3 | import { Navigation } from "@/components/layout/navigation"
+> 4 | import { ThemeToggle } from '@/components/layout/'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Import map: aliased to relative './components/layout/' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:52.181] Server  ERROR    ⨯ ./app/profile/page.tsx:4:1
+Module not found: Can't resolve '@/components/layout/'
+  2 |
+  3 | import { Navigation } from "@/components/layout/navigation"
+> 4 | import { ThemeToggle } from '@/components/layout/'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Import map: aliased to relative './components/layout/' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:02:52.740] Browser ERROR   ./app/profile/page.tsx:4:1
+Module not found: Can't resolve '@/components/layout/'
+  2 |
+  3 | import { Navigation } from "@/components/layout/navigation"
+> 4 | import { ThemeToggle } from '@/components/layout/'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Import map: aliased to relative './components/layout/' inside of [project]/
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:02:55.551] Server  LOG      ✓ Compiled in 94ms
+[00:06:45.423] Server  LOG      ✓ Compiled in 150ms
+[00:10:44.604] Server  LOG      ✓ Compiled in 118ms
+[00:11:11.368] Server  LOG      ✓ Compiled in 117ms
+[00:11:31.169] Server  LOG      ✓ Compiled in 105ms
+[01:21:04.317] Browser ERROR   {}
+[01:21:05.316] Browser ERROR   {}
+[01:38:39.110] Browser ERROR   {}
+[01:38:40.112] Browser ERROR   {}
+[01:38:41.112] Browser ERROR   {}
+[01:38:42.110] Browser ERROR   {}
+[01:38:43.110] Browser ERROR   {}
+[01:54:42.961] Browser ERROR   {}
+[01:54:44.888] Browser ERROR   {}
+[01:54:46.888] Browser ERROR   {}
+[01:54:47.892] Browser ERROR   {}
+[02:12:12.698] Browser ERROR   {}
+[02:12:13.695] Browser ERROR   {}
+[02:13:35.517] Browser ERROR   {}
+[02:13:36.492] Browser ERROR   {}
+[02:17:23.844] Browser ERROR   {}
+[02:17:24.833] Browser ERROR   {}
+[02:17:33.838] Browser ERROR   {}
+[02:18:40.530] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[02:18:40.531] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[02:20:51.747] Server  LOG      ✓ Compiled in 216ms
+[02:21:21.298] Server  LOG      ✓ Compiled in 65ms
+[02:21:40.608] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[02:21:40.608] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[02:23:04.415] Server  ERROR    ⨯ Error: TypeError: fetch failed
+[02:23:04.832] Browser ERROR   uncaughtError: Error: TypeError: fetch failed
+[02:29:31.614] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[02:29:31.614] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[02:29:31.614] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[02:29:31.614] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[02:29:31.614] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[02:29:31.614] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[02:29:31.614] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[02:29:31.614] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[02:32:31.638] Server  LOG      ✓ Compiled in 422ms
+[02:32:31.832] Browser ERROR   React instrumentation encountered an error: %o {}
+[02:33:16.071] Server  LOG      ✓ Compiled in 75ms
+[02:33:16.502] Server  LOG      ✓ Compiled in 42ms
+[02:33:16.887] Server  LOG      ✓ Compiled in 39ms
+[02:33:17.170] Server  LOG      ✓ Compiled in 29ms
+[02:33:17.345] Server  LOG      ✓ Compiled in 29ms
+[02:33:18.089] Server  LOG      ✓ Compiled in 55ms
+[02:33:18.392] Server  LOG      ✓ Compiled in 38ms
+[02:33:18.448] Server  LOG      ✓ Compiled in 26ms
+[02:33:18.720] Server  LOG      ✓ Compiled in 26ms
+[02:33:48.120] Server  LOG      ✓ Compiled in 84ms
+[02:34:18.200] Server  LOG      ✓ Compiled in 280ms
+[02:34:24.704] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <MenuProvider scope={{Menu:[...], ...}} open={false} onOpenChange={function useCallbackRef.useMemo} content={null} ...>
+      <MenuProvider scope={{Menu:[...], ...}} onClose={function Menu.useCallback} isUsingKeyboardRef={{current:false}} ...>
+        <DropdownMenuTrigger asChild={true}>
+          <DropdownMenuTrigger data-slot="dropdown-m..." asChild={true}>
+            <MenuAnchor asChild={true} __scopeMenu={{Menu:[...], ...}}>
+              <PopperAnchor __scopePopper={{Menu:[...], ...}} asChild={true} ref={null}>
+                <Primitive.div asChild={true} ref={function}>
+                  <Slot ref={function}>
+                    <SlotClone ref={function}>
+                      <Primitive.button type="button" id="radix-_R_7..." aria-haspopup="menu" aria-expanded={false} ...>
+                        <Slot type="button" id="radix-_R_7..." aria-haspopup="menu" aria-expanded={false} ...>
+                          <SlotClone type="button" id="radix-_R_7..." aria-haspopup="menu" aria-expanded={false} ...>
+                            <Button variant="ghost" size="icon" className="rounded-full" type="button" id="radix-_R_7..." ...>
+                              <button
+                                data-slot="dropdown-menu-trigger"
+                                className={"inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm f..."}
+                                type="button"
++                               id="radix-_R_75esnelb_"
+-                               id="radix-_R_r5esnelb_"
+                                aria-haspopup="menu"
+                                aria-expanded={false}
+                                aria-controls={undefined}
+                                data-state="closed"
+                                data-disabled={undefined}
+                                disabled={false}
+                                onPointerDown={function handleEvent}
+                                onKeyDown={function handleEvent}
+                                ref={function}
+                              >
+        ...
+
+[02:35:17.176] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[02:35:17.176] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[02:35:17.176] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[02:35:17.176] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[02:35:17.176] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[02:35:17.176] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[02:35:17.176] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[02:35:17.176] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[02:39:19.041] Server  LOG      ✓ Compiled in 186ms
+[02:40:56.612] Server  LOG      ✓ Compiled in 56ms
+[02:41:52.775] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[02:41:52.775] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[02:41:52.775] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[02:41:52.776] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[02:41:52.776] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[02:41:52.776] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[02:41:52.776] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[02:41:52.776] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[02:43:19.850] Server  LOG      ✓ Compiled in 56ms
+[02:43:59.501] Server  LOG      ✓ Compiled in 52ms

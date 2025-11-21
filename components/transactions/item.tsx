@@ -5,7 +5,7 @@ import { ArrowUpIcon, ArrowDownIcon, Trash2Icon, Edit2Icon } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { toast } from "sonner"
 import { useState } from "react"
-import { EditTransactionForm } from "@/components/edit-transaction-form"
+import { EditTransactionForm } from "./edit-form"
 import {
   Dialog,
   DialogContent,
@@ -27,9 +27,10 @@ export function TransactionItem({
   const [isDeleted, setIsDeleted] = useState(false)
   const [isEditing, setIsEditing] = useState(false)
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false)
+  const [localTransaction, setLocalTransaction] = useState(transaction)
   
-  const isIncome = transaction.type === "income"
-  const date = new Date(transaction.date)
+  const isIncome = localTransaction.type === "income"
+  const date = new Date(localTransaction.date)
   const formattedDate = date.toLocaleDateString("en-US", {
     month: "short",
     day: "numeric",
@@ -37,7 +38,7 @@ export function TransactionItem({
 
   const handleDelete = async () => {
     try {
-      const response = await fetch(`/api/transactions/delete/${transaction.id}`, {
+      const response = await fetch(`/api/transactions/delete/${localTransaction.id}`, {
         method: 'DELETE',
       })
       
@@ -56,6 +57,7 @@ export function TransactionItem({
   }
 
   const handleUpdate = (updatedTransaction: Transaction) => {
+    setLocalTransaction(updatedTransaction)
     if (onUpdate) {
       onUpdate(updatedTransaction)
     }
@@ -82,9 +84,9 @@ export function TransactionItem({
             )}
           </div>
           <div>
-            <p className="font-medium">{transaction.reason}</p>
+            <p className="font-medium">{localTransaction.reason}</p>
             <p className="text-sm text-muted-foreground">
-              {transaction.category} • {formattedDate}
+              {localTransaction.category} • {formattedDate}
             </p>
           </div>
         </div>
@@ -94,7 +96,7 @@ export function TransactionItem({
               isIncome ? "text-green-600" : "text-red-600"
             }`}
           >
-            {isIncome ? "+" : "-"}${transaction.amount.toLocaleString()}
+            {isIncome ? "+" : "-"}${localTransaction.amount.toLocaleString()}
           </p>
           <div className="flex gap-2">
             <Button
@@ -121,7 +123,7 @@ export function TransactionItem({
             <DialogTitle>Edit Transaction</DialogTitle>
           </DialogHeader>
           <EditTransactionForm 
-            transaction={transaction} 
+            transaction={localTransaction} 
             onClose={() => setIsEditing(false)}
             onUpdate={handleUpdate}
           />

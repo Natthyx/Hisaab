@@ -1,22 +1,15 @@
-import { createClient } from '@/lib/supabase/server'
 import { NextResponse } from 'next/server'
 import { z } from 'zod'
-
-const listTransactionsSchema = z.object({
-  filter: z.enum(['daily', 'weekly', 'monthly', 'yearly']).optional(),
-  search: z.string().optional(),
-  category: z.string().optional(),
-  accountId: z.string().optional(), // Optional account ID filter
-  dateRange: z.object({
-    start: z.string().optional(), // ISO string
-    end: z.string().optional(),   // ISO string
-  }).optional(),
-})
+import { 
+  getUserFromRequest, 
+  createSuccessResponse, 
+  createErrorResponse
+} from '@/lib/api/index'
+import { listTransactionsForUser } from '@/lib/transactions/service'
+import { getAccountById, getUserAccounts } from '@/lib/accounts/service'
 
 export async function GET(request: Request) {
   try {
-    const supabase = await createClient()
-    
     const { searchParams } = new URL(request.url)
     
     // Parse query parameters
@@ -28,125 +21,43 @@ export async function GET(request: Request) {
     const endDate = searchParams.get('endDate') || undefined
     
     // Get the current user
-    const { data: { user }, error: userError } = await supabase.auth.getUser()
+    const { user, error: userError } = await getUserFromRequest(request)
     
     if (userError || !user) {
-      return NextResponse.json(
-        { error: 'Unauthorized' },
-        { status: 401 }
-      )
+      return createErrorResponse('Unauthorized', 401)
     }
     
     // Get user's accounts
     let accountIds: string[] = []
     
     if (accountId) {
-      // If specific account requested, verify it belongs to user
-      const { data: accountData, error: accountError } = await supabase
-        .from('accounts')
-        .select('id')
-        .eq('id', accountId)
-        .eq('user_id', user.id)
-        .single()
-      
-      if (accountError || !accountData) {
-        return NextResponse.json(
-          { error: 'Account not found or unauthorized' },
-          { status: 404 }
-        )
+      // If specific account requested, verify it belongs to user using service function
+      const account = await getAccountById(accountId)
+      if (!account || account.user_id !== user.id) {
+        return createErrorResponse('Account not found or unauthorized', 404)
       }
       
       accountIds = [accountId]
     } else {
-      // Get all user's accounts
-      const { data: accounts, error: accountsError } = await supabase
-        .from('accounts')
-        .select('id')
-        .eq('user_id', user.id)
-      
-      if (accountsError) {
-        return NextResponse.json(
-          { error: 'Failed to get user accounts' },
-          { status: 500 }
-        )
-      }
-      
+      // Get all user's accounts using service function
+      const accounts = await getUserAccounts(user.id)
       accountIds = accounts.map(account => account.id)
     }
     
-    // Build the query
-    let query = supabase
-      .from('transactions')
-      .select('*')
-      .in('account_id', accountIds)
-    
-    // Apply search filter
-    if (search) {
-      query = query.ilike('reason', `%${search}%`)
+    // List transactions using the service function
+    const filters = {
+      search,
+      category,
+      startDate,
+      endDate,
+      filter
     }
     
-    // Apply category filter
-    if (category) {
-      query = query.eq('category', category)
-    }
+    const data = await listTransactionsForUser(accountIds, filters)
     
-    // Apply date range filter
-    if (startDate) {
-      query = query.gte('date', new Date(startDate).toISOString())
-    }
-    
-    if (endDate) {
-      query = query.lte('date', new Date(endDate).toISOString())
-    }
-    
-    // Apply period filter
-    const now = new Date()
-    if (filter) {
-      let startOfDay, endOfDay
-      
-      switch (filter) {
-        case 'daily':
-          startOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate())
-          endOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23, 59, 59, 999)
-          break
-        case 'weekly':
-          const firstDayOfWeek = new Date(now)
-          firstDayOfWeek.setDate(now.getDate() - now.getDay())
-          startOfDay = new Date(firstDayOfWeek.getFullYear(), firstDayOfWeek.getMonth(), firstDayOfWeek.getDate())
-          endOfDay = new Date(firstDayOfWeek.getFullYear(), firstDayOfWeek.getMonth(), firstDayOfWeek.getDate() + 6, 23, 59, 59, 999)
-          break
-        case 'monthly':
-          startOfDay = new Date(now.getFullYear(), now.getMonth(), 1)
-          endOfDay = new Date(now.getFullYear(), now.getMonth() + 1, 0, 23, 59, 59, 999)
-          break
-        case 'yearly':
-          startOfDay = new Date(now.getFullYear(), 0, 1)
-          endOfDay = new Date(now.getFullYear(), 11, 31, 23, 59, 59, 999)
-          break
-      }
-      
-      if (startOfDay && endOfDay) {
-        query = query.gte('date', startOfDay.toISOString())
-        query = query.lte('date', endOfDay.toISOString())
-      }
-    }
-    
-    // Order by date descending
-    const { data, error } = await query
-      .order('date', { ascending: false })
-    
-    if (error) {
-      return NextResponse.json(
-        { error: error.message },
-        { status: 500 }
-      )
-    }
-    
-    return NextResponse.json({ success: true, data })
-  } catch (error) {
-    return NextResponse.json(
-      { error: 'An unexpected error occurred' },
-      { status: 500 }
-    )
+    return createSuccessResponse(data)
+  } catch (error: any) {
+    console.error('Error listing transactions:', error)
+    return createErrorResponse(error.message || 'An unexpected error occurred', 500)
   }
 }

@@ -4,7 +4,7 @@ import Link from "next/link"
 import { usePathname } from 'next/navigation'
 import { HomeIcon, PlusCircleIcon, ListIcon, BarChart3Icon, WalletIcon } from 'lucide-react'
 import { cn } from "@/lib/utils"
-import { ProfileIcon } from "@/components/profile-icon"
+import { ProfileIcon } from "./profile-icon"
 
 const navItems = [
   { href: "/dashboard", label: "Dashboard", icon: HomeIcon },
@@ -18,8 +18,8 @@ export function Navigation() {
   const pathname = usePathname()
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 z-50 border-t bg-background md:static md:h-screen md:w-64 md:border-r md:border-t-0">
-      <div className="flex h-16 items-center justify-around md:h-auto md:flex-col md:gap-1 md:p-2">
+    <nav className="fixed bottom-0 left-0 right-0 z-50 border-t bg-background md:fixed md:left-0 md:top-0 md:h-screen md:w-64 md:border-r md:border-t-0">
+      <div className="flex h-16 items-center justify-around md:h-full md:flex-col md:gap-1 md:p-2">
         <div className="hidden md:block md:mb-4 md:mt-2">
           <h1 className="text-2xl font-bold text-indigo-600">Hisaab</h1>
         </div>

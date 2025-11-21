@@ -1,12 +1,12 @@
 "use client"
 
-import { Navigation } from "@/components/navigation"
-import { ThemeToggle } from '@/components/theme-toggle'
+import { Navigation } from "@/components/layout/navigation"
+import { ThemeToggle } from '@/components/layout/theme-toggle'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { signOut } from '@/lib/actions/auth'
+import { fetchUserProfile, updateProfile, changePassword } from '@/lib/auth/client-service'
 import { 
   UserIcon, 
   MailIcon, 
@@ -53,32 +53,37 @@ export default function ProfilePage() {
         setUser(user)
 
         // Get user's full name from the users table
-        const { data: userData, error: userError } = await supabase
-          .from('users')
-          .select('full_name')
-          .eq('id', user.id)
-          .single()
-        
-        if (!userError && userData) {
-          setFullName(userData.full_name || "")
-        } else if (user.user_metadata?.full_name) {
-          // Fallback to user metadata if available
-          setFullName(user.user_metadata.full_name)
+        try {
+          const userData = await fetchUserProfile(user.id)
+          if (userData) {
+            setFullName(userData.full_name || "")
+          } else if (user.user_metadata?.full_name) {
+            // Fallback to user metadata if available
+            setFullName(user.user_metadata.full_name)
+          }
+        } catch (error) {
+          // If we can't fetch user profile, fallback to user metadata
+          if (user.user_metadata?.full_name) {
+            setFullName(user.user_metadata.full_name)
+          }
         }
 
         // Get user's accounts
-        const { data: accountsData, error: accountsError } = await supabase
-          .from('accounts')
-          .select('*')
-          .eq('user_id', user.id)
-          .order('name')
-        
-        if (accountsError) {
+        try {
+          const { data: accountsData, error: accountsError } = await supabase
+            .from('accounts')
+            .select('id, name, initial_balance, created_at')
+            .eq('user_id', user.id)
+            .order('name')
+          
+          if (accountsError) {
+            throw new Error(accountsError.message)
+          }
+          
+          setAccounts(accountsData || [])
+        } catch (error) {
           toast.error('Failed to load accounts')
-          return
         }
-
-        setAccounts(accountsData || [])
       } catch (error) {
         toast.error('An unexpected error occurred')
       }
@@ -92,40 +97,10 @@ export default function ProfilePage() {
     setIsUpdating(true)
     
     try {
-      // Update the user's full name in our database
-      const formData = new FormData()
-      formData.append('full_name', fullName)
-      
-      const response = await fetch('/api/users/update', {
-        method: 'POST',
-        body: formData,
-      })
-      
-      const result = await response.json()
-      
-      if (!response.ok || !result.success) {
-        toast.error(result.error || 'Failed to update profile')
-        setIsUpdating(false)
-        return
-      }
-      
-      // Also update the Supabase auth user metadata
-      const { error: updateError } = await supabase.auth.updateUser({
-        data: {
-          full_name: fullName,
-          display_name: fullName
-        }
-      })
-      
-      if (updateError) {
-        toast.error('Profile updated in database but failed to update display name')
-        setIsUpdating(false)
-        return
-      }
-      
+      await updateProfile(user.id, fullName)
       toast.success('Profile updated successfully')
-    } catch (error) {
-      toast.error('An unexpected error occurred')
+    } catch (error: any) {
+      toast.error(error.message || 'An unexpected error occurred')
     } finally {
       setIsUpdating(false)
     }
@@ -148,29 +123,7 @@ export default function ProfilePage() {
     setIsChangingPassword(true)
     
     try {
-      // First, we need to re-authenticate the user with their current password
-      // This is required by Supabase to change the password
-      const { data: signInData, error: signInError } = await supabase.auth.signInWithPassword({
-        email: user.email,
-        password: currentPassword,
-      })
-      
-      if (signInError) {
-        toast.error('Current password is incorrect')
-        setIsChangingPassword(false)
-        return
-      }
-      
-      // Now update the password
-      const { error: updateError } = await supabase.auth.updateUser({
-        password: newPassword,
-      })
-      
-      if (updateError) {
-        toast.error(updateError.message || 'Failed to update password')
-        setIsChangingPassword(false)
-        return
-      }
+      await changePassword(user.email, currentPassword, newPassword)
       
       // Clear password fields
       setCurrentPassword("")
@@ -178,17 +131,26 @@ export default function ProfilePage() {
       setConfirmPassword("")
       
       toast.success('Password updated successfully')
-    } catch (error) {
-      toast.error('An unexpected error occurred')
+    } catch (error: any) {
+      toast.error(error.message || 'An unexpected error occurred')
     } finally {
       setIsChangingPassword(false)
     }
   }
 
+  const handleSignOut = async () => {
+    // Use fetch to call the signout API route instead of importing server-side function
+    await fetch('/api/auth/signout', {
+      method: 'POST',
+    })
+    // Redirect to login page
+    router.push('/login')
+  }
+
   return (
     <div className="flex min-h-screen flex-col md:flex-row">
       <Navigation />
-      <main className="flex-1 p-4 pb-20 md:p-8 md:pb-8">
+      <main className="flex-1 p-4 pb-20 md:ml-64 md:p-8 md:pb-8">
         <div className="mx-auto max-w-4xl space-y-6">
           <div className="flex items-center justify-between">
             <h1 className="text-3xl font-bold">Profile Settings</h1>
@@ -379,7 +341,7 @@ export default function ProfilePage() {
                     Once you delete your account, there is no going back. Please be certain.
                   </p>
                 </div>
-                <Button variant="destructive" onClick={() => signOut()}>
+                <Button variant="destructive" onClick={handleSignOut}>
                   <LogOutIcon className="mr-2 h-4 w-4" />
                   Log Out
                 </Button>

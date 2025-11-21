@@ -6,8 +6,12 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { ErrorMessage } from "@/components/ui/error-message"
 import { createClient } from '@/lib/supabase/client'
 import { toast } from "sonner"
+import { validateLoginForm } from "@/lib/auth/validation"
+import { signInWithEmailAndPassword } from "@/lib/auth/client-service"
+import { checkUserHasAccounts } from "@/lib/accounts/client-service"
 
 export default function LoginPage() {
   const router = useRouter()
@@ -15,100 +19,20 @@ export default function LoginPage() {
   const [password, setPassword] = useState("")
   const [loading, setLoading] = useState(false)
   const [errors, setErrors] = useState<{email?: string, password?: string}>({})
+  const [authError, setAuthError] = useState<string | null>(null)
 
   const supabase = createClient()
 
-  // Check if user is already logged in and needs to complete setup
+  // Check if user is already logged in and redirect appropriately
   useEffect(() => {
-    checkUserSetup()
-  }, [])
-
-  const checkUserSetup = async () => {
-    try {
-      const { data: { user }, error } = await supabase.auth.getUser()
-      
-      if (error || !user) {
-        return
-      }
-
-      // Check if user has any accounts
-      const { data: accounts, error: accountsError } = await supabase
-        .from('accounts')
-        .select('id')
-        .eq('user_id', user.id)
-        .limit(1)
-
-      // If user has accounts, redirect to dashboard
-      if (!accountsError && accounts && accounts.length > 0) {
-        router.push("/dashboard")
-      } 
-      // If user exists but has no accounts, redirect to setup
-      else {
-        router.push("/setup")
-      }
-    } catch (error) {
-      console.error("Error checking user setup:", error)
-    }
-  }
-
-  // Validate form inputs
-  const validateForm = () => {
-    const newErrors: {email?: string, password?: string} = {}
-    
-    // Email validation
-    if (!email) {
-      newErrors.email = "Email is required"
-    } else if (!/\S+@\S+\.\S+/.test(email)) {
-      newErrors.email = "Email address is invalid"
-    }
-    
-    // Password validation
-    if (!password) {
-      newErrors.password = "Password is required"
-    } else if (password.length < 6) {
-      newErrors.password = "Password must be at least 6 characters"
-    }
-    
-    setErrors(newErrors)
-    return Object.keys(newErrors).length === 0
-  }
-
-  const handleLogin = async (e: React.FormEvent) => {
-    e.preventDefault()
-    
-    // Validate form before submission
-    if (!validateForm()) {
-      toast.error("Please fix the errors below")
-      return
-    }
-    
-    setLoading(true)
-    
-    try {
-      const { data, error } = await supabase.auth.signInWithPassword({
-        email,
-        password,
-      })
-
-      if (error) {
-        toast.error(error.message)
-        setLoading(false)
-        return
-      }
-
-      // Show success message
-      toast.success("Login successful! Redirecting...")
-      
-      // Check if user has accounts
-      if (data.user) {
-        const { data: accounts, error: accountsError } = await supabase
-          .from('accounts')
-          .select('id')
-          .eq('user_id', data.user.id)
-          .limit(1)
-
+    const checkUserSession = async () => {
+      const { data: { user } } = await supabase.auth.getUser()
+      if (user) {
+        // Check if user has accounts
+        const hasAccounts = await checkUserHasAccounts(user.id)
+        
         // If user has accounts, redirect to dashboard
-        if (!accountsError && accounts && accounts.length > 0) {
+        if (hasAccounts) {
           router.push("/dashboard")
         } 
         // If user has no accounts, redirect to setup
@@ -116,8 +40,50 @@ export default function LoginPage() {
           router.push("/setup")
         }
       }
-    } catch (error) {
-      toast.error("An unexpected error occurred")
+    }
+    
+    checkUserSession()
+  }, [router, supabase])
+
+  const handleLogin = async (e: React.FormEvent) => {
+    e.preventDefault()
+    
+    // Clear previous errors
+    setAuthError(null)
+    
+    // Validate form before submission
+    const validation = validateLoginForm(email, password)
+    if (!validation.isValid) {
+      setErrors(validation.errors)
+      toast.error("Please fix the errors below")
+      return
+    }
+    
+    setLoading(true)
+    
+    try {
+      const data = await signInWithEmailAndPassword(email, password)
+
+      // Show success message
+      toast.success("Login successful! Redirecting...")
+      
+      // Check if user has accounts
+      if (data.user) {
+        const hasAccounts = await checkUserHasAccounts(data.user.id)
+
+        // If user has accounts, redirect to dashboard
+        if (hasAccounts) {
+          router.push("/dashboard")
+        } 
+        // If user has no accounts, redirect to setup
+        else {
+          router.push("/setup")
+        }
+      }
+    } catch (error: any) {
+      // Set authentication error message
+      const errorMessage = error.message || "An unexpected error occurred"
+      setAuthError(errorMessage)
       setLoading(false)
     }
   }
@@ -134,6 +100,16 @@ export default function LoginPage() {
           </CardDescription>
         </CardHeader>
         <CardContent>
+          {/* Authentication Error Message */}
+          {authError && (
+            <div className="mb-4">
+              <ErrorMessage 
+                title="Login Failed" 
+                message={authError} 
+              />
+            </div>
+          )}
+          
           <form onSubmit={handleLogin} className="space-y-4">
             <div className="space-y-2">
               <Label htmlFor="email">Email</Label>
@@ -147,6 +123,10 @@ export default function LoginPage() {
                   // Clear error when user types
                   if (errors.email) {
                     setErrors(prev => ({ ...prev, email: undefined }))
+                  }
+                  // Clear auth error when user types
+                  if (authError) {
+                    setAuthError(null)
                   }
                 }}
                 className={errors.email ? "border-red-500" : ""}
@@ -167,6 +147,10 @@ export default function LoginPage() {
                   // Clear error when user types
                   if (errors.password) {
                     setErrors(prev => ({ ...prev, password: undefined }))
+                  }
+                  // Clear auth error when user types
+                  if (authError) {
+                    setAuthError(null)
                   }
                 }}
                 className={errors.password ? "border-red-500" : ""}
