@@ -11,13 +11,41 @@ import { toast } from "sonner"
 
 export default function SetupPage() {
   const router = useRouter()
+  const [accountName, setAccountName] = useState("Main Account")
   const [initialBalance, setInitialBalance] = useState("")
   const [loading, setLoading] = useState(false)
+  const [errors, setErrors] = useState<{accountName?: string, initialBalance?: string}>({})
 
   const supabase = createClient()
 
+  // Validate form inputs
+  const validateForm = () => {
+    const newErrors: {accountName?: string, initialBalance?: string} = {}
+    
+    // Account name validation
+    if (!accountName.trim()) {
+      newErrors.accountName = "Account name is required"
+    }
+    
+    // Initial balance validation
+    const balance = parseFloat(initialBalance)
+    if (initialBalance && (isNaN(balance) || balance < 0)) {
+      newErrors.initialBalance = "Please enter a valid positive number"
+    }
+    
+    setErrors(newErrors)
+    return Object.keys(newErrors).length === 0
+  }
+
   const handleSetup = async (e: React.FormEvent) => {
     e.preventDefault()
+    
+    // Validate form before submission
+    if (!validateForm()) {
+      toast.error("Please fix the errors below")
+      return
+    }
+    
     setLoading(true)
     
     try {
@@ -29,39 +57,39 @@ export default function SetupPage() {
         return
       }
 
-      console.log("User ID:", user.id)
-      console.log("Initial Balance:", initialBalance)
+      // Create the initial account
+      const { data: accountData, error: accountError } = await supabase
+        .from('accounts')
+        .insert({
+          user_id: user.id,
+          name: accountName,
+          initial_balance: parseFloat(initialBalance) || 0,
+        })
+        .select()
+        .single()
 
-      // Update the user's initial balance using service role
-      const response = await fetch("/api/auth/update-initial-balance", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          userId: user.id,
-          initialBalance: parseFloat(initialBalance) || 0,
-        }),
-      })
-
-      console.log("Response status:", response.status)
-
-      const result = await response.json()
-      
-      console.log("Response data:", result)
-      
-      if (!response.ok || !result.success) {
-        toast.error(result.error || "Failed to update initial balance")
+      if (accountError) {
+        toast.error(accountError.message)
         setLoading(false)
         return
       }
 
-      // Redirect to dashboard on successful setup
+      // Set this as the default account
+      const { error: updateError } = await supabase
+        .from('users')
+        .update({ default_account_id: accountData.id })
+        .eq('id', user.id)
+
+      if (updateError) {
+        toast.error(updateError.message)
+        setLoading(false)
+        return
+      }
+
+      toast.success("Account setup completed successfully")
       router.push("/dashboard")
-      router.refresh()
     } catch (error) {
-      console.error("Unexpected error:", error)
-      toast.error("An unexpected error occurred. Please try again.")
+      toast.error("An unexpected error occurred")
       setLoading(false)
     }
   }
@@ -74,14 +102,37 @@ export default function SetupPage() {
             Welcome to Hisaab
           </CardTitle>
           <CardDescription className="text-center">
-            Let's get started by setting up your initial balance
+            Let's get started by setting up your first account
           </CardDescription>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSetup} className="space-y-6">
             <div className="space-y-2">
+              <Label htmlFor="account-name" className="text-base">
+                Account Name
+              </Label>
+              <Input
+                id="account-name"
+                type="text"
+                placeholder="e.g., Main Account, Checking Account"
+                value={accountName}
+                onChange={(e) => {
+                  setAccountName(e.target.value)
+                  // Clear error when user types
+                  if (errors.accountName) {
+                    setErrors(prev => ({ ...prev, accountName: undefined }))
+                  }
+                }}
+                className={`text-base h-12 ${errors.accountName ? "border-red-500" : ""}`}
+              />
+              {errors.accountName && (
+                <p className="text-sm text-red-500">{errors.accountName}</p>
+              )}
+            </div>
+            
+            <div className="space-y-2">
               <Label htmlFor="balance" className="text-base">
-                How much money do you have now?
+                Initial Balance
               </Label>
               <div className="relative">
                 <span className="absolute left-3 top-1/2 -translate-y-1/2 text-2xl text-muted-foreground">
@@ -92,20 +143,28 @@ export default function SetupPage() {
                   type="number"
                   placeholder="0"
                   value={initialBalance}
-                  onChange={(e) => setInitialBalance(e.target.value)}
-                  className="pl-8 text-2xl h-14"
-                  required
+                  onChange={(e) => {
+                    setInitialBalance(e.target.value)
+                    // Clear error when user types
+                    if (errors.initialBalance) {
+                      setErrors(prev => ({ ...prev, initialBalance: undefined }))
+                    }
+                  }}
+                  className={`pl-8 text-2xl h-12 ${errors.initialBalance ? "border-red-500" : ""}`}
                   min="0"
                   step="0.01"
                 />
+                {errors.initialBalance && (
+                  <p className="text-sm text-red-500">{errors.initialBalance}</p>
+                )}
               </div>
             </div>
             <Button 
               type="submit" 
-              className="w-full bg-indigo-600 hover:bg-indigo-700 h-12 text-base"
+              className="w-full bg-indigo-600 hover:bg-indigo-700"
               disabled={loading}
             >
-              {loading ? "Setting up..." : "Continue"}
+              {loading ? "Setting up..." : "Complete Setup"}
             </Button>
           </form>
         </CardContent>

@@ -21,12 +21,27 @@ export async function DELETE(
       )
     }
     
-    // Delete the transaction
+    // Get user's accounts
+    const { data: accounts, error: accountsError } = await supabase
+      .from('accounts')
+      .select('id')
+      .eq('user_id', user.id)
+    
+    if (accountsError) {
+      return NextResponse.json(
+        { error: 'Failed to get user accounts' },
+        { status: 500 }
+      )
+    }
+    
+    const accountIds = accounts.map(account => account.id)
+    
+    // Delete the transaction only if it belongs to one of the user's accounts
     const { error: deleteError } = await supabase
       .from('transactions')
       .delete()
       .eq('id', id)
-      .eq('user_id', user.id)
+      .in('account_id', accountIds)
     
     if (deleteError) {
       return NextResponse.json(

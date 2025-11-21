@@ -103,21 +103,30 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$v3$2f
 ;
 ;
 const updateTransactionSchema = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$v3$2f$external$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__z$3e$__["z"].object({
-    amount: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$v3$2f$external$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__z$3e$__["z"].number().optional(),
+    amount: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$v3$2f$external$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__z$3e$__["z"].string().optional(),
     reason: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$v3$2f$external$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__z$3e$__["z"].string().optional(),
     type: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$v3$2f$external$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__z$3e$__["z"].enum([
         'income',
         'expense'
     ]).optional(),
     category: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$v3$2f$external$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__z$3e$__["z"].string().optional(),
-    date: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$v3$2f$external$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__z$3e$__["z"].string().optional()
+    date: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$v3$2f$external$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__z$3e$__["z"].string().optional(),
+    accountId: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$v3$2f$external$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__z$3e$__["z"].string().optional()
 });
 async function PUT(request, { params }) {
     try {
         const supabase = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$supabase$2f$server$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["createClient"])();
         // Await the params promise to get the actual params
         const { id } = await params;
-        const body = await request.json();
+        // Get form data
+        const formData = await request.formData();
+        // Convert FormData to object (only include fields that are present)
+        const body = {};
+        for (const [key, value] of formData.entries()){
+            if (typeof value === 'string') {
+                body[key] = value;
+            }
+        }
         // Validate the request body
         const parsed = updateTransactionSchema.safeParse(body);
         if (!parsed.success) {
@@ -128,6 +137,13 @@ async function PUT(request, { params }) {
                 status: 400
             });
         }
+        // Prepare update data (convert amount to number if present)
+        const updateData = {
+            ...parsed.data
+        };
+        if (updateData.amount) {
+            updateData.amount = parseFloat(updateData.amount);
+        }
         // Get the current user
         const { data: { user }, error: userError } = await supabase.auth.getUser();
         if (userError || !user) {
@@ -137,13 +153,30 @@ async function PUT(request, { params }) {
                 status: 401
             });
         }
-        // Update the transaction
-        const { data, error: updateError } = await supabase.from('transactions').update(parsed.data).eq('id', id).eq('user_id', user.id).select().single();
+        // Get user's accounts
+        const { data: accounts, error: accountsError } = await supabase.from('accounts').select('id').eq('user_id', user.id);
+        if (accountsError) {
+            return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json({
+                error: 'Failed to get user accounts'
+            }, {
+                status: 500
+            });
+        }
+        const accountIds = accounts.map((account)=>account.id);
+        // Update the transaction only if it belongs to one of the user's accounts
+        const { data, error: updateError } = await supabase.from('transactions').update(updateData).eq('id', id).in('account_id', accountIds).select().single();
         if (updateError) {
             return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json({
                 error: updateError.message
             }, {
                 status: 500
+            });
+        }
+        if (!data) {
+            return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json({
+                error: 'Transaction not found or unauthorized'
+            }, {
+                status: 404
             });
         }
         return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json({

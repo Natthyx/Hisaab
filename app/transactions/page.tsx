@@ -16,7 +16,13 @@ interface Transaction {
   date: string
 }
 
-export default async function TransactionsPage() {
+interface Account {
+  id: string
+  name: string
+}
+
+export default async function TransactionsPage(props: { searchParams: Promise<{ account?: string }> }) {
+  const searchParams = await props.searchParams
   const supabase = await createClient()
   
   // Get user data
@@ -26,16 +32,47 @@ export default async function TransactionsPage() {
     redirect('/login')
   }
   
-  // Get transactions
-  const { data: transactions, error } = await supabase
-    .from('transactions')
-    .select('*')
+  // Get user's accounts
+  const { data: accounts } = await supabase
+    .from('accounts')
+    .select('id, name')
     .eq('user_id', user.id)
-    .order('date', { ascending: false })
+    .order('name')
   
-  if (error) {
-    console.error('Error fetching transactions:', error)
-    // Handle error appropriately
+  // Determine which account to show
+  let selectedAccountId = searchParams.account
+  
+  // If no account specified, use user's default account or first account
+  if (!selectedAccountId && accounts && accounts.length > 0) {
+    // Get user's default account
+    const { data: userData } = await supabase
+      .from('users')
+      .select('default_account_id')
+      .eq('id', user.id)
+      .single()
+    
+    if (userData?.default_account_id) {
+      selectedAccountId = userData.default_account_id
+    } else {
+      selectedAccountId = accounts[0].id
+    }
+  }
+  
+  // Get transactions for the selected account
+  let transactions = []
+  if (selectedAccountId) {
+    const { data, error } = await supabase
+      .from('transactions')
+      .select('*')
+      .eq('account_id', selectedAccountId)
+      .order('date', { ascending: false })
+    
+    if (error) {
+      console.error('Error fetching transactions:', error)
+      // Handle error appropriately
+    }
+    
+    transactions = data || []
   }
   
   return (
@@ -50,13 +87,17 @@ export default async function TransactionsPage() {
               <Link href="/add">
                 <Button className="bg-indigo-600 hover:bg-indigo-700">
                   <PlusIcon className="mr-2 h-4 w-4" />
-                  Add Transaction
+                  <span className="hidden sm:inline">Add Transaction</span>
                 </Button>
               </Link>
             </div>
           </div>
           
-          <TransactionsClient initialTransactions={transactions || []} />
+          <TransactionsClient 
+            initialTransactions={transactions || []} 
+            accounts={accounts || []}
+            selectedAccountId={selectedAccountId}
+          />
         </div>
       </main>
     </div>

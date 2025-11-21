@@ -2,7 +2,7 @@ import { createClient } from '@supabase/supabase-js'
 
 export async function POST(req: Request) {
   try {
-    const { userId, initialBalance } = await req.json()
+    const { userId, ...updates } = await req.json()
 
     // Validate input
     if (!userId) {
@@ -16,7 +16,7 @@ export async function POST(req: Request) {
 
     const { error } = await supabase
       .from("users")
-      .update({ initial_balance: initialBalance || 0 })
+      .update(updates)
       .eq('id', userId)
 
     if (error) {

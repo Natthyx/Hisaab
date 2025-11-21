@@ -44,13 +44,13 @@ export function ExpenseChart({
   const DataComponent = type === "line" ? Line : Bar
 
   return (
-    <Card>
+    <Card className="border-0 shadow-none md:border md:shadow-sm">
       {title && (
-        <CardHeader>
+        <CardHeader className="px-0 md:px-6">
           <CardTitle>{title}</CardTitle>
         </CardHeader>
       )}
-      <CardContent>
+      <CardContent className="px-0 md:px-6">
         <ResponsiveContainer width="100%" height={300}>
           <ChartComponent data={data}>
             <CartesianGrid strokeDasharray="3 3" stroke={gridColor} />

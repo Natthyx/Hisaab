@@ -314,11 +314,33 @@ var _s = __turbopack_context__.k.signature();
 function SetupPage() {
     _s();
     const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"])();
+    const [accountName, setAccountName] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("Main Account");
     const [initialBalance, setInitialBalance] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
     const [loading, setLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [errors, setErrors] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])({});
     const supabase = (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$supabase$2f$client$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["createClient"])();
+    // Validate form inputs
+    const validateForm = ()=>{
+        const newErrors = {};
+        // Account name validation
+        if (!accountName.trim()) {
+            newErrors.accountName = "Account name is required";
+        }
+        // Initial balance validation
+        const balance = parseFloat(initialBalance);
+        if (initialBalance && (isNaN(balance) || balance < 0)) {
+            newErrors.initialBalance = "Please enter a valid positive number";
+        }
+        setErrors(newErrors);
+        return Object.keys(newErrors).length === 0;
+    };
     const handleSetup = async (e)=>{
         e.preventDefault();
+        // Validate form before submission
+        if (!validateForm()) {
+            __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$sonner$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["toast"].error("Please fix the errors below");
+            return;
+        }
         setLoading(true);
         try {
             const { data: { user }, error: userError } = await supabase.auth.getUser();
@@ -327,33 +349,30 @@ function SetupPage() {
                 setLoading(false);
                 return;
             }
-            console.log("User ID:", user.id);
-            console.log("Initial Balance:", initialBalance);
-            // Update the user's initial balance using service role
-            const response = await fetch("/api/auth/update-initial-balance", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    userId: user.id,
-                    initialBalance: parseFloat(initialBalance) || 0
-                })
-            });
-            console.log("Response status:", response.status);
-            const result = await response.json();
-            console.log("Response data:", result);
-            if (!response.ok || !result.success) {
-                __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$sonner$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["toast"].error(result.error || "Failed to update initial balance");
+            // Create the initial account
+            const { data: accountData, error: accountError } = await supabase.from('accounts').insert({
+                user_id: user.id,
+                name: accountName,
+                initial_balance: parseFloat(initialBalance) || 0
+            }).select().single();
+            if (accountError) {
+                __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$sonner$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["toast"].error(accountError.message);
                 setLoading(false);
                 return;
             }
-            // Redirect to dashboard on successful setup
+            // Set this as the default account
+            const { error: updateError } = await supabase.from('users').update({
+                default_account_id: accountData.id
+            }).eq('id', user.id);
+            if (updateError) {
+                __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$sonner$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["toast"].error(updateError.message);
+                setLoading(false);
+                return;
+            }
+            __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$sonner$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["toast"].success("Account setup completed successfully");
             router.push("/dashboard");
-            router.refresh();
         } catch (error) {
-            console.error("Unexpected error:", error);
-            __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$sonner$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["toast"].error("An unexpected error occurred. Please try again.");
+            __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$sonner$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["toast"].error("An unexpected error occurred");
             setLoading(false);
         }
     };
@@ -367,24 +386,24 @@ function SetupPage() {
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardTitle"], {
                             className: "text-3xl font-bold text-center",
-                            children: "Welcome to ExpenseTracker"
+                            children: "Welcome to Hisaab"
                         }, void 0, false, {
                             fileName: "[project]/app/setup/page.tsx",
-                            lineNumber: 73,
+                            lineNumber: 101,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardDescription"], {
                             className: "text-center",
-                            children: "Let's get started by setting up your initial balance"
+                            children: "Let's get started by setting up your first account"
                         }, void 0, false, {
                             fileName: "[project]/app/setup/page.tsx",
-                            lineNumber: 76,
+                            lineNumber: 104,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/setup/page.tsx",
-                    lineNumber: 72,
+                    lineNumber: 100,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -396,12 +415,59 @@ function SetupPage() {
                                 className: "space-y-2",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$label$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Label"], {
-                                        htmlFor: "balance",
+                                        htmlFor: "account-name",
                                         className: "text-base",
-                                        children: "How much money do you have now?"
+                                        children: "Account Name"
                                     }, void 0, false, {
                                         fileName: "[project]/app/setup/page.tsx",
-                                        lineNumber: 83,
+                                        lineNumber: 111,
+                                        columnNumber: 15
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
+                                        id: "account-name",
+                                        type: "text",
+                                        placeholder: "e.g., Main Account, Checking Account",
+                                        value: accountName,
+                                        onChange: (e)=>{
+                                            setAccountName(e.target.value);
+                                            // Clear error when user types
+                                            if (errors.accountName) {
+                                                setErrors((prev)=>({
+                                                        ...prev,
+                                                        accountName: undefined
+                                                    }));
+                                            }
+                                        },
+                                        className: `text-base h-12 ${errors.accountName ? "border-red-500" : ""}`
+                                    }, void 0, false, {
+                                        fileName: "[project]/app/setup/page.tsx",
+                                        lineNumber: 114,
+                                        columnNumber: 15
+                                    }, this),
+                                    errors.accountName && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                        className: "text-sm text-red-500",
+                                        children: errors.accountName
+                                    }, void 0, false, {
+                                        fileName: "[project]/app/setup/page.tsx",
+                                        lineNumber: 129,
+                                        columnNumber: 17
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/app/setup/page.tsx",
+                                lineNumber: 110,
+                                columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "space-y-2",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$label$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Label"], {
+                                        htmlFor: "balance",
+                                        className: "text-base",
+                                        children: "Initial Balance"
+                                    }, void 0, false, {
+                                        fileName: "[project]/app/setup/page.tsx",
+                                        lineNumber: 134,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -412,7 +478,7 @@ function SetupPage() {
                                                 children: "$"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/setup/page.tsx",
-                                                lineNumber: 87,
+                                                lineNumber: 138,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
@@ -420,62 +486,78 @@ function SetupPage() {
                                                 type: "number",
                                                 placeholder: "0",
                                                 value: initialBalance,
-                                                onChange: (e)=>setInitialBalance(e.target.value),
-                                                className: "pl-8 text-2xl h-14",
-                                                required: true,
+                                                onChange: (e)=>{
+                                                    setInitialBalance(e.target.value);
+                                                    // Clear error when user types
+                                                    if (errors.initialBalance) {
+                                                        setErrors((prev)=>({
+                                                                ...prev,
+                                                                initialBalance: undefined
+                                                            }));
+                                                    }
+                                                },
+                                                className: `pl-8 text-2xl h-12 ${errors.initialBalance ? "border-red-500" : ""}`,
                                                 min: "0",
                                                 step: "0.01"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/setup/page.tsx",
-                                                lineNumber: 90,
+                                                lineNumber: 141,
                                                 columnNumber: 17
+                                            }, this),
+                                            errors.initialBalance && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                className: "text-sm text-red-500",
+                                                children: errors.initialBalance
+                                            }, void 0, false, {
+                                                fileName: "[project]/app/setup/page.tsx",
+                                                lineNumber: 158,
+                                                columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/setup/page.tsx",
-                                        lineNumber: 86,
+                                        lineNumber: 137,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/setup/page.tsx",
-                                lineNumber: 82,
+                                lineNumber: 133,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
                                 type: "submit",
-                                className: "w-full bg-indigo-600 hover:bg-indigo-700 h-12 text-base",
+                                className: "w-full bg-indigo-600 hover:bg-indigo-700",
                                 disabled: loading,
-                                children: loading ? "Setting up..." : "Continue"
+                                children: loading ? "Setting up..." : "Complete Setup"
                             }, void 0, false, {
                                 fileName: "[project]/app/setup/page.tsx",
-                                lineNumber: 103,
+                                lineNumber: 162,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/setup/page.tsx",
-                        lineNumber: 81,
+                        lineNumber: 109,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/app/setup/page.tsx",
-                    lineNumber: 80,
+                    lineNumber: 108,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/app/setup/page.tsx",
-            lineNumber: 71,
+            lineNumber: 99,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/app/setup/page.tsx",
-        lineNumber: 70,
+        lineNumber: 98,
         columnNumber: 5
     }, this);
 }
-_s(SetupPage, "oYvhtdphUFYlXITL3YRQBMmvDH8=", false, function() {
+_s(SetupPage, "DI9gATvLYDRWO2vH9+zPiww+eJw=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"]
     ];

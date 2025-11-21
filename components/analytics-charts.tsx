@@ -44,7 +44,7 @@ export function MoneyFlowChart({ data }: MoneyFlowChartProps) {
   const gridColor = theme === 'dark' ? '#444444' : '#e5e7eb'
   
   return (
-    <div className="h-80">
+    <div className="h-90 pl-0 md:pl-0">
       <ResponsiveContainer width="100%" height="100%">
         <AreaChart data={data}>
           <CartesianGrid strokeDasharray="3 3" stroke={gridColor} />
@@ -89,7 +89,7 @@ export function CategoryBreakdownChart({ data }: CategoryBreakdownChartProps) {
   const textColor = theme === 'dark' ? '#ffffff' : '#000000'
   
   return (
-    <div className="h-80">
+    <div className="h-80 p-0 md:p-0">
       <ResponsiveContainer width="100%" height="100%">
         <PieChart>
           <Pie
@@ -135,7 +135,7 @@ export function MonthlyTrendsChart({ data }: MonthlyTrendsChartProps) {
   const gridColor = theme === 'dark' ? '#444444' : '#e5e7eb'
   
   return (
-    <div className="h-80">
+    <div className="h-80 p-4 md:p-0">
       <ResponsiveContainer width="100%" height="100%">
         <BarChart data={data}>
           <CartesianGrid strokeDasharray="3 3" stroke={gridColor} />
@@ -185,7 +185,7 @@ export function BalanceOverTimeChart({ data }: BalanceOverTimeChartProps) {
   const gridColor = theme === 'dark' ? '#444444' : '#e5e7eb'
   
   return (
-    <div className="h-80">
+    <div className="h-80 p-4 md:p-0">
       <ResponsiveContainer width="100%" height="100%">
         <LineChart data={formattedData}>
           <CartesianGrid strokeDasharray="3 3" stroke={gridColor} />

@@ -14,6 +14,7 @@ export default function LoginPage() {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [loading, setLoading] = useState(false)
+  const [errors, setErrors] = useState<{email?: string, password?: string}>({})
 
   const supabase = createClient()
 
@@ -30,22 +31,18 @@ export default function LoginPage() {
         return
       }
 
-      // Check if user has completed setup
-      const { data: userData, error: userError } = await supabase
-        .from('users')
-        .select('initial_balance')
-        .eq('id', user.id)
-        .single()
+      // Check if user has any accounts
+      const { data: accounts, error: accountsError } = await supabase
+        .from('accounts')
+        .select('id')
+        .eq('user_id', user.id)
+        .limit(1)
 
-      // If user exists and has set initial balance, redirect to dashboard
-      if (!userError && userData && userData.initial_balance !== null && userData.initial_balance !== 0) {
+      // If user has accounts, redirect to dashboard
+      if (!accountsError && accounts && accounts.length > 0) {
         router.push("/dashboard")
       } 
-      // If user exists but hasn't set initial balance, redirect to setup
-      else if (!userError && userData) {
-        router.push("/setup")
-      }
-      // If user doesn't exist in our users table, redirect to setup
+      // If user exists but has no accounts, redirect to setup
       else {
         router.push("/setup")
       }
@@ -54,8 +51,37 @@ export default function LoginPage() {
     }
   }
 
+  // Validate form inputs
+  const validateForm = () => {
+    const newErrors: {email?: string, password?: string} = {}
+    
+    // Email validation
+    if (!email) {
+      newErrors.email = "Email is required"
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+      newErrors.email = "Email address is invalid"
+    }
+    
+    // Password validation
+    if (!password) {
+      newErrors.password = "Password is required"
+    } else if (password.length < 6) {
+      newErrors.password = "Password must be at least 6 characters"
+    }
+    
+    setErrors(newErrors)
+    return Object.keys(newErrors).length === 0
+  }
+
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault()
+    
+    // Validate form before submission
+    if (!validateForm()) {
+      toast.error("Please fix the errors below")
+      return
+    }
+    
     setLoading(true)
     
     try {
@@ -70,31 +96,28 @@ export default function LoginPage() {
         return
       }
 
-      // Check if user has completed setup
+      // Show success message
+      toast.success("Login successful! Redirecting...")
+      
+      // Check if user has accounts
       if (data.user) {
-        const { data: userData, error: userError } = await supabase
-          .from('users')
-          .select('initial_balance')
-          .eq('id', data.user.id)
-          .single()
+        const { data: accounts, error: accountsError } = await supabase
+          .from('accounts')
+          .select('id')
+          .eq('user_id', data.user.id)
+          .limit(1)
 
-        // If user exists and has set initial balance, redirect to dashboard
-        if (!userError && userData && userData.initial_balance !== null && userData.initial_balance !== 0) {
+        // If user has accounts, redirect to dashboard
+        if (!accountsError && accounts && accounts.length > 0) {
           router.push("/dashboard")
         } 
-        // If user exists but hasn't set initial balance, redirect to setup
-        else if (!userError && userData) {
-          router.push("/setup")
-        }
-        // If user doesn't exist in our users table, redirect to setup
+        // If user has no accounts, redirect to setup
         else {
           router.push("/setup")
         }
       }
-
-      router.refresh()
     } catch (error) {
-      toast.error("An unexpected error occurred. Please try again.")
+      toast.error("An unexpected error occurred")
       setLoading(false)
     }
   }
@@ -119,9 +142,18 @@ export default function LoginPage() {
                 type="email"
                 placeholder="you@example.com"
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
+                onChange={(e) => {
+                  setEmail(e.target.value)
+                  // Clear error when user types
+                  if (errors.email) {
+                    setErrors(prev => ({ ...prev, email: undefined }))
+                  }
+                }}
+                className={errors.email ? "border-red-500" : ""}
               />
+              {errors.email && (
+                <p className="text-sm text-red-500">{errors.email}</p>
+              )}
             </div>
             <div className="space-y-2">
               <Label htmlFor="password">Password</Label>
@@ -130,9 +162,18 @@ export default function LoginPage() {
                 type="password"
                 placeholder="••••••••"
                 value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                required
+                onChange={(e) => {
+                  setPassword(e.target.value)
+                  // Clear error when user types
+                  if (errors.password) {
+                    setErrors(prev => ({ ...prev, password: undefined }))
+                  }
+                }}
+                className={errors.password ? "border-red-500" : ""}
               />
+              {errors.password && (
+                <p className="text-sm text-red-500">{errors.password}</p>
+              )}
             </div>
             <Button 
               type="submit" 

@@ -16,14 +16,45 @@ export default function SignupPage() {
   const [confirmPassword, setConfirmPassword] = useState("")
   const [loading, setLoading] = useState(false)
   const [showConfirmationMessage, setShowConfirmationMessage] = useState(false)
+  const [errors, setErrors] = useState<{email?: string, password?: string, confirmPassword?: string}>({})
 
   const supabase = createClient()
+
+  // Validate form inputs
+  const validateForm = () => {
+    const newErrors: {email?: string, password?: string, confirmPassword?: string} = {}
+    
+    // Email validation
+    if (!email) {
+      newErrors.email = "Email is required"
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+      newErrors.email = "Email address is invalid"
+    }
+    
+    // Password validation
+    if (!password) {
+      newErrors.password = "Password is required"
+    } else if (password.length < 6) {
+      newErrors.password = "Password must be at least 6 characters"
+    }
+    
+    // Confirm password validation
+    if (!confirmPassword) {
+      newErrors.confirmPassword = "Please confirm your password"
+    } else if (password !== confirmPassword) {
+      newErrors.confirmPassword = "Passwords do not match"
+    }
+    
+    setErrors(newErrors)
+    return Object.keys(newErrors).length === 0
+  }
 
   const handleSignup = async (e: React.FormEvent) => {
     e.preventDefault()
     
-    if (password !== confirmPassword) {
-      toast.error("Passwords do not match")
+    // Validate form before submission
+    if (!validateForm()) {
+      toast.error("Please fix the errors below")
       return
     }
     
@@ -63,6 +94,9 @@ export default function SignupPage() {
         }
       }
 
+      // Show success message
+      toast.success("Account created successfully! Please check your email for confirmation.")
+      
       // Show confirmation message instead of redirecting immediately
       setShowConfirmationMessage(true)
       setLoading(false)
@@ -121,9 +155,18 @@ export default function SignupPage() {
                 type="email"
                 placeholder="you@example.com"
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
+                onChange={(e) => {
+                  setEmail(e.target.value)
+                  // Clear error when user types
+                  if (errors.email) {
+                    setErrors(prev => ({ ...prev, email: undefined }))
+                  }
+                }}
+                className={errors.email ? "border-red-500" : ""}
               />
+              {errors.email && (
+                <p className="text-sm text-red-500">{errors.email}</p>
+              )}
             </div>
             <div className="space-y-2">
               <Label htmlFor="password">Password</Label>
@@ -132,9 +175,18 @@ export default function SignupPage() {
                 type="password"
                 placeholder="••••••••"
                 value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                required
+                onChange={(e) => {
+                  setPassword(e.target.value)
+                  // Clear error when user types
+                  if (errors.password) {
+                    setErrors(prev => ({ ...prev, password: undefined }))
+                  }
+                }}
+                className={errors.password ? "border-red-500" : ""}
               />
+              {errors.password && (
+                <p className="text-sm text-red-500">{errors.password}</p>
+              )}
             </div>
             <div className="space-y-2">
               <Label htmlFor="confirm-password">Confirm Password</Label>
@@ -143,9 +195,18 @@ export default function SignupPage() {
                 type="password"
                 placeholder="••••••••"
                 value={confirmPassword}
-                onChange={(e) => setConfirmPassword(e.target.value)}
-                required
+                onChange={(e) => {
+                  setConfirmPassword(e.target.value)
+                  // Clear error when user types
+                  if (errors.confirmPassword) {
+                    setErrors(prev => ({ ...prev, confirmPassword: undefined }))
+                  }
+                }}
+                className={errors.confirmPassword ? "border-red-500" : ""}
               />
+              {errors.confirmPassword && (
+                <p className="text-sm text-red-500">{errors.confirmPassword}</p>
+              )}
             </div>
             <Button 
               type="submit" 
@@ -160,6 +221,7 @@ export default function SignupPage() {
                 type="button"
                 onClick={() => router.push("/login")}
                 className="text-indigo-600 hover:underline"
+                disabled={loading}
               >
                 Sign in
               </button>

@@ -2,15 +2,16 @@
 
 import Link from "next/link"
 import { usePathname } from 'next/navigation'
-import { HomeIcon, PlusCircleIcon, ListIcon, BarChart3Icon, LogOutIcon } from 'lucide-react'
+import { HomeIcon, PlusCircleIcon, ListIcon, BarChart3Icon, WalletIcon } from 'lucide-react'
 import { cn } from "@/lib/utils"
-import { signOut } from '@/lib/actions/auth'
+import { ProfileIcon } from "@/components/profile-icon"
 
 const navItems = [
   { href: "/dashboard", label: "Dashboard", icon: HomeIcon },
   { href: "/add", label: "Add Transaction", icon: PlusCircleIcon },
   { href: "/transactions", label: "Transactions", icon: ListIcon },
   { href: "/analytics", label: "Analytics", icon: BarChart3Icon },
+  { href: "/accounts", label: "Accounts", icon: WalletIcon },
 ]
 
 export function Navigation() {
@@ -18,8 +19,8 @@ export function Navigation() {
 
   return (
     <nav className="fixed bottom-0 left-0 right-0 z-50 border-t bg-background md:static md:h-screen md:w-64 md:border-r md:border-t-0">
-      <div className="flex h-16 items-center justify-around md:h-auto md:flex-col md:gap-2 md:p-4">
-        <div className="hidden md:block md:mb-8 md:mt-4">
+      <div className="flex h-16 items-center justify-around md:h-auto md:flex-col md:gap-1 md:p-2">
+        <div className="hidden md:block md:mb-4 md:mt-2">
           <h1 className="text-2xl font-bold text-indigo-600">Hisaab</h1>
         </div>
         {navItems.map((item) => {
@@ -29,26 +30,21 @@ export function Navigation() {
               key={item.href}
               href={item.href}
               className={cn(
-                "flex flex-col items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium transition-colors md:w-full md:flex-row md:gap-3 md:px-4",
+                "flex flex-col items-center gap-1 rounded-lg px-2 py-1 text-sm font-medium transition-colors md:w-full md:flex-row md:gap-3 md:px-4 md:py-2",
                 isActive
                   ? "bg-indigo-600 text-white"
                   : "text-muted-foreground hover:bg-muted hover:text-foreground"
               )}
             >
               <item.icon className="h-5 w-5" />
-              <span className="text-xs md:text-sm">{item.label}</span>
+              <span className="text-xs md:text-sm hidden md:inline">{item.label}</span>
             </Link>
           )
         })}
-        <button
-          className="flex flex-col items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground md:mt-auto md:w-full md:flex-row md:gap-3 md:px-4"
-          onClick={async () => {
-            await signOut()
-          }}
-        >
-          <LogOutIcon className="h-5 w-5" />
-          <span className="text-xs md:text-sm">Logout</span>
-        </button>
+        {/* Profile Icon at the bottom on desktop */}
+        <div className="md:mt-auto md:mb-4">
+          <ProfileIcon />
+        </div>
       </div>
     </nav>
   )

@@ -35,24 +35,62 @@ export function EditTransactionForm({ transaction, onClose, onUpdate }: EditTran
   const [category, setCategory] = useState(transaction.category)
   const [date, setDate] = useState(new Date(transaction.date).toISOString().split('T')[0])
   const [loading, setLoading] = useState(false)
+  const [errors, setErrors] = useState<{amount?: string, reason?: string, category?: string, date?: string}>({})
+
+  // Validate form inputs
+  const validateForm = () => {
+    const newErrors: {amount?: string, reason?: string, category?: string, date?: string} = {}
+    
+    // Amount validation
+    const amountValue = parseFloat(amount)
+    if (!amount) {
+      newErrors.amount = "Amount is required"
+    } else if (isNaN(amountValue) || amountValue <= 0) {
+      newErrors.amount = "Please enter a valid positive amount"
+    }
+    
+    // Reason validation
+    if (!reason.trim()) {
+      newErrors.reason = "Reason is required"
+    }
+    
+    // Category validation
+    if (!category) {
+      newErrors.category = "Category is required"
+    }
+    
+    // Date validation
+    if (!date) {
+      newErrors.date = "Date is required"
+    }
+    
+    setErrors(newErrors)
+    return Object.keys(newErrors).length === 0
+  }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    
+    // Validate form before submission
+    if (!validateForm()) {
+      toast.error("Please fix the errors below")
+      return
+    }
+    
     setLoading(true)
     
     try {
+      // Create FormData object
+      const formData = new FormData()
+      formData.append('amount', amount)
+      formData.append('reason', reason)
+      formData.append('type', type)
+      formData.append('category', category)
+      formData.append('date', date ? new Date(date).toISOString() : new Date().toISOString())
+
       const response = await fetch(`/api/transactions/update/${transaction.id}`, {
         method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          amount: parseFloat(amount),
-          reason,
-          type,
-          category,
-          date: date ? new Date(date).toISOString() : new Date().toISOString(),
-        }),
+        body: formData,
       })
       
       const result = await response.json()
@@ -103,19 +141,33 @@ export function EditTransactionForm({ transaction, onClose, onUpdate }: EditTran
                 type="number"
                 placeholder="0.00"
                 value={amount}
-                onChange={(e) => setAmount(e.target.value)}
-                className="pl-8"
-                required
+                onChange={(e) => {
+                  setAmount(e.target.value)
+                  // Clear error when user types
+                  if (errors.amount) {
+                    setErrors(prev => ({ ...prev, amount: undefined }))
+                  }
+                }}
+                className={`pl-8 ${errors.amount ? "border-red-500" : ""}`}
                 min="0"
                 step="0.01"
               />
+              {errors.amount && (
+                <p className="text-sm text-red-500">{errors.amount}</p>
+              )}
             </div>
           </div>
 
           <div className="space-y-2">
             <Label htmlFor="category">Category</Label>
-            <Select value={category} onValueChange={setCategory}>
-              <SelectTrigger id="category">
+            <Select value={category} onValueChange={(value) => {
+              setCategory(value)
+              // Clear error when user selects
+              if (errors.category) {
+                setErrors(prev => ({ ...prev, category: undefined }))
+              }
+            }}>
+              <SelectTrigger id="category" className={errors.category ? "border-red-500" : ""}>
                 <SelectValue placeholder="Select a category" />
               </SelectTrigger>
               <SelectContent>
@@ -126,6 +178,9 @@ export function EditTransactionForm({ transaction, onClose, onUpdate }: EditTran
                 ))}
               </SelectContent>
             </Select>
+            {errors.category && (
+              <p className="text-sm text-red-500">{errors.category}</p>
+            )}
           </div>
 
           <div className="space-y-2">
@@ -134,10 +189,19 @@ export function EditTransactionForm({ transaction, onClose, onUpdate }: EditTran
               id="reason"
               placeholder="What was this transaction for?"
               value={reason}
-              onChange={(e) => setReason(e.target.value)}
-              required
+              onChange={(e) => {
+                setReason(e.target.value)
+                // Clear error when user types
+                if (errors.reason) {
+                  setErrors(prev => ({ ...prev, reason: undefined }))
+                }
+              }}
+              className={errors.reason ? "border-red-500" : ""}
               rows={3}
             />
+            {errors.reason && (
+              <p className="text-sm text-red-500">{errors.reason}</p>
+            )}
           </div>
 
           <div className="space-y-2">
@@ -148,9 +212,18 @@ export function EditTransactionForm({ transaction, onClose, onUpdate }: EditTran
                 id="date"
                 type="date"
                 value={date}
-                onChange={(e) => setDate(e.target.value)}
-                className="pl-10"
+                onChange={(e) => {
+                  setDate(e.target.value)
+                  // Clear error when user selects
+                  if (errors.date) {
+                    setErrors(prev => ({ ...prev, date: undefined }))
+                  }
+                }}
+                className={`pl-10 ${errors.date ? "border-red-500" : ""}`}
               />
+              {errors.date && (
+                <p className="text-sm text-red-500">{errors.date}</p>
+              )}
             </div>
           </div>
 

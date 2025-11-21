@@ -22,6 +22,12 @@ import {
   BalanceOverTimeChart
 } from "@/components/analytics-charts"
 
+interface Account {
+  id: string
+  name: string
+  initial_balance: number
+}
+
 // Helper functions for date formatting
 const formatDailyDate = (dateString: string) => {
   const date = new Date(dateString)
@@ -150,7 +156,8 @@ const getTopDays = (transactions: any[], type: 'income' | 'expense', limit: numb
     .map(([date, amount]) => ({ date, amount }))
 }
 
-export default async function AnalyticsPage() {
+export default async function AnalyticsPage(props: { searchParams: Promise<{ account?: string }> }) {
+  const searchParams = await props.searchParams
   const supabase = await createClient()
   
   // Get user data
@@ -160,21 +167,44 @@ export default async function AnalyticsPage() {
     redirect('/login')
   }
   
-  // Get user's initial balance
-  const { data: userData } = await supabase
-    .from('users')
-    .select('initial_balance')
-    .eq('id', user.id)
-    .single()
+  // Get user's accounts
+  const { data: accounts } = await supabase
+    .from('accounts')
+    .select('id, name, initial_balance')
+    .eq('user_id', user.id)
+    .order('name')
   
-  const initialBalance = userData?.initial_balance || 0
+  // Determine which account to show
+  let selectedAccountId = searchParams.account
   
-  // Get all transactions
+  // If no account specified, use user's default account or first account
+  if (!selectedAccountId && accounts && accounts.length > 0) {
+    // Get user's default account
+    const { data: userData } = await supabase
+      .from('users')
+      .select('default_account_id')
+      .eq('id', user.id)
+      .single()
+    
+    if (userData?.default_account_id) {
+      selectedAccountId = userData.default_account_id
+    } else {
+      selectedAccountId = accounts[0].id
+    }
+  }
+  
+  // Get selected account details
+  const selectedAccount = accounts?.find(account => account.id === selectedAccountId) || accounts?.[0]
+  
+  // Get transactions for the selected account
   const { data: transactions } = await supabase
     .from('transactions')
     .select('*')
-    .eq('user_id', user.id)
+    .eq('account_id', selectedAccountId)
     .order('date', { ascending: false })
+  
+  // Get account's initial balance
+  const initialBalance = selectedAccount?.initial_balance || 0
   
   // Calculate summary metrics
   let totalIncome = 0
@@ -301,13 +331,13 @@ export default async function AnalyticsPage() {
       <main className="flex-1 p-4 pb-20 md:p-8 md:pb-8">
         <div className="mx-auto max-w-6xl space-y-6">
           <div className="flex items-center justify-between">
-            <h1 className="text-3xl font-bold">Analytics Dashboard</h1>
+            <h1 className="text-3xl font-bold">Analytics</h1>
             <div className="flex items-center gap-2">
               <ThemeToggle />
               <Link href="/add">
                 <Button className="bg-indigo-600 hover:bg-indigo-700">
                   <PlusIcon className="mr-2 h-4 w-4" />
-                  Add Transaction
+                  <span className="hidden sm:inline">Add Transaction</span>
                 </Button>
               </Link>
             </div>
@@ -345,28 +375,28 @@ export default async function AnalyticsPage() {
           </div>
           
           {/* Money Flow Chart */}
-          <div className="rounded-lg border bg-card p-6">
-            <h2 className="text-xl font-semibold mb-4">Money Flow</h2>
+          <div className="rounded-lg border bg-card p-0">
+            <h2 className="text-xl font-semibold p-6 pb-0">Money Flow</h2>
             <MoneyFlowChart data={dailyData} />
           </div>
           
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid grid-cols-1 gap-6">
             {/* Category Breakdown */}
-            <div className="rounded-lg border bg-card p-6">
-              <h2 className="text-xl font-semibold mb-4">Category Breakdown</h2>
+            <div className="rounded-lg border bg-card p-0">
+              <h2 className="text-xl font-semibold p-6 pb-0">Category Breakdown</h2>
               <CategoryBreakdownChart data={categoryData} />
             </div>
             
             {/* Monthly Trends */}
-            <div className="rounded-lg border bg-card p-6">
-              <h2 className="text-xl font-semibold mb-4">Monthly Trends</h2>
+            <div className="rounded-lg border bg-card p-0">
+              <h2 className="text-xl font-semibold p-6 pb-0">Monthly Trends</h2>
               <MonthlyTrendsChart data={monthlyTrendData} />
             </div>
           </div>
           
           {/* Running Balance Chart */}
-          <div className="rounded-lg border bg-card p-6">
-            <h2 className="text-xl font-semibold mb-4">Balance Over Time</h2>
+          <div className="rounded-lg border bg-card p-0">
+            <h2 className="text-xl font-semibold p-6 pb-0">Balance Over Time</h2>
             <BalanceOverTimeChart data={runningBalanceData} />
           </div>
           

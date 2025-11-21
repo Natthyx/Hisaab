@@ -6,6 +6,7 @@ const listTransactionsSchema = z.object({
   filter: z.enum(['daily', 'weekly', 'monthly', 'yearly']).optional(),
   search: z.string().optional(),
   category: z.string().optional(),
+  accountId: z.string().optional(), // Optional account ID filter
   dateRange: z.object({
     start: z.string().optional(), // ISO string
     end: z.string().optional(),   // ISO string
@@ -22,6 +23,7 @@ export async function GET(request: Request) {
     const filter = searchParams.get('filter') as 'daily' | 'weekly' | 'monthly' | 'yearly' | undefined
     const search = searchParams.get('search') || undefined
     const category = searchParams.get('category') || undefined
+    const accountId = searchParams.get('accountId') || undefined
     const startDate = searchParams.get('startDate') || undefined
     const endDate = searchParams.get('endDate') || undefined
     
@@ -35,11 +37,48 @@ export async function GET(request: Request) {
       )
     }
     
+    // Get user's accounts
+    let accountIds: string[] = []
+    
+    if (accountId) {
+      // If specific account requested, verify it belongs to user
+      const { data: accountData, error: accountError } = await supabase
+        .from('accounts')
+        .select('id')
+        .eq('id', accountId)
+        .eq('user_id', user.id)
+        .single()
+      
+      if (accountError || !accountData) {
+        return NextResponse.json(
+          { error: 'Account not found or unauthorized' },
+          { status: 404 }
+        )
+      }
+      
+      accountIds = [accountId]
+    } else {
+      // Get all user's accounts
+      const { data: accounts, error: accountsError } = await supabase
+        .from('accounts')
+        .select('id')
+        .eq('user_id', user.id)
+      
+      if (accountsError) {
+        return NextResponse.json(
+          { error: 'Failed to get user accounts' },
+          { status: 500 }
+        )
+      }
+      
+      accountIds = accounts.map(account => account.id)
+    }
+    
     // Build the query
     let query = supabase
       .from('transactions')
       .select('*')
-      .eq('user_id', user.id)
+      .in('account_id', accountIds)
     
     // Apply search filter
     if (search) {

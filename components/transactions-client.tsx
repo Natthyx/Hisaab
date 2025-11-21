@@ -5,7 +5,9 @@ import { TransactionItem } from "@/components/transaction-item"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { SearchIcon, FilterIcon, ArrowUpIcon, ArrowDownIcon } from 'lucide-react'
+import { useRouter, useSearchParams } from 'next/navigation'
 
 interface Transaction {
   id: string
@@ -16,8 +18,15 @@ interface Transaction {
   date: string
 }
 
+interface Account {
+  id: string
+  name: string
+}
+
 interface TransactionsClientProps {
   initialTransactions: Transaction[]
+  accounts: Account[]
+  selectedAccountId?: string
 }
 
 // Helper function to filter transactions by date range
@@ -84,11 +93,13 @@ const filterTransactionsBySearch = (transactions: Transaction[], searchTerm: str
   )
 }
 
-export function TransactionsClient({ initialTransactions }: TransactionsClientProps) {
+export function TransactionsClient({ initialTransactions, accounts, selectedAccountId }: TransactionsClientProps) {
   const [searchTerm, setSearchTerm] = useState("")
   const [dateFilter, setDateFilter] = useState("all")
   const [typeFilter, setTypeFilter] = useState("all")
   const [filteredTransactions, setFilteredTransactions] = useState(initialTransactions)
+  const router = useRouter()
+  const searchParams = useSearchParams()
 
   // Update filtered transactions when filters change
   useEffect(() => {
@@ -113,9 +124,31 @@ export function TransactionsClient({ initialTransactions }: TransactionsClientPr
     )
   }
 
+  const handleAccountChange = (accountId: string) => {
+    const params = new URLSearchParams(searchParams.toString())
+    params.set('account', accountId)
+    router.push(`/transactions?${params.toString()}`)
+  }
+
   return (
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row gap-4">
+        {accounts.length > 1 && (
+          <div className="w-full sm:w-64">
+            <Select value={selectedAccountId || ""} onValueChange={handleAccountChange}>
+              <SelectTrigger>
+                <SelectValue placeholder="Select account" />
+              </SelectTrigger>
+              <SelectContent>
+                {accounts.map((account) => (
+                  <SelectItem key={account.id} value={account.id}>
+                    {account.name}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
+        )}
         <div className="relative flex-1">
           <SearchIcon className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
           <Input
@@ -125,30 +158,33 @@ export function TransactionsClient({ initialTransactions }: TransactionsClientPr
             onChange={(e) => setSearchTerm(e.target.value)}
           />
         </div>
-        <div className="flex gap-2">
+        <div className="flex gap-1 sm:gap-2">
           <Button 
             variant={typeFilter === "all" ? "default" : "outline"} 
-            className="gap-2"
+            className="gap-1 sm:gap-2 px-2 sm:px-4"
             onClick={() => setTypeFilter("all")}
+            size="sm"
           >
             <FilterIcon className="h-4 w-4" />
-            <span>All</span>
+            <span className="hidden sm:inline">All</span>
           </Button>
           <Button 
             variant={typeFilter === "income" ? "default" : "outline"} 
-            className="gap-2"
+            className="gap-1 sm:gap-2 px-2 sm:px-4"
             onClick={() => setTypeFilter("income")}
+            size="sm"
           >
             <ArrowUpIcon className="h-4 w-4" />
-            <span>Income</span>
+            <span className="hidden sm:inline">Income</span>
           </Button>
           <Button 
             variant={typeFilter === "expense" ? "default" : "outline"} 
-            className="gap-2"
+            className="gap-1 sm:gap-2 px-2 sm:px-4"
             onClick={() => setTypeFilter("expense")}
+            size="sm"
           >
             <ArrowDownIcon className="h-4 w-4" />
-            <span>Expense</span>
+            <span className="hidden sm:inline">Expense</span>
           </Button>
         </div>
       </div>

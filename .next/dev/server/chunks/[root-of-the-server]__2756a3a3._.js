@@ -114,8 +114,18 @@ async function DELETE(request, { params }) {
                 status: 401
             });
         }
-        // Delete the transaction
-        const { error: deleteError } = await supabase.from('transactions').delete().eq('id', id).eq('user_id', user.id);
+        // Get user's accounts
+        const { data: accounts, error: accountsError } = await supabase.from('accounts').select('id').eq('user_id', user.id);
+        if (accountsError) {
+            return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json({
+                error: 'Failed to get user accounts'
+            }, {
+                status: 500
+            });
+        }
+        const accountIds = accounts.map((account)=>account.id);
+        // Delete the transaction only if it belongs to one of the user's accounts
+        const { error: deleteError } = await supabase.from('transactions').delete().eq('id', id).in('account_id', accountIds);
         if (deleteError) {
             return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json({
                 error: deleteError.message

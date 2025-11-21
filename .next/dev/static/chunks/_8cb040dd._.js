@@ -317,6 +317,7 @@ function LoginPage() {
     const [email, setEmail] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
     const [password, setPassword] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
     const [loading, setLoading] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [errors, setErrors] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])({});
     const supabase = (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$supabase$2f$client$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["createClient"])();
     // Check if user is already logged in and needs to complete setup
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
@@ -330,13 +331,11 @@ function LoginPage() {
             if (error || !user) {
                 return;
             }
-            // Check if user has completed setup
-            const { data: userData, error: userError } = await supabase.from('users').select('initial_balance').eq('id', user.id).single();
-            // If user exists and has set initial balance, redirect to dashboard
-            if (!userError && userData && userData.initial_balance !== null && userData.initial_balance !== 0) {
+            // Check if user has any accounts
+            const { data: accounts, error: accountsError } = await supabase.from('accounts').select('id').eq('user_id', user.id).limit(1);
+            // If user has accounts, redirect to dashboard
+            if (!accountsError && accounts && accounts.length > 0) {
                 router.push("/dashboard");
-            } else if (!userError && userData) {
-                router.push("/setup");
             } else {
                 router.push("/setup");
             }
@@ -344,8 +343,31 @@ function LoginPage() {
             console.error("Error checking user setup:", error);
         }
     };
+    // Validate form inputs
+    const validateForm = ()=>{
+        const newErrors = {};
+        // Email validation
+        if (!email) {
+            newErrors.email = "Email is required";
+        } else if (!/\S+@\S+\.\S+/.test(email)) {
+            newErrors.email = "Email address is invalid";
+        }
+        // Password validation
+        if (!password) {
+            newErrors.password = "Password is required";
+        } else if (password.length < 6) {
+            newErrors.password = "Password must be at least 6 characters";
+        }
+        setErrors(newErrors);
+        return Object.keys(newErrors).length === 0;
+    };
     const handleLogin = async (e)=>{
         e.preventDefault();
+        // Validate form before submission
+        if (!validateForm()) {
+            __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$sonner$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["toast"].error("Please fix the errors below");
+            return;
+        }
         setLoading(true);
         try {
             const { data, error } = await supabase.auth.signInWithPassword({
@@ -357,21 +379,20 @@ function LoginPage() {
                 setLoading(false);
                 return;
             }
-            // Check if user has completed setup
+            // Show success message
+            __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$sonner$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["toast"].success("Login successful! Redirecting...");
+            // Check if user has accounts
             if (data.user) {
-                const { data: userData, error: userError } = await supabase.from('users').select('initial_balance').eq('id', data.user.id).single();
-                // If user exists and has set initial balance, redirect to dashboard
-                if (!userError && userData && userData.initial_balance !== null && userData.initial_balance !== 0) {
+                const { data: accounts, error: accountsError } = await supabase.from('accounts').select('id').eq('user_id', data.user.id).limit(1);
+                // If user has accounts, redirect to dashboard
+                if (!accountsError && accounts && accounts.length > 0) {
                     router.push("/dashboard");
-                } else if (!userError && userData) {
-                    router.push("/setup");
                 } else {
                     router.push("/setup");
                 }
             }
-            router.refresh();
         } catch (error) {
-            __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$sonner$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["toast"].error("An unexpected error occurred. Please try again.");
+            __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$sonner$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["toast"].error("An unexpected error occurred");
             setLoading(false);
         }
     };
@@ -388,7 +409,7 @@ function LoginPage() {
                             children: "Hisaab"
                         }, void 0, false, {
                             fileName: "[project]/app/login/page.tsx",
-                            lineNumber: 106,
+                            lineNumber: 129,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardDescription"], {
@@ -396,13 +417,13 @@ function LoginPage() {
                             children: "Sign in to manage your expenses"
                         }, void 0, false, {
                             fileName: "[project]/app/login/page.tsx",
-                            lineNumber: 109,
+                            lineNumber: 132,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/login/page.tsx",
-                    lineNumber: 105,
+                    lineNumber: 128,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -418,7 +439,7 @@ function LoginPage() {
                                         children: "Email"
                                     }, void 0, false, {
                                         fileName: "[project]/app/login/page.tsx",
-                                        lineNumber: 116,
+                                        lineNumber: 139,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
@@ -426,17 +447,34 @@ function LoginPage() {
                                         type: "email",
                                         placeholder: "you@example.com",
                                         value: email,
-                                        onChange: (e)=>setEmail(e.target.value),
-                                        required: true
+                                        onChange: (e)=>{
+                                            setEmail(e.target.value);
+                                            // Clear error when user types
+                                            if (errors.email) {
+                                                setErrors((prev)=>({
+                                                        ...prev,
+                                                        email: undefined
+                                                    }));
+                                            }
+                                        },
+                                        className: errors.email ? "border-red-500" : ""
                                     }, void 0, false, {
                                         fileName: "[project]/app/login/page.tsx",
-                                        lineNumber: 117,
+                                        lineNumber: 140,
                                         columnNumber: 15
+                                    }, this),
+                                    errors.email && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                        className: "text-sm text-red-500",
+                                        children: errors.email
+                                    }, void 0, false, {
+                                        fileName: "[project]/app/login/page.tsx",
+                                        lineNumber: 155,
+                                        columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/login/page.tsx",
-                                lineNumber: 115,
+                                lineNumber: 138,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -447,7 +485,7 @@ function LoginPage() {
                                         children: "Password"
                                     }, void 0, false, {
                                         fileName: "[project]/app/login/page.tsx",
-                                        lineNumber: 127,
+                                        lineNumber: 159,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
@@ -455,17 +493,34 @@ function LoginPage() {
                                         type: "password",
                                         placeholder: "••••••••",
                                         value: password,
-                                        onChange: (e)=>setPassword(e.target.value),
-                                        required: true
+                                        onChange: (e)=>{
+                                            setPassword(e.target.value);
+                                            // Clear error when user types
+                                            if (errors.password) {
+                                                setErrors((prev)=>({
+                                                        ...prev,
+                                                        password: undefined
+                                                    }));
+                                            }
+                                        },
+                                        className: errors.password ? "border-red-500" : ""
                                     }, void 0, false, {
                                         fileName: "[project]/app/login/page.tsx",
-                                        lineNumber: 128,
+                                        lineNumber: 160,
                                         columnNumber: 15
+                                    }, this),
+                                    errors.password && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                        className: "text-sm text-red-500",
+                                        children: errors.password
+                                    }, void 0, false, {
+                                        fileName: "[project]/app/login/page.tsx",
+                                        lineNumber: 175,
+                                        columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/login/page.tsx",
-                                lineNumber: 126,
+                                lineNumber: 158,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
@@ -475,7 +530,7 @@ function LoginPage() {
                                 children: loading ? "Signing in..." : "Sign In"
                             }, void 0, false, {
                                 fileName: "[project]/app/login/page.tsx",
-                                lineNumber: 137,
+                                lineNumber: 178,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -491,39 +546,39 @@ function LoginPage() {
                                         children: "Sign up"
                                     }, void 0, false, {
                                         fileName: "[project]/app/login/page.tsx",
-                                        lineNumber: 146,
+                                        lineNumber: 187,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/login/page.tsx",
-                                lineNumber: 144,
+                                lineNumber: 185,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/login/page.tsx",
-                        lineNumber: 114,
+                        lineNumber: 137,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/app/login/page.tsx",
-                    lineNumber: 113,
+                    lineNumber: 136,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/app/login/page.tsx",
-            lineNumber: 104,
+            lineNumber: 127,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/app/login/page.tsx",
-        lineNumber: 103,
+        lineNumber: 126,
         columnNumber: 5
     }, this);
 }
-_s(LoginPage, "+PUYPlboEWvP2PgmdztZdUKh5NU=", false, function() {
+_s(LoginPage, "/de/vW9lgYv+J54U+tRE8Pq9+34=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"]
     ];

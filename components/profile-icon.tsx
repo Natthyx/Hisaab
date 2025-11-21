@@ -1,0 +1,175 @@
+"use client"
+
+import { UserIcon } from 'lucide-react'
+import { useState, useEffect } from 'react'
+import { createClient } from '@/lib/supabase/client'
+import { Button } from '@/components/ui/button'
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+import { AccountSelector } from "@/components/account-selector"
+import { useRouter } from 'next/navigation'
+import { signOut } from '@/lib/actions/auth'
+
+interface Account {
+  id: string
+  name: string
+}
+
+export function ProfileIcon() {
+  const [accounts, setAccounts] = useState<Account[]>([])
+  const [defaultAccountId, setDefaultAccountId] = useState<string | null>(null)
+  const [userEmail, setUserEmail] = useState<string | null>(null)
+  const supabase = createClient()
+  const router = useRouter()
+
+  useEffect(() => {
+    const fetchUserData = async () => {
+      try {
+        // Get user data
+        const { data: { user } } = await supabase.auth.getUser()
+        
+        if (!user) return
+
+        setUserEmail(user.email || null)
+
+        // Get user's accounts
+        const { data: accountsData, error: accountsError } = await supabase
+          .from('accounts')
+          .select('id, name')
+          .eq('user_id', user.id)
+          .order('name')
+        
+        if (accountsError) {
+          console.error('Error fetching accounts:', accountsError)
+          return
+        }
+
+        setAccounts(accountsData || [])
+
+        // Get user's default account
+        const { data: userData, error: userError } = await supabase
+          .from('users')
+          .select('default_account_id')
+          .eq('id', user.id)
+          .single()
+        
+        if (userError) {
+          console.error('Error fetching user data:', userError)
+          return
+        }
+
+        setDefaultAccountId(userData?.default_account_id || null)
+      } catch (error) {
+        console.error('Error fetching user data:', error)
+      }
+    }
+
+    fetchUserData()
+  }, [supabase])
+
+  // Listen for account changes
+  useEffect(() => {
+    const channel = supabase
+      .channel('profile-accounts-changes')
+      .on(
+        'postgres_changes',
+        {
+          event: 'INSERT',
+          schema: 'public',
+          table: 'accounts',
+        },
+        (payload) => {
+          // Add new account to the list
+          const newAccount = payload.new as Account
+          setAccounts(prev => [...prev, newAccount])
+        }
+      )
+      .on(
+        'postgres_changes',
+        {
+          event: 'DELETE',
+          schema: 'public',
+          table: 'accounts',
+        },
+        (payload) => {
+          // Remove deleted account from the list
+          const deletedAccountId = payload.old.id
+          setAccounts(prev => prev.filter(account => account.id !== deletedAccountId))
+          // If this was the default account, clear the default
+          if (defaultAccountId === deletedAccountId) {
+            setDefaultAccountId(null)
+          }
+        }
+      )
+      .on(
+        'postgres_changes',
+        {
+          event: 'UPDATE',
+          schema: 'public',
+          table: 'users',
+        },
+        (payload) => {
+          // Update default account if changed
+          if (payload.new.default_account_id !== defaultAccountId) {
+            setDefaultAccountId(payload.new.default_account_id)
+          }
+        }
+      )
+      .subscribe()
+
+    return () => {
+      supabase.removeChannel(channel)
+    }
+  }, [supabase, defaultAccountId])
+
+  const handleSignOut = async () => {
+    await signOut()
+  }
+
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button variant="ghost" size="icon" className="rounded-full">
+          <UserIcon className="h-5 w-5" />
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent align="end" className="w-64">
+        <div className="flex items-center gap-2 px-2 py-1.5">
+          <div className="bg-indigo-100 rounded-full p-2">
+            <UserIcon className="h-5 w-5 text-indigo-600" />
+          </div>
+          <div>
+            <p className="text-sm font-medium">{userEmail}</p>
+            <p className="text-xs text-muted-foreground">View profile</p>
+          </div>
+        </div>
+        
+        <div className="border-t my-1" />
+        
+        {accounts.length > 1 && defaultAccountId && (
+          <>
+            <div className="px-2 py-1.5">
+              <p className="text-xs font-medium text-muted-foreground mb-2">ACCOUNTS</p>
+              <AccountSelector 
+                accounts={accounts} 
+                selectedAccountId={defaultAccountId} 
+              />
+            </div>
+            <div className="border-t my-1" />
+          </>
+        )}
+        
+        <DropdownMenuItem onClick={() => router.push('/profile')}>
+          Profile Settings
+        </DropdownMenuItem>
+        <DropdownMenuItem onClick={handleSignOut}>
+          Log out
+        </DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
+  )
+}

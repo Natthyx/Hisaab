@@ -103,19 +103,30 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$v3$2f
 ;
 ;
 const transactionSchema = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$v3$2f$external$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__z$3e$__["z"].object({
-    amount: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$v3$2f$external$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__z$3e$__["z"].number(),
+    amount: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$v3$2f$external$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__z$3e$__["z"].string(),
     reason: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$v3$2f$external$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__z$3e$__["z"].string().optional(),
     type: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$v3$2f$external$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__z$3e$__["z"].enum([
         'income',
         'expense'
     ]),
     category: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$v3$2f$external$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__z$3e$__["z"].string().optional(),
-    date: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$v3$2f$external$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__z$3e$__["z"].string().optional()
+    date: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$v3$2f$external$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__z$3e$__["z"].string().optional(),
+    accountId: __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$zod$2f$v3$2f$external$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__$3c$export__$2a$__as__z$3e$__["z"].string().optional()
 });
 async function POST(request) {
     try {
         const supabase = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$supabase$2f$server$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["createClient"])();
-        const body = await request.json();
+        // Get form data
+        const formData = await request.formData();
+        // Convert FormData to object
+        const body = {
+            amount: formData.get('amount'),
+            reason: formData.get('reason') || undefined,
+            type: formData.get('type'),
+            category: formData.get('category') || undefined,
+            date: formData.get('date') || undefined,
+            accountId: formData.get('accountId') || undefined
+        };
         // Validate the request body
         const parsed = transactionSchema.safeParse(body);
         if (!parsed.success) {
@@ -126,7 +137,7 @@ async function POST(request) {
                 status: 400
             });
         }
-        const { amount, reason, type, category, date } = parsed.data;
+        const { amount, reason, type, category, date, accountId } = parsed.data;
         // Get the current user
         const { data: { user }, error: userError } = await supabase.auth.getUser();
         if (userError || !user) {
@@ -135,6 +146,32 @@ async function POST(request) {
             }, {
                 status: 401
             });
+        }
+        // Get the account ID - either provided or use user's default account
+        let transactionAccountId = accountId;
+        if (!transactionAccountId) {
+            // Get user's default account
+            const { data: userData, error: userError } = await supabase.from('users').select('default_account_id').eq('id', user.id).single();
+            if (userError) {
+                return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json({
+                    error: 'Failed to get user data'
+                }, {
+                    status: 500
+                });
+            }
+            transactionAccountId = userData?.default_account_id;
+            // If no default account, get the first account for this user
+            if (!transactionAccountId) {
+                const { data: accountData, error: accountError } = await supabase.from('accounts').select('id').eq('user_id', user.id).limit(1).single();
+                if (accountError) {
+                    return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json({
+                        error: 'User has no accounts. Please create an account first.'
+                    }, {
+                        status: 400
+                    });
+                }
+                transactionAccountId = accountData.id;
+            }
         }
         // Process the date - if provided, use it, otherwise use current date
         let transactionDate;
@@ -153,8 +190,8 @@ async function POST(request) {
         }
         // Insert the transaction
         const { data, error: insertError } = await supabase.from('transactions').insert({
-            user_id: user.id,
-            amount,
+            account_id: transactionAccountId,
+            amount: parseFloat(amount),
             reason: reason || '',
             type,
             category: category || 'general',

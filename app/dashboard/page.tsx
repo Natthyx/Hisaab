@@ -9,6 +9,12 @@ import Link from "next/link"
 import { createClient } from '@/lib/supabase/server'
 import { redirect } from 'next/navigation'
 
+interface Account {
+  id: string
+  name: string
+  initial_balance: number
+}
+
 // Helper function to format dates for daily chart
 const formatDailyDate = (dateString: string) => {
   const date = new Date(dateString)
@@ -28,7 +34,8 @@ const formatMonthlyDate = (dateString: string) => {
   return months[date.getMonth()]
 }
 
-export default async function DashboardPage() {
+export default async function DashboardPage(props: { searchParams: Promise<{ account?: string }> }) {
+  const searchParams = await props.searchParams
   const supabase = await createClient()
   
   // Get user data
@@ -38,19 +45,46 @@ export default async function DashboardPage() {
     redirect('/login')
   }
   
-  // Get user's initial balance
-  const { data: userData } = await supabase
-    .from('users')
-    .select('initial_balance')
-    .eq('id', user.id)
-    .single()
-  
-  // Get transactions for analytics
-  const { data: transactions } = await supabase
-    .from('transactions')
-    .select('*')
+  // Get user's accounts
+  const { data: accounts } = await supabase
+    .from('accounts')
+    .select('id, name, initial_balance')
     .eq('user_id', user.id)
-    .order('date', { ascending: false })
+    .order('name')
+  
+  // Determine which account to show
+  let selectedAccountId = searchParams.account
+  
+  // If no account specified, use user's default account or first account
+  if (!selectedAccountId && accounts && accounts.length > 0) {
+    // Get user's default account
+    const { data: userData } = await supabase
+      .from('users')
+      .select('default_account_id')
+      .eq('id', user.id)
+      .single()
+    
+    if (userData?.default_account_id) {
+      selectedAccountId = userData.default_account_id
+    } else {
+      selectedAccountId = accounts[0].id
+    }
+  }
+  
+  // Get selected account details
+  const selectedAccount = accounts?.find(account => account.id === selectedAccountId) || accounts?.[0]
+  
+  // Get transactions for the selected account
+  let transactions = []
+  if (selectedAccountId) {
+    const { data } = await supabase
+      .from('transactions')
+      .select('*')
+      .eq('account_id', selectedAccountId)
+      .order('date', { ascending: false })
+    
+    transactions = data || []
+  }
   
   // Calculate income and expense
   let totalIncome = 0
@@ -64,7 +98,7 @@ export default async function DashboardPage() {
     }
   })
   
-  const balance = (userData?.initial_balance || 0) + totalIncome - totalExpense
+  const balance = (selectedAccount?.initial_balance || 0) + totalIncome - totalExpense
   
   // Generate daily chart data (Mon-Sun)
   const dailyData = []
@@ -172,14 +206,15 @@ export default async function DashboardPage() {
       <Navigation />
       <main className="flex-1 p-4 pb-20 md:p-8 md:pb-8">
         <div className="mx-auto max-w-6xl space-y-6">
-          <div className="flex items-center justify-between">
+          {/* Header with buttons on the same line even on mobile */}
+          <div className="flex items-center justify-between gap-4">
             <h1 className="text-3xl font-bold">Dashboard</h1>
             <div className="flex items-center gap-2">
               <ThemeToggle />
               <Link href="/add">
                 <Button className="bg-indigo-600 hover:bg-indigo-700">
                   <PlusIcon className="mr-2 h-4 w-4" />
-                  Add Transaction
+                  <span className="hidden sm:inline">Add Transaction</span>
                 </Button>
               </Link>
             </div>
@@ -193,7 +228,7 @@ export default async function DashboardPage() {
               <TabsTrigger value="weekly">Weekly</TabsTrigger>
               <TabsTrigger value="monthly">Monthly</TabsTrigger>
             </TabsList>
-            <TabsContent value="daily" className="mt-6">
+            <TabsContent value="daily" className="mt-6 p-0">
               <ExpenseChart
                 data={dailyData}
                 title="Daily Overview"
@@ -205,7 +240,7 @@ export default async function DashboardPage() {
                 xAxisKey="day"
               />
             </TabsContent>
-            <TabsContent value="weekly" className="mt-6">
+            <TabsContent value="weekly" className="mt-6 p-0">
               <ExpenseChart
                 data={weeklyData}
                 title="Weekly Overview"
@@ -217,7 +252,7 @@ export default async function DashboardPage() {
                 xAxisKey="week"
               />
             </TabsContent>
-            <TabsContent value="monthly" className="mt-6">
+            <TabsContent value="monthly" className="mt-6 p-0">
               <ExpenseChart
                 data={monthlyData}
                 title="Monthly Overview"

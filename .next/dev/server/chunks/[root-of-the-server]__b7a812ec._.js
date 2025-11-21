@@ -46,16 +46,31 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$supabase$2
 ;
 async function POST(req) {
     try {
-        const { userId, email, initialBalance } = await req.json();
+        const { userId, email } = await req.json();
         const supabase = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$supabase$2f$supabase$2d$js$2f$dist$2f$module$2f$index$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__$3c$locals$3e$__["createClient"])(("TURBOPACK compile-time value", "https://sibpumkqregwnfbtnrwy.supabase.co"), process.env.SUPABASE_SERVICE_KEY);
-        const { error } = await supabase.from("users").insert([
+        // Try to insert the user profile
+        const { error } = await supabase.from("users").upsert([
             {
                 id: userId,
-                email,
-                initial_balance: initialBalance || 0
+                email: email,
+                full_name: null,
+                default_account_id: null,
+                created_at: new Date().toISOString()
             }
-        ]);
+        ], {
+            onConflict: 'id'
+        });
         if (error) {
+            console.error('Error creating user profile:', error);
+            // If the error is due to a missing table, we should provide a more helpful message
+            if (error.message.includes('relation') || error.message.includes('table')) {
+                return Response.json({
+                    error: 'Database schema not set up. Please run the database schema script.',
+                    details: error.message
+                }, {
+                    status: 400
+                });
+            }
             return Response.json({
                 error: error.message
             }, {
@@ -66,8 +81,10 @@ async function POST(req) {
             success: true
         });
     } catch (error) {
+        console.error('Unexpected error:', error);
         return Response.json({
-            error: 'An unexpected error occurred'
+            error: 'An unexpected error occurred',
+            details: error.message
         }, {
             status: 500
         });

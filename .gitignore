@@ -1,3 +1,7 @@
 node_modules
 .env
 schema.sql
+.next/dev
+/next/cache
+/next/logs
+next

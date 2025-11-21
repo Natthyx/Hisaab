@@ -3,11 +3,12 @@ import { NextResponse } from 'next/server'
 import { z } from 'zod'
 
 const updateTransactionSchema = z.object({
-  amount: z.number().optional(),
+  amount: z.string().optional(), // Changed to string since FormData sends strings
   reason: z.string().optional(),
   type: z.enum(['income', 'expense']).optional(),
   category: z.string().optional(),
   date: z.string().optional(), // ISO string
+  accountId: z.string().optional(), // Optional account ID
 })
 
 export async function PUT(
@@ -20,7 +21,16 @@ export async function PUT(
     // Await the params promise to get the actual params
     const { id } = await params
     
-    const body = await request.json()
+    // Get form data
+    const formData = await request.formData()
+    
+    // Convert FormData to object (only include fields that are present)
+    const body: Record<string, string> = {}
+    for (const [key, value] of formData.entries()) {
+      if (typeof value === 'string') {
+        body[key] = value
+      }
+    }
     
     // Validate the request body
     const parsed = updateTransactionSchema.safeParse(body)
@@ -29,6 +39,12 @@ export async function PUT(
         { error: 'Invalid request body', details: parsed.error.flatten() },
         { status: 400 }
       )
+    }
+    
+    // Prepare update data (convert amount to number if present)
+    const updateData: Record<string, any> = { ...parsed.data }
+    if (updateData.amount) {
+      updateData.amount = parseFloat(updateData.amount)
     }
     
     // Get the current user
@@ -41,12 +57,27 @@ export async function PUT(
       )
     }
     
-    // Update the transaction
+    // Get user's accounts
+    const { data: accounts, error: accountsError } = await supabase
+      .from('accounts')
+      .select('id')
+      .eq('user_id', user.id)
+    
+    if (accountsError) {
+      return NextResponse.json(
+        { error: 'Failed to get user accounts' },
+        { status: 500 }
+      )
+    }
+    
+    const accountIds = accounts.map(account => account.id)
+    
+    // Update the transaction only if it belongs to one of the user's accounts
     const { data, error: updateError } = await supabase
       .from('transactions')
-      .update(parsed.data)
+      .update(updateData)
       .eq('id', id)
-      .eq('user_id', user.id)
+      .in('account_id', accountIds)
       .select()
       .single()
     
@@ -54,6 +85,13 @@ export async function PUT(
       return NextResponse.json(
         { error: updateError.message },
         { status: 500 }
+      )
+    }
+    
+    if (!data) {
+      return NextResponse.json(
+        { error: 'Transaction not found or unauthorized' },
+        { status: 404 }
       )
     }
     
