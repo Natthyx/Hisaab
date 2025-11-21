@@ -2110,3 +2110,2706 @@ It can also happen if the client has a browser extension installed which messes 
        height and width.
 [02:43:19.850] Server  LOG      ✓ Compiled in 56ms
 [02:43:59.501] Server  LOG      ✓ Compiled in 52ms
+[02:50:32.973] Server  LOG      ✓ Compiled in 0ms
+[02:51:13.833] Browser ERROR   ./components/transactions/client.tsx:9:1
+Export filterTransactionsByDate doesn't exist in target module
+   7 | import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+   8 | import { SearchIcon, FilterIcon, ArrowUpIcon, ArrowDownIcon } from 'lucide-react'
+>  9 | import { useTransactions, filterTransactionsByDate } from "@/hooks/useTransactions"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import { Transaction } from "@/types"
+  11 |
+  12 | interface Account {
+
+The export filterTransactionsByDate was not found in module [project]/hooks/useTransactions.ts [app-client] (ecmascript).
+Did you mean to import useTransactions?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./components/transactions/client.tsx
+    ./app/transactions/page.tsx
+[02:51:13.834] Browser ERROR   ./components/transactions/client.tsx:9:1
+Export filterTransactionsByDate doesn't exist in target module
+   7 | import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+   8 | import { SearchIcon, FilterIcon, ArrowUpIcon, ArrowDownIcon } from 'lucide-react'
+>  9 | import { useTransactions, filterTransactionsByDate } from "@/hooks/useTransactions"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import { Transaction } from "@/types"
+  11 |
+  12 | interface Account {
+
+The export filterTransactionsByDate was not found in module [project]/hooks/useTransactions.ts [app-ssr] (ecmascript).
+Did you mean to import useTransactions?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./components/transactions/client.tsx
+    ./app/transactions/page.tsx
+[02:51:26.833] Browser ERROR   ./components/transactions/client.tsx:9:1
+Export filterTransactionsByDate doesn't exist in target module
+   7 | import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+   8 | import { SearchIcon, FilterIcon, ArrowUpIcon, ArrowDownIcon } from 'lucide-react'
+>  9 | import { useTransactions, filterTransactionsByDate } from "@/hooks/useTransactions"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import { Transaction } from "@/types"
+  11 |
+  12 | interface Account {
+
+The export filterTransactionsByDate was not found in module [project]/hooks/useTransactions.ts [app-client] (ecmascript).
+Did you mean to import useTransactions?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./components/transactions/client.tsx
+    ./app/transactions/page.tsx
+[02:51:26.833] Browser ERROR   ./components/transactions/client.tsx:9:1
+Export filterTransactionsByDate doesn't exist in target module
+   7 | import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+   8 | import { SearchIcon, FilterIcon, ArrowUpIcon, ArrowDownIcon } from 'lucide-react'
+>  9 | import { useTransactions, filterTransactionsByDate } from "@/hooks/useTransactions"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import { Transaction } from "@/types"
+  11 |
+  12 | interface Account {
+
+The export filterTransactionsByDate was not found in module [project]/hooks/useTransactions.ts [app-ssr] (ecmascript).
+Did you mean to import useTransactions?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./components/transactions/client.tsx
+    ./app/transactions/page.tsx
+[02:51:43.832] Browser ERROR   ./components/transactions/client.tsx:9:1
+Export filterTransactionsByDate doesn't exist in target module
+   7 | import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+   8 | import { SearchIcon, FilterIcon, ArrowUpIcon, ArrowDownIcon } from 'lucide-react'
+>  9 | import { useTransactions, filterTransactionsByDate } from "@/hooks/useTransactions"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import { Transaction } from "@/types"
+  11 |
+  12 | interface Account {
+
+The export filterTransactionsByDate was not found in module [project]/hooks/useTransactions.ts [app-client] (ecmascript).
+Did you mean to import useTransactions?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./components/transactions/client.tsx
+    ./app/transactions/page.tsx
+[02:51:43.832] Browser ERROR   ./components/transactions/client.tsx:9:1
+Export filterTransactionsByDate doesn't exist in target module
+   7 | import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+   8 | import { SearchIcon, FilterIcon, ArrowUpIcon, ArrowDownIcon } from 'lucide-react'
+>  9 | import { useTransactions, filterTransactionsByDate } from "@/hooks/useTransactions"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import { Transaction } from "@/types"
+  11 |
+  12 | interface Account {
+
+The export filterTransactionsByDate was not found in module [project]/hooks/useTransactions.ts [app-ssr] (ecmascript).
+Did you mean to import useTransactions?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./components/transactions/client.tsx
+    ./app/transactions/page.tsx
+[02:52:07.832] Browser ERROR   ./components/transactions/client.tsx:9:1
+Export filterTransactionsByDate doesn't exist in target module
+   7 | import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+   8 | import { SearchIcon, FilterIcon, ArrowUpIcon, ArrowDownIcon } from 'lucide-react'
+>  9 | import { useTransactions, filterTransactionsByDate } from "@/hooks/useTransactions"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import { Transaction } from "@/types"
+  11 |
+  12 | interface Account {
+
+The export filterTransactionsByDate was not found in module [project]/hooks/useTransactions.ts [app-client] (ecmascript).
+Did you mean to import useTransactions?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./components/transactions/client.tsx
+    ./app/transactions/page.tsx
+[02:52:07.832] Browser ERROR   ./components/transactions/client.tsx:9:1
+Export filterTransactionsByDate doesn't exist in target module
+   7 | import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+   8 | import { SearchIcon, FilterIcon, ArrowUpIcon, ArrowDownIcon } from 'lucide-react'
+>  9 | import { useTransactions, filterTransactionsByDate } from "@/hooks/useTransactions"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import { Transaction } from "@/types"
+  11 |
+  12 | interface Account {
+
+The export filterTransactionsByDate was not found in module [project]/hooks/useTransactions.ts [app-ssr] (ecmascript).
+Did you mean to import useTransactions?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./components/transactions/client.tsx
+    ./app/transactions/page.tsx
+[02:52:39.842] Browser ERROR   ./components/transactions/client.tsx:9:1
+Export filterTransactionsByDate doesn't exist in target module
+   7 | import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+   8 | import { SearchIcon, FilterIcon, ArrowUpIcon, ArrowDownIcon } from 'lucide-react'
+>  9 | import { useTransactions, filterTransactionsByDate } from "@/hooks/useTransactions"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import { Transaction } from "@/types"
+  11 |
+  12 | interface Account {
+
+The export filterTransactionsByDate was not found in module [project]/hooks/useTransactions.ts [app-client] (ecmascript).
+Did you mean to import useTransactions?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./components/transactions/client.tsx
+    ./app/transactions/page.tsx
+[02:52:39.843] Browser ERROR   ./components/transactions/client.tsx:9:1
+Export filterTransactionsByDate doesn't exist in target module
+   7 | import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+   8 | import { SearchIcon, FilterIcon, ArrowUpIcon, ArrowDownIcon } from 'lucide-react'
+>  9 | import { useTransactions, filterTransactionsByDate } from "@/hooks/useTransactions"
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import { Transaction } from "@/types"
+  11 |
+  12 | interface Account {
+
+The export filterTransactionsByDate was not found in module [project]/hooks/useTransactions.ts [app-ssr] (ecmascript).
+Did you mean to import useTransactions?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./components/transactions/client.tsx
+    ./app/transactions/page.tsx
+[02:53:05.073] Server  LOG      ✓ Compiled in 142ms
+[02:54:30.832] Browser ERROR   ./app/transactions/page.tsx:11:32
+Ecmascript file had an error
+   9 |
+  10 | // Dynamically import the client page to avoid server/client component mismatch
+> 11 | const TransactionsClientPage = dynamic(() => import('./client-page'), {
+     |                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 13 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 14 | })
+     | ^^^
+  15 |
+  16 | export default async function TransactionsPage(props: { searchParams: Promise<{ account?: string }> }) {
+  17 |   const searchParams = await props.searchParams
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:54:53.191] Server  LOG      ✓ Compiled in 181ms
+[02:54:53.833] Browser ERROR   ./app/transactions/page.tsx:11:32
+Ecmascript file had an error
+   9 |
+  10 | // Dynamically import the client page to avoid server/client component mismatch
+> 11 | const TransactionsClientPage = dynamic(() => import('./client-page'), {
+     |                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 13 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 14 | })
+     | ^^^
+  15 |
+  16 | export default async function TransactionsPage(props: { searchParams: Promise<{ account?: string }> }) {
+  17 |   const searchParams = await props.searchParams
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:55:51.836] Browser ERROR   ./app/transactions/page.tsx:11:32
+Ecmascript file had an error
+   9 |
+  10 | // Dynamically import the client page to avoid server/client component mismatch
+> 11 | const TransactionsClientPage = dynamic(() => import('./client-page'), {
+     |                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 13 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 14 | })
+     | ^^^
+  15 |
+  16 | export default async function TransactionsPage(props: { searchParams: Promise<{ account?: string }> }) {
+  17 |   const searchParams = await props.searchParams
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:56:13.832] Browser ERROR   ./app/transactions/page.tsx:11:32
+Ecmascript file had an error
+   9 |
+  10 | // Dynamically import the client page to avoid server/client component mismatch
+> 11 | const TransactionsClientPage = dynamic(() => import('./client-page'), {
+     |                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 13 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 14 | })
+     | ^^^
+  15 |
+  16 | export default async function TransactionsPage(props: { searchParams: Promise<{ account?: string }> }) {
+  17 |   const searchParams = await props.searchParams
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:56:20.335] Server  LOG      ✓ Compiled in 215ms
+[02:56:20.832] Browser ERROR   ./app/transactions/page.tsx:11:32
+Ecmascript file had an error
+   9 |
+  10 | // Dynamically import the client page to avoid server/client component mismatch
+> 11 | const TransactionsClientPage = dynamic(() => import('./client-page'), {
+     |                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 13 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 14 | })
+     | ^^^
+  15 |
+  16 | export default async function TransactionsPage(props: { searchParams: Promise<{ account?: string }> }) {
+  17 |   const searchParams = await props.searchParams
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:56:20.832] Browser ERROR   ./app/dashboard/page.tsx:11:29
+Ecmascript file had an error
+   9 |
+  10 | // Dynamically import the client page to avoid server/client component mismatch
+> 11 | const DashboardClientPage = dynamic(() => import('./client-page'), {
+     |                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 13 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 14 | })
+     | ^^^
+  15 |
+  16 | export default async function DashboardPage() {
+  17 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:56:45.832] Browser ERROR   ./app/transactions/page.tsx:11:32
+Ecmascript file had an error
+   9 |
+  10 | // Dynamically import the client page to avoid server/client component mismatch
+> 11 | const TransactionsClientPage = dynamic(() => import('./client-page'), {
+     |                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 13 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 14 | })
+     | ^^^
+  15 |
+  16 | export default async function TransactionsPage(props: { searchParams: Promise<{ account?: string }> }) {
+  17 |   const searchParams = await props.searchParams
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:56:45.832] Browser ERROR   ./app/dashboard/page.tsx:11:29
+Ecmascript file had an error
+   9 |
+  10 | // Dynamically import the client page to avoid server/client component mismatch
+> 11 | const DashboardClientPage = dynamic(() => import('./client-page'), {
+     |                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 13 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 14 | })
+     | ^^^
+  15 |
+  16 | export default async function DashboardPage() {
+  17 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:57:14.833] Browser ERROR   ./app/transactions/page.tsx:11:32
+Ecmascript file had an error
+   9 |
+  10 | // Dynamically import the client page to avoid server/client component mismatch
+> 11 | const TransactionsClientPage = dynamic(() => import('./client-page'), {
+     |                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 13 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 14 | })
+     | ^^^
+  15 |
+  16 | export default async function TransactionsPage(props: { searchParams: Promise<{ account?: string }> }) {
+  17 |   const searchParams = await props.searchParams
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:57:14.833] Browser ERROR   ./app/dashboard/page.tsx:11:29
+Ecmascript file had an error
+   9 |
+  10 | // Dynamically import the client page to avoid server/client component mismatch
+> 11 | const DashboardClientPage = dynamic(() => import('./client-page'), {
+     |                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 13 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 14 | })
+     | ^^^
+  15 |
+  16 | export default async function DashboardPage() {
+  17 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:57:22.832] Browser ERROR   ./app/transactions/page.tsx:11:32
+Ecmascript file had an error
+   9 |
+  10 | // Dynamically import the client page to avoid server/client component mismatch
+> 11 | const TransactionsClientPage = dynamic(() => import('./client-page'), {
+     |                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 13 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 14 | })
+     | ^^^
+  15 |
+  16 | export default async function TransactionsPage(props: { searchParams: Promise<{ account?: string }> }) {
+  17 |   const searchParams = await props.searchParams
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:57:22.832] Browser ERROR   ./app/analytics/page.tsx:8:29
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const AnalyticsClientPage = dynamic(() => import('./client-page'), {
+     |                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function AnalyticsPage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:57:22.832] Browser ERROR   ./app/dashboard/page.tsx:11:29
+Ecmascript file had an error
+   9 |
+  10 | // Dynamically import the client page to avoid server/client component mismatch
+> 11 | const DashboardClientPage = dynamic(() => import('./client-page'), {
+     |                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 13 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 14 | })
+     | ^^^
+  15 |
+  16 | export default async function DashboardPage() {
+  17 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:57:45.832] Browser ERROR   ./app/transactions/page.tsx:11:32
+Ecmascript file had an error
+   9 |
+  10 | // Dynamically import the client page to avoid server/client component mismatch
+> 11 | const TransactionsClientPage = dynamic(() => import('./client-page'), {
+     |                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 13 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 14 | })
+     | ^^^
+  15 |
+  16 | export default async function TransactionsPage(props: { searchParams: Promise<{ account?: string }> }) {
+  17 |   const searchParams = await props.searchParams
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:57:45.832] Browser ERROR   ./app/analytics/page.tsx:8:29
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const AnalyticsClientPage = dynamic(() => import('./client-page'), {
+     |                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function AnalyticsPage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:57:45.832] Browser ERROR   ./app/dashboard/page.tsx:11:29
+Ecmascript file had an error
+   9 |
+  10 | // Dynamically import the client page to avoid server/client component mismatch
+> 11 | const DashboardClientPage = dynamic(() => import('./client-page'), {
+     |                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 13 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 14 | })
+     | ^^^
+  15 |
+  16 | export default async function DashboardPage() {
+  17 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:57:51.833] Browser ERROR   ./app/transactions/page.tsx:11:32
+Ecmascript file had an error
+   9 |
+  10 | // Dynamically import the client page to avoid server/client component mismatch
+> 11 | const TransactionsClientPage = dynamic(() => import('./client-page'), {
+     |                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 13 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 14 | })
+     | ^^^
+  15 |
+  16 | export default async function TransactionsPage(props: { searchParams: Promise<{ account?: string }> }) {
+  17 |   const searchParams = await props.searchParams
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:57:51.833] Browser ERROR   ./app/analytics/page.tsx:8:29
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const AnalyticsClientPage = dynamic(() => import('./client-page'), {
+     |                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function AnalyticsPage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:57:51.833] Browser ERROR   ./app/accounts/page.tsx:8:28
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const AccountsClientPage = dynamic(() => import('./client-page'), {
+     |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function AccountsPage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:57:51.833] Browser ERROR   ./app/dashboard/page.tsx:11:29
+Ecmascript file had an error
+   9 |
+  10 | // Dynamically import the client page to avoid server/client component mismatch
+> 11 | const DashboardClientPage = dynamic(() => import('./client-page'), {
+     |                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 13 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 14 | })
+     | ^^^
+  15 |
+  16 | export default async function DashboardPage() {
+  17 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:58:04.831] Browser ERROR   ./app/transactions/page.tsx:11:32
+Ecmascript file had an error
+   9 |
+  10 | // Dynamically import the client page to avoid server/client component mismatch
+> 11 | const TransactionsClientPage = dynamic(() => import('./client-page'), {
+     |                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 13 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 14 | })
+     | ^^^
+  15 |
+  16 | export default async function TransactionsPage(props: { searchParams: Promise<{ account?: string }> }) {
+  17 |   const searchParams = await props.searchParams
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:58:04.831] Browser ERROR   ./app/analytics/page.tsx:8:29
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const AnalyticsClientPage = dynamic(() => import('./client-page'), {
+     |                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function AnalyticsPage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:58:04.831] Browser ERROR   ./app/accounts/page.tsx:8:28
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const AccountsClientPage = dynamic(() => import('./client-page'), {
+     |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function AccountsPage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:58:04.831] Browser ERROR   ./app/dashboard/page.tsx:11:29
+Ecmascript file had an error
+   9 |
+  10 | // Dynamically import the client page to avoid server/client component mismatch
+> 11 | const DashboardClientPage = dynamic(() => import('./client-page'), {
+     |                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 13 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 14 | })
+     | ^^^
+  15 |
+  16 | export default async function DashboardPage() {
+  17 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:58:11.832] Browser ERROR   ./app/transactions/page.tsx:11:32
+Ecmascript file had an error
+   9 |
+  10 | // Dynamically import the client page to avoid server/client component mismatch
+> 11 | const TransactionsClientPage = dynamic(() => import('./client-page'), {
+     |                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 13 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 14 | })
+     | ^^^
+  15 |
+  16 | export default async function TransactionsPage(props: { searchParams: Promise<{ account?: string }> }) {
+  17 |   const searchParams = await props.searchParams
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:58:11.832] Browser ERROR   ./app/analytics/page.tsx:8:29
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const AnalyticsClientPage = dynamic(() => import('./client-page'), {
+     |                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function AnalyticsPage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:58:11.832] Browser ERROR   ./app/accounts/page.tsx:8:28
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const AccountsClientPage = dynamic(() => import('./client-page'), {
+     |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function AccountsPage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:58:11.832] Browser ERROR   ./app/dashboard/page.tsx:11:29
+Ecmascript file had an error
+   9 |
+  10 | // Dynamically import the client page to avoid server/client component mismatch
+> 11 | const DashboardClientPage = dynamic(() => import('./client-page'), {
+     |                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 13 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 14 | })
+     | ^^^
+  15 |
+  16 | export default async function DashboardPage() {
+  17 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:58:11.833] Browser ERROR   ./app/profile/page.tsx:8:27
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const ProfileClientPage = dynamic(() => import('./client-page'), {
+     |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function ProfilePage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:58:32.832] Browser ERROR   ./app/transactions/page.tsx:11:32
+Ecmascript file had an error
+   9 |
+  10 | // Dynamically import the client page to avoid server/client component mismatch
+> 11 | const TransactionsClientPage = dynamic(() => import('./client-page'), {
+     |                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 13 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 14 | })
+     | ^^^
+  15 |
+  16 | export default async function TransactionsPage(props: { searchParams: Promise<{ account?: string }> }) {
+  17 |   const searchParams = await props.searchParams
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:58:32.833] Browser ERROR   ./app/analytics/page.tsx:8:29
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const AnalyticsClientPage = dynamic(() => import('./client-page'), {
+     |                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function AnalyticsPage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:58:32.833] Browser ERROR   ./app/accounts/page.tsx:8:28
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const AccountsClientPage = dynamic(() => import('./client-page'), {
+     |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function AccountsPage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:58:32.833] Browser ERROR   ./app/dashboard/page.tsx:11:29
+Ecmascript file had an error
+   9 |
+  10 | // Dynamically import the client page to avoid server/client component mismatch
+> 11 | const DashboardClientPage = dynamic(() => import('./client-page'), {
+     |                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 13 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 14 | })
+     | ^^^
+  15 |
+  16 | export default async function DashboardPage() {
+  17 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:58:32.833] Browser ERROR   ./app/profile/page.tsx:8:27
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const ProfileClientPage = dynamic(() => import('./client-page'), {
+     |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function ProfilePage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:58:33.096] Server  LOG      ✓ Compiled in 193ms
+[02:58:33.832] Browser ERROR   ./app/transactions/page.tsx:11:32
+Ecmascript file had an error
+   9 |
+  10 | // Dynamically import the client page to avoid server/client component mismatch
+> 11 | const TransactionsClientPage = dynamic(() => import('./client-page'), {
+     |                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 13 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 14 | })
+     | ^^^
+  15 |
+  16 | export default async function TransactionsPage(props: { searchParams: Promise<{ account?: string }> }) {
+  17 |   const searchParams = await props.searchParams
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:58:33.833] Browser ERROR   ./app/analytics/page.tsx:8:29
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const AnalyticsClientPage = dynamic(() => import('./client-page'), {
+     |                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function AnalyticsPage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:58:33.833] Browser ERROR   ./app/accounts/page.tsx:8:28
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const AccountsClientPage = dynamic(() => import('./client-page'), {
+     |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function AccountsPage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:58:33.833] Browser ERROR   ./app/dashboard/page.tsx:11:29
+Ecmascript file had an error
+   9 |
+  10 | // Dynamically import the client page to avoid server/client component mismatch
+> 11 | const DashboardClientPage = dynamic(() => import('./client-page'), {
+     |                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 13 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 14 | })
+     | ^^^
+  15 |
+  16 | export default async function DashboardPage() {
+  17 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:58:33.833] Browser ERROR   ./app/profile/page.tsx:8:27
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const ProfileClientPage = dynamic(() => import('./client-page'), {
+     |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function ProfilePage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:58:47.842] Browser ERROR   ./app/transactions/page.tsx:11:32
+Ecmascript file had an error
+   9 |
+  10 | // Dynamically import the client page to avoid server/client component mismatch
+> 11 | const TransactionsClientPage = dynamic(() => import('./client-page'), {
+     |                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 13 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 14 | })
+     | ^^^
+  15 |
+  16 | export default async function TransactionsPage(props: { searchParams: Promise<{ account?: string }> }) {
+  17 |   const searchParams = await props.searchParams
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:58:47.843] Browser ERROR   ./app/analytics/page.tsx:8:29
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const AnalyticsClientPage = dynamic(() => import('./client-page'), {
+     |                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function AnalyticsPage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:58:47.843] Browser ERROR   ./app/add/page.tsx:8:34
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const AddTransactionClientPage = dynamic(() => import('./client-page'), {
+     |                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function AddTransactionPage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:58:47.843] Browser ERROR   ./app/accounts/page.tsx:8:28
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const AccountsClientPage = dynamic(() => import('./client-page'), {
+     |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function AccountsPage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:58:47.843] Browser ERROR   ./app/dashboard/page.tsx:11:29
+Ecmascript file had an error
+   9 |
+  10 | // Dynamically import the client page to avoid server/client component mismatch
+> 11 | const DashboardClientPage = dynamic(() => import('./client-page'), {
+     |                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 13 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 14 | })
+     | ^^^
+  15 |
+  16 | export default async function DashboardPage() {
+  17 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:58:47.843] Browser ERROR   ./app/profile/page.tsx:8:27
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const ProfileClientPage = dynamic(() => import('./client-page'), {
+     |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function ProfilePage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:59:06.832] Browser ERROR   ./app/transactions/page.tsx:11:32
+Ecmascript file had an error
+   9 |
+  10 | // Dynamically import the client page to avoid server/client component mismatch
+> 11 | const TransactionsClientPage = dynamic(() => import('./client-page'), {
+     |                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 13 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 14 | })
+     | ^^^
+  15 |
+  16 | export default async function TransactionsPage(props: { searchParams: Promise<{ account?: string }> }) {
+  17 |   const searchParams = await props.searchParams
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:59:06.832] Browser ERROR   ./app/analytics/page.tsx:8:29
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const AnalyticsClientPage = dynamic(() => import('./client-page'), {
+     |                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function AnalyticsPage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:59:06.832] Browser ERROR   ./app/add/page.tsx:8:34
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const AddTransactionClientPage = dynamic(() => import('./client-page'), {
+     |                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function AddTransactionPage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:59:06.832] Browser ERROR   ./app/accounts/page.tsx:8:28
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const AccountsClientPage = dynamic(() => import('./client-page'), {
+     |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function AccountsPage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:59:06.832] Browser ERROR   ./app/dashboard/page.tsx:11:29
+Ecmascript file had an error
+   9 |
+  10 | // Dynamically import the client page to avoid server/client component mismatch
+> 11 | const DashboardClientPage = dynamic(() => import('./client-page'), {
+     |                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 13 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 14 | })
+     | ^^^
+  15 |
+  16 | export default async function DashboardPage() {
+  17 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:59:06.832] Browser ERROR   ./app/profile/page.tsx:8:27
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const ProfileClientPage = dynamic(() => import('./client-page'), {
+     |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function ProfilePage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:59:07.832] Browser ERROR   ./app/transactions/page.tsx:11:32
+Ecmascript file had an error
+   9 |
+  10 | // Dynamically import the client page to avoid server/client component mismatch
+> 11 | const TransactionsClientPage = dynamic(() => import('./client-page'), {
+     |                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 13 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 14 | })
+     | ^^^
+  15 |
+  16 | export default async function TransactionsPage(props: { searchParams: Promise<{ account?: string }> }) {
+  17 |   const searchParams = await props.searchParams
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:59:07.832] Browser ERROR   ./app/analytics/page.tsx:8:29
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const AnalyticsClientPage = dynamic(() => import('./client-page'), {
+     |                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function AnalyticsPage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:59:07.832] Browser ERROR   ./app/add/page.tsx:8:34
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const AddTransactionClientPage = dynamic(() => import('./client-page'), {
+     |                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function AddTransactionPage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:59:07.832] Browser ERROR   ./app/accounts/page.tsx:8:28
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const AccountsClientPage = dynamic(() => import('./client-page'), {
+     |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function AccountsPage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:59:07.832] Browser ERROR   ./app/dashboard/page.tsx:11:29
+Ecmascript file had an error
+   9 |
+  10 | // Dynamically import the client page to avoid server/client component mismatch
+> 11 | const DashboardClientPage = dynamic(() => import('./client-page'), {
+     |                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 13 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 14 | })
+     | ^^^
+  15 |
+  16 | export default async function DashboardPage() {
+  17 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:59:07.832] Browser ERROR   ./app/profile/page.tsx:8:27
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const ProfileClientPage = dynamic(() => import('./client-page'), {
+     |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function ProfilePage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:59:16.835] Browser ERROR   ./app/transactions/page.tsx:11:32
+Ecmascript file had an error
+   9 |
+  10 | // Dynamically import the client page to avoid server/client component mismatch
+> 11 | const TransactionsClientPage = dynamic(() => import('./client-page'), {
+     |                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 13 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 14 | })
+     | ^^^
+  15 |
+  16 | export default async function TransactionsPage(props: { searchParams: Promise<{ account?: string }> }) {
+  17 |   const searchParams = await props.searchParams
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:59:16.835] Browser ERROR   ./app/analytics/page.tsx:8:29
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const AnalyticsClientPage = dynamic(() => import('./client-page'), {
+     |                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function AnalyticsPage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:59:16.835] Browser ERROR   ./app/add/page.tsx:8:34
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const AddTransactionClientPage = dynamic(() => import('./client-page'), {
+     |                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function AddTransactionPage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:59:16.835] Browser ERROR   ./app/accounts/page.tsx:8:28
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const AccountsClientPage = dynamic(() => import('./client-page'), {
+     |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function AccountsPage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:59:16.835] Browser ERROR   ./app/dashboard/page.tsx:11:29
+Ecmascript file had an error
+   9 |
+  10 | // Dynamically import the client page to avoid server/client component mismatch
+> 11 | const DashboardClientPage = dynamic(() => import('./client-page'), {
+     |                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 13 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 14 | })
+     | ^^^
+  15 |
+  16 | export default async function DashboardPage() {
+  17 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[02:59:16.835] Browser ERROR   ./app/profile/page.tsx:8:27
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const ProfileClientPage = dynamic(() => import('./client-page'), {
+     |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function ProfilePage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[03:06:33.421] Server  ERROR    ⨯ ./app/dashboard/page.tsx:11:29
+Ecmascript file had an error
+   9 |
+  10 | // Dynamically import the client page to avoid server/client component mismatch
+> 11 | const DashboardClientPage = dynamic(() => import('./client-page'), {
+     |                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 13 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 14 | })
+     | ^^^
+  15 |
+  16 | export default async function DashboardPage() {
+  17 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+
+[03:06:33.644] Browser ERROR   uncaughtError: Error: ./app/transactions/page.tsx:11:32
+Ecmascript file had an error
+   9 |
+  10 | // Dynamically import the client page to avoid server/client component mismatch
+> 11 | const TransactionsClientPage = dynamic(() => import('./client-page'), {
+     |                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 13 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 14 | })
+     | ^^^
+  15 |
+  16 | export default async function TransactionsPage(props: { searchParams: Promise<{ account?: string }> }) {
+  17 |   const searchParams = await props.searchParams
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+
+
+[03:06:33.806] Browser ERROR   ./app/transactions/page.tsx:11:32
+Ecmascript file had an error
+   9 |
+  10 | // Dynamically import the client page to avoid server/client component mismatch
+> 11 | const TransactionsClientPage = dynamic(() => import('./client-page'), {
+     |                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 13 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 14 | })
+     | ^^^
+  15 |
+  16 | export default async function TransactionsPage(props: { searchParams: Promise<{ account?: string }> }) {
+  17 |   const searchParams = await props.searchParams
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[03:06:33.806] Browser ERROR   ./app/analytics/page.tsx:8:29
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const AnalyticsClientPage = dynamic(() => import('./client-page'), {
+     |                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function AnalyticsPage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[03:06:33.806] Browser ERROR   ./app/add/page.tsx:8:34
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const AddTransactionClientPage = dynamic(() => import('./client-page'), {
+     |                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function AddTransactionPage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[03:06:33.806] Browser ERROR   ./app/accounts/page.tsx:8:28
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const AccountsClientPage = dynamic(() => import('./client-page'), {
+     |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function AccountsPage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[03:06:33.806] Browser ERROR   ./app/dashboard/page.tsx:11:29
+Ecmascript file had an error
+   9 |
+  10 | // Dynamically import the client page to avoid server/client component mismatch
+> 11 | const DashboardClientPage = dynamic(() => import('./client-page'), {
+     |                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 13 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 14 | })
+     | ^^^
+  15 |
+  16 | export default async function DashboardPage() {
+  17 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[03:06:33.806] Browser ERROR   ./app/profile/page.tsx:8:27
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const ProfileClientPage = dynamic(() => import('./client-page'), {
+     |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function ProfilePage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[03:06:33.806] Browser ERROR   ./app/transactions/page.tsx:11:32
+Ecmascript file had an error
+   9 |
+  10 | // Dynamically import the client page to avoid server/client component mismatch
+> 11 | const TransactionsClientPage = dynamic(() => import('./client-page'), {
+     |                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 13 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 14 | })
+     | ^^^
+  15 |
+  16 | export default async function TransactionsPage(props: { searchParams: Promise<{ account?: string }> }) {
+  17 |   const searchParams = await props.searchParams
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[03:06:33.806] Browser ERROR   ./app/analytics/page.tsx:8:29
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const AnalyticsClientPage = dynamic(() => import('./client-page'), {
+     |                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function AnalyticsPage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[03:06:33.806] Browser ERROR   ./app/add/page.tsx:8:34
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const AddTransactionClientPage = dynamic(() => import('./client-page'), {
+     |                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function AddTransactionPage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[03:06:33.806] Browser ERROR   ./app/accounts/page.tsx:8:28
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const AccountsClientPage = dynamic(() => import('./client-page'), {
+     |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function AccountsPage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[03:06:33.806] Browser ERROR   ./app/dashboard/page.tsx:11:29
+Ecmascript file had an error
+   9 |
+  10 | // Dynamically import the client page to avoid server/client component mismatch
+> 11 | const DashboardClientPage = dynamic(() => import('./client-page'), {
+     |                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 13 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 14 | })
+     | ^^^
+  15 |
+  16 | export default async function DashboardPage() {
+  17 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[03:06:33.806] Browser ERROR   ./app/profile/page.tsx:8:27
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const ProfileClientPage = dynamic(() => import('./client-page'), {
+     |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function ProfilePage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[03:07:00.796] Server  LOG      ✓ Compiled in 155ms
+[03:07:01.832] Browser ERROR   ./app/transactions/page.tsx:11:32
+Ecmascript file had an error
+   9 |
+  10 | // Dynamically import the client page to avoid server/client component mismatch
+> 11 | const TransactionsClientPage = dynamic(() => import('./client-page'), {
+     |                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 13 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 14 | })
+     | ^^^
+  15 |
+  16 | export default async function TransactionsPage(props: { searchParams: Promise<{ account?: string }> }) {
+  17 |   const searchParams = await props.searchParams
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[03:07:01.832] Browser ERROR   ./app/analytics/page.tsx:8:29
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const AnalyticsClientPage = dynamic(() => import('./client-page'), {
+     |                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function AnalyticsPage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[03:07:01.833] Browser ERROR   ./app/add/page.tsx:8:34
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const AddTransactionClientPage = dynamic(() => import('./client-page'), {
+     |                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function AddTransactionPage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[03:07:01.833] Browser ERROR   ./app/accounts/page.tsx:8:28
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const AccountsClientPage = dynamic(() => import('./client-page'), {
+     |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function AccountsPage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[03:07:01.833] Browser ERROR   ./app/profile/page.tsx:8:27
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const ProfileClientPage = dynamic(() => import('./client-page'), {
+     |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function ProfilePage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[03:07:07.832] Browser ERROR   ./app/transactions/page.tsx:11:32
+Ecmascript file had an error
+   9 |
+  10 | // Dynamically import the client page to avoid server/client component mismatch
+> 11 | const TransactionsClientPage = dynamic(() => import('./client-page'), {
+     |                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 13 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 14 | })
+     | ^^^
+  15 |
+  16 | export default async function TransactionsPage(props: { searchParams: Promise<{ account?: string }> }) {
+  17 |   const searchParams = await props.searchParams
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[03:07:07.832] Browser ERROR   ./app/analytics/page.tsx:8:29
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const AnalyticsClientPage = dynamic(() => import('./client-page'), {
+     |                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function AnalyticsPage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[03:07:07.832] Browser ERROR   ./app/add/page.tsx:8:34
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const AddTransactionClientPage = dynamic(() => import('./client-page'), {
+     |                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function AddTransactionPage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[03:07:07.832] Browser ERROR   ./app/accounts/page.tsx:8:28
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const AccountsClientPage = dynamic(() => import('./client-page'), {
+     |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function AccountsPage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[03:07:07.832] Browser ERROR   ./app/profile/page.tsx:8:27
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const ProfileClientPage = dynamic(() => import('./client-page'), {
+     |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function ProfilePage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[03:07:20.833] Browser ERROR   ./app/transactions/page.tsx:11:32
+Ecmascript file had an error
+   9 |
+  10 | // Dynamically import the client page to avoid server/client component mismatch
+> 11 | const TransactionsClientPage = dynamic(() => import('./client-page'), {
+     |                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 13 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 14 | })
+     | ^^^
+  15 |
+  16 | export default async function TransactionsPage(props: { searchParams: Promise<{ account?: string }> }) {
+  17 |   const searchParams = await props.searchParams
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[03:07:20.833] Browser ERROR   ./app/analytics/page.tsx:8:29
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const AnalyticsClientPage = dynamic(() => import('./client-page'), {
+     |                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function AnalyticsPage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[03:07:20.833] Browser ERROR   ./app/add/page.tsx:8:34
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const AddTransactionClientPage = dynamic(() => import('./client-page'), {
+     |                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function AddTransactionPage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[03:07:20.833] Browser ERROR   ./app/accounts/page.tsx:8:28
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const AccountsClientPage = dynamic(() => import('./client-page'), {
+     |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function AccountsPage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[03:07:20.833] Browser ERROR   ./app/profile/page.tsx:8:27
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const ProfileClientPage = dynamic(() => import('./client-page'), {
+     |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function ProfilePage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[03:07:35.619] Server  LOG      ✓ Compiled in 244ms
+[03:07:35.832] Browser ERROR   ./app/transactions/page.tsx:11:32
+Ecmascript file had an error
+   9 |
+  10 | // Dynamically import the client page to avoid server/client component mismatch
+> 11 | const TransactionsClientPage = dynamic(() => import('./client-page'), {
+     |                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 12 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 13 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 14 | })
+     | ^^^
+  15 |
+  16 | export default async function TransactionsPage(props: { searchParams: Promise<{ account?: string }> }) {
+  17 |   const searchParams = await props.searchParams
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[03:07:35.832] Browser ERROR   ./app/analytics/page.tsx:8:29
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const AnalyticsClientPage = dynamic(() => import('./client-page'), {
+     |                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function AnalyticsPage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[03:07:35.832] Browser ERROR   ./app/add/page.tsx:8:34
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const AddTransactionClientPage = dynamic(() => import('./client-page'), {
+     |                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function AddTransactionPage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[03:07:35.832] Browser ERROR   ./app/accounts/page.tsx:8:28
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const AccountsClientPage = dynamic(() => import('./client-page'), {
+     |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function AccountsPage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[03:07:35.832] Browser ERROR   ./app/profile/page.tsx:8:27
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const ProfileClientPage = dynamic(() => import('./client-page'), {
+     |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function ProfilePage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[03:07:45.702] Server  LOG      ✓ Compiled in 80ms
+[03:07:45.832] Browser ERROR   ./app/analytics/page.tsx:8:29
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const AnalyticsClientPage = dynamic(() => import('./client-page'), {
+     |                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function AnalyticsPage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[03:07:45.832] Browser ERROR   ./app/add/page.tsx:8:34
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const AddTransactionClientPage = dynamic(() => import('./client-page'), {
+     |                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function AddTransactionPage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[03:07:45.832] Browser ERROR   ./app/accounts/page.tsx:8:28
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const AccountsClientPage = dynamic(() => import('./client-page'), {
+     |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function AccountsPage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[03:07:45.832] Browser ERROR   ./app/profile/page.tsx:8:27
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const ProfileClientPage = dynamic(() => import('./client-page'), {
+     |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function ProfilePage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[03:07:59.848] Server  LOG      ✓ Compiled in 139ms
+[03:08:00.832] Browser ERROR   ./app/add/page.tsx:8:34
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const AddTransactionClientPage = dynamic(() => import('./client-page'), {
+     |                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function AddTransactionPage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[03:08:00.832] Browser ERROR   ./app/accounts/page.tsx:8:28
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const AccountsClientPage = dynamic(() => import('./client-page'), {
+     |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function AccountsPage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[03:08:00.832] Browser ERROR   ./app/profile/page.tsx:8:27
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const ProfileClientPage = dynamic(() => import('./client-page'), {
+     |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function ProfilePage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[03:08:05.448] Browser ERROR   ./app/add/page.tsx:8:34
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const AddTransactionClientPage = dynamic(() => import('./client-page'), {
+     |                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function AddTransactionPage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[03:08:05.448] Browser ERROR   ./app/accounts/page.tsx:8:28
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const AccountsClientPage = dynamic(() => import('./client-page'), {
+     |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function AccountsPage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[03:08:05.448] Browser ERROR   ./app/profile/page.tsx:8:27
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const ProfileClientPage = dynamic(() => import('./client-page'), {
+     |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function ProfilePage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[03:08:10.187] Browser ERROR   ./app/add/page.tsx:8:34
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const AddTransactionClientPage = dynamic(() => import('./client-page'), {
+     |                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function AddTransactionPage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[03:08:10.187] Browser ERROR   ./app/accounts/page.tsx:8:28
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const AccountsClientPage = dynamic(() => import('./client-page'), {
+     |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function AccountsPage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[03:08:10.187] Browser ERROR   ./app/profile/page.tsx:8:27
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const ProfileClientPage = dynamic(() => import('./client-page'), {
+     |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function ProfilePage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[03:08:10.404] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/dashboard" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="en" suppressHydrationWarning={true}>
+                          <body
+                            className="geist_9232b81-module__uX3Naq__className antialiased"
+-                           style={{overflow-x:"hidden",overflow-y:"hidden"}}
+                          >
+                  ...
+
+[03:08:10.514] Browser ERROR   ./app/add/page.tsx:8:34
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const AddTransactionClientPage = dynamic(() => import('./client-page'), {
+     |                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function AddTransactionPage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[03:08:10.514] Browser ERROR   ./app/accounts/page.tsx:8:28
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const AccountsClientPage = dynamic(() => import('./client-page'), {
+     |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function AccountsPage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[03:08:10.514] Browser ERROR   ./app/profile/page.tsx:8:27
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const ProfileClientPage = dynamic(() => import('./client-page'), {
+     |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function ProfilePage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[03:08:28.007] Server  LOG      ✓ Compiled in 92ms
+[03:08:28.113] Browser ERROR   ./app/add/page.tsx:8:34
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const AddTransactionClientPage = dynamic(() => import('./client-page'), {
+     |                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function AddTransactionPage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[03:08:28.113] Browser ERROR   ./app/profile/page.tsx:8:27
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const ProfileClientPage = dynamic(() => import('./client-page'), {
+     |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function ProfilePage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[03:08:51.988] Server  LOG      ✓ Compiled in 66ms
+[03:08:52.093] Browser ERROR   ./app/add/page.tsx:8:34
+Ecmascript file had an error
+   6 |
+   7 | // Dynamically import the client page to avoid server/client component mismatch
+>  8 | const AddTransactionClientPage = dynamic(() => import('./client-page'), {
+     |                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  9 |   ssr: false,
+     | ^^^^^^^^^^^^^
+> 10 |   loading: () => <div>Loading...</div>
+     | ^^^^^^^^^^^^^
+> 11 | })
+     | ^^^
+  12 |
+  13 | export default async function AddTransactionPage() {
+  14 |   const supabase = await createClient()
+
+`ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+[03:09:16.105] Server  LOG      ✓ Compiled in 127ms
+[03:10:51.478] Server  ERROR    ⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/components/query-client-provider'
+   3 | import "./globals.css"
+   4 | import { ThemeProvider } from "@/components/layout/theme-provider"
+>  5 |
+     | ^
+>  6 | const geistSans = Geist({ subsets: ['latin'] })
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | const geistMono = Geist_Mono({ subsets: ['latin'] })
+     | ^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | export const metadata: Metadata = {
+  10 |   title: "Hisaab - Manage Your Finances",
+
+Import map: aliased to relative './components/query-client-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[03:10:51.480] Server  ERROR    ⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/components/query-client-provider'
+   3 | import "./globals.css"
+   4 | import { ThemeProvider } from "@/components/layout/theme-provider"
+>  5 |
+     | ^
+>  6 | const geistSans = Geist({ subsets: ['latin'] })
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | const geistMono = Geist_Mono({ subsets: ['latin'] })
+     | ^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | export const metadata: Metadata = {
+  10 |   title: "Hisaab - Manage Your Finances",
+
+Import map: aliased to relative './components/query-client-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[03:10:51.482] Server  ERROR    ⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/components/query-client-provider'
+   3 | import "./globals.css"
+   4 | import { ThemeProvider } from "@/components/layout/theme-provider"
+>  5 |
+     | ^
+>  6 | const geistSans = Geist({ subsets: ['latin'] })
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | const geistMono = Geist_Mono({ subsets: ['latin'] })
+     | ^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | export const metadata: Metadata = {
+  10 |   title: "Hisaab - Manage Your Finances",
+
+Import map: aliased to relative './components/query-client-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[03:10:51.484] Server  ERROR    ⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/components/query-client-provider'
+   3 | import "./globals.css"
+   4 | import { ThemeProvider } from "@/components/layout/theme-provider"
+>  5 |
+     | ^
+>  6 | const geistSans = Geist({ subsets: ['latin'] })
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | const geistMono = Geist_Mono({ subsets: ['latin'] })
+     | ^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | export const metadata: Metadata = {
+  10 |   title: "Hisaab - Manage Your Finances",
+
+Import map: aliased to relative './components/query-client-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[03:10:51.516] Server  ERROR    ⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/components/query-client-provider'
+   3 | import "./globals.css"
+   4 | import { ThemeProvider } from "@/components/layout/theme-provider"
+>  5 |
+     | ^
+>  6 | const geistSans = Geist({ subsets: ['latin'] })
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | const geistMono = Geist_Mono({ subsets: ['latin'] })
+     | ^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | export const metadata: Metadata = {
+  10 |   title: "Hisaab - Manage Your Finances",
+
+Import map: aliased to relative './components/query-client-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[03:10:51.516] Server  ERROR    ⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/components/query-client-provider'
+   3 | import "./globals.css"
+   4 | import { ThemeProvider } from "@/components/layout/theme-provider"
+>  5 |
+     | ^
+>  6 | const geistSans = Geist({ subsets: ['latin'] })
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | const geistMono = Geist_Mono({ subsets: ['latin'] })
+     | ^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | export const metadata: Metadata = {
+  10 |   title: "Hisaab - Manage Your Finances",
+
+Import map: aliased to relative './components/query-client-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[03:10:51.564] Server  ERROR    ⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/components/query-client-provider'
+   3 | import "./globals.css"
+   4 | import { ThemeProvider } from "@/components/layout/theme-provider"
+>  5 |
+     | ^
+>  6 | const geistSans = Geist({ subsets: ['latin'] })
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | const geistMono = Geist_Mono({ subsets: ['latin'] })
+     | ^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | export const metadata: Metadata = {
+  10 |   title: "Hisaab - Manage Your Finances",
+
+Import map: aliased to relative './components/query-client-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[03:10:51.566] Server  ERROR    ⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/components/query-client-provider'
+   3 | import "./globals.css"
+   4 | import { ThemeProvider } from "@/components/layout/theme-provider"
+>  5 |
+     | ^
+>  6 | const geistSans = Geist({ subsets: ['latin'] })
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | const geistMono = Geist_Mono({ subsets: ['latin'] })
+     | ^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | export const metadata: Metadata = {
+  10 |   title: "Hisaab - Manage Your Finances",
+
+Import map: aliased to relative './components/query-client-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[03:10:51.605] Server  ERROR    ⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/components/query-client-provider'
+   3 | import "./globals.css"
+   4 | import { ThemeProvider } from "@/components/layout/theme-provider"
+>  5 |
+     | ^
+>  6 | const geistSans = Geist({ subsets: ['latin'] })
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | const geistMono = Geist_Mono({ subsets: ['latin'] })
+     | ^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | export const metadata: Metadata = {
+  10 |   title: "Hisaab - Manage Your Finances",
+
+Import map: aliased to relative './components/query-client-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[03:10:51.607] Server  ERROR    ⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/components/query-client-provider'
+   3 | import "./globals.css"
+   4 | import { ThemeProvider } from "@/components/layout/theme-provider"
+>  5 |
+     | ^
+>  6 | const geistSans = Geist({ subsets: ['latin'] })
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | const geistMono = Geist_Mono({ subsets: ['latin'] })
+     | ^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | export const metadata: Metadata = {
+  10 |   title: "Hisaab - Manage Your Finances",
+
+Import map: aliased to relative './components/query-client-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[03:10:51.628] Server  ERROR    ⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/components/query-client-provider'
+   3 | import "./globals.css"
+   4 | import { ThemeProvider } from "@/components/layout/theme-provider"
+>  5 |
+     | ^
+>  6 | const geistSans = Geist({ subsets: ['latin'] })
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | const geistMono = Geist_Mono({ subsets: ['latin'] })
+     | ^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | export const metadata: Metadata = {
+  10 |   title: "Hisaab - Manage Your Finances",
+
+Import map: aliased to relative './components/query-client-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[03:10:51.630] Server  ERROR    ⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/components/query-client-provider'
+   3 | import "./globals.css"
+   4 | import { ThemeProvider } from "@/components/layout/theme-provider"
+>  5 |
+     | ^
+>  6 | const geistSans = Geist({ subsets: ['latin'] })
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | const geistMono = Geist_Mono({ subsets: ['latin'] })
+     | ^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | export const metadata: Metadata = {
+  10 |   title: "Hisaab - Manage Your Finances",
+
+Import map: aliased to relative './components/query-client-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[03:10:51.650] Server  ERROR    ⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/components/query-client-provider'
+   3 | import "./globals.css"
+   4 | import { ThemeProvider } from "@/components/layout/theme-provider"
+>  5 |
+     | ^
+>  6 | const geistSans = Geist({ subsets: ['latin'] })
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | const geistMono = Geist_Mono({ subsets: ['latin'] })
+     | ^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | export const metadata: Metadata = {
+  10 |   title: "Hisaab - Manage Your Finances",
+
+Import map: aliased to relative './components/query-client-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[03:10:51.652] Server  ERROR    ⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/components/query-client-provider'
+   3 | import "./globals.css"
+   4 | import { ThemeProvider } from "@/components/layout/theme-provider"
+>  5 |
+     | ^
+>  6 | const geistSans = Geist({ subsets: ['latin'] })
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | const geistMono = Geist_Mono({ subsets: ['latin'] })
+     | ^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | export const metadata: Metadata = {
+  10 |   title: "Hisaab - Manage Your Finances",
+
+Import map: aliased to relative './components/query-client-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[03:10:51.653] Server  ERROR    ⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/components/query-client-provider'
+   3 | import "./globals.css"
+   4 | import { ThemeProvider } from "@/components/layout/theme-provider"
+>  5 |
+     | ^
+>  6 | const geistSans = Geist({ subsets: ['latin'] })
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | const geistMono = Geist_Mono({ subsets: ['latin'] })
+     | ^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | export const metadata: Metadata = {
+  10 |   title: "Hisaab - Manage Your Finances",
+
+Import map: aliased to relative './components/query-client-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[03:10:51.656] Server  ERROR    ⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/components/query-client-provider'
+   3 | import "./globals.css"
+   4 | import { ThemeProvider } from "@/components/layout/theme-provider"
+>  5 |
+     | ^
+>  6 | const geistSans = Geist({ subsets: ['latin'] })
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | const geistMono = Geist_Mono({ subsets: ['latin'] })
+     | ^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | export const metadata: Metadata = {
+  10 |   title: "Hisaab - Manage Your Finances",
+
+Import map: aliased to relative './components/query-client-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[03:10:51.659] Server  ERROR    ⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/components/query-client-provider'
+   3 | import "./globals.css"
+   4 | import { ThemeProvider } from "@/components/layout/theme-provider"
+>  5 |
+     | ^
+>  6 | const geistSans = Geist({ subsets: ['latin'] })
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | const geistMono = Geist_Mono({ subsets: ['latin'] })
+     | ^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | export const metadata: Metadata = {
+  10 |   title: "Hisaab - Manage Your Finances",
+
+Import map: aliased to relative './components/query-client-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[03:10:51.661] Server  ERROR    ⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/components/query-client-provider'
+   3 | import "./globals.css"
+   4 | import { ThemeProvider } from "@/components/layout/theme-provider"
+>  5 |
+     | ^
+>  6 | const geistSans = Geist({ subsets: ['latin'] })
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | const geistMono = Geist_Mono({ subsets: ['latin'] })
+     | ^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | export const metadata: Metadata = {
+  10 |   title: "Hisaab - Manage Your Finances",
+
+Import map: aliased to relative './components/query-client-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[03:10:51.662] Server  ERROR    ⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/components/query-client-provider'
+   3 | import "./globals.css"
+   4 | import { ThemeProvider } from "@/components/layout/theme-provider"
+>  5 |
+     | ^
+>  6 | const geistSans = Geist({ subsets: ['latin'] })
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | const geistMono = Geist_Mono({ subsets: ['latin'] })
+     | ^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | export const metadata: Metadata = {
+  10 |   title: "Hisaab - Manage Your Finances",
+
+Import map: aliased to relative './components/query-client-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[03:10:51.665] Server  ERROR    ⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/components/query-client-provider'
+   3 | import "./globals.css"
+   4 | import { ThemeProvider } from "@/components/layout/theme-provider"
+>  5 |
+     | ^
+>  6 | const geistSans = Geist({ subsets: ['latin'] })
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | const geistMono = Geist_Mono({ subsets: ['latin'] })
+     | ^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | export const metadata: Metadata = {
+  10 |   title: "Hisaab - Manage Your Finances",
+
+Import map: aliased to relative './components/query-client-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[03:10:51.669] Server  ERROR    ⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/components/query-client-provider'
+   3 | import "./globals.css"
+   4 | import { ThemeProvider } from "@/components/layout/theme-provider"
+>  5 |
+     | ^
+>  6 | const geistSans = Geist({ subsets: ['latin'] })
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | const geistMono = Geist_Mono({ subsets: ['latin'] })
+     | ^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | export const metadata: Metadata = {
+  10 |   title: "Hisaab - Manage Your Finances",
+
+Import map: aliased to relative './components/query-client-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[03:10:51.671] Server  ERROR    ⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/components/query-client-provider'
+   3 | import "./globals.css"
+   4 | import { ThemeProvider } from "@/components/layout/theme-provider"
+>  5 |
+     | ^
+>  6 | const geistSans = Geist({ subsets: ['latin'] })
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | const geistMono = Geist_Mono({ subsets: ['latin'] })
+     | ^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | export const metadata: Metadata = {
+  10 |   title: "Hisaab - Manage Your Finances",
+
+Import map: aliased to relative './components/query-client-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[03:10:51.778] Server  ERROR    ⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/components/query-client-provider'
+   3 | import "./globals.css"
+   4 | import { ThemeProvider } from "@/components/layout/theme-provider"
+>  5 |
+     | ^
+>  6 | const geistSans = Geist({ subsets: ['latin'] })
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | const geistMono = Geist_Mono({ subsets: ['latin'] })
+     | ^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | export const metadata: Metadata = {
+  10 |   title: "Hisaab - Manage Your Finances",
+
+Import map: aliased to relative './components/query-client-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[03:10:51.781] Server  ERROR    ⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/components/query-client-provider'
+   3 | import "./globals.css"
+   4 | import { ThemeProvider } from "@/components/layout/theme-provider"
+>  5 |
+     | ^
+>  6 | const geistSans = Geist({ subsets: ['latin'] })
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | const geistMono = Geist_Mono({ subsets: ['latin'] })
+     | ^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | export const metadata: Metadata = {
+  10 |   title: "Hisaab - Manage Your Finances",
+
+Import map: aliased to relative './components/query-client-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[03:10:51.892] Server  LOG      ✓ Compiled in 1490ms
+[03:10:52.837] Browser ERROR   ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/components/query-client-provider'
+   3 | import "./globals.css"
+   4 | import { ThemeProvider } from "@/components/layout/theme-provider"
+>  5 |
+     | ^
+>  6 | const geistSans = Geist({ subsets: ['latin'] })
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+>  7 | const geistMono = Geist_Mono({ subsets: ['latin'] })
+     | ^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | export const metadata: Metadata = {
+  10 |   title: "Hisaab - Manage Your Finances",
+
+Import map: aliased to relative './components/query-client-provider' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found

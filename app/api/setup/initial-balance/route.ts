@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 import { z } from 'zod'
 import { updateInitialBalance } from '@/lib/auth/service'
-import { createClient } from '@/lib/supabase/server'
+import { createClient } from '@/lib/supabase/client'
 
 const initialBalanceSchema = z.object({
   initialBalance: z.number().min(0),

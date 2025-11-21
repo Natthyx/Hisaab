@@ -9,11 +9,6 @@ import { AnalyticsClient } from "@/components/analytics/client"
 import { getAccountTransactions } from "@/lib/transactions/service"
 import { getUserAccounts, getUserDefaultAccount } from "@/lib/accounts/service"
 
-interface Account {
-  id: string
-  name: string
-  initial_balance: number
-}
 
 export default async function AnalyticsPage(props: { searchParams: Promise<{ account?: string }> }) {
   const searchParams = await props.searchParams

@@ -9,7 +9,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { createClient } from '@/lib/supabase/client'
 import { toast } from "sonner"
 import { validateSetupForm } from "@/lib/setup/validation"
-import { setupUserAccount } from "@/lib/accounts/service"
+// Removed the import of setupUserAccount since it's a server-side function
 
 export default function SetupPage() {
   const router = useRouter()
@@ -42,12 +42,25 @@ export default function SetupPage() {
         return
       }
 
-      // Setup the user account using the service function
-      await setupUserAccount(
-        user.id, 
-        accountName, 
-        parseFloat(initialBalance) || 0
-      )
+      // Setup the user account using the API route
+      const response = await fetch('/api/setup/account', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: accountName,
+          initial_balance: initialBalance
+        }),
+      })
+
+      const result = await response.json()
+
+      if (!response.ok || !result.success) {
+        toast.error(result.error || "Failed to set up account")
+        setLoading(false)
+        return
+      }
 
       toast.success("Account setup completed successfully")
       router.push("/dashboard")
