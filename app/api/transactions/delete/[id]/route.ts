@@ -5,7 +5,7 @@ import {
   createErrorResponse
 } from '@/lib/api/index'
 import { deleteTransaction, doesTransactionBelongToUserAccounts } from '@/lib/transactions/service'
-import { getUserAccounts } from '@/lib/accounts/service'
+import { getUserAccountsWithCurrentUser } from '@/lib/accounts/service'
 
 export async function DELETE(
   request: Request,
@@ -22,8 +22,8 @@ export async function DELETE(
       return createErrorResponse('Unauthorized', 401)
     }
     
-    // Get user's accounts using the service function
-    const accounts = await getUserAccounts(user.id)
+    // Get user's accounts using the service function (user ID handled internally with caching)
+    const accounts = await getUserAccountsWithCurrentUser()
     
     const accountIds = accounts.map(account => account.id)
     

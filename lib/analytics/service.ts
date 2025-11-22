@@ -1,6 +1,9 @@
 // Analytics service for calculations and business logic
 import { createClient } from '@/lib/supabase/server'
 
+// Simple in-memory cache for analytics data during a single request
+let cachedAnalyticsData: Map<string, any> = new Map()
+
 // Helper functions for date formatting
 export const formatDailyDate = (dateString: string) => {
   const date = new Date(dateString)

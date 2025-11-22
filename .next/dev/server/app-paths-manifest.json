@@ -1,16 +1,8 @@
 {
-  "/accounts/page": "app/accounts/page.js",
-  "/add/page": "app/add/page.js",
-  "/analytics/page": "app/analytics/page.js",
-  "/api/accounts/create/route": "app/api/accounts/create/route.js",
-  "/api/accounts/delete/route": "app/api/accounts/delete/route.js",
+  "/(with-auth)/accounts/page": "app/(with-auth)/accounts/page.js",
+  "/(with-auth)/add/page": "app/(with-auth)/add/page.js",
+  "/(with-auth)/dashboard/page": "app/(with-auth)/dashboard/page.js",
+  "/(with-auth)/transactions/page": "app/(with-auth)/transactions/page.js",
   "/api/accounts/set-default/route": "app/api/accounts/set-default/route.js",
-  "/api/auth/signout/route": "app/api/auth/signout/route.js",
-  "/api/transactions/create/route": "app/api/transactions/create/route.js",
-  "/api/transactions/update/[id]/route": "app/api/transactions/update/[id]/route.js",
-  "/api/users/update/route": "app/api/users/update/route.js",
-  "/dashboard/page": "app/dashboard/page.js",
-  "/login/page": "app/login/page.js",
-  "/profile/page": "app/profile/page.js",
-  "/transactions/page": "app/transactions/page.js"
+  "/profile/page": "app/profile/page.js"
 }

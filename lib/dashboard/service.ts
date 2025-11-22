@@ -1,5 +1,9 @@
 import { getAccountTransactions } from "@/lib/transactions/service"
 import { getUserAccounts, getUserDefaultAccount } from "@/lib/accounts/service"
+import { getCurrentUser } from "@/lib/auth/user-service"
+
+// Simple in-memory cache for dashboard data during a single request
+let cachedDashboardData: Map<string, any> = new Map()
 
 // Helper function to format dates for daily chart
 const formatDailyDate = (dateString: string) => {
@@ -21,6 +25,14 @@ const formatMonthlyDate = (dateString: string) => {
 }
 
 export async function getDashboardData(userId: string, accountId?: string) {
+  // Create a cache key
+  const cacheKey = `${userId}-${accountId || 'default'}`
+  
+  // Return cached dashboard data if available
+  if (cachedDashboardData.has(cacheKey)) {
+    return cachedDashboardData.get(cacheKey)
+  }
+  
   // Get user's accounts
   const accounts = await getUserAccounts(userId)
   
@@ -162,7 +174,7 @@ export async function getDashboardData(userId: string, accountId?: string) {
     })
   }
   
-  return {
+  const dashboardData = {
     accounts,
     selectedAccount,
     selectedAccountId,
@@ -174,4 +186,19 @@ export async function getDashboardData(userId: string, accountId?: string) {
     weeklyData,
     monthlyData
   }
+  
+  // Cache the dashboard data
+  cachedDashboardData.set(cacheKey, dashboardData)
+  
+  return dashboardData
+}
+
+// New function that gets the user ID internally
+export async function getDashboardDataForCurrentUser(accountId?: string) {
+  const user = await getCurrentUser()
+  if (!user) {
+    throw new Error('User not authenticated')
+  }
+  
+  return await getDashboardData(user.id, accountId)
 }

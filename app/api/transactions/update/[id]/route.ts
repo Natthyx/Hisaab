@@ -7,7 +7,7 @@ import {
   validateFormData
 } from '@/lib/api/index'
 import { updateTransactionForUser } from '@/lib/transactions/service'
-import { getUserAccounts } from '@/lib/accounts/service'
+import { getUserAccountsWithCurrentUser } from '@/lib/accounts/service'
 
 const updateTransactionSchema = z.object({
   amount: z.string().optional(), // Changed to string since FormData sends strings
@@ -48,8 +48,8 @@ export async function PUT(
       updateData.amount = parseFloat(updateData.amount)
     }
     
-    // Get user's accounts using the service function
-    const accounts = await getUserAccounts(user.id)
+    // Get user's accounts using the service function (user ID handled internally with caching)
+    const accounts = await getUserAccountsWithCurrentUser()
     const accountIds = accounts.map(account => account.id)
     
     // Update the transaction using the service function

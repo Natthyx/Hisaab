@@ -1,6 +1,16 @@
 import { createClient } from '@/lib/supabase/server'
+import { getCurrentUser } from "@/lib/auth/user-service"
+
+// Simple in-memory cache for accounts data during a single request
+let cachedAccounts: any[] | null = null
+let cachedDefaultAccount: any = null
 
 export async function getUserAccounts(userId: string) {
+  // Return cached accounts if available and for the same user
+  if (cachedAccounts) {
+    return cachedAccounts
+  }
+  
   const supabase = await createClient()
   
   const { data, error } = await supabase
@@ -12,6 +22,9 @@ export async function getUserAccounts(userId: string) {
   if (error) {
     throw new Error(error.message)
   }
+  
+  // Cache the accounts data
+  cachedAccounts = data
   
   return data
 }
@@ -33,6 +46,11 @@ export async function getAccountById(accountId: string) {
 }
 
 export async function getUserDefaultAccount(userId: string) {
+  // Return cached default account if available and for the same user
+  if (cachedDefaultAccount) {
+    return cachedDefaultAccount
+  }
+  
   const supabase = await createClient()
   
   const { data, error } = await supabase
@@ -45,11 +63,18 @@ export async function getUserDefaultAccount(userId: string) {
     throw new Error(error.message)
   }
   
+  // Cache the default account data
+  cachedDefaultAccount = data
+  
   return data
 }
 
 export async function createAccount(accountData: any) {
   const supabase = await createClient()
+  
+  // Clear cache when creating a new account
+  cachedAccounts = null
+  cachedDefaultAccount = null
   
   const { data, error } = await supabase
     .from('accounts')
@@ -66,6 +91,10 @@ export async function createAccount(accountData: any) {
 
 export async function updateAccount(accountId: string, accountData: any) {
   const supabase = await createClient()
+  
+  // Clear cache when updating an account
+  cachedAccounts = null
+  cachedDefaultAccount = null
   
   const { data, error } = await supabase
     .from('accounts')
@@ -84,6 +113,10 @@ export async function updateAccount(accountId: string, accountData: any) {
 export async function deleteAccount(accountId: string) {
   const supabase = await createClient()
   
+  // Clear cache when deleting an account
+  cachedAccounts = null
+  cachedDefaultAccount = null
+  
   const { data, error } = await supabase
     .from('accounts')
     .delete()
@@ -100,6 +133,9 @@ export async function deleteAccount(accountId: string) {
 
 export async function setDefaultAccount(userId: string, accountId: string) {
   const supabase = await createClient()
+  
+  // Clear cache when setting default account
+  cachedDefaultAccount = null
   
   const { data, error } = await supabase
     .from('users')
@@ -150,6 +186,9 @@ export async function doesAccountBelongToUser(accountId: string, userId: string)
 export async function clearDefaultAccount(userId: string) {
   const supabase = await createClient()
   
+  // Clear cache when clearing default account
+  cachedDefaultAccount = null
+  
   const { data, error } = await supabase
     .from('users')
     .update({ default_account_id: null })
@@ -175,6 +214,10 @@ export async function checkUserHasAccounts(userId: string) {
 
 export async function setupUserAccount(userId: string, accountName: string, initialBalance: number) {
   const supabase = await createClient()
+  
+  // Clear cache when setting up user account
+  cachedAccounts = null
+  cachedDefaultAccount = null
   
   // Create the initial account
   const { data: accountData, error: accountError } = await supabase
@@ -215,8 +258,39 @@ export async function setAccountAsDefault(accountId: string) {
     throw new Error('Account not found')
   }
   
+  // Clear cache when setting account as default
+  cachedDefaultAccount = null
+  
   // Set this account as default for the user
   const result = await setDefaultAccount(account.user_id, accountId)
   
   return result
+}
+
+// New functions that get the user ID internally
+export async function getUserAccountsWithCurrentUser() {
+  const user = await getCurrentUser()
+  if (!user) {
+    throw new Error('User not authenticated')
+  }
+  
+  return await getUserAccounts(user.id)
+}
+
+export async function getUserDefaultAccountForCurrentUser() {
+  const user = await getCurrentUser()
+  if (!user) {
+    throw new Error('User not authenticated')
+  }
+  
+  return await getUserDefaultAccount(user.id)
+}
+
+export async function checkUserHasAccountsWithCurrentUser() {
+  const user = await getCurrentUser()
+  if (!user) {
+    throw new Error('User not authenticated')
+  }
+  
+  return await checkUserHasAccounts(user.id)
 }

@@ -6,7 +6,7 @@ import {
   createErrorResponse
 } from '@/lib/api/index'
 import { listTransactionsForUser } from '@/lib/transactions/service'
-import { getAccountById, getUserAccounts } from '@/lib/accounts/service'
+import { getAccountById, getUserAccountsWithCurrentUser } from '@/lib/accounts/service'
 
 export async function GET(request: Request) {
   try {
@@ -39,8 +39,8 @@ export async function GET(request: Request) {
       
       accountIds = [accountId]
     } else {
-      // Get all user's accounts using service function
-      const accounts = await getUserAccounts(user.id)
+      // Get all user's accounts using service function (user ID handled internally with caching)
+      const accounts = await getUserAccountsWithCurrentUser()
       accountIds = accounts.map(account => account.id)
     }
     

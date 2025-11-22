@@ -3,7 +3,7 @@ import {
   createSuccessResponse, 
   createErrorResponse
 } from '@/lib/api/index'
-import { deleteAccount, doesAccountBelongToUser, getUserDefaultAccount, clearDefaultAccount } from '@/lib/accounts/service'
+import { deleteAccount, doesAccountBelongToUser, getUserDefaultAccountForCurrentUser, clearDefaultAccount } from '@/lib/accounts/service'
 
 export async function POST(request: Request) {
   try {
@@ -28,7 +28,7 @@ export async function POST(request: Request) {
     }
     
     // Check if this is the default account
-    const userData = await getUserDefaultAccount(user.id)
+    const userData = await getUserDefaultAccountForCurrentUser()
     
     // Delete the account using the service function
     await deleteAccount(accountId)

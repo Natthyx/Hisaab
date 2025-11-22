@@ -135,45 +135,53 @@ export function ProfileIcon() {
   }
 
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="icon" className="rounded-full">
-          <UserIcon className="h-5 w-5" />
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="w-64">
-        <div className="flex items-center gap-2 px-2 py-1.5">
-          <div className="bg-indigo-100 rounded-full p-2">
-            <UserIcon className="h-5 w-5 text-indigo-600" />
-          </div>
-          <div>
-            <p className="text-sm font-medium">{userEmail}</p>
-            <p className="text-xs text-muted-foreground">View profile</p>
-          </div>
-        </div>
-        
-        <div className="border-t my-1" />
-        
-        {accounts.length > 1 && defaultAccountId && (
-          <>
-            <div className="px-2 py-1.5">
-              <p className="text-xs font-medium text-muted-foreground mb-2">ACCOUNTS</p>
-              <AccountSelector 
-                accounts={accounts} 
-                selectedAccountId={defaultAccountId} 
-              />
+    <div className="flex items-center justify-center">
+      <DropdownMenu>
+        <DropdownMenuTrigger asChild>
+          <Button 
+            variant="ghost" 
+            className="w-full rounded-lg border border-transparent hover:bg-muted px-3 py-2 md:border-gray-300 md:rounded-lg"
+          >
+            <div className="flex w-full items-center justify-center gap-2 px-17">
+              <UserIcon className="h-5 w-5" />
+              <span className="hidden md:inline">Profile</span>
             </div>
-            <div className="border-t my-1" />
-          </>
-        )}
-        
-        <DropdownMenuItem onClick={() => router.push('/profile')}>
-          Profile Settings
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={handleSignOut}>
-          Log out
-        </DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
+          </Button>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent align="end" className="w-64">
+          <div className="flex items-center gap-2 px-2 py-1.5">
+            <div className="bg-indigo-100 rounded-full p-2">
+              <UserIcon className="h-5 w-5 text-indigo-600" />
+            </div>
+            <div>
+              <p className="text-sm font-medium">{userEmail}</p>
+              <p className="text-xs text-muted-foreground">View profile</p>
+            </div>
+          </div>
+          
+          <div className="border-t my-1" />
+          
+          {accounts.length > 1 && defaultAccountId && (
+            <>
+              <div className="px-2 py-1.5">
+                <p className="text-xs font-medium text-muted-foreground mb-2">ACCOUNTS</p>
+                <AccountSelector 
+                  accounts={accounts} 
+                  selectedAccountId={defaultAccountId} 
+                />
+              </div>
+              <div className="border-t my-1" />
+            </>
+          )}
+          
+          <DropdownMenuItem onClick={() => router.push('/profile')}>
+            Profile Settings
+          </DropdownMenuItem>
+          <DropdownMenuItem onClick={handleSignOut}>
+            Log out
+          </DropdownMenuItem>
+        </DropdownMenuContent>
+      </DropdownMenu>
+    </div>
   )
 }

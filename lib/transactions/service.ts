@@ -1,7 +1,17 @@
 import { createClient } from '@/lib/supabase/server'
 import { getUserAccounts, getUserDefaultAccount } from "@/lib/accounts/service"
+import { getCurrentUser } from "@/lib/auth/user-service"
+
+// Simple in-memory cache for transactions data during a single request
+let cachedTransactions: Map<string, any[]> = new Map()
+let cachedTransactionById: Map<string, any> = new Map()
 
 export async function getAccountTransactions(accountId: string) {
+  // Return cached transactions if available
+  if (cachedTransactions.has(accountId)) {
+    return cachedTransactions.get(accountId)
+  }
+  
   const supabase = await createClient()
   
   const { data, error } = await supabase
@@ -13,6 +23,9 @@ export async function getAccountTransactions(accountId: string) {
   if (error) {
     throw new Error(error.message)
   }
+  
+  // Cache the transactions data
+  cachedTransactions.set(accountId, data)
   
   return data
 }
@@ -36,6 +49,11 @@ export async function getAccountTransactionsByDateRange(accountId: string, start
 }
 
 export async function getTransactionById(transactionId: string) {
+  // Return cached transaction if available
+  if (cachedTransactionById.has(transactionId)) {
+    return cachedTransactionById.get(transactionId)
+  }
+  
   const supabase = await createClient()
   
   const { data, error } = await supabase
@@ -48,11 +66,17 @@ export async function getTransactionById(transactionId: string) {
     throw new Error(error.message)
   }
   
+  // Cache the transaction data
+  cachedTransactionById.set(transactionId, data)
+  
   return data
 }
 
 export async function createTransaction(transactionData: any) {
   const supabase = await createClient()
+  
+  // Clear cache for this account when creating a new transaction
+  cachedTransactions.delete(transactionData.account_id)
   
   const { data, error } = await supabase
     .from('transactions')
@@ -70,6 +94,18 @@ export async function createTransaction(transactionData: any) {
 export async function updateTransaction(transactionId: string, transactionData: any) {
   const supabase = await createClient()
   
+  // Get the existing transaction to clear cache
+  const existingTransaction = await getTransactionById(transactionId)
+  if (existingTransaction) {
+    // Clear cache for both old and new account (in case account changed)
+    cachedTransactions.delete(existingTransaction.account_id)
+    if (transactionData.account_id) {
+      cachedTransactions.delete(transactionData.account_id)
+    }
+    // Clear the specific transaction cache
+    cachedTransactionById.delete(transactionId)
+  }
+  
   const { data, error } = await supabase
     .from('transactions')
     .update(transactionData)
@@ -86,6 +122,15 @@ export async function updateTransaction(transactionId: string, transactionData: 
 
 export async function deleteTransaction(transactionId: string) {
   const supabase = await createClient()
+  
+  // Get the existing transaction to clear cache
+  const existingTransaction = await getTransactionById(transactionId)
+  if (existingTransaction) {
+    // Clear cache for this account when deleting a transaction
+    cachedTransactions.delete(existingTransaction.account_id)
+    // Clear the specific transaction cache
+    cachedTransactionById.delete(transactionId)
+  }
   
   const { data, error } = await supabase
     .from('transactions')
@@ -120,6 +165,11 @@ export async function doesTransactionBelongToUserAccounts(transactionId: string,
 
 export async function updateTransactionForUser(transactionId: string, updateData: any, userAccountIds: string[]) {
   const supabase = await createClient()
+  
+  // Clear cache when updating a transaction
+  cachedTransactionById.delete(transactionId)
+  // We don't know which account this transaction belongs to, so we'll clear all cached transactions
+  cachedTransactions.clear()
   
   const { data, error } = await supabase
     .from('transactions')
@@ -249,4 +299,14 @@ export async function getTransactionsPageData(userId: string, accountId?: string
     selectedAccountId,
     transactions
   }
+}
+
+// New function that gets the user ID internally
+export async function getTransactionsPageDataForCurrentUser(accountId?: string) {
+  const user = await getCurrentUser()
+  if (!user) {
+    throw new Error('User not authenticated')
+  }
+  
+  return await getTransactionsPageData(user.id, accountId)
 }

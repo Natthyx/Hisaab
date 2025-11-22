@@ -6,7 +6,7 @@ import {
   validateFormData
 } from '@/lib/api/index'
 import { createTransaction } from '@/lib/transactions/service'
-import { getUserDefaultAccount, getUserAccounts } from '@/lib/accounts/service'
+import { getUserDefaultAccountForCurrentUser, getUserAccountsWithCurrentUser } from '@/lib/accounts/service'
 
 const transactionSchema = z.object({
   amount: z.string(), // Changed to string since FormData sends strings
@@ -41,13 +41,13 @@ export async function POST(request: Request) {
     let transactionAccountId = accountId;
     
     if (!transactionAccountId) {
-      // Get user's default account using the service function
-      const userData = await getUserDefaultAccount(user.id)
+      // Get user's default account using the service function (user ID handled internally with caching)
+      const userData = await getUserDefaultAccountForCurrentUser()
       transactionAccountId = userData?.default_account_id;
       
       // If no default account, get the first account for this user
       if (!transactionAccountId) {
-        const accounts = await getUserAccounts(user.id)
+        const accounts = await getUserAccountsWithCurrentUser()
         if (!accounts || accounts.length === 0) {
           return createErrorResponse('User has no accounts. Please create an account first.', 400)
         }
