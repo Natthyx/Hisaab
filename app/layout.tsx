@@ -1,14 +1,13 @@
 import type { Metadata } from "next"
 import { Geist, Geist_Mono } from 'next/font/google'
-import "./globals.css"
+import "@/styles/globals.css"
 import { ThemeProvider } from "@/components/layout/theme-provider"
 
 const geistSans = Geist({ subsets: ['latin'] })
-const geistMono = Geist_Mono({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: "Hisaab - Manage Your Finances",
-  description: "A minimalist expense tracking app to help you manage your income and expenses effectively",
+  description: "Take control of your finances with beautiful expense tracking, advanced analytics, and smart insights.",
 }
 
 export default function RootLayout({
