@@ -140,9 +140,9 @@ export function ProfileIcon() {
         <DropdownMenuTrigger asChild>
           <Button 
             variant="ghost" 
-            className="w-full rounded-lg border border-transparent hover:bg-muted px-3 py-2 md:border-gray-300 md:rounded-lg"
+            className="w-full rounded-lg border border-transparent hover:bg-muted px-3 py-2 md:border-gray-300 md:rounded-lg md:px-20"
           >
-            <div className="flex w-full items-center justify-center gap-2 px-17">
+            <div className="flex w-full items-center justify-center gap-2">
               <UserIcon className="h-5 w-5" />
               <span className="hidden md:inline">Profile</span>
             </div>
