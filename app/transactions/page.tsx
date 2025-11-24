@@ -1,19 +1,18 @@
 import { Navigation } from "@/components/layout/navigation"
-import { TransactionsClient } from "@/components/transactions/client"
 import { ThemeToggle } from '@/components/layout/theme-toggle'
-import { PlusIcon } from 'lucide-react'
-import Link from "next/link"
-import { Button } from '@/components/ui/button'
 import { createClient } from '@/lib/supabase/server'
 import { redirect } from 'next/navigation'
+import { TransactionsClient } from "@/components/transactions/client"
 import { getTransactionsPageData } from "@/lib/transactions/service"
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
+import { PlusIcon } from 'lucide-react'
+import { getCachedUser } from "@/lib/auth/service"
 
 export default async function TransactionsPage(props: { searchParams: Promise<{ account?: string }> }) {
   const searchParams = await props.searchParams
-  const supabase = await createClient()
-  
-  // Get user data
-  const { data: { user } } = await supabase.auth.getUser()
+  // Use cached user instead of calling getUser directly
+  const user = await getCachedUser()
   
   if (!user) {
     redirect('/login')

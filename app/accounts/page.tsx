@@ -4,12 +4,11 @@ import { createClient } from '@/lib/supabase/server'
 import { redirect } from 'next/navigation'
 import { AccountsClient } from "@/components/accounts/client"
 import { getUserAccounts, getUserDefaultAccount } from "@/lib/accounts/service"
+import { getCachedUser } from "@/lib/auth/service"
 
 export default async function AccountsPage() {
-  const supabase = await createClient()
-  
-  // Get user data
-  const { data: { user } } = await supabase.auth.getUser()
+  // Use cached user instead of calling getUser directly
+  const user = await getCachedUser()
   
   if (!user) {
     redirect('/login')

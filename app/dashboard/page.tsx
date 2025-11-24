@@ -6,16 +6,16 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Button } from "@/components/ui/button"
 import { PlusIcon } from 'lucide-react'
 import Link from "next/link"
-import { createClient } from '@/lib/supabase/server'
 import { redirect } from 'next/navigation'
 import { getDashboardData } from "@/lib/dashboard/service"
+import { getCachedUser } from '@/lib/auth/service'
+import { DateFilter } from "@/components/dashboard/date-filter"
 
-export default async function DashboardPage(props: { searchParams: Promise<{ account?: string }> }) {
+export default async function DashboardPage(props: { searchParams: Promise<{ account?: string, dateRange?: 'current' | 'previous' }> }) {
   const searchParams = await props.searchParams
-  const supabase = await createClient()
   
   // Get user data
-  const { data: { user } } = await supabase.auth.getUser()
+  const user = await getCachedUser()
   
   if (!user) {
     redirect('/login')
@@ -32,8 +32,9 @@ export default async function DashboardPage(props: { searchParams: Promise<{ acc
     balance,
     dailyData,
     weeklyData,
-    monthlyData
-  } = await getDashboardData(user.id, searchParams.account)
+    monthlyData,
+    dateRange
+  } = await getDashboardData(user.id, searchParams.account, searchParams.dateRange)
   
   return (
     <div className="flex min-h-screen flex-col md:flex-row">
@@ -57,11 +58,14 @@ export default async function DashboardPage(props: { searchParams: Promise<{ acc
           <BalanceCard balance={balance} income={totalIncome} expense={totalExpense} />
 
           <Tabs defaultValue="daily">
-            <TabsList className="grid w-full grid-cols-3">
-              <TabsTrigger value="daily">Daily</TabsTrigger>
-              <TabsTrigger value="weekly">Weekly</TabsTrigger>
-              <TabsTrigger value="monthly">Monthly</TabsTrigger>
-            </TabsList>
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+              <TabsList className="grid w-full grid-cols-3 sm:w-[300px]">
+                <TabsTrigger value="daily">Daily</TabsTrigger>
+                <TabsTrigger value="weekly">Weekly</TabsTrigger>
+                <TabsTrigger value="monthly">Monthly</TabsTrigger>
+              </TabsList>
+              <DateFilter currentDateRange={dateRange || 'current'} />
+            </div>
             <TabsContent value="daily" className="mt-6 p-0">
               <ExpenseChart
                 data={dailyData}
@@ -100,6 +104,33 @@ export default async function DashboardPage(props: { searchParams: Promise<{ acc
             </TabsContent>
           </Tabs>
         </div>
+        {/* Recent Transactions */}
+          <div className="mt-6">
+            <div className="mb-4 flex items-center justify-between">
+              <h2 className="text-xl font-semibold">Recent Transactions</h2>
+              <Link href="/transactions" className="text-sm text-indigo-600 hover:underline">
+                View All
+              </Link>
+            </div>
+            <div className="space-y-2">
+              {transactions && transactions.slice(0, 5).map((transaction) => (
+                <div key={transaction.id} className="flex items-center justify-between rounded-lg border p-3">
+                  <div>
+                    <p className="font-medium">{transaction.reason}</p>
+                    <p className="text-sm text-muted-foreground">
+                      {new Date(transaction.date).toLocaleDateString()}
+                    </p>
+                  </div>
+                  <p className={`font-medium ${transaction.type === 'income' ? 'text-green-600' : 'text-red-600'}`}>
+                    {transaction.type === 'income' ? '+' : '-'}${transaction.amount.toFixed(2)}
+                  </p>
+                </div>
+              ))}
+              {(!transactions || transactions.length === 0) && (
+                <p className="py-4 text-center text-muted-foreground">No transactions yet</p>
+              )}
+            </div>
+          </div>
       </main>
     </div>
   )

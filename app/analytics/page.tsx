@@ -1,28 +1,42 @@
 import { Navigation } from "@/components/layout/navigation"
 import { ThemeToggle } from '@/components/layout/theme-toggle'
-import { PlusIcon } from 'lucide-react'
-import Link from "next/link"
-import { Button } from '@/components/ui/button'
 import { createClient } from '@/lib/supabase/server'
 import { redirect } from 'next/navigation'
-import { AnalyticsClient } from "@/components/analytics/client"
+import { 
+  getUserAccounts, 
+  getUserDefaultAccount
+} from "@/lib/accounts/service"
 import { getAccountTransactions } from "@/lib/transactions/service"
-import { getUserAccounts, getUserDefaultAccount } from "@/lib/accounts/service"
+import { AnalyticsClient } from "@/components/analytics/client"
+import { getCachedUser } from "@/lib/auth/service"
 
+interface Account {
+  id: string
+  name: string
+  initial_balance: number
+}
+
+interface Transaction {
+  id: string
+  amount: number
+  reason: string
+  type: 'income' | 'expense'
+  category: string
+  date: string
+  account_id: string
+}
 
 export default async function AnalyticsPage(props: { searchParams: Promise<{ account?: string }> }) {
   const searchParams = await props.searchParams
-  const supabase = await createClient()
-  
-  // Get user data
-  const { data: { user } } = await supabase.auth.getUser()
+  // Use cached user instead of calling getUser directly
+  const user = await getCachedUser()
   
   if (!user) {
     redirect('/login')
   }
   
   // Get user's accounts using the service function
-  const accounts = await getUserAccounts(user.id)
+  const accounts: Account[] = await getUserAccounts(user.id)
   
   // Determine which account to show
   let selectedAccountId = searchParams.account
@@ -45,7 +59,7 @@ export default async function AnalyticsPage(props: { searchParams: Promise<{ acc
     : accounts?.[0]
   
   // Get transactions for the selected account using the service function
-  const transactions = selectedAccountId 
+  const transactions: Transaction[] = selectedAccountId 
     ? await getAccountTransactions(selectedAccountId) 
     : []
   
@@ -61,12 +75,6 @@ export default async function AnalyticsPage(props: { searchParams: Promise<{ acc
             <h1 className="text-3xl font-bold">Analytics</h1>
             <div className="flex items-center gap-2">
               <ThemeToggle />
-              <Link href="/add">
-                <Button className="bg-indigo-600 hover:bg-indigo-700">
-                  <PlusIcon className="mr-2 h-4 w-4" />
-                  <span className="hidden sm:inline">Add Transaction</span>
-                </Button>
-              </Link>
             </div>
           </div>
           

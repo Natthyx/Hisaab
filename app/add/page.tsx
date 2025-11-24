@@ -4,12 +4,11 @@ import { createClient } from '@/lib/supabase/server'
 import { redirect } from 'next/navigation'
 import { AddTransactionClient } from "@/components/forms/add-transaction-form"
 import { getUserAccounts, getUserDefaultAccount } from "@/lib/accounts/service"
+import { getCachedUser } from "@/lib/auth/service"
 
 export default async function AddTransactionPage() {
-  const supabase = await createClient()
-  
-  // Get user data
-  const { data: { user } } = await supabase.auth.getUser()
+  // Use cached user instead of calling getUser directly
+  const user = await getCachedUser()
   
   if (!user) {
     redirect('/login')

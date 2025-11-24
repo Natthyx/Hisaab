@@ -1,6 +1,39 @@
 import { createClient } from '@/lib/supabase/client'
 import { redirect } from 'next/navigation'
 
+// Cache for user data to prevent multiple database calls
+let userCache: any = null
+let lastFetchTime: number = 0
+const CACHE_DURATION = 5 * 60 * 1000 // 5 minutes cache
+
+export async function getCachedUser() {
+  const currentTime = Date.now()
+  
+  // If we have cached data and it's not expired, return it
+  if (userCache && (currentTime - lastFetchTime) < CACHE_DURATION) {
+    return userCache
+  }
+  
+  // Otherwise fetch fresh data
+  const supabase = createClient()
+  const { data: { user }, error } = await supabase.auth.getUser()
+  
+  if (error) {
+    throw new Error(error.message)
+  }
+  
+  // Update cache
+  userCache = user
+  lastFetchTime = currentTime
+  
+  return user
+}
+
+export function clearUserCache() {
+  userCache = null
+  lastFetchTime = 0
+}
+
 export async function signInWithEmailAndPassword(email: string, password: string) {
   const supabase = createClient()
   
@@ -12,6 +45,9 @@ export async function signInWithEmailAndPassword(email: string, password: string
   if (error) {
     throw new Error(error.message)
   }
+
+  // Clear user cache on successful login
+  clearUserCache()
 
   return data
 }
@@ -48,6 +84,9 @@ export async function signUpWithEmailAndPassword(email: string, password: string
     }
   }
 
+  // Clear user cache on successful signup
+  clearUserCache()
+
   return data
 }
 
@@ -81,6 +120,9 @@ export async function updateProfile(userId: string, fullName: string) {
     throw new Error('Profile updated in database but failed to update display name')
   }
   
+  // Clear user cache when profile is updated
+  clearUserCache()
+  
   return result
 }
 
@@ -106,6 +148,9 @@ export async function changePassword(email: string, currentPassword: string, new
   if (updateError) {
     throw new Error(updateError.message || 'Failed to update password')
   }
+  
+  // Clear user cache when password is changed
+  clearUserCache()
   
   return { success: true }
 }

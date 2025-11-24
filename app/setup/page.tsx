@@ -9,7 +9,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { createClient } from '@/lib/supabase/client'
 import { toast } from "sonner"
 import { validateSetupForm } from "@/lib/setup/validation"
-// Removed the import of setupUserAccount since it's a server-side function
+import { getCachedUser } from '@/lib/auth/client-service'
 
 export default function SetupPage() {
   const router = useRouter()
@@ -34,9 +34,10 @@ export default function SetupPage() {
     setLoading(true)
     
     try {
-      const { data: { user }, error: userError } = await supabase.auth.getUser()
+      // Use cached user instead of calling getUser directly
+      const user = await getCachedUser()
       
-      if (userError || !user) {
+      if (!user) {
         toast.error("You must be logged in to set up your account")
         setLoading(false)
         return

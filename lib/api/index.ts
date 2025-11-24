@@ -1,13 +1,14 @@
 import { createClient } from '@/lib/supabase/server'
 import { NextResponse } from 'next/server'
+import { getCachedUser } from '@/lib/auth/service'
 
 // Common API utilities for consistent error handling and response formatting
 
 export async function getUserFromRequest(request: Request) {
-  const supabase = await createClient()
-  const { data: { user }, error } = await supabase.auth.getUser()
+  // Use cached user instead of calling getUser directly
+  const user = await getCachedUser()
   
-  if (error || !user) {
+  if (!user) {
     return { user: null, error: 'Unauthorized' }
   }
   

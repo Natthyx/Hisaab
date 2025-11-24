@@ -1,6 +1,7 @@
 import { createClient as createServerClient } from '@/lib/supabase/server'
 import { redirect } from 'next/navigation'
 import { getUserAccounts, checkUserHasAccounts } from '@/lib/accounts/service'
+import { getCachedUser } from '@/lib/auth/service'
 
 export async function signOut() {
   const supabase = await createServerClient()
@@ -9,12 +10,11 @@ export async function signOut() {
 }
 
 export async function checkUserSetupAndRedirect() {
-  const supabase = await createServerClient()
-  
   try {
-    const { data: { user }, error } = await supabase.auth.getUser()
+    // Use cached user instead of calling getUser directly
+    const user = await getCachedUser()
     
-    if (error || !user) {
+    if (!user) {
       // User not logged in, stay on login page
       return
     }

@@ -19,6 +19,7 @@ import { useRouter } from 'next/navigation'
 import { useEffect, useState } from "react"
 import { createClient } from '@/lib/supabase/client'
 import { toast } from "sonner"
+import { getCachedUser, clearUserCache } from '@/lib/auth/client-service'
 
 interface Account {
   id: string
@@ -42,29 +43,29 @@ export default function ProfilePage() {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        // Get user data
-        const { data: { user } } = await supabase.auth.getUser()
+        // Use cached user instead of calling getUser directly
+        const userData = await getCachedUser()
         
-        if (!user) {
+        if (!userData) {
           router.push('/login')
           return
         }
         
-        setUser(user)
+        setUser(userData)
 
         // Get user's full name from the users table
         try {
-          const userData = await fetchUserProfile(user.id)
-          if (userData) {
-            setFullName(userData.full_name || "")
-          } else if (user.user_metadata?.full_name) {
+          const userProfile = await fetchUserProfile(userData.id)
+          if (userProfile) {
+            setFullName(userProfile.full_name || "")
+          } else if (userData.user_metadata?.full_name) {
             // Fallback to user metadata if available
-            setFullName(user.user_metadata.full_name)
+            setFullName(userData.user_metadata.full_name)
           }
         } catch (error) {
           // If we can't fetch user profile, fallback to user metadata
-          if (user.user_metadata?.full_name) {
-            setFullName(user.user_metadata.full_name)
+          if (userData.user_metadata?.full_name) {
+            setFullName(userData.user_metadata.full_name)
           }
         }
 
@@ -73,7 +74,7 @@ export default function ProfilePage() {
           const { data: accountsData, error: accountsError } = await supabase
             .from('accounts')
             .select('id, name, initial_balance, created_at')
-            .eq('user_id', user.id)
+            .eq('user_id', userData.id)
             .order('name')
           
           if (accountsError) {
@@ -88,7 +89,7 @@ export default function ProfilePage() {
         toast.error('An unexpected error occurred')
       }
     }
-
+    
     fetchUserData()
   }, [router, supabase])
 
@@ -99,6 +100,9 @@ export default function ProfilePage() {
     try {
       await updateProfile(user.id, fullName)
       toast.success('Profile updated successfully')
+      
+      // Clear user cache after profile update
+      clearUserCache()
     } catch (error: any) {
       toast.error(error.message || 'An unexpected error occurred')
     } finally {
@@ -130,6 +134,9 @@ export default function ProfilePage() {
       setNewPassword("")
       setConfirmPassword("")
       
+      // Clear user cache after password change
+      clearUserCache()
+      
       toast.success('Password updated successfully')
     } catch (error: any) {
       toast.error(error.message || 'An unexpected error occurred')
@@ -143,6 +150,10 @@ export default function ProfilePage() {
     await fetch('/api/auth/signout', {
       method: 'POST',
     })
+    
+    // Clear user cache on signout
+    clearUserCache()
+    
     // Redirect to login page
     router.push('/login')
   }
@@ -252,100 +263,63 @@ export default function ProfilePage() {
                 </form>
               </CardContent>
             </Card>
-            
-            {/* Notification Preferences */}
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <BellIcon className="h-5 w-5" />
-                  Notifications
-                </CardTitle>
-                <CardDescription>
-                  Configure how you receive notifications
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <p className="font-medium">Email Notifications</p>
-                      <p className="text-sm text-muted-foreground">Receive updates via email</p>
-                    </div>
-                    <Button variant="outline" size="sm">Enable</Button>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <p className="font-medium">Push Notifications</p>
-                      <p className="text-sm text-muted-foreground">Receive push notifications</p>
-                    </div>
-                    <Button variant="outline" size="sm">Enable</Button>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-            
-            {/* Account Management */}
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <CreditCardIcon className="h-5 w-5" />
-                  Your Accounts
-                </CardTitle>
-                <CardDescription>
-                  Manage your financial accounts
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-3">
-                  {accounts.map((account) => (
-                    <div key={account.id} className="flex items-center justify-between p-3 border rounded-lg">
-                      <div>
-                        <p className="font-medium">{account.name}</p>
-                        <p className="text-sm text-muted-foreground">
-                          Balance: ${account.initial_balance.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
-                        </p>
-                      </div>
-                      <Button variant="outline" size="sm" onClick={() => router.push('/accounts')}>
-                        Manage
-                      </Button>
-                    </div>
-                  ))}
-                  
-                  {accounts.length === 0 && (
-                    <div className="text-center py-4 text-muted-foreground">
-                      <p>You don't have any accounts yet.</p>
-                    </div>
-                  )}
-                  
-                  <Button className="w-full" onClick={() => router.push('/accounts')}>
-                    Manage All Accounts
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
           </div>
           
-          {/* Danger Zone */}
-          <Card className="border-destructive">
+          {/* Account Information */}
+          <Card>
             <CardHeader>
-              <CardTitle className="text-destructive">Danger Zone</CardTitle>
+              <CardTitle className="flex items-center gap-2">
+                <CreditCardIcon className="h-5 w-5" />
+                Your Accounts
+              </CardTitle>
               <CardDescription>
-                Permanently delete your account and all associated data
+                Manage your financial accounts
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-                <div>
-                  <p className="font-medium">Delete Account</p>
-                  <p className="text-sm text-muted-foreground">
-                    Once you delete your account, there is no going back. Please be certain.
-                  </p>
+              <div className="space-y-4">
+                {accounts.length > 0 ? (
+                  accounts.map(account => (
+                    <div key={account.id} className="flex items-center justify-between rounded-lg border p-4">
+                      <div>
+                        <p className="font-medium">{account.name}</p>
+                        <p className="text-sm text-muted-foreground">
+                          Created: {new Date(account.created_at).toLocaleDateString()}
+                        </p>
+                      </div>
+                      <div className="text-right">
+                        <p className="font-medium">${account.initial_balance.toFixed(2)}</p>
+                        <p className="text-sm text-muted-foreground">Initial Balance</p>
+                      </div>
+                    </div>
+                  ))
+                ) : (
+                  <p className="py-4 text-center text-muted-foreground">No accounts found</p>
+                )}
+                <div className="pt-4">
+                  <Button variant="outline" onClick={() => router.push('/accounts')}>
+                    Manage Accounts
+                  </Button>
                 </div>
-                <Button variant="destructive" onClick={handleSignOut}>
-                  <LogOutIcon className="mr-2 h-4 w-4" />
-                  Log Out
-                </Button>
               </div>
+            </CardContent>
+          </Card>
+          
+          {/* Danger Zone */}
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2 text-destructive">
+                <LogOutIcon className="h-5 w-5" />
+                Sign Out
+              </CardTitle>
+              <CardDescription>
+                Sign out from your account on this device
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <Button variant="destructive" onClick={handleSignOut}>
+                Sign Out
+              </Button>
             </CardContent>
           </Card>
         </div>

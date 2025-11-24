@@ -1,10 +1,10 @@
-import { getAccountTransactions } from "@/lib/transactions/service"
+import { getAccountTransactions, getAccountTransactionsByDateRange } from "@/lib/transactions/service"
 import { getUserAccounts, getUserDefaultAccount } from "@/lib/accounts/service"
 
 // Helper function to format dates for daily chart
 const formatDailyDate = (dateString: string) => {
   const date = new Date(dateString)
-  const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+  const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
   return days[date.getDay()]
 }
 
@@ -16,11 +16,41 @@ const formatWeeklyDate = (dateString: string, index: number) => {
 // Helper function to format dates for monthly chart
 const formatMonthlyDate = (dateString: string) => {
   const date = new Date(dateString)
-  const months = ['Sep', 'Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug']
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug','Sep', 'Oct', 'Nov', 'Dec']
   return months[date.getMonth()]
 }
 
-export async function getDashboardData(userId: string, accountId?: string) {
+// Helper function to get the start and end dates for the current week
+const getCurrentWeekDates = () => {
+  const now = new Date()
+  const firstDayOfWeek = new Date(now)
+  firstDayOfWeek.setDate(now.getDate() - now.getDay())
+  
+  const lastDayOfWeek = new Date(firstDayOfWeek)
+  lastDayOfWeek.setDate(firstDayOfWeek.getDate() + 6)
+  
+  return {
+    start: firstDayOfWeek,
+    end: lastDayOfWeek
+  }
+}
+
+// Helper function to get the start and end dates for the previous week
+const getPreviousWeekDates = () => {
+  const now = new Date()
+  const firstDayOfWeek = new Date(now)
+  firstDayOfWeek.setDate(now.getDate() - now.getDay() - 7)
+  
+  const lastDayOfWeek = new Date(firstDayOfWeek)
+  lastDayOfWeek.setDate(firstDayOfWeek.getDate() + 6)
+  
+  return {
+    start: firstDayOfWeek,
+    end: lastDayOfWeek
+  }
+}
+
+export async function getDashboardData(userId: string, accountId?: string, dateRange: 'current' | 'previous' = 'current') {
   // Get user's accounts
   const accounts = await getUserAccounts(userId)
   
@@ -42,9 +72,25 @@ export async function getDashboardData(userId: string, accountId?: string) {
   // Get selected account details
   const selectedAccount = accounts?.find(account => account.id === selectedAccountId) || accounts?.[0]
   
-  // Get transactions for the selected account
+  // Get date range for filtering transactions
+  let startDate, endDate
+  if (dateRange === 'previous') {
+    const previousWeek = getPreviousWeekDates()
+    startDate = previousWeek.start
+    endDate = previousWeek.end
+  } else {
+    const currentWeek = getCurrentWeekDates()
+    startDate = currentWeek.start
+    endDate = currentWeek.end
+  }
+  
+  // Get transactions for the selected account within the date range
   const transactions = selectedAccountId 
-    ? await getAccountTransactions(selectedAccountId) 
+    ? await getAccountTransactionsByDateRange(
+        selectedAccountId, 
+        startDate.toISOString(), 
+        endDate.toISOString()
+      )
     : []
   
   // Calculate income and expense
@@ -61,15 +107,12 @@ export async function getDashboardData(userId: string, accountId?: string) {
   
   const balance = (selectedAccount?.initial_balance || 0) + totalIncome - totalExpense
   
-  // Generate daily chart data (Mon-Sun)
+  // Generate daily chart data (Mon-Sun) for the selected week
   const dailyData = []
-  const now = new Date()
-  const firstDayOfWeek = new Date(now)
-  firstDayOfWeek.setDate(now.getDate() - now.getDay())
   
   for (let i = 0; i < 7; i++) {
-    const day = new Date(firstDayOfWeek)
-    day.setDate(firstDayOfWeek.getDate() + i)
+    const day = new Date(startDate)
+    day.setDate(startDate.getDate() + i)
     
     const dayStart = new Date(day.getFullYear(), day.getMonth(), day.getDate())
     const dayEnd = new Date(day.getFullYear(), day.getMonth(), day.getDate(), 23, 59, 59, 999)
@@ -97,6 +140,7 @@ export async function getDashboardData(userId: string, accountId?: string) {
   
   // Generate weekly chart data (Week 1 - Week 4)
   const weeklyData = []
+  const now = new Date()
   const startOfMonth = new Date(now.getFullYear(), now.getMonth(), 1)
   const endOfMonth = new Date(now.getFullYear(), now.getMonth() + 1, 0, 23, 59, 59, 999)
   
@@ -172,6 +216,7 @@ export async function getDashboardData(userId: string, accountId?: string) {
     balance,
     dailyData,
     weeklyData,
-    monthlyData
+    monthlyData,
+    dateRange
   }
 }

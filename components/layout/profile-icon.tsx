@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { AccountSelector } from "@/components/accounts/account-selector"
 import { useRouter } from 'next/navigation'
+import { getCachedUser, clearUserCache } from '@/lib/auth/client-service'
 
 interface Account {
   id: string
@@ -28,8 +29,8 @@ export function ProfileIcon() {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        // Get user data
-        const { data: { user } } = await supabase.auth.getUser()
+        // Use cached user instead of calling getUser directly
+        const user = await getCachedUser()
         
         if (!user) return
 
@@ -56,17 +57,14 @@ export function ProfileIcon() {
           .eq('id', user.id)
           .single()
         
-        if (userError) {
-          console.error('Error fetching user data:', userError)
-          return
+        if (!userError && userData) {
+          setDefaultAccountId(userData.default_account_id)
         }
-
-        setDefaultAccountId(userData?.default_account_id || null)
       } catch (error) {
         console.error('Error fetching user data:', error)
       }
     }
-
+    
     fetchUserData()
   }, [supabase])
 
@@ -130,48 +128,47 @@ export function ProfileIcon() {
     await fetch('/api/auth/signout', {
       method: 'POST',
     })
+    
+    // Clear user cache on signout
+    clearUserCache()
+    
     // Redirect to login page
     router.push('/login')
   }
+
+  if (!userEmail) return null
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" size="icon" className="rounded-full">
           <UserIcon className="h-5 w-5" />
+          <span className="sr-only">User menu</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-64">
-        <div className="flex items-center gap-2 px-2 py-1.5">
-          <div className="bg-indigo-100 rounded-full p-2">
-            <UserIcon className="h-5 w-5 text-indigo-600" />
+        <div className="flex items-center gap-2 p-2">
+          <div className="rounded-full bg-gray-200 p-2">
+            <UserIcon className="h-5 w-5" />
           </div>
           <div>
             <p className="text-sm font-medium">{userEmail}</p>
             <p className="text-xs text-muted-foreground">View profile</p>
           </div>
         </div>
-        
-        <div className="border-t my-1" />
-        
-        {accounts.length > 1 && defaultAccountId && (
-          <>
-            <div className="px-2 py-1.5">
-              <p className="text-xs font-medium text-muted-foreground mb-2">ACCOUNTS</p>
-              <AccountSelector 
-                accounts={accounts} 
-                selectedAccountId={defaultAccountId} 
-              />
-            </div>
-            <div className="border-t my-1" />
-          </>
-        )}
-        
-        <DropdownMenuItem onClick={() => router.push('/profile')}>
-          Profile Settings
+        <div className="border-t pt-2">
+          {accounts.length > 0 && defaultAccountId && (
+            <AccountSelector 
+              accounts={accounts} 
+              selectedAccountId={defaultAccountId}
+            />
+          )}
+        </div>
+        <DropdownMenuItem asChild>
+          <a href="/profile">Profile Settings</a>
         </DropdownMenuItem>
         <DropdownMenuItem onClick={handleSignOut}>
-          Log out
+          Sign Out
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
