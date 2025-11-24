@@ -6,13 +6,13 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { ErrorMessage } from "@/components/ui/error-message"
 import { createClient } from '@/lib/supabase/client'
 import { toast } from "sonner"
 import { validateLoginForm } from "@/lib/auth/validation"
 import { signInWithEmailAndPassword } from "@/lib/auth/client-service"
 import { checkUserHasAccounts } from "@/lib/accounts/client-service"
-import Link from "next/link"
-import { getCachedUser } from '@/lib/auth/client-service'
+import { LandingHeader } from "@/components/landing/landing-header"
 
 export default function LoginPage() {
   const router = useRouter()
@@ -27,8 +27,7 @@ export default function LoginPage() {
   useEffect(() => {
     const checkUserSession = async () => {
       try {
-        // Use cached user instead of calling getUser directly
-        const user = await getCachedUser()
+        const { data: { user } } = await supabase.auth.getUser()
         if (user) {
           // Check if user has accounts
           const hasAccounts = await checkUserHasAccounts(user.id)
@@ -94,98 +93,100 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-indigo-50 to-white p-4">
-      <Card className="w-full max-w-md">
-        <CardHeader className="space-y-1">
-          <CardTitle className="text-3xl font-bold text-center">
-            Welcome back
-          </CardTitle>
-          <CardDescription className="text-center">
-            Sign in to your Hisaab account
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <form onSubmit={handleLogin} className="space-y-4">
-            <div className="space-y-2">
-              <Label htmlFor="email" className="text-base">
-                Email
-              </Label>
-              <Input
-                id="email"
-                type="email"
-                placeholder="your.email@example.com"
-                value={email}
-                onChange={(e) => {
-                  setEmail(e.target.value)
-                  // Clear error when user types
-                  if (errors.email) {
-                    setErrors(prev => ({ ...prev, email: undefined }))
-                  }
-                  // Clear auth error when user types
-                  if (authError) {
-                    setAuthError(null)
-                  }
-                }}
-                className={`text-base h-12 ${errors.email ? "border-red-500" : ""}`}
-              />
-              {errors.email && (
-                <p className="text-sm text-red-500">{errors.email}</p>
-              )}
-            </div>
-            <div className="space-y-2">
-              <div className="flex items-center justify-between">
-                <Label htmlFor="password" className="text-base">
-                  Password
-                </Label>
-                <Link href="/forgot-password" className="text-sm text-indigo-600 hover:underline">
-                  Forgot password?
-                </Link>
-              </div>
-              <Input
-                id="password"
-                type="password"
-                placeholder="••••••••"
-                value={password}
-                onChange={(e) => {
-                  setPassword(e.target.value)
-                  // Clear error when user types
-                  if (errors.password) {
-                    setErrors(prev => ({ ...prev, password: undefined }))
-                  }
-                  // Clear auth error when user types
-                  if (authError) {
-                    setAuthError(null)
-                  }
-                }}
-                className={`text-base h-12 ${errors.password ? "border-red-500" : ""}`}
-              />
-              {errors.password && (
-                <p className="text-sm text-red-500">{errors.password}</p>
-              )}
-            </div>
+    <div className="flex flex-col min-h-screen">
+      <LandingHeader />
+      <div className="flex flex-1 items-center justify-center bg-background p-4">
+        <Card className="w-full max-w-md bg-card border-border">
+          <CardHeader className="space-y-1">
+            <CardTitle className="text-3xl font-bold text-center text-foreground">
+              Hisaab
+            </CardTitle>
+            <CardDescription className="text-center text-muted-foreground">
+              Sign in to manage your expenses
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            {/* Authentication Error Message */}
             {authError && (
-              <div className="rounded-md bg-red-50 p-3">
-                <p className="text-sm text-red-700">{authError}</p>
+              <div className="mb-4">
+                <ErrorMessage 
+                  title="Login Failed" 
+                  message={authError} 
+                />
               </div>
             )}
-            <Button 
-              type="submit" 
-              className="w-full bg-indigo-600 hover:bg-indigo-700"
-              disabled={loading}
-            >
-              {loading ? "Signing in..." : "Sign In"}
-            </Button>
-          </form>
-          <div className="mt-6 text-center">
-            <p className="text-sm text-muted-foreground">
-              Don't have an account?{" "}
-              <Link href="/signup" className="font-medium text-indigo-600 hover:underline">
-                Sign up
-              </Link>
-            </p>
-          </div>
-        </CardContent>
-      </Card>
+            
+            <form onSubmit={handleLogin} className="space-y-4">
+              <div className="space-y-2">
+                <Label htmlFor="email" className="text-foreground">Email</Label>
+                <Input
+                  id="email"
+                  type="email"
+                  placeholder="you@example.com"
+                  value={email}
+                  onChange={(e) => {
+                    setEmail(e.target.value)
+                    // Clear error when user types
+                    if (errors.email) {
+                      setErrors(prev => ({ ...prev, email: undefined }))
+                    }
+                    // Clear auth error when user types
+                    if (authError) {
+                      setAuthError(null)
+                    }
+                  }}
+                  className={`bg-background border-input text-foreground placeholder-muted-foreground ${errors.email ? "border-red-500" : ""}`}
+                />
+                {errors.email && (
+                  <p className="text-sm text-red-500">{errors.email}</p>
+                )}
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="password" className="text-foreground">Password</Label>
+                <Input
+                  id="password"
+                  type="password"
+                  placeholder="••••••••"
+                  value={password}
+                  onChange={(e) => {
+                    setPassword(e.target.value)
+                    // Clear error when user types
+                    if (errors.password) {
+                      setErrors(prev => ({ ...prev, password: undefined }))
+                    }
+                    // Clear auth error when user types
+                    if (authError) {
+                      setAuthError(null)
+                    }
+                  }}
+                  className={`bg-background border-input text-foreground placeholder-muted-foreground ${errors.password ? "border-red-500" : ""}`}
+                />
+                {errors.password && (
+                  <p className="text-sm text-red-500">{errors.password}</p>
+                )}
+              </div>
+              <Button 
+                type="submit" 
+                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
+                disabled={loading}
+              >
+                {loading ? "Signing in..." : "Sign In"}
+              </Button>
+              <div className="text-center text-sm text-muted-foreground">
+                Don't have an account?{" "}
+                <button
+                  type="button"
+                  onClick={() => router.push("/signup")}
+                  className="text-primary hover:underline"
+                  disabled={loading}
+                >
+                  Sign up
+                </button>
+              </div>
+            </form>
+          </CardContent>
+        </Card>
+      </div>
     </div>
   )
 }

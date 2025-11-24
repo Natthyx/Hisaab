@@ -263,63 +263,100 @@ export default function ProfilePage() {
                 </form>
               </CardContent>
             </Card>
-          </div>
-          
-          {/* Account Information */}
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <CreditCardIcon className="h-5 w-5" />
-                Your Accounts
-              </CardTitle>
-              <CardDescription>
-                Manage your financial accounts
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-4">
-                {accounts.length > 0 ? (
-                  accounts.map(account => (
-                    <div key={account.id} className="flex items-center justify-between rounded-lg border p-4">
+            
+            {/* Notification Preferences */}
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <BellIcon className="h-5 w-5" />
+                  Notifications
+                </CardTitle>
+                <CardDescription>
+                  Configure how you receive notifications
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <p className="font-medium">Email Notifications</p>
+                      <p className="text-sm text-muted-foreground">Receive updates via email</p>
+                    </div>
+                    <Button variant="outline" size="sm">Enable</Button>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <p className="font-medium">Push Notifications</p>
+                      <p className="text-sm text-muted-foreground">Receive push notifications</p>
+                    </div>
+                    <Button variant="outline" size="sm">Enable</Button>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            
+            {/* Account Management */}
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <CreditCardIcon className="h-5 w-5" />
+                  Your Accounts
+                </CardTitle>
+                <CardDescription>
+                  Manage your financial accounts
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-3">
+                  {accounts.map((account) => (
+                    <div key={account.id} className="flex items-center justify-between p-3 border rounded-lg">
                       <div>
                         <p className="font-medium">{account.name}</p>
                         <p className="text-sm text-muted-foreground">
-                          Created: {new Date(account.created_at).toLocaleDateString()}
+                          Balance: ${account.initial_balance.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                         </p>
                       </div>
-                      <div className="text-right">
-                        <p className="font-medium">${account.initial_balance.toFixed(2)}</p>
-                        <p className="text-sm text-muted-foreground">Initial Balance</p>
-                      </div>
+                      <Button variant="outline" size="sm" onClick={() => router.push('/accounts')}>
+                        Manage
+                      </Button>
                     </div>
-                  ))
-                ) : (
-                  <p className="py-4 text-center text-muted-foreground">No accounts found</p>
-                )}
-                <div className="pt-4">
-                  <Button variant="outline" onClick={() => router.push('/accounts')}>
-                    Manage Accounts
+                  ))}
+                  
+                  {accounts.length === 0 && (
+                    <div className="text-center py-4 text-muted-foreground">
+                      <p>You don't have any accounts yet.</p>
+                    </div>
+                  )}
+                  
+                  <Button className="w-full" onClick={() => router.push('/accounts')}>
+                    Manage All Accounts
                   </Button>
                 </div>
-              </div>
-            </CardContent>
-          </Card>
+              </CardContent>
+            </Card>
+          </div>
           
           {/* Danger Zone */}
-          <Card>
+          <Card className="border-destructive">
             <CardHeader>
-              <CardTitle className="flex items-center gap-2 text-destructive">
-                <LogOutIcon className="h-5 w-5" />
-                Sign Out
-              </CardTitle>
+              <CardTitle className="text-destructive">Danger Zone</CardTitle>
               <CardDescription>
-                Sign out from your account on this device
+                Permanently delete your account and all associated data
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <Button variant="destructive" onClick={handleSignOut}>
-                Sign Out
-              </Button>
+              <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+                <div>
+                  <p className="font-medium">Delete Account</p>
+                  <p className="text-sm text-muted-foreground">
+                    Once you delete your account, there is no going back. Please be certain.
+                  </p>
+                </div>
+                <Button variant="destructive" onClick={handleSignOut}>
+                  <LogOutIcon className="mr-2 h-4 w-4" />
+                  Log Out
+                </Button>
+              </div>
             </CardContent>
           </Card>
         </div>

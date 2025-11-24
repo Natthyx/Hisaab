@@ -2,9 +2,11 @@
 
 import Link from "next/link"
 import { usePathname } from 'next/navigation'
-import { HomeIcon, PlusCircleIcon, ListIcon, BarChart3Icon, WalletIcon } from 'lucide-react'
+import { HomeIcon, PlusCircleIcon, ListIcon, BarChart3Icon, WalletIcon, LogOutIcon } from 'lucide-react'
 import { cn } from "@/lib/utils"
 import { ProfileIcon } from "./profile-icon"
+import { createClient } from '@/lib/supabase/client'
+import { useRouter } from 'next/navigation'
 
 const navItems = [
   { href: "/dashboard", label: "Dashboard", icon: HomeIcon },
@@ -16,6 +18,17 @@ const navItems = [
 
 export function Navigation() {
   const pathname = usePathname()
+  const router = useRouter()
+  const supabase = createClient()
+
+  const handleSignOut = async () => {
+    // Use fetch to call the signout API route instead of importing server-side function
+    await fetch('/api/auth/signout', {
+      method: 'POST',
+    })
+    // Redirect to login page
+    router.push('/login')
+  }
 
   return (
     <nav className="fixed bottom-0 left-0 right-0 z-50 border-t bg-background md:fixed md:left-0 md:top-0 md:h-screen md:w-64 md:border-r md:border-t-0">
@@ -25,6 +38,7 @@ export function Navigation() {
         </div>
         {navItems.map((item) => {
           const isActive = pathname === item.href || pathname.startsWith(item.href)
+          
           return (
             <Link
               key={item.href}
@@ -41,9 +55,21 @@ export function Navigation() {
             </Link>
           )
         })}
-        {/* Profile Icon at the bottom on desktop */}
-        <div className="md:mt-auto md:mb-4">
-          <ProfileIcon />
+        {/* Profile and Logout Section */}
+        <div className="md:mt-auto md:mb-4 md:w-full md:px-1">
+          {/* Profile Icon - Using existing component with dropdown functionality */}
+          <div className="flex items-center justify-center md:mb-2">
+            <ProfileIcon />
+          </div>
+          
+          {/* Logout Button - Hidden on mobile */}
+          <button
+            onClick={handleSignOut}
+            className="hidden w-full items-center justify-center gap-2 rounded-lg border border-red-500 px-2 py-2 text-sm font-medium text-red-500 transition-colors hover:bg-red-500 hover:text-white md:flex md:mt-2"
+          >
+            <LogOutIcon className="h-5 w-5" />
+            <span className="hidden md:inline">Logout</span>
+          </button>
         </div>
       </div>
     </nav>
