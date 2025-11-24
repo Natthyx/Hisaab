@@ -1,9 +1,11 @@
 {
+  "/(with-auth)/accounts/page": "/accounts",
+  "/(with-auth)/add/page": "/add",
+  "/(with-auth)/analytics/page": "/analytics",
+  "/(with-auth)/dashboard/page": "/dashboard",
+  "/(with-auth)/transactions/page": "/transactions",
   "/_global-error/page": "/_global-error",
   "/_not-found/page": "/_not-found",
-  "/accounts/page": "/accounts",
-  "/add/page": "/add",
-  "/analytics/page": "/analytics",
   "/api/accounts/create/route": "/api/accounts/create",
   "/api/accounts/delete/route": "/api/accounts/delete",
   "/api/accounts/set-default/route": "/api/accounts/set-default",
@@ -17,11 +19,10 @@
   "/api/transactions/list/route": "/api/transactions/list",
   "/api/transactions/update/[id]/route": "/api/transactions/update/[id]",
   "/api/users/update/route": "/api/users/update",
-  "/dashboard/page": "/dashboard",
+  "/landing/page": "/landing",
   "/login/page": "/login",
   "/page": "/",
   "/profile/page": "/profile",
   "/setup/page": "/setup",
-  "/signup/page": "/signup",
-  "/transactions/page": "/transactions"
+  "/signup/page": "/signup"
 }

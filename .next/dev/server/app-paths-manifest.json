@@ -1,4 +1,8 @@
 {
-  "/dashboard/page": "app/dashboard/page.js",
-  "/transactions/page": "app/transactions/page.js"
+  "/(with-auth)/analytics/page": "app/(with-auth)/analytics/page.js",
+  "/(with-auth)/dashboard/page": "app/(with-auth)/dashboard/page.js",
+  "/(with-auth)/transactions/page": "app/(with-auth)/transactions/page.js",
+  "/api/accounts/set-default/route": "app/api/accounts/set-default/route.js",
+  "/api/auth/signout/route": "app/api/auth/signout/route.js",
+  "/login/page": "app/login/page.js"
 }

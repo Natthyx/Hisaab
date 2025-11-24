@@ -1,3 +1,329 @@
-[00:00:00.681] Server  WARN     ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
-[00:00:00.760] Server  LOG      ✓ Ready in 562ms
-[00:00:03.960] Server  LOG      ○ Compiling /dashboard ...
+[00:00:01.032] Server  WARN     ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:00:01.165] Server  LOG      ✓ Ready in 898ms
+[00:00:09.153] Server  LOG      ○ Compiling /analytics ...
+[00:00:13.031] Server  WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:00:13.032] Server  WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:00:13.033] Server  WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:00:13.033] Server  WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:00:14.718] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:00:14.718] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:00:14.719] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:00:14.719] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:00:14.719] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:00:14.719] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:00:14.719] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:00:14.719] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:00:39.495] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:00:39.495] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:00:39.495] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:00:39.495] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:00:39.495] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:00:39.495] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:00:39.495] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:00:39.495] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:00:50.585] Server  ERROR    ⨯ ./lib/supabase/server.ts:2:1
+Ecmascript file had an error
+  1 | import { createServerClient, type CookieOptions } from '@supabase/ssr'
+> 2 | import { cookies } from 'next/headers'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export async function createClient() {
+  5 |   const cookieStore = await cookies()
+
+You're importing a component that needs "next/headers". That only works in a Server Component which is not supported in the pages/ directory. Read more: https://nextjs.org/docs/app/building-your-application/rendering/server-components
+
+
+
+Import traces:
+  Client Component Browser:
+    ./lib/supabase/server.ts [Client Component Browser]
+    ./lib/accounts/service.ts [Client Component Browser]
+    ./app/login/page.tsx [Client Component Browser]
+    ./app/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./lib/supabase/server.ts [Client Component SSR]
+    ./lib/accounts/service.ts [Client Component SSR]
+    ./app/login/page.tsx [Client Component SSR]
+    ./app/login/page.tsx [Server Component]
+
+
+[00:00:50.714] Browser ERROR   ./lib/supabase/server.ts:2:1
+Ecmascript file had an error
+  1 | import { createServerClient, type CookieOptions } from '@supabase/ssr'
+> 2 | import { cookies } from 'next/headers'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export async function createClient() {
+  5 |   const cookieStore = await cookies()
+
+You're importing a component that needs "next/headers". That only works in a Server Component which is not supported in the pages/ directory. Read more: https://nextjs.org/docs/app/building-your-application/rendering/server-components
+
+Import traces:
+  Client Component Browser:
+    ./lib/supabase/server.ts [Client Component Browser]
+    ./lib/accounts/service.ts [Client Component Browser]
+    ./app/login/page.tsx [Client Component Browser]
+    ./app/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./lib/supabase/server.ts [Client Component SSR]
+    ./lib/accounts/service.ts [Client Component SSR]
+    ./app/login/page.tsx [Client Component SSR]
+    ./app/login/page.tsx [Server Component]
+[00:00:51.191] Browser ERROR   ./lib/supabase/server.ts:2:1
+Ecmascript file had an error
+  1 | import { createServerClient, type CookieOptions } from '@supabase/ssr'
+> 2 | import { cookies } from 'next/headers'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export async function createClient() {
+  5 |   const cookieStore = await cookies()
+
+You're importing a component that needs "next/headers". That only works in a Server Component which is not supported in the pages/ directory. Read more: https://nextjs.org/docs/app/building-your-application/rendering/server-components
+
+Import traces:
+  Client Component Browser:
+    ./lib/supabase/server.ts [Client Component Browser]
+    ./lib/accounts/service.ts [Client Component Browser]
+    ./app/login/page.tsx [Client Component Browser]
+    ./app/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./lib/supabase/server.ts [Client Component SSR]
+    ./lib/accounts/service.ts [Client Component SSR]
+    ./app/login/page.tsx [Client Component SSR]
+    ./app/login/page.tsx [Server Component]
+[00:00:51.191] Browser ERROR   ./lib/supabase/server.ts:2:1
+Ecmascript file had an error
+  1 | import { createServerClient, type CookieOptions } from '@supabase/ssr'
+> 2 | import { cookies } from 'next/headers'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export async function createClient() {
+  5 |   const cookieStore = await cookies()
+
+You're importing a component that needs "next/headers". That only works in a Server Component which is not supported in the pages/ directory. Read more: https://nextjs.org/docs/app/building-your-application/rendering/server-components
+
+Import traces:
+  Client Component Browser:
+    ./lib/supabase/server.ts [Client Component Browser]
+    ./lib/accounts/service.ts [Client Component Browser]
+    ./app/login/page.tsx [Client Component Browser]
+    ./app/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./lib/supabase/server.ts [Client Component SSR]
+    ./lib/accounts/service.ts [Client Component SSR]
+    ./app/login/page.tsx [Client Component SSR]
+    ./app/login/page.tsx [Server Component]
+[00:00:51.213] Server  ERROR    ⨯ ./lib/supabase/server.ts:2:1
+Ecmascript file had an error
+  1 | import { createServerClient, type CookieOptions } from '@supabase/ssr'
+> 2 | import { cookies } from 'next/headers'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export async function createClient() {
+  5 |   const cookieStore = await cookies()
+
+You're importing a component that needs "next/headers". That only works in a Server Component which is not supported in the pages/ directory. Read more: https://nextjs.org/docs/app/building-your-application/rendering/server-components
+
+
+
+Import traces:
+  Client Component Browser:
+    ./lib/supabase/server.ts [Client Component Browser]
+    ./lib/accounts/service.ts [Client Component Browser]
+    ./app/login/page.tsx [Client Component Browser]
+    ./app/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./lib/supabase/server.ts [Client Component SSR]
+    ./lib/accounts/service.ts [Client Component SSR]
+    ./app/login/page.tsx [Client Component SSR]
+    ./app/login/page.tsx [Server Component]
+
+
+[00:00:51.238] Browser ERROR   ./lib/supabase/server.ts:2:1
+Ecmascript file had an error
+  1 | import { createServerClient, type CookieOptions } from '@supabase/ssr'
+> 2 | import { cookies } from 'next/headers'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export async function createClient() {
+  5 |   const cookieStore = await cookies()
+
+You're importing a component that needs "next/headers". That only works in a Server Component which is not supported in the pages/ directory. Read more: https://nextjs.org/docs/app/building-your-application/rendering/server-components
+
+Import traces:
+  Client Component Browser:
+    ./lib/supabase/server.ts [Client Component Browser]
+    ./lib/accounts/service.ts [Client Component Browser]
+    ./app/login/page.tsx [Client Component Browser]
+    ./app/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./lib/supabase/server.ts [Client Component SSR]
+    ./lib/accounts/service.ts [Client Component SSR]
+    ./app/login/page.tsx [Client Component SSR]
+    ./app/login/page.tsx [Server Component]
+[00:00:51.270] Server  ERROR    ⨯ ./lib/supabase/server.ts:2:1
+Ecmascript file had an error
+  1 | import { createServerClient, type CookieOptions } from '@supabase/ssr'
+> 2 | import { cookies } from 'next/headers'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export async function createClient() {
+  5 |   const cookieStore = await cookies()
+
+You're importing a component that needs "next/headers". That only works in a Server Component which is not supported in the pages/ directory. Read more: https://nextjs.org/docs/app/building-your-application/rendering/server-components
+
+
+
+Import traces:
+  Client Component Browser:
+    ./lib/supabase/server.ts [Client Component Browser]
+    ./lib/accounts/service.ts [Client Component Browser]
+    ./app/login/page.tsx [Client Component Browser]
+    ./app/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./lib/supabase/server.ts [Client Component SSR]
+    ./lib/accounts/service.ts [Client Component SSR]
+    ./app/login/page.tsx [Client Component SSR]
+    ./app/login/page.tsx [Server Component]
+
+
+[00:00:51.509] Browser ERROR   uncaughtError: Error: ./lib/supabase/server.ts:2:1
+Ecmascript file had an error
+  1 | import { createServerClient, type CookieOptions } from '@supabase/ssr'
+> 2 | import { cookies } from 'next/headers'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export async function createClient() {
+  5 |   const cookieStore = await cookies()
+
+You're importing a component that needs "next/headers". That only works in a Server Component which is not supported in the pages/ directory. Read more: https://nextjs.org/docs/app/building-your-application/rendering/server-components
+
+
+
+Import traces:
+  Client Component Browser:
+    ./lib/supabase/server.ts [Client Component Browser]
+    ./lib/accounts/service.ts [Client Component Browser]
+    ./app/login/page.tsx [Client Component Browser]
+    ./app/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./lib/supabase/server.ts [Client Component SSR]
+    ./lib/accounts/service.ts [Client Component SSR]
+    ./app/login/page.tsx [Client Component SSR]
+    ./app/login/page.tsx [Server Component]
+
+
+[00:00:51.680] Browser ERROR   ./lib/supabase/server.ts:2:1
+Ecmascript file had an error
+  1 | import { createServerClient, type CookieOptions } from '@supabase/ssr'
+> 2 | import { cookies } from 'next/headers'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export async function createClient() {
+  5 |   const cookieStore = await cookies()
+
+You're importing a component that needs "next/headers". That only works in a Server Component which is not supported in the pages/ directory. Read more: https://nextjs.org/docs/app/building-your-application/rendering/server-components
+
+Import traces:
+  Client Component Browser:
+    ./lib/supabase/server.ts [Client Component Browser]
+    ./lib/accounts/service.ts [Client Component Browser]
+    ./app/login/page.tsx [Client Component Browser]
+    ./app/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./lib/supabase/server.ts [Client Component SSR]
+    ./lib/accounts/service.ts [Client Component SSR]
+    ./app/login/page.tsx [Client Component SSR]
+    ./app/login/page.tsx [Server Component]
+[00:00:51.680] Browser ERROR   ./lib/supabase/server.ts:2:1
+Ecmascript file had an error
+  1 | import { createServerClient, type CookieOptions } from '@supabase/ssr'
+> 2 | import { cookies } from 'next/headers'
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 |
+  4 | export async function createClient() {
+  5 |   const cookieStore = await cookies()
+
+You're importing a component that needs "next/headers". That only works in a Server Component which is not supported in the pages/ directory. Read more: https://nextjs.org/docs/app/building-your-application/rendering/server-components
+
+Import traces:
+  Client Component Browser:
+    ./lib/supabase/server.ts [Client Component Browser]
+    ./lib/accounts/service.ts [Client Component Browser]
+    ./app/login/page.tsx [Client Component Browser]
+    ./app/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./lib/supabase/server.ts [Client Component SSR]
+    ./lib/accounts/service.ts [Client Component SSR]
+    ./app/login/page.tsx [Client Component SSR]
+    ./app/login/page.tsx [Server Component]

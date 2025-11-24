@@ -10,7 +10,7 @@ import { createClient } from '@/lib/supabase/client'
 import { toast } from "sonner"
 import { validateLoginForm } from "@/lib/auth/validation"
 import { signInWithEmailAndPassword } from "@/lib/auth/client-service"
-import { checkUserHasAccounts } from "@/lib/accounts/service"
+import { checkUserHasAccounts } from "@/lib/accounts/client-service"
 import Link from "next/link"
 import { getCachedUser } from '@/lib/auth/client-service'
 
