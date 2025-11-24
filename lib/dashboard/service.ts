@@ -1,5 +1,5 @@
 import { getAccountTransactions, getAccountTransactionsByDateRange } from "@/lib/transactions/service"
-import { getUserAccounts, getUserDefaultAccount } from "@/lib/accounts/service"
+import { getUserAccounts, getUserDefaultAccount, getAccountById } from "@/lib/accounts/service"
 
 // Helper function to format dates for daily chart
 const formatDailyDate = (dateString: string) => {
@@ -84,7 +84,7 @@ export async function getDashboardData(userId: string, accountId?: string, dateR
     endDate = currentWeek.end
   }
   
-  // Get transactions for the selected account within the date range
+  // Get transactions for the selected account within the date range (for charts)
   const transactions = selectedAccountId 
     ? await getAccountTransactionsByDateRange(
         selectedAccountId, 
@@ -93,7 +93,27 @@ export async function getDashboardData(userId: string, accountId?: string, dateR
       )
     : []
   
-  // Calculate income and expense
+  // Get ALL transactions for the selected account (for real bank account balance calculation)
+  const allTransactions = selectedAccountId 
+    ? await getAccountTransactions(selectedAccountId)
+    : []
+  
+  // Calculate income and expense for ALL transactions (real bank account balance)
+  let totalAllTimeIncome = 0
+  let totalAllTimeExpense = 0
+  
+  allTransactions?.forEach(transaction => {
+    if (transaction.type === 'income') {
+      totalAllTimeIncome += transaction.amount
+    } else {
+      totalAllTimeExpense += transaction.amount
+    }
+  })
+  
+  // Real bank account balance calculation (includes all historical transactions)
+  const balance = (selectedAccount?.initial_balance || 0) + totalAllTimeIncome - totalAllTimeExpense
+  
+  // Calculate income and expense for the selected date range (for dashboard display)
   let totalIncome = 0
   let totalExpense = 0
   
@@ -104,8 +124,6 @@ export async function getDashboardData(userId: string, accountId?: string, dateR
       totalExpense += transaction.amount
     }
   })
-  
-  const balance = (selectedAccount?.initial_balance || 0) + totalIncome - totalExpense
   
   // Generate daily chart data (Mon-Sun) for the selected week
   const dailyData = []
@@ -211,6 +229,7 @@ export async function getDashboardData(userId: string, accountId?: string, dateR
     selectedAccount,
     selectedAccountId,
     transactions,
+    allTransactions,
     totalIncome,
     totalExpense,
     balance,

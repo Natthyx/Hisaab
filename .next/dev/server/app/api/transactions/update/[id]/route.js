@@ -4,7 +4,7 @@ R.c("server/chunks/node_modules_zod_v3_f358d7b3._.js")
 R.c("server/chunks/node_modules_@supabase_storage-js_dist_module_829f4f3c._.js")
 R.c("server/chunks/node_modules_@supabase_auth-js_dist_module_02e1b12e._.js")
 R.c("server/chunks/node_modules_6a002b03._.js")
-R.c("server/chunks/[root-of-the-server]__80ee952f._.js")
+R.c("server/chunks/[root-of-the-server]__baaa3cb5._.js")
 R.c("server/chunks/_next-internal_server_app_api_transactions_update_[id]_route_actions_f0f68a96.js")
 R.m("[project]/node_modules/next/dist/esm/build/templates/app-route.js { INNER_APP_ROUTE => \"[project]/app/api/transactions/update/[id]/route.ts [app-route] (ecmascript)\" } [app-route] (ecmascript)")
 module.exports=R.m("[project]/node_modules/next/dist/esm/build/templates/app-route.js { INNER_APP_ROUTE => \"[project]/app/api/transactions/update/[id]/route.ts [app-route] (ecmascript)\" } [app-route] (ecmascript)").exports

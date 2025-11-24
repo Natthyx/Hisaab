@@ -1,5 +1,8 @@
 {
   "/(with-auth)/add/page": "app/(with-auth)/add/page.js",
+  "/(with-auth)/analytics/page": "app/(with-auth)/analytics/page.js",
   "/(with-auth)/dashboard/page": "app/(with-auth)/dashboard/page.js",
-  "/api/accounts/set-default/route": "app/api/accounts/set-default/route.js"
+  "/(with-auth)/transactions/page": "app/(with-auth)/transactions/page.js",
+  "/api/accounts/set-default/route": "app/api/accounts/set-default/route.js",
+  "/api/transactions/update/[id]/route": "app/api/transactions/update/[id]/route.js"
 }

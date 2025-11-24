@@ -27,6 +27,7 @@ export default async function DashboardPage(props: { searchParams: Promise<{ acc
     selectedAccount,
     selectedAccountId,
     transactions,
+    allTransactions,
     totalIncome,
     totalExpense,
     balance,
