@@ -21,7 +21,6 @@ export default function SignupPage() {
   const [showConfirmationMessage, setShowConfirmationMessage] = useState(false)
   const [errors, setErrors] = useState<{email?: string, password?: string, confirmPassword?: string}>({})
 
-  const supabase = createClient()
 
   const handleSignup = async (e: React.FormEvent) => {
     e.preventDefault()

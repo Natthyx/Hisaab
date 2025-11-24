@@ -1997,10 +1997,6 @@
     }
   }
 
-  .bg-red-50 {
-    background-color: var(--color-red-50);
-  }
-
   .bg-red-100 {
     background-color: var(--color-red-100);
   }
@@ -2601,10 +2597,6 @@
 
   .text-red-600 {
     color: var(--color-red-600);
-  }
-
-  .text-red-700 {
-    color: var(--color-red-700);
   }
 
   .text-secondary-foreground {

@@ -9,6 +9,7 @@ import { redirect } from 'next/navigation'
 import { getDashboardData } from "@/lib/dashboard/service"
 import { getCachedUser } from '@/lib/auth/service'
 import { DateFilter } from "@/components/dashboard/date-filter"
+import { Transaction } from '@/types'
 
 export default async function DashboardPage(props: { searchParams: Promise<{ account?: string, dateRange?: 'current' | 'previous' }> }) {
   const searchParams = await props.searchParams
@@ -111,7 +112,7 @@ export default async function DashboardPage(props: { searchParams: Promise<{ acc
               </Link>
             </div>
             <div className="space-y-2">
-              {transactions && transactions.slice(0, 5).map((transaction) => (
+              {transactions && transactions.slice(0, 5).map((transaction: Transaction) => (
                 <div key={transaction.id} className="flex items-center justify-between rounded-lg border p-3">
                   <div>
                     <p className="font-medium">{transaction.reason}</p>

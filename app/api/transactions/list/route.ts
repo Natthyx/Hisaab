@@ -1,5 +1,4 @@
-import { NextResponse } from 'next/server'
-import { z } from 'zod'
+import { Account } from '@/types'
 import { 
   getUserFromRequest, 
   createSuccessResponse, 
@@ -41,7 +40,7 @@ export async function GET(request: Request) {
     } else {
       // Get all user's accounts using service function
       const accounts = await getUserAccounts(user.id)
-      accountIds = accounts.map(account => account.id)
+      accountIds = accounts.map((account: Account) => account.id)
     }
     
     // List transactions using the service function

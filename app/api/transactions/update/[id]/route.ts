@@ -8,6 +8,7 @@ import {
 } from '@/lib/api/index'
 import { updateTransactionForUser } from '@/lib/transactions/service'
 import { getUserAccounts } from '@/lib/accounts/service'
+import { Account } from '@/types'
 
 const updateTransactionSchema = z.object({
   amount: z.string().optional(), // Changed to string since FormData sends strings
@@ -50,7 +51,7 @@ export async function PUT(
     
     // Get user's accounts using the service function
     const accounts = await getUserAccounts(user.id)
-    const accountIds = accounts.map(account => account.id)
+    const accountIds = accounts.map((account: Account) => account.id)
     
     // Update the transaction using the service function
     const data = await updateTransactionForUser(id, updateData, accountIds)

@@ -20,9 +20,10 @@ interface Account {
 interface AccountSelectorProps {
   accounts: Account[]
   selectedAccountId: string
+  onAccountChange?: (accountId: string) => void
 }
 
-export function AccountSelector({ accounts, selectedAccountId }: AccountSelectorProps) {
+export function AccountSelector({ accounts, selectedAccountId, onAccountChange }: AccountSelectorProps) {
   const [isOpen, setIsOpen] = useState(false)
   const router = useRouter()
   
@@ -45,6 +46,10 @@ export function AccountSelector({ accounts, selectedAccountId }: AccountSelector
         toast.error(result.error || 'Failed to set default account')
         return
       }
+      // If there's an onAccountChange callback, call it
+      if (onAccountChange) {
+        onAccountChange(accountId)
+      }
       
       // Refresh the page to reflect the change
       router.refresh()
@@ -60,6 +65,7 @@ export function AccountSelector({ accounts, selectedAccountId }: AccountSelector
           variant="outline" 
           className="w-full justify-between"
           aria-label="Select account"
+          id="account-selector-trigger"
         >
           <span className="truncate">{selectedAccount?.name}</span>
           <ChevronsUpDownIcon className="ml-2 h-4 w-4 shrink-0 opacity-50" />

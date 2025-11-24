@@ -137,6 +137,10 @@ export function ProfileIcon() {
   }
 
   if (!userEmail) return null
+    // Handle account change from AccountSelector
+  const handleAccountChange = (accountId: string) => {
+    setDefaultAccountId(accountId)
+  }
 
   return (
     <DropdownMenu>
@@ -166,6 +170,7 @@ export function ProfileIcon() {
             <AccountSelector 
               accounts={accounts} 
               selectedAccountId={defaultAccountId}
+              onAccountChange={handleAccountChange}
             /></div>
             </>
             

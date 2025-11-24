@@ -7,22 +7,7 @@ import {
 import { getAccountTransactions } from "@/lib/transactions/service"
 import { AnalyticsClient } from "@/components/analytics/client"
 import { getCachedUser } from "@/lib/auth/service"
-
-interface Account {
-  id: string
-  name: string
-  initial_balance: number
-}
-
-interface Transaction {
-  id: string
-  amount: number
-  reason: string
-  type: 'income' | 'expense'
-  category: string
-  date: string
-  account_id: string
-}
+import {Account, Transaction} from "@/types/index"
 
 export default async function AnalyticsPage(props: { searchParams: Promise<{ account?: string }> }) {
   const searchParams = await props.searchParams

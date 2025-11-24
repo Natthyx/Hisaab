@@ -18,7 +18,6 @@ export default function SetupPage() {
   const [loading, setLoading] = useState(false)
   const [errors, setErrors] = useState<{accountName?: string, initialBalance?: string}>({})
 
-  const supabase = createClient()
 
   const handleSetup = async (e: React.FormEvent) => {
     e.preventDefault()

@@ -6,6 +6,7 @@ import {
 } from '@/lib/api/index'
 import { deleteTransaction, doesTransactionBelongToUserAccounts } from '@/lib/transactions/service'
 import { getUserAccounts } from '@/lib/accounts/service'
+import { Account } from '@/types'
 
 export async function DELETE(
   request: Request,
@@ -25,7 +26,7 @@ export async function DELETE(
     // Get user's accounts using the service function
     const accounts = await getUserAccounts(user.id)
     
-    const accountIds = accounts.map(account => account.id)
+    const accountIds = accounts.map((account: Account) => account.id)
     
     // Verify that the transaction belongs to one of the user's accounts
     const transactionBelongsToUser = await doesTransactionBelongToUserAccounts(id, accountIds)
