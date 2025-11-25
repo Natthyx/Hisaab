@@ -1,6 +1,6 @@
 "use client"
 
-import { Navigation } from "@/components/layout/navigation"
+import { Navigation } from '@/components/layout/navigation'
 import { ThemeToggle } from '@/components/layout/theme-toggle'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -20,6 +20,7 @@ import { useEffect, useState } from "react"
 import { createClient } from '@/lib/supabase/client'
 import { toast } from "sonner"
 import { getCachedUser, clearUserCache } from '@/lib/auth/client-service'
+import { useLoading } from '@/components/layout/loading-overlay'
 
 interface Account {
   id: string
@@ -31,6 +32,7 @@ interface Account {
 export default function ProfilePage() {
   const router = useRouter()
   const supabase = createClient()
+  const { setIsLoading } = useLoading()
   const [user, setUser] = useState<any>(null)
   const [accounts, setAccounts] = useState<Account[]>([])
   const [fullName, setFullName] = useState<string>("")
@@ -47,6 +49,7 @@ export default function ProfilePage() {
         const userData = await getCachedUser()
         
         if (!userData) {
+          setIsLoading(true)
           router.push('/login')
           return
         }
@@ -146,6 +149,9 @@ export default function ProfilePage() {
   }
 
   const handleSignOut = async () => {
+    // Set loading state
+    setIsLoading(true)
+    
     // Use fetch to call the signout API route instead of importing server-side function
     await fetch('/api/auth/signout', {
       method: 'POST',
@@ -155,6 +161,7 @@ export default function ProfilePage() {
     clearUserCache()
     
     // Redirect to login page
+    setIsLoading(true)
     router.push('/login')
   }
 
@@ -316,7 +323,10 @@ export default function ProfilePage() {
                           Balance: ${account.initial_balance.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                         </p>
                       </div>
-                      <Button variant="outline" size="sm" onClick={() => router.push('/accounts')}>
+                      <Button variant="outline" size="sm" onClick={() => {
+                        setIsLoading(true)
+                        router.push('/accounts')
+                      }}>
                         Manage
                       </Button>
                     </div>
@@ -328,7 +338,10 @@ export default function ProfilePage() {
                     </div>
                   )}
                   
-                  <Button className="w-full" onClick={() => router.push('/accounts')}>
+                  <Button className="w-full" onClick={() => {
+                    setIsLoading(true)
+                    router.push('/accounts')
+                  }}>
                     Manage All Accounts
                   </Button>
                 </div>

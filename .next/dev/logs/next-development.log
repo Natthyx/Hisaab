@@ -1,106 +1,1130 @@
-[00:00:00.670] Server  WARN     ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
-[00:00:00.751] Server  LOG      ✓ Ready in 535ms
-[00:00:04.805] Server  LOG      ○ Compiling /add ...
-[00:46:16.691] Browser ERROR   {}
-[00:46:17.690] Browser ERROR   {}
-[00:46:18.690] Browser ERROR   {}
-[00:46:19.690] Browser ERROR   {}
-[00:46:21.702] Browser ERROR   {}
-[00:47:58.137] Browser ERROR   {}
-[01:21:05.629] Browser ERROR   {}
-[01:21:06.612] Browser ERROR   {}
-[01:21:07.613] Browser ERROR   {}
-[01:39:00.437] Browser ERROR   {}
-[01:39:02.427] Browser ERROR   {}
-[01:39:02.435] Browser ERROR   {}
-[01:39:03.418] Browser ERROR   {}
-[01:39:04.418] Browser ERROR   {}
-[01:39:05.418] Browser ERROR   {}
-[01:54:45.225] Browser ERROR   {}
-[01:54:47.225] Browser ERROR   {}
-[01:54:48.228] Browser ERROR   {}
-[02:09:29.019] Browser ERROR   {}
-[02:09:30.017] Browser ERROR   {}
-[02:27:09.572] Browser ERROR   {}
-[02:27:10.573] Browser ERROR   {}
-[02:27:11.571] Browser ERROR   {}
-[02:43:22.321] Browser ERROR   {}
-[02:43:24.320] Browser ERROR   {}
-[02:58:48.127] Browser ERROR   {}
-[03:10:29.926] Browser ERROR   {}
-[03:10:30.926] Browser ERROR   {}
-[03:28:01.837] Browser ERROR   {}
-[03:44:25.623] Browser ERROR   {}
-[03:44:26.626] Browser ERROR   {}
-[05:21:21.144] Server  LOG      ✓ Compiled in 285ms
-[05:21:32.580] Server  LOG      ✓ Compiled in 56ms
-[05:21:52.112] Server  LOG      ✓ Compiled in 79ms
-[05:22:08.787] Server  LOG      ✓ Compiled in 60ms
-[05:25:24.108] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
-[05:25:24.109] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
-[05:25:57.102] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+[00:00:00.928] Server  WARN     ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:00:01.028] Server  LOG      ✓ Ready in 803ms
+[00:00:06.048] Server  LOG      ○ Compiling /transactions ...
+[00:00:32.348] Server  LOG      ✓ Compiled in 237ms
+[00:00:57.246] Server  LOG      ✓ Compiled in 183ms
+[00:01:03.561] Server  LOG      ✓ Compiled in 77ms
+[00:01:04.192] Server  ERROR    ⨯ ReferenceError: imp is not defined
+[00:01:04.227] Server  LOG      ✓ Compiled in 55ms
+[00:01:04.237] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./app/profile/page.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:01:04.286] Server  LOG      ✓ Compiled in 120ms
+[00:01:04.310] Server  ERROR    ⨯ ./app/profile/page.tsx:4:1
+Parsing ecmascript source code failed
+  2 |
+  3 | import 
+> 4 | import { ThemeToggle } from '@/components/layout/theme-toggle'
+    | ^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Expected 'from', got 'import'
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+
+[00:01:04.488] Browser ERROR   ./app/profile/page.tsx:4:1
+Parsing ecmascript source code failed
+  2 |
+  3 | import
+> 4 | import { ThemeToggle } from '@/components/layout/theme-toggle'
+    | ^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Expected 'from', got 'import'
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+[00:01:04.488] Browser ERROR   ./app/profile/page.tsx:4:1
+Parsing ecmascript source code failed
+  2 |
+  3 | import
+> 4 | import { ThemeToggle } from '@/components/layout/theme-toggle'
+    | ^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Expected 'from', got 'import'
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+[00:01:04.489] Browser ERROR   ./app/profile/page.tsx:4:1
+Parsing ecmascript source code failed
+  2 |
+  3 | import
+> 4 | import { ThemeToggle } from '@/components/layout/theme-toggle'
+    | ^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Expected 'from', got 'import'
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+[00:01:04.489] Browser ERROR   ./app/profile/page.tsx:4:1
+Parsing ecmascript source code failed
+  2 |
+  3 | import
+> 4 | import { ThemeToggle } from '@/components/layout/theme-toggle'
+    | ^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Expected 'from', got 'import'
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+[00:01:04.489] Browser ERROR   ./app/profile/page.tsx:4:1
+Parsing ecmascript source code failed
+  2 |
+  3 | import 
+> 4 | import { ThemeToggle } from '@/components/layout/theme-toggle'
+    | ^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Expected 'from', got 'import'
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+[00:01:04.489] Browser ERROR   ./app/profile/page.tsx:4:1
+Parsing ecmascript source code failed
+  2 |
+  3 | import 
+> 4 | import { ThemeToggle } from '@/components/layout/theme-toggle'
+    | ^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Expected 'from', got 'import'
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+[00:01:05.231] Browser ERROR   uncaughtError: Error: ./app/profile/page.tsx:4:1
+Parsing ecmascript source code failed
+  2 |
+  3 | import 
+> 4 | import { ThemeToggle } from '@/components/layout/theme-toggle'
+    | ^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Expected 'from', got 'import'
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+
+
+[00:01:05.487] Browser ERROR   ./app/profile/page.tsx:4:1
+Parsing ecmascript source code failed
+  2 |
+  3 | import 
+> 4 | import { ThemeToggle } from '@/components/layout/theme-toggle'
+    | ^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Expected 'from', got 'import'
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+[00:01:05.487] Browser ERROR   ./app/profile/page.tsx:4:1
+Parsing ecmascript source code failed
+  2 |
+  3 | import 
+> 4 | import { ThemeToggle } from '@/components/layout/theme-toggle'
+    | ^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Expected 'from', got 'import'
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+[00:01:06.491] Browser ERROR   ./app/profile/page.tsx:4:1
+Parsing ecmascript source code failed
+  2 |
+  3 | import {}
+> 4 | import { ThemeToggle } from '@/components/layout/theme-toggle'
+    | ^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Expected 'from', got 'import'
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+[00:01:06.491] Browser ERROR   ./app/profile/page.tsx:4:1
+Parsing ecmascript source code failed
+  2 |
+  3 | import {N}
+> 4 | import { ThemeToggle } from '@/components/layout/theme-toggle'
+    | ^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Expected 'from', got 'import'
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+[00:01:06.491] Browser ERROR   ./app/profile/page.tsx:4:1
+Parsing ecmascript source code failed
+  2 |
+  3 | import {Na}
+> 4 | import { ThemeToggle } from '@/components/layout/theme-toggle'
+    | ^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Expected 'from', got 'import'
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+[00:01:08.488] Browser ERROR   ./app/profile/page.tsx:4:1
+Parsing ecmascript source code failed
+  2 |
+  3 | import {N}
+> 4 | import { ThemeToggle } from '@/components/layout/theme-toggle'
+    | ^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Expected 'from', got 'import'
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+[00:01:08.488] Browser ERROR   ./app/profile/page.tsx:4:1
+Parsing ecmascript source code failed
+  2 |
+  3 | import {}
+> 4 | import { ThemeToggle } from '@/components/layout/theme-toggle'
+    | ^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Expected 'from', got 'import'
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+[00:01:08.488] Browser ERROR   ./app/profile/page.tsx:4:1
+Parsing ecmascript source code failed
+  2 |
+  3 | import 
+> 4 | import { ThemeToggle } from '@/components/layout/theme-toggle'
+    | ^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Expected 'from', got 'import'
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+[00:01:08.488] Browser ERROR   ./app/profile/page.tsx:4:1
+Parsing ecmascript source code failed
+  2 |
+  3 | import N
+> 4 | import { ThemeToggle } from '@/components/layout/theme-toggle'
+    | ^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Expected ',', got 'import'
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+[00:01:08.488] Browser ERROR   ./app/profile/page.tsx:4:1
+Parsing ecmascript source code failed
+  2 |
+  3 | import Na
+> 4 | import { ThemeToggle } from '@/components/layout/theme-toggle'
+    | ^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Expected ',', got 'import'
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+[00:01:09.489] Browser ERROR   ./app/profile/page.tsx:4:1
+Parsing ecmascript source code failed
+  2 |
+  3 | import Nav
+> 4 | import { ThemeToggle } from '@/components/layout/theme-toggle'
+    | ^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Expected ',', got 'import'
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+[00:01:09.489] Browser ERROR   ./app/profile/page.tsx:4:1
+Parsing ecmascript source code failed
+  2 |
+  3 | import Navi
+> 4 | import { ThemeToggle } from '@/components/layout/theme-toggle'
+    | ^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Expected ',', got 'import'
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+[00:01:10.495] Browser ERROR   ./app/profile/page.tsx:4:1
+Parsing ecmascript source code failed
+  2 |
+  3 | import Navig
+> 4 | import { ThemeToggle } from '@/components/layout/theme-toggle'
+    | ^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Expected ',', got 'import'
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+[00:01:10.495] Browser ERROR   ./app/profile/page.tsx:4:1
+Parsing ecmascript source code failed
+  2 |
+  3 | import Naviga
+> 4 | import { ThemeToggle } from '@/components/layout/theme-toggle'
+    | ^^^^^^
+  5 | import { Button } from "@/components/ui/button"
+  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+  7 | import { Input } from "@/components/ui/input"
+
+Expected ',', got 'import'
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+[00:01:11.621] Server  LOG      ✓ Compiled in 112ms
+[00:01:17.720] Server  LOG      ✓ Compiled in 52ms
+[00:01:21.061] Server  LOG      ✓ Compiled in 99ms
+[00:01:23.367] Server  LOG      ✓ Compiled in 58ms
+[00:01:24.002] Server  LOG      ✓ Compiled in 40ms
+[00:01:24.490] Browser ERROR   ./app/profile/page.tsx:171:7
+Parsing ecmascript source code failed
+  169 |     <div className="flex min-h-screen flex-col md:flex-row">
+  170 |       <
+> 171 |       <main className="flex-1 p-4 pb-20 md:ml-64 md:p-8 md:pb-8">
+      |       ^
+  172 |         <div className="mx-auto max-w-4xl space-y-6">
+  173 |           <div className="flex items-center justify-between">
+  174 |             <h1 className="text-3xl font-bold">Profile Settings</h1>
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+[00:01:25.489] Browser ERROR   ./app/profile/page.tsx:171:7
+Parsing ecmascript source code failed
+  169 |     <div className="flex min-h-screen flex-col md:flex-row">
+  170 |       <di
+> 171 |       <main className="flex-1 p-4 pb-20 md:ml-64 md:p-8 md:pb-8">
+      |       ^
+  172 |         <div className="mx-auto max-w-4xl space-y-6">
+  173 |           <div className="flex items-center justify-between">
+  174 |             <h1 className="text-3xl font-bold">Profile Settings</h1>
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+[00:01:26.489] Browser ERROR   ./app/profile/page.tsx:171:7
+Parsing ecmascript source code failed
+  169 |     <div className="flex min-h-screen flex-col md:flex-row">
+  170 |       <d
+> 171 |       <main className="flex-1 p-4 pb-20 md:ml-64 md:p-8 md:pb-8">
+      |       ^
+  172 |         <div className="mx-auto max-w-4xl space-y-6">
+  173 |           <div className="flex items-center justify-between">
+  174 |             <h1 className="text-3xl font-bold">Profile Settings</h1>
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+[00:01:26.489] Browser ERROR   ./app/profile/page.tsx:171:7
+Parsing ecmascript source code failed
+  169 |     <div className="flex min-h-screen flex-col md:flex-row">
+  170 |       <
+> 171 |       <main className="flex-1 p-4 pb-20 md:ml-64 md:p-8 md:pb-8">
+      |       ^
+  172 |         <div className="mx-auto max-w-4xl space-y-6">
+  173 |           <div className="flex items-center justify-between">
+  174 |             <h1 className="text-3xl font-bold">Profile Settings</h1>
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+[00:01:27.488] Browser ERROR   ./app/profile/page.tsx:171:7
+Parsing ecmascript source code failed
+  169 |     <div className="flex min-h-screen flex-col md:flex-row">
+  170 |       <L
+> 171 |       <main className="flex-1 p-4 pb-20 md:ml-64 md:p-8 md:pb-8">
+      |       ^
+  172 |         <div className="mx-auto max-w-4xl space-y-6">
+  173 |           <div className="flex items-center justify-between">
+  174 |             <h1 className="text-3xl font-bold">Profile Settings</h1>
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+[00:01:28.784] Server  LOG      ✓ Compiled in 121ms
+[00:01:53.445] Server  LOG      ✓ Compiled in 71ms
+[00:01:55.492] Server  LOG      ✓ Compiled in 56ms
+[00:01:55.494] Browser ERROR   ./app/profile/page.tsx:171:7
+Parsing ecmascript source code failed
+  169 |     <div className="flex min-h-screen flex-col md:flex-row">
+  170 |       <L
+> 171 |       <main className="flex-1 p-4 pb-20 md:ml-64 md:p-8 md:pb-8">
+      |       ^
+  172 |         <div className="mx-auto max-w-4xl space-y-6">
+  173 |           <div className="flex items-center justify-between">
+  174 |             <h1 className="text-3xl font-bold">Profile Settings</h1>
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+[00:01:55.494] Browser ERROR   ./app/profile/page.tsx:171:7
+Parsing ecmascript source code failed
+  169 |     <div className="flex min-h-screen flex-col md:flex-row">
+  170 |       <
+> 171 |       <main className="flex-1 p-4 pb-20 md:ml-64 md:p-8 md:pb-8">
+      |       ^
+  172 |         <div className="mx-auto max-w-4xl space-y-6">
+  173 |           <div className="flex items-center justify-between">
+  174 |             <h1 className="text-3xl font-bold">Profile Settings</h1>
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+[00:01:55.494] Browser ERROR   ./app/profile/page.tsx:171:7
+Parsing ecmascript source code failed
+  169 |     <div className="flex min-h-screen flex-col md:flex-row">
+  170 |       <d
+> 171 |       <main className="flex-1 p-4 pb-20 md:ml-64 md:p-8 md:pb-8">
+      |       ^
+  172 |         <div className="mx-auto max-w-4xl space-y-6">
+  173 |           <div className="flex items-center justify-between">
+  174 |             <h1 className="text-3xl font-bold">Profile Settings</h1>
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+[00:01:55.494] Browser ERROR   ./app/profile/page.tsx:171:7
+Parsing ecmascript source code failed
+  169 |     <div className="flex min-h-screen flex-col md:flex-row">
+  170 |       <di
+> 171 |       <main className="flex-1 p-4 pb-20 md:ml-64 md:p-8 md:pb-8">
+      |       ^
+  172 |         <div className="mx-auto max-w-4xl space-y-6">
+  173 |           <div className="flex items-center justify-between">
+  174 |             <h1 className="text-3xl font-bold">Profile Settings</h1>
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+[00:01:55.494] Browser ERROR   ./app/profile/page.tsx:171:7
+Parsing ecmascript source code failed
+  169 |     <div className="flex min-h-screen flex-col md:flex-row">
+  170 |       <d
+> 171 |       <main className="flex-1 p-4 pb-20 md:ml-64 md:p-8 md:pb-8">
+      |       ^
+  172 |         <div className="mx-auto max-w-4xl space-y-6">
+  173 |           <div className="flex items-center justify-between">
+  174 |             <h1 className="text-3xl font-bold">Profile Settings</h1>
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+[00:01:55.494] Browser ERROR   ./app/profile/page.tsx:171:7
+Parsing ecmascript source code failed
+  169 |     <div className="flex min-h-screen flex-col md:flex-row">
+  170 |       <
+> 171 |       <main className="flex-1 p-4 pb-20 md:ml-64 md:p-8 md:pb-8">
+      |       ^
+  172 |         <div className="mx-auto max-w-4xl space-y-6">
+  173 |           <div className="flex items-center justify-between">
+  174 |             <h1 className="text-3xl font-bold">Profile Settings</h1>
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+[00:01:55.560] Server  LOG      ✓ Compiled in 125ms
+[00:01:56.711] Server  LOG      ✓ Compiled in 31ms
+[00:02:03.475] Server  LOG      ✓ Compiled in 35ms
+[00:02:04.169] Server  LOG      ✓ Compiled in 26ms
+[00:02:04.453] Server  LOG      ✓ Compiled in 30ms
+[00:02:04.701] Server  LOG      ✓ Compiled in 30ms
+[00:02:05.488] Browser ERROR   ./app/profile/page.tsx:171:7
+Parsing ecmascript source code failed
+  169 |     <div className="flex min-h-screen flex-col md:flex-row">
+  170 |       <
+> 171 |       <main className="flex-1 p-4 pb-20 md:ml-64 md:p-8 md:pb-8">
+      |       ^
+  172 |         <div className="mx-auto max-w-4xl space-y-6">
+  173 |           <div className="flex items-center justify-between">
+  174 |             <h1 className="text-3xl font-bold">Profile Settings</h1>
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+[00:02:05.488] Browser ERROR   ./app/profile/page.tsx:171:7
+Parsing ecmascript source code failed
+  169 |     <div className="flex min-h-screen flex-col md:flex-row">
+  170 |       <d
+> 171 |       <main className="flex-1 p-4 pb-20 md:ml-64 md:p-8 md:pb-8">
+      |       ^
+  172 |         <div className="mx-auto max-w-4xl space-y-6">
+  173 |           <div className="flex items-center justify-between">
+  174 |             <h1 className="text-3xl font-bold">Profile Settings</h1>
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+[00:02:05.488] Browser ERROR   ./app/profile/page.tsx:171:7
+Parsing ecmascript source code failed
+  169 |     <div className="flex min-h-screen flex-col md:flex-row">
+  170 |       <di
+> 171 |       <main className="flex-1 p-4 pb-20 md:ml-64 md:p-8 md:pb-8">
+      |       ^
+  172 |         <div className="mx-auto max-w-4xl space-y-6">
+  173 |           <div className="flex items-center justify-between">
+  174 |             <h1 className="text-3xl font-bold">Profile Settings</h1>
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+[00:02:06.391] Server  LOG      ✓ Compiled in 112ms
+[00:02:06.488] Browser ERROR   ./app/profile/page.tsx:171:7
+Parsing ecmascript source code failed
+  169 |     <div className="flex min-h-screen flex-col md:flex-row">
+  170 |       <d
+> 171 |       <main className="flex-1 p-4 pb-20 md:ml-64 md:p-8 md:pb-8">
+      |       ^
+  172 |         <div className="mx-auto max-w-4xl space-y-6">
+  173 |           <div className="flex items-center justify-between">
+  174 |             <h1 className="text-3xl font-bold">Profile Settings</h1>
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+[00:02:06.488] Browser ERROR   ./app/profile/page.tsx:171:7
+Parsing ecmascript source code failed
+  169 |     <div className="flex min-h-screen flex-col md:flex-row">
+  170 |       <
+> 171 |       <main className="flex-1 p-4 pb-20 md:ml-64 md:p-8 md:pb-8">
+      |       ^
+  172 |         <div className="mx-auto max-w-4xl space-y-6">
+  173 |           <div className="flex items-center justify-between">
+  174 |             <h1 className="text-3xl font-bold">Profile Settings</h1>
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+[00:02:06.488] Browser ERROR   ./app/profile/page.tsx:171:7
+Parsing ecmascript source code failed
+  169 |     <div className="flex min-h-screen flex-col md:flex-row">
+  170 |       <L
+> 171 |       <main className="flex-1 p-4 pb-20 md:ml-64 md:p-8 md:pb-8">
+      |       ^
+  172 |         <div className="mx-auto max-w-4xl space-y-6">
+  173 |           <div className="flex items-center justify-between">
+  174 |             <h1 className="text-3xl font-bold">Profile Settings</h1>
+
+Expression expected
+
+Import traces:
+  Client Component Browser:
+    ./app/profile/page.tsx [Client Component Browser]
+    ./app/profile/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/profile/page.tsx [Client Component SSR]
+    ./app/profile/page.tsx [Server Component]
+[00:02:48.430] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
        please check the style of container, or the props width(100%) and height(100%),
        or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
        height and width.
-[05:25:57.102] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+[00:02:48.430] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
        please check the style of container, or the props width(100%) and height(100%),
        or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
        height and width.
-[05:25:57.102] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+[00:02:48.430] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
        please check the style of container, or the props width(100%) and height(100%),
        or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
        height and width.
-[05:25:57.102] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+[00:02:48.430] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
        please check the style of container, or the props width(100%) and height(100%),
        or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
        height and width.
-[05:25:57.102] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+[00:02:48.430] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
        please check the style of container, or the props width(100%) and height(100%),
        or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
        height and width.
-[05:25:57.102] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+[00:02:48.430] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
        please check the style of container, or the props width(100%) and height(100%),
        or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
        height and width.
-[05:25:57.102] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+[00:02:48.430] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
        please check the style of container, or the props width(100%) and height(100%),
        or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
        height and width.
-[05:25:57.102] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+[00:02:48.430] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
        please check the style of container, or the props width(100%) and height(100%),
        or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
        height and width.
-[05:29:24.673] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
-[05:29:24.673] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
-[05:31:07.251] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+[00:02:55.974] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
        please check the style of container, or the props width(100%) and height(100%),
        or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
        height and width.
-[05:31:07.251] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+[00:02:55.974] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
        please check the style of container, or the props width(100%) and height(100%),
        or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
        height and width.
-[05:31:07.251] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+[00:02:55.974] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
        please check the style of container, or the props width(100%) and height(100%),
        or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
        height and width.
-[05:31:07.251] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+[00:02:55.975] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
        please check the style of container, or the props width(100%) and height(100%),
        or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
        height and width.
-[05:31:07.251] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+[00:02:55.975] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
        please check the style of container, or the props width(100%) and height(100%),
        or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
        height and width.
-[05:31:07.251] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+[00:02:55.975] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
        please check the style of container, or the props width(100%) and height(100%),
        or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
        height and width.
-[05:31:07.251] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+[00:02:55.975] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
        please check the style of container, or the props width(100%) and height(100%),
        or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
        height and width.
-[05:31:07.251] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+[00:02:55.975] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
        please check the style of container, or the props width(100%) and height(100%),
        or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
        height and width.
+[00:03:37.138] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./components/layout/loading-overlay.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:03:37.143] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./components/layout/loading-overlay.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:03:37.162] Server  LOG      ✓ Compiled in 154ms
+[00:03:40.449] Server  WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:03:40.451] Server  WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:03:40.451] Server  WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:03:40.452] Server  WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:03:41.492] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:03:41.492] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:03:41.492] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:03:41.492] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:03:41.492] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:03:41.492] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:03:41.492] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:03:41.493] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:04:02.176] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./components/layout/loading-overlay.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:04:02.193] Server  LOG      ✓ Compiled in 115ms
+[00:04:04.392] Server  WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:04:04.392] Server  WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:04:04.393] Server  WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:04:04.393] Server  WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:04:05.493] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:04:05.493] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:04:05.493] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:04:05.493] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:04:05.493] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:04:05.493] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:04:05.493] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:04:05.493] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:04:31.944] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./components/layout/loading-overlay.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:04:31.956] Server  LOG      ✓ Compiled in 102ms
+[00:04:37.219] Server  WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:04:37.220] Server  WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:04:37.220] Server  WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:04:37.221] Server  WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:04:38.491] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:04:38.491] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:04:38.491] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:04:38.491] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:04:38.491] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:04:38.491] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:04:38.491] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:04:38.491] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:06:49.535] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:06:49.536] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:06:49.536] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:06:49.536] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:06:49.536] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:06:49.536] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:06:49.536] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:06:49.536] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:07:11.321] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./components/layout/loading-overlay.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:07:11.346] Server  LOG      ✓ Compiled in 71ms
+[00:07:19.189] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:07:19.189] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:07:19.189] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:07:19.190] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:07:19.190] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:07:19.190] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:07:19.190] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:07:19.190] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:07:50.428] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:07:50.428] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:08:09.253] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:08:09.254] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:09:59.818] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./components/layout/loading-overlay.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:09:59.819] Server  LOG      ✓ Compiled in 148ms
+[00:10:13.872] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:10:13.872] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:10:13.872] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:10:13.872] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:10:13.872] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:10:13.872] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:10:13.872] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:10:13.872] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:11:13.708] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./components/layout/loading-overlay.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:11:13.720] Server  LOG      ✓ Compiled in 87ms

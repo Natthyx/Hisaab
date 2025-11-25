@@ -5,9 +5,11 @@ import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import { useState } from "react"
 import { ThemeToggle } from "@/components/layout/theme-toggle"
+import { useTheme } from "next-themes"
 
 export function LandingHeader() {
   const [isOpen, setIsOpen] = useState(false)
+  const { theme } = useTheme()
 
   return (
     <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border">
@@ -15,8 +17,13 @@ export function LandingHeader() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-8 h-8 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">$</span>
+            <div className="w-8 h-8 rounded-lg flex items-center justify-center">
+              <img 
+                src={theme === "dark" ? "/hisaab-logo-white.png" : "/hisaab-logo-main.png"} 
+                alt="Hisaab Logo" 
+                className="h-5 w-5" 
+                suppressHydrationWarning
+              />
             </div>
             <span className="text-xl font-bold text-foreground hidden sm:inline">Hisaab</span>
           </Link>

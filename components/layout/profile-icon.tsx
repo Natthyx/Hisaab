@@ -13,6 +13,7 @@ import {
 import { AccountSelector } from "@/components/accounts/account-selector"
 import { useRouter } from 'next/navigation'
 import { getCachedUser, clearUserCache } from '@/lib/auth/client-service'
+import { useLoading } from './loading-overlay'
 
 interface Account {
   id: string
@@ -25,6 +26,7 @@ export function ProfileIcon() {
   const [userEmail, setUserEmail] = useState<string | null>(null)
   const supabase = createClient()
   const router = useRouter()
+  const { setIsLoading } = useLoading()
 
   useEffect(() => {
     const fetchUserData = async () => {
@@ -124,6 +126,9 @@ export function ProfileIcon() {
   }, [supabase, defaultAccountId])
 
   const handleSignOut = async () => {
+    // Set loading state
+    setIsLoading(true)
+    
     // Use fetch to call the signout API route instead of importing server-side function
     await fetch('/api/auth/signout', {
       method: 'POST',
@@ -176,7 +181,10 @@ export function ProfileIcon() {
             
           )}
         </div>
-        <DropdownMenuItem onClick={() => router.push('/profile')}>
+        <DropdownMenuItem onClick={() => {
+            setIsLoading(true)
+            router.push('/profile')
+          }}>
             Profile Settings
           </DropdownMenuItem>
         <DropdownMenuItem className='text-red-600' onClick={handleSignOut}>

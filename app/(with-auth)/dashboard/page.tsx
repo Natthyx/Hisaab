@@ -38,7 +38,6 @@ export default async function DashboardPage(props: { searchParams: Promise<{ acc
   } = await getDashboardData(user.id, searchParams.account, searchParams.dateRange)
   
   return (
-    // Removed the outer div and Navigation component since they're now in the layout
     <main className="flex-1">
       <div className="mx-auto max-w-6xl space-y-6">
         {/* Header with buttons on the same line even on mobile */}

@@ -10,6 +10,23 @@ const geistMono = Geist_Mono({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: "Hisaab - Manage Your Finances",
   description: "A minimalist expense tracking app to help you manage your income and expenses effectively",
+  icons: {
+    icon: [
+      {
+        url: '/hisaab-logo-white.png',
+        media: '(prefers-color-scheme: light)',
+      },
+      {
+        url: '/hisaab-logo-main.png',
+        media: '(prefers-color-scheme: dark)',
+      },
+      {
+        url: '/hisaab-logo-main.png',
+        type: 'image/svg+xml',
+      },
+    ],
+    apple: '/hisaab-logo-main.png',
+  },
 }
 
 export default function RootLayout({
