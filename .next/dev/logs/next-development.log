@@ -1,1130 +1,2285 @@
-[00:00:00.928] Server  WARN     ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
-[00:00:01.028] Server  LOG      ✓ Ready in 803ms
-[00:00:06.048] Server  LOG      ○ Compiling /transactions ...
-[00:00:32.348] Server  LOG      ✓ Compiled in 237ms
-[00:00:57.246] Server  LOG      ✓ Compiled in 183ms
-[00:01:03.561] Server  LOG      ✓ Compiled in 77ms
-[00:01:04.192] Server  ERROR    ⨯ ReferenceError: imp is not defined
-[00:01:04.227] Server  LOG      ✓ Compiled in 55ms
-[00:01:04.237] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./app/profile/page.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
-[00:01:04.286] Server  LOG      ✓ Compiled in 120ms
-[00:01:04.310] Server  ERROR    ⨯ ./app/profile/page.tsx:4:1
+[00:00:00.814] Server  WARN     ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+[00:00:00.907] Server  LOG      ✓ Ready in 703ms
+[00:00:05.425] Server  LOG      ○ Compiling /transactions ...
+[00:00:13.475] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:00:13.475] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:00:13.475] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:00:13.475] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:00:13.475] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:00:13.475] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:00:13.475] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:00:13.476] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:00:38.126] Server  LOG      ✓ Compiled in 103ms
+[00:01:05.627] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:01:05.627] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:01:05.627] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:01:05.627] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:01:05.627] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:01:05.627] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:01:05.627] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:01:05.627] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:03:07.205] Server  LOG      ✓ Compiled in 132ms
+[00:03:13.408] Server  LOG      ✓ Compiled in 118ms
+[00:03:25.049] Server  LOG      ✓ Compiled in 55ms
+[00:03:30.631] Server  LOG      ✓ Compiled in 100ms
+[00:04:03.586] Server  LOG      ✓ Compiled in 58ms
+[00:04:10.088] Server  LOG      ✓ Compiled in 106ms
+[00:06:45.031] Server  LOG      ✓ Compiled in 171ms
+[00:06:45.840] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:06:45.840] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:06:45.840] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:06:45.840] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:06:45.840] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:06:45.840] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:06:45.840] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:06:45.840] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:06:47.841] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:06:47.841] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:06:47.841] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:06:47.841] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:06:47.841] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:06:47.841] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:06:47.841] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:06:47.841] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:08:34.640] Server  LOG      ✓ Compiled in 86ms
+[00:09:39.158] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:09:39.158] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:09:39.158] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:09:39.158] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:09:39.158] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:09:39.158] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:09:39.158] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:09:39.158] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:10:24.380] Server  LOG      ✓ Compiled in 98ms
+[00:10:24.839] Browser ERROR   The final argument passed to %s changed size between renders. The order and size of this array must remain constant.
+
+Previous: %s
+Incoming: %s useEffect [/dashboard, , function () { [native code] }] [/dashboard, function () { [native code] }]
+[00:11:40.488] Server  LOG      ✓ Compiled in 114ms
+[00:11:40.683] Server  LOG      ✓ Compiled in 32ms
+[00:11:42.314] Server  LOG      ✓ Compiled in 120ms
+[00:11:42.512] Server  LOG      ✓ Compiled in 31ms
+[00:11:47.430] Server  LOG      ✓ Compiled in 27ms
+[00:11:49.688] Server  LOG      ✓ Compiled in 23ms
+[00:12:09.344] Server  LOG      ✓ Compiled in 94ms
+[00:12:09.495] Server  ERROR    ⨯ ReferenceError: PageLoadingIndicator is not defined
+[00:12:09.838] Browser ERROR   uncaughtError: ReferenceError: PageLoadingIndicator is not defined
+[00:12:44.136] Server  LOG      ✓ Compiled in 71ms
+[00:12:58.038] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:12:58.038] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:12:58.038] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:12:58.038] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:12:58.038] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:12:58.038] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:12:58.038] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:12:58.038] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:17:05.945] Server  LOG      ✓ Compiled in 61ms
+[00:20:12.839] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:57:49
 Parsing ecmascript source code failed
-  2 |
-  3 | import 
-> 4 | import { ThemeToggle } from '@/components/layout/theme-toggle'
-    | ^^^^^^
-  5 | import { Button } from "@/components/ui/button"
-  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-  7 | import { Input } from "@/components/ui/input"
-
-Expected 'from', got 'import'
-
-Import traces:
-  Client Component Browser:
-    ./app/profile/page.tsx [Client Component Browser]
-    ./app/profile/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/profile/page.tsx [Client Component SSR]
-    ./app/profile/page.tsx [Server Component]
-
-
-[00:01:04.488] Browser ERROR   ./app/profile/page.tsx:4:1
-Parsing ecmascript source code failed
-  2 |
-  3 | import
-> 4 | import { ThemeToggle } from '@/components/layout/theme-toggle'
-    | ^^^^^^
-  5 | import { Button } from "@/components/ui/button"
-  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-  7 | import { Input } from "@/components/ui/input"
-
-Expected 'from', got 'import'
-
-Import traces:
-  Client Component Browser:
-    ./app/profile/page.tsx [Client Component Browser]
-    ./app/profile/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/profile/page.tsx [Client Component SSR]
-    ./app/profile/page.tsx [Server Component]
-[00:01:04.488] Browser ERROR   ./app/profile/page.tsx:4:1
-Parsing ecmascript source code failed
-  2 |
-  3 | import
-> 4 | import { ThemeToggle } from '@/components/layout/theme-toggle'
-    | ^^^^^^
-  5 | import { Button } from "@/components/ui/button"
-  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-  7 | import { Input } from "@/components/ui/input"
-
-Expected 'from', got 'import'
-
-Import traces:
-  Client Component Browser:
-    ./app/profile/page.tsx [Client Component Browser]
-    ./app/profile/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/profile/page.tsx [Client Component SSR]
-    ./app/profile/page.tsx [Server Component]
-[00:01:04.489] Browser ERROR   ./app/profile/page.tsx:4:1
-Parsing ecmascript source code failed
-  2 |
-  3 | import
-> 4 | import { ThemeToggle } from '@/components/layout/theme-toggle'
-    | ^^^^^^
-  5 | import { Button } from "@/components/ui/button"
-  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-  7 | import { Input } from "@/components/ui/input"
-
-Expected 'from', got 'import'
-
-Import traces:
-  Client Component Browser:
-    ./app/profile/page.tsx [Client Component Browser]
-    ./app/profile/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/profile/page.tsx [Client Component SSR]
-    ./app/profile/page.tsx [Server Component]
-[00:01:04.489] Browser ERROR   ./app/profile/page.tsx:4:1
-Parsing ecmascript source code failed
-  2 |
-  3 | import
-> 4 | import { ThemeToggle } from '@/components/layout/theme-toggle'
-    | ^^^^^^
-  5 | import { Button } from "@/components/ui/button"
-  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-  7 | import { Input } from "@/components/ui/input"
-
-Expected 'from', got 'import'
-
-Import traces:
-  Client Component Browser:
-    ./app/profile/page.tsx [Client Component Browser]
-    ./app/profile/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/profile/page.tsx [Client Component SSR]
-    ./app/profile/page.tsx [Server Component]
-[00:01:04.489] Browser ERROR   ./app/profile/page.tsx:4:1
-Parsing ecmascript source code failed
-  2 |
-  3 | import 
-> 4 | import { ThemeToggle } from '@/components/layout/theme-toggle'
-    | ^^^^^^
-  5 | import { Button } from "@/components/ui/button"
-  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-  7 | import { Input } from "@/components/ui/input"
-
-Expected 'from', got 'import'
-
-Import traces:
-  Client Component Browser:
-    ./app/profile/page.tsx [Client Component Browser]
-    ./app/profile/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/profile/page.tsx [Client Component SSR]
-    ./app/profile/page.tsx [Server Component]
-[00:01:04.489] Browser ERROR   ./app/profile/page.tsx:4:1
-Parsing ecmascript source code failed
-  2 |
-  3 | import 
-> 4 | import { ThemeToggle } from '@/components/layout/theme-toggle'
-    | ^^^^^^
-  5 | import { Button } from "@/components/ui/button"
-  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-  7 | import { Input } from "@/components/ui/input"
-
-Expected 'from', got 'import'
-
-Import traces:
-  Client Component Browser:
-    ./app/profile/page.tsx [Client Component Browser]
-    ./app/profile/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/profile/page.tsx [Client Component SSR]
-    ./app/profile/page.tsx [Server Component]
-[00:01:05.231] Browser ERROR   uncaughtError: Error: ./app/profile/page.tsx:4:1
-Parsing ecmascript source code failed
-  2 |
-  3 | import 
-> 4 | import { ThemeToggle } from '@/components/layout/theme-toggle'
-    | ^^^^^^
-  5 | import { Button } from "@/components/ui/button"
-  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-  7 | import { Input } from "@/components/ui/input"
-
-Expected 'from', got 'import'
-
-Import traces:
-  Client Component Browser:
-    ./app/profile/page.tsx [Client Component Browser]
-    ./app/profile/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/profile/page.tsx [Client Component SSR]
-    ./app/profile/page.tsx [Server Component]
-
-
-[00:01:05.487] Browser ERROR   ./app/profile/page.tsx:4:1
-Parsing ecmascript source code failed
-  2 |
-  3 | import 
-> 4 | import { ThemeToggle } from '@/components/layout/theme-toggle'
-    | ^^^^^^
-  5 | import { Button } from "@/components/ui/button"
-  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-  7 | import { Input } from "@/components/ui/input"
-
-Expected 'from', got 'import'
-
-Import traces:
-  Client Component Browser:
-    ./app/profile/page.tsx [Client Component Browser]
-    ./app/profile/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/profile/page.tsx [Client Component SSR]
-    ./app/profile/page.tsx [Server Component]
-[00:01:05.487] Browser ERROR   ./app/profile/page.tsx:4:1
-Parsing ecmascript source code failed
-  2 |
-  3 | import 
-> 4 | import { ThemeToggle } from '@/components/layout/theme-toggle'
-    | ^^^^^^
-  5 | import { Button } from "@/components/ui/button"
-  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-  7 | import { Input } from "@/components/ui/input"
-
-Expected 'from', got 'import'
-
-Import traces:
-  Client Component Browser:
-    ./app/profile/page.tsx [Client Component Browser]
-    ./app/profile/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/profile/page.tsx [Client Component SSR]
-    ./app/profile/page.tsx [Server Component]
-[00:01:06.491] Browser ERROR   ./app/profile/page.tsx:4:1
-Parsing ecmascript source code failed
-  2 |
-  3 | import {}
-> 4 | import { ThemeToggle } from '@/components/layout/theme-toggle'
-    | ^^^^^^
-  5 | import { Button } from "@/components/ui/button"
-  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-  7 | import { Input } from "@/components/ui/input"
-
-Expected 'from', got 'import'
-
-Import traces:
-  Client Component Browser:
-    ./app/profile/page.tsx [Client Component Browser]
-    ./app/profile/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/profile/page.tsx [Client Component SSR]
-    ./app/profile/page.tsx [Server Component]
-[00:01:06.491] Browser ERROR   ./app/profile/page.tsx:4:1
-Parsing ecmascript source code failed
-  2 |
-  3 | import {N}
-> 4 | import { ThemeToggle } from '@/components/layout/theme-toggle'
-    | ^^^^^^
-  5 | import { Button } from "@/components/ui/button"
-  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-  7 | import { Input } from "@/components/ui/input"
-
-Expected 'from', got 'import'
-
-Import traces:
-  Client Component Browser:
-    ./app/profile/page.tsx [Client Component Browser]
-    ./app/profile/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/profile/page.tsx [Client Component SSR]
-    ./app/profile/page.tsx [Server Component]
-[00:01:06.491] Browser ERROR   ./app/profile/page.tsx:4:1
-Parsing ecmascript source code failed
-  2 |
-  3 | import {Na}
-> 4 | import { ThemeToggle } from '@/components/layout/theme-toggle'
-    | ^^^^^^
-  5 | import { Button } from "@/components/ui/button"
-  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-  7 | import { Input } from "@/components/ui/input"
-
-Expected 'from', got 'import'
-
-Import traces:
-  Client Component Browser:
-    ./app/profile/page.tsx [Client Component Browser]
-    ./app/profile/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/profile/page.tsx [Client Component SSR]
-    ./app/profile/page.tsx [Server Component]
-[00:01:08.488] Browser ERROR   ./app/profile/page.tsx:4:1
-Parsing ecmascript source code failed
-  2 |
-  3 | import {N}
-> 4 | import { ThemeToggle } from '@/components/layout/theme-toggle'
-    | ^^^^^^
-  5 | import { Button } from "@/components/ui/button"
-  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-  7 | import { Input } from "@/components/ui/input"
-
-Expected 'from', got 'import'
-
-Import traces:
-  Client Component Browser:
-    ./app/profile/page.tsx [Client Component Browser]
-    ./app/profile/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/profile/page.tsx [Client Component SSR]
-    ./app/profile/page.tsx [Server Component]
-[00:01:08.488] Browser ERROR   ./app/profile/page.tsx:4:1
-Parsing ecmascript source code failed
-  2 |
-  3 | import {}
-> 4 | import { ThemeToggle } from '@/components/layout/theme-toggle'
-    | ^^^^^^
-  5 | import { Button } from "@/components/ui/button"
-  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-  7 | import { Input } from "@/components/ui/input"
-
-Expected 'from', got 'import'
-
-Import traces:
-  Client Component Browser:
-    ./app/profile/page.tsx [Client Component Browser]
-    ./app/profile/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/profile/page.tsx [Client Component SSR]
-    ./app/profile/page.tsx [Server Component]
-[00:01:08.488] Browser ERROR   ./app/profile/page.tsx:4:1
-Parsing ecmascript source code failed
-  2 |
-  3 | import 
-> 4 | import { ThemeToggle } from '@/components/layout/theme-toggle'
-    | ^^^^^^
-  5 | import { Button } from "@/components/ui/button"
-  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-  7 | import { Input } from "@/components/ui/input"
-
-Expected 'from', got 'import'
-
-Import traces:
-  Client Component Browser:
-    ./app/profile/page.tsx [Client Component Browser]
-    ./app/profile/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/profile/page.tsx [Client Component SSR]
-    ./app/profile/page.tsx [Server Component]
-[00:01:08.488] Browser ERROR   ./app/profile/page.tsx:4:1
-Parsing ecmascript source code failed
-  2 |
-  3 | import N
-> 4 | import { ThemeToggle } from '@/components/layout/theme-toggle'
-    | ^^^^^^
-  5 | import { Button } from "@/components/ui/button"
-  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-  7 | import { Input } from "@/components/ui/input"
-
-Expected ',', got 'import'
-
-Import traces:
-  Client Component Browser:
-    ./app/profile/page.tsx [Client Component Browser]
-    ./app/profile/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/profile/page.tsx [Client Component SSR]
-    ./app/profile/page.tsx [Server Component]
-[00:01:08.488] Browser ERROR   ./app/profile/page.tsx:4:1
-Parsing ecmascript source code failed
-  2 |
-  3 | import Na
-> 4 | import { ThemeToggle } from '@/components/layout/theme-toggle'
-    | ^^^^^^
-  5 | import { Button } from "@/components/ui/button"
-  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-  7 | import { Input } from "@/components/ui/input"
-
-Expected ',', got 'import'
-
-Import traces:
-  Client Component Browser:
-    ./app/profile/page.tsx [Client Component Browser]
-    ./app/profile/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/profile/page.tsx [Client Component SSR]
-    ./app/profile/page.tsx [Server Component]
-[00:01:09.489] Browser ERROR   ./app/profile/page.tsx:4:1
-Parsing ecmascript source code failed
-  2 |
-  3 | import Nav
-> 4 | import { ThemeToggle } from '@/components/layout/theme-toggle'
-    | ^^^^^^
-  5 | import { Button } from "@/components/ui/button"
-  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-  7 | import { Input } from "@/components/ui/input"
-
-Expected ',', got 'import'
-
-Import traces:
-  Client Component Browser:
-    ./app/profile/page.tsx [Client Component Browser]
-    ./app/profile/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/profile/page.tsx [Client Component SSR]
-    ./app/profile/page.tsx [Server Component]
-[00:01:09.489] Browser ERROR   ./app/profile/page.tsx:4:1
-Parsing ecmascript source code failed
-  2 |
-  3 | import Navi
-> 4 | import { ThemeToggle } from '@/components/layout/theme-toggle'
-    | ^^^^^^
-  5 | import { Button } from "@/components/ui/button"
-  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-  7 | import { Input } from "@/components/ui/input"
-
-Expected ',', got 'import'
-
-Import traces:
-  Client Component Browser:
-    ./app/profile/page.tsx [Client Component Browser]
-    ./app/profile/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/profile/page.tsx [Client Component SSR]
-    ./app/profile/page.tsx [Server Component]
-[00:01:10.495] Browser ERROR   ./app/profile/page.tsx:4:1
-Parsing ecmascript source code failed
-  2 |
-  3 | import Navig
-> 4 | import { ThemeToggle } from '@/components/layout/theme-toggle'
-    | ^^^^^^
-  5 | import { Button } from "@/components/ui/button"
-  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-  7 | import { Input } from "@/components/ui/input"
-
-Expected ',', got 'import'
-
-Import traces:
-  Client Component Browser:
-    ./app/profile/page.tsx [Client Component Browser]
-    ./app/profile/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/profile/page.tsx [Client Component SSR]
-    ./app/profile/page.tsx [Server Component]
-[00:01:10.495] Browser ERROR   ./app/profile/page.tsx:4:1
-Parsing ecmascript source code failed
-  2 |
-  3 | import Naviga
-> 4 | import { ThemeToggle } from '@/components/layout/theme-toggle'
-    | ^^^^^^
-  5 | import { Button } from "@/components/ui/button"
-  6 | import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-  7 | import { Input } from "@/components/ui/input"
-
-Expected ',', got 'import'
-
-Import traces:
-  Client Component Browser:
-    ./app/profile/page.tsx [Client Component Browser]
-    ./app/profile/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/profile/page.tsx [Client Component SSR]
-    ./app/profile/page.tsx [Server Component]
-[00:01:11.621] Server  LOG      ✓ Compiled in 112ms
-[00:01:17.720] Server  LOG      ✓ Compiled in 52ms
-[00:01:21.061] Server  LOG      ✓ Compiled in 99ms
-[00:01:23.367] Server  LOG      ✓ Compiled in 58ms
-[00:01:24.002] Server  LOG      ✓ Compiled in 40ms
-[00:01:24.490] Browser ERROR   ./app/profile/page.tsx:171:7
-Parsing ecmascript source code failed
-  169 |     <div className="flex min-h-screen flex-col md:flex-row">
-  170 |       <
-> 171 |       <main className="flex-1 p-4 pb-20 md:ml-64 md:p-8 md:pb-8">
-      |       ^
-  172 |         <div className="mx-auto max-w-4xl space-y-6">
-  173 |           <div className="flex items-center justify-between">
-  174 |             <h1 className="text-3xl font-bold">Profile Settings</h1>
+  55 | export default function TransactionsPage(props: { searchParams: Promise<{ account?: string }> }) {
+  56 |   return (
+> 57 |     <Suspense fallback={<<PageLoadingIndicator />>}>
+     |                                                 ^^
+  58 |       <TransactionsContent {...props} />
+  59 |     </Suspense>
+  60 |   )
 
 Expression expected
-
-Import traces:
-  Client Component Browser:
-    ./app/profile/page.tsx [Client Component Browser]
-    ./app/profile/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/profile/page.tsx [Client Component SSR]
-    ./app/profile/page.tsx [Server Component]
-[00:01:25.489] Browser ERROR   ./app/profile/page.tsx:171:7
+[00:20:12.839] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:57:30
 Parsing ecmascript source code failed
-  169 |     <div className="flex min-h-screen flex-col md:flex-row">
-  170 |       <di
-> 171 |       <main className="flex-1 p-4 pb-20 md:ml-64 md:p-8 md:pb-8">
-      |       ^
-  172 |         <div className="mx-auto max-w-4xl space-y-6">
-  173 |           <div className="flex items-center justify-between">
-  174 |             <h1 className="text-3xl font-bold">Profile Settings</h1>
+  55 | export default function TransactionsPage(props: { searchParams: Promise<{ account?: string }> }) {
+  56 |   return (
+> 57 |     <Suspense fallback={<DI>}>
+     |                              ^
+  58 |       <TransactionsContent {...props} />
+  59 |     </Suspense>
+  60 |   )
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:20:12.839] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:57:29
+Parsing ecmascript source code failed
+  55 | export default function TransactionsPage(props: { searchParams: Promise<{ account?: string }> }) {
+  56 |   return (
+> 57 |     <Suspense fallback={<DI>}>
+     |                             ^
+  58 |       <TransactionsContent {...props} />
+  59 |     </Suspense>
+  60 |   )
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:20:13.838] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:57:29
+Parsing ecmascript source code failed
+  55 | export default function TransactionsPage(props: { searchParams: Promise<{ account?: string }> }) {
+  56 |   return (
+> 57 |     <Suspense fallback={<D>}>
+     |                             ^
+  58 |       <TransactionsContent {...props} />
+  59 |     </Suspense>
+  60 |   )
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:20:13.838] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:57:28
+Parsing ecmascript source code failed
+  55 | export default function TransactionsPage(props: { searchParams: Promise<{ account?: string }> }) {
+  56 |   return (
+> 57 |     <Suspense fallback={<D>}>
+     |                            ^
+  58 |       <TransactionsContent {...props} />
+  59 |     </Suspense>
+  60 |   )
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:20:13.838] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:57:28
+Parsing ecmascript source code failed
+  55 | export default function TransactionsPage(props: { searchParams: Promise<{ account?: string }> }) {
+  56 |   return (
+> 57 |     <Suspense fallback={<>}>
+     |                            ^
+  58 |       <TransactionsContent {...props} />
+  59 |     </Suspense>
+  60 |   )
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:20:13.838] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:57:27
+Parsing ecmascript source code failed
+  55 | export default function TransactionsPage(props: { searchParams: Promise<{ account?: string }> }) {
+  56 |   return (
+> 57 |     <Suspense fallback={<>}>
+     |                           ^
+  58 |       <TransactionsContent {...props} />
+  59 |     </Suspense>
+  60 |   )
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:20:13.838] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:57:29
+Parsing ecmascript source code failed
+  55 | export default function TransactionsPage(props: { searchParams: Promise<{ account?: string }> }) {
+  56 |   return (
+> 57 |     <Suspense fallback={<d>}>
+     |                             ^
+  58 |       <TransactionsContent {...props} />
+  59 |     </Suspense>
+  60 |   )
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:20:13.838] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:57:28
+Parsing ecmascript source code failed
+  55 | export default function TransactionsPage(props: { searchParams: Promise<{ account?: string }> }) {
+  56 |   return (
+> 57 |     <Suspense fallback={<d>}>
+     |                            ^
+  58 |       <TransactionsContent {...props} />
+  59 |     </Suspense>
+  60 |   )
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:20:13.838] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:57:30
+Parsing ecmascript source code failed
+  55 | export default function TransactionsPage(props: { searchParams: Promise<{ account?: string }> }) {
+  56 |   return (
+> 57 |     <Suspense fallback={<di>}>
+     |                              ^
+  58 |       <TransactionsContent {...props} />
+  59 |     </Suspense>
+  60 |   )
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:20:13.838] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:57:29
+Parsing ecmascript source code failed
+  55 | export default function TransactionsPage(props: { searchParams: Promise<{ account?: string }> }) {
+  56 |   return (
+> 57 |     <Suspense fallback={<di>}>
+     |                             ^
+  58 |       <TransactionsContent {...props} />
+  59 |     </Suspense>
+  60 |   )
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:20:13.838] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:57:31
+Parsing ecmascript source code failed
+  55 | export default function TransactionsPage(props: { searchParams: Promise<{ account?: string }> }) {
+  56 |   return (
+> 57 |     <Suspense fallback={<div>}>
+     |                               ^
+  58 |       <TransactionsContent {...props} />
+  59 |     </Suspense>
+  60 |   )
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:20:13.838] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:57:30
+Parsing ecmascript source code failed
+  55 | export default function TransactionsPage(props: { searchParams: Promise<{ account?: string }> }) {
+  56 |   return (
+> 57 |     <Suspense fallback={<div>}>
+     |                              ^
+  58 |       <TransactionsContent {...props} />
+  59 |     </Suspense>
+  60 |   )
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:20:16.840] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:57:32
+Parsing ecmascript source code failed
+  55 | export default function TransactionsPage(props: { searchParams: Promise<{ account?: string }> }) {
+  56 |   return (
+> 57 |     <Suspense fallback={<div>>}>
+     |                                ^
+  58 |       <TransactionsContent {...props} />
+  59 |     </Suspense>
+  60 |   )
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:20:16.840] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:57:31
+Parsing ecmascript source code failed
+  55 | export default function TransactionsPage(props: { searchParams: Promise<{ account?: string }> }) {
+  56 |   return (
+> 57 |     <Suspense fallback={<div>>}>
+     |                               ^
+  58 |       <TransactionsContent {...props} />
+  59 |     </Suspense>
+  60 |   )
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:20:16.840] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:57:37
+Parsing ecmascript source code failed
+  55 | export default function TransactionsPage(props: { searchParams: Promise<{ account?: string }> }) {
+  56 |   return (
+> 57 |     <Suspense fallback={<div></div>>}>
+     |                                     ^
+  58 |       <TransactionsContent {...props} />
+  59 |     </Suspense>
+  60 |   )
 
 Expression expected
-
-Import traces:
-  Client Component Browser:
-    ./app/profile/page.tsx [Client Component Browser]
-    ./app/profile/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/profile/page.tsx [Client Component SSR]
-    ./app/profile/page.tsx [Server Component]
-[00:01:26.489] Browser ERROR   ./app/profile/page.tsx:171:7
+[00:20:18.276] Server  LOG      ✓ Compiled in 55ms
+[00:20:21.134] Server  LOG      ✓ Compiled in 25ms
+[00:20:50.736] Server  ERROR    ⨯ ReferenceError: theme is not defined
+[00:20:51.839] Browser ERROR   uncaughtError: ReferenceError: theme is not defined
+[00:21:14.867] Server  LOG      ✓ Compiled in 52ms
+[00:21:15.071] Server  ERROR    ⨯ ReferenceError: theme is not defined
+[00:21:15.739] Browser ERROR   uncaughtError: ReferenceError: theme is not defined
+[00:21:15.835] Server  ERROR    ⨯ ReferenceError: theme is not defined
+[00:21:16.839] Browser ERROR   uncaughtError: ReferenceError: theme is not defined
+[00:21:22.459] Server  LOG      ✓ Compiled in 148ms
+[00:21:22.630] Server  ERROR    ⨯ ReferenceError: theme is not defined
+[00:21:23.847] Browser ERROR   uncaughtError: ReferenceError: theme is not defined
+[00:21:58.911] Server  LOG      ✓ Compiled in 52ms
+[00:21:59.107] Server  ERROR    ⨯ ReferenceError: theme is not defined
+[00:21:59.738] Browser ERROR   uncaughtError: ReferenceError: theme is not defined
+[00:21:59.849] Server  ERROR    ⨯ Error: Attempted to call useTheme() from the server but useTheme is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.
+[00:22:00.841] Browser ERROR   uncaughtError: Error: Attempted to call useTheme() from the server but useTheme is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.
+[00:22:23.479] Server  LOG      ✓ Compiled in 64ms
+[00:22:23.633] Server  ERROR    ⨯ ReferenceError: theme is not defined
+[00:22:24.841] Browser ERROR   uncaughtError: ReferenceError: theme is not defined
+[00:22:31.157] Server  LOG      ✓ Compiled in 70ms
+[00:22:31.328] Server  ERROR    ⨯ ReferenceError: theme is not defined
+[00:22:31.839] Browser ERROR   uncaughtError: ReferenceError: theme is not defined
+[00:22:32.761] Server  LOG      ✓ Compiled in 54ms
+[00:22:32.859] Server  ERROR    ⨯ ReferenceError: theme is not defined
+[00:22:33.840] Browser ERROR   uncaughtError: ReferenceError: theme is not defined
+[00:22:52.559] Server  LOG      ✓ Compiled in 58ms
+[00:22:52.752] Server  ERROR    ⨯ ReferenceError: theme is not defined
+[00:22:53.072] Server  LOG      ✓ Compiled in 93ms
+[00:22:53.846] Browser ERROR   uncaughtError: ReferenceError: theme is not defined
+[00:23:03.869] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:64:42
 Parsing ecmascript source code failed
-  169 |     <div className="flex min-h-screen flex-col md:flex-row">
-  170 |       <d
-> 171 |       <main className="flex-1 p-4 pb-20 md:ml-64 md:p-8 md:pb-8">
-      |       ^
-  172 |         <div className="mx-auto max-w-4xl space-y-6">
-  173 |           <div className="flex items-center justify-between">
-  174 |             <h1 className="text-3xl font-bold">Profile Settings</h1>
+  62 |         <div className="relative">
+  63 |           <img 
+> 64 |             src="/hisaab-logo-white.png" : "/hisaab-logo-main.png"} 
+     |                                          ^
+  65 |             alt="Hisaab Logo" 
+  66 |             className="h-12 w-12 animate-pulse sm:h-16 sm:w-16"
+  67 |           />
+
+Expected '</', got ':'
+[00:23:08.840] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:64:40
+Parsing ecmascript source code failed
+  62 |         <div className="relative">
+  63 |           <img 
+> 64 |             src="/hisaab-logo-main.png"} 
+     |                                        ^
+  65 |             alt="Hisaab Logo" 
+  66 |             className="h-12 w-12 animate-pulse sm:h-16 sm:w-16"
+  67 |           />
+
+Expected '</', got '}'
+[00:23:10.838] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:64:40
+Parsing ecmascript source code failed
+  62 |         <div className="relative">
+  63 |           <img 
+> 64 |             src="/hisaab-logo-main.png"}
+     |                                        ^
+  65 |             alt="Hisaab Logo" 
+  66 |             className="h-12 w-12 animate-pulse sm:h-16 sm:w-16"
+  67 |           />
+
+Expected '</', got '}'
+[00:23:11.325] Server  LOG      ✓ Compiled in 36ms
+[00:23:12.535] Server  ERROR    ⨯ Error: Attempted to call useTheme() from the server but useTheme is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.
+[00:23:12.839] Browser ERROR   uncaughtError: Error: Attempted to call useTheme() from the server but useTheme is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.
+[00:23:25.655] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:23:25.655] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:23:25.655] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:23:25.655] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:23:25.655] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:23:25.655] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:23:25.655] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:23:25.655] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:24:45.285] Server  LOG      ✓ Compiled in 125ms
+[00:24:47.125] Server  LOG      ✓ Compiled in 79ms
+[00:24:47.298] Server  ERROR    ⨯ Error: Attempted to call useTheme() from the server but useTheme is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.
+[00:24:47.841] Browser ERROR   uncaughtError: Error: Attempted to call useTheme() from the server but useTheme is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.
+[00:24:47.841] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:64:40
+Parsing ecmascript source code failed
+  62 |         <div className="relative">
+  63 |           <img 
+> 64 |             src="/hisaab-logo-main.png"}
+     |                                        ^
+  65 |             alt="Hisaab Logo" 
+  66 |             className="h-12 w-12 animate-pulse sm:h-16 sm:w-16"
+  67 |           />
+
+Expected '</', got '}'
+[00:24:48.838] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:64:40
+Parsing ecmascript source code failed
+  62 |         <div className="relative">
+  63 |           <img 
+> 64 |             src="/hisaab-logo-main.png"} 
+     |                                        ^
+  65 |             alt="Hisaab Logo" 
+  66 |             className="h-12 w-12 animate-pulse sm:h-16 sm:w-16"
+  67 |           />
+
+Expected '</', got '}'
+[00:24:49.685] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:64:42
+Parsing ecmascript source code failed
+  62 |         <div className="relative">
+  63 |           <img 
+> 64 |             src="/hisaab-logo-white.png" : "/hisaab-logo-main.png"} 
+     |                                          ^
+  65 |             alt="Hisaab Logo" 
+  66 |             className="h-12 w-12 animate-pulse sm:h-16 sm:w-16"
+  67 |           />
+
+Expected '</', got ':'
+[00:24:49.718] Server  LOG      ✓ Compiled in 27ms
+[00:24:49.875] Server  ERROR    ⨯ ReferenceError: theme is not defined
+[00:24:50.844] Browser ERROR   uncaughtError: ReferenceError: theme is not defined
+[00:24:51.710] Server  ERROR    ⨯ ReferenceError: theme is not defined
+[00:24:52.007] Server  LOG      ✓ Compiled in 64ms
+[00:24:52.124] Server  ERROR    ⨯ ReferenceError: theme is not defined
+[00:24:52.840] Browser ERROR   uncaughtError: ReferenceError: theme is not defined
+[00:24:56.099] Server  LOG      ✓ Compiled in 43ms
+[00:24:56.279] Server  ERROR    ⨯ ReferenceError: theme is not defined
+[00:24:56.594] Server  LOG      ✓ Compiled in 105ms
+[00:24:56.838] Browser ERROR   uncaughtError: ReferenceError: theme is not defined
+[00:24:57.300] Server  LOG      ✓ Compiled in 65ms
+[00:24:57.463] Server  ERROR    ⨯ Error: Attempted to call useTheme() from the server but useTheme is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.
+[00:24:58.839] Browser ERROR   uncaughtError: Error: Attempted to call useTheme() from the server but useTheme is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.
+[00:25:17.630] Server  ERROR    ⨯ Error: Attempted to call useTheme() from the server but useTheme is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.
+[00:25:17.768] Browser ERROR   uncaughtError: Error: Attempted to call useTheme() from the server but useTheme is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.
+[00:25:25.607] Server  ERROR    ⨯ Error: TypeError: fetch failed
+[00:25:27.079] Server  ERROR    ⨯ Error: TypeError: fetch failed
+[00:26:14.914] Browser ERROR   {}
+[00:26:14.915] Browser ERROR   Error fetching user data: {}
+[00:32:24.838] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:8
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={<div className="fixed inset-0 flex items-center justify-center bg-background z-[100] overflow-hidden">
+> 61 |       <<div className="flex flex-col items-center gap-4 px-4 w-full max-w-xs sm:max-w-sm">
+     |        ^
+  62 |         <div className="relative">
+  63 |           <img 
+  64 |             src={theme === "dark" ? "/hisaab-logo-white.png" : "/hisaab-logo-main.png"} 
 
 Expression expected
-
-Import traces:
-  Client Component Browser:
-    ./app/profile/page.tsx [Client Component Browser]
-    ./app/profile/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/profile/page.tsx [Client Component SSR]
-    ./app/profile/page.tsx [Server Component]
-[00:01:26.489] Browser ERROR   ./app/profile/page.tsx:171:7
+[00:32:24.839] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:8
 Parsing ecmascript source code failed
-  169 |     <div className="flex min-h-screen flex-col md:flex-row">
-  170 |       <
-> 171 |       <main className="flex-1 p-4 pb-20 md:ml-64 md:p-8 md:pb-8">
-      |       ^
-  172 |         <div className="mx-auto max-w-4xl space-y-6">
-  173 |           <div className="flex items-center justify-between">
-  174 |             <h1 className="text-3xl font-bold">Profile Settings</h1>
+  59 |   return (
+  60 |     <Suspense fallback={<div className="fixed inset-0 flex items-center justify-center bg-background z-[100] overflow-hidden">
+> 61 |       <<div className="flex flex-col items-center gap-4 px-4 w-full max-w-xs sm:max-w-sm">
+     |        ^
+  62 |         <div className="relative">
+  63 |           <img 
+  64 |             src={theme === "dark" ? "/hisaab-logo-white.png" : "/hisaab-logo-main.png"} 
 
 Expression expected
-
-Import traces:
-  Client Component Browser:
-    ./app/profile/page.tsx [Client Component Browser]
-    ./app/profile/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/profile/page.tsx [Client Component SSR]
-    ./app/profile/page.tsx [Server Component]
-[00:01:27.488] Browser ERROR   ./app/profile/page.tsx:171:7
+[00:32:25.838] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:12
 Parsing ecmascript source code failed
-  169 |     <div className="flex min-h-screen flex-col md:flex-row">
-  170 |       <L
-> 171 |       <main className="flex-1 p-4 pb-20 md:ml-64 md:p-8 md:pb-8">
-      |       ^
-  172 |         <div className="mx-auto max-w-4xl space-y-6">
-  173 |           <div className="flex items-center justify-between">
-  174 |             <h1 className="text-3xl font-bold">Profile Settings</h1>
+  59 |   return (
+  60 |     <Suspense fallback={<div className="fixed inset-0 flex items-center justify-center bg-background z-[100] overflow-hidden">
+> 61 |       <di>}>
+     |            ^
+  62 |       <TransactionsContent {...props} />
+  63 |     </Suspense>
+  64 |   )
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:32:25.839] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:65:1
+Parsing ecmascript source code failed
+  63 |     </Suspense>
+  64 |   )
+> 65 | }
+     | ^
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:32:25.839] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:12
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={<div className="fixed inset-0 flex items-center justify-center bg-background z-[100] overflow-hidden">
+> 61 |       <di>}>
+     |            ^
+  62 |       <TransactionsContent {...props} />
+  63 |     </Suspense>
+  64 |   )
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:32:25.839] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:65:1
+Parsing ecmascript source code failed
+  63 |     </Suspense>
+  64 |   )
+> 65 | }
+     | ^
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:32:25.839] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:12
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={<div className="fixed inset-0 flex items-center justify-center bg-background z-[100] overflow-hidden">
+> 61 |       <di>}>
+     |            ^
+  62 |       <TransactionsContent {...props} />
+  63 |     </Suspense>
+  64 |   )
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:32:25.839] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:65:1
+Parsing ecmascript source code failed
+  63 |     </Suspense>
+  64 |   )
+> 65 | }
+     | ^
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:32:25.839] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:12
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={<div className="fixed inset-0 flex items-center justify-center bg-background z-[100] overflow-hidden">
+> 61 |       <di>}>
+     |            ^
+  62 |       <TransactionsContent {...props} />
+  63 |     </Suspense>
+  64 |   )
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:32:25.839] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:65:1
+Parsing ecmascript source code failed
+  63 |     </Suspense>
+  64 |   )
+> 65 | }
+     | ^
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:32:26.839] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:13
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={<div className="fixed inset-0 flex items-center justify-center bg-background z-[100] overflow-hidden">
+> 61 |       <div>}>
+     |             ^
+  62 |       <TransactionsContent {...props} />
+  63 |     </Suspense>
+  64 |   )
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:32:26.839] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:65:1
+Parsing ecmascript source code failed
+  63 |     </Suspense>
+  64 |   )
+> 65 | }
+     | ^
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:32:26.839] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:13
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={<div className="fixed inset-0 flex items-center justify-center bg-background z-[100] overflow-hidden">
+> 61 |       <div>}>
+     |             ^
+  62 |       <TransactionsContent {...props} />
+  63 |     </Suspense>
+  64 |   )
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:32:26.839] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:65:1
+Parsing ecmascript source code failed
+  63 |     </Suspense>
+  64 |   )
+> 65 | }
+     | ^
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:32:28.840] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:14
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={<div className="fixed inset-0 flex items-center justify-center bg-background z-[100] overflow-hidden">
+> 61 |       <div>>}>
+     |              ^
+  62 |       <TransactionsContent {...props} />
+  63 |     </Suspense>
+  64 |   )
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:32:28.841] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:65:1
+Parsing ecmascript source code failed
+  63 |     </Suspense>
+  64 |   )
+> 65 | }
+     | ^
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:32:28.841] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:20
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={<div className="fixed inset-0 flex items-center justify-center bg-background z-[100] overflow-hidden">
+> 61 |       <div></div>>}>
+     |                    ^
+  62 |       <TransactionsContent {...props} />
+  63 |     </Suspense>
+  64 |   )
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:32:28.841] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:19
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={<div className="fixed inset-0 flex items-center justify-center bg-background z-[100] overflow-hidden">
+> 61 |       <div></div>>}>
+     |                   ^
+  62 |       <TransactionsContent {...props} />
+  63 |     </Suspense>
+  64 |   )
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:32:28.842] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:14
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={<div className="fixed inset-0 flex items-center justify-center bg-background z-[100] overflow-hidden">
+> 61 |       <div>>}>
+     |              ^
+  62 |       <TransactionsContent {...props} />
+  63 |     </Suspense>
+  64 |   )
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:32:28.842] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:65:1
+Parsing ecmascript source code failed
+  63 |     </Suspense>
+  64 |   )
+> 65 | }
+     | ^
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:32:28.842] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:20
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={<div className="fixed inset-0 flex items-center justify-center bg-background z-[100] overflow-hidden">
+> 61 |       <div></div>>}>
+     |                    ^
+  62 |       <TransactionsContent {...props} />
+  63 |     </Suspense>
+  64 |   )
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:32:28.842] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:19
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={<div className="fixed inset-0 flex items-center justify-center bg-background z-[100] overflow-hidden">
+> 61 |       <div></div>>}>
+     |                   ^
+  62 |       <TransactionsContent {...props} />
+  63 |     </Suspense>
+  64 |   )
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:32:31.838] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:19
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={<div className="fixed inset-0 flex items-center justify-center bg-background z-[100] overflow-hidden">
+> 61 |       <div></div>}>
+     |                   ^
+  62 |       <TransactionsContent {...props} />
+  63 |     </Suspense>
+  64 |   )
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:32:31.838] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:18
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={<div className="fixed inset-0 flex items-center justify-center bg-background z-[100] overflow-hidden">
+> 61 |       <div></div>}>
+     |                  ^
+  62 |       <TransactionsContent {...props} />
+  63 |     </Suspense>
+  64 |   )
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:32:31.838] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:19
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={<div className="fixed inset-0 flex items-center justify-center bg-background z-[100] overflow-hidden">
+> 61 |       <div></div>}>
+     |                   ^
+  62 |       <TransactionsContent {...props} />
+  63 |     </Suspense>
+  64 |   )
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:32:31.838] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:18
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={<div className="fixed inset-0 flex items-center justify-center bg-background z-[100] overflow-hidden">
+> 61 |       <div></div>}>
+     |                  ^
+  62 |       <TransactionsContent {...props} />
+  63 |     </Suspense>
+  64 |   )
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:32:32.840] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:18
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={<div className="fixed inset-0 flex items-center justify-center bg-background z-[100] overflow-hidden">
+> 61 |       <div></div>}
+     |                  ^
+  62 |       <TransactionsContent {...props} />
+  63 |     </Suspense>
+  64 |   )
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:32:32.840] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:18
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={<div className="fixed inset-0 flex items-center justify-center bg-background z-[100] overflow-hidden">
+> 61 |       <div></div>}
+     |                  ^
+  62 |       <TransactionsContent {...props} />
+  63 |     </Suspense>
+  64 |   )
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:32:40.838] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:62:7
+Parsing ecmascript source code failed
+  60 |     <Suspense fallback={
+  61 |       <div></div>}
+> 62 |       <TransactionsContent {...props} />
+     |       ^
+  63 |     </Suspense>
+  64 |   )
+  65 | }
 
 Expression expected
-
-Import traces:
-  Client Component Browser:
-    ./app/profile/page.tsx [Client Component Browser]
-    ./app/profile/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/profile/page.tsx [Client Component SSR]
-    ./app/profile/page.tsx [Server Component]
-[00:01:28.784] Server  LOG      ✓ Compiled in 121ms
-[00:01:53.445] Server  LOG      ✓ Compiled in 71ms
-[00:01:55.492] Server  LOG      ✓ Compiled in 56ms
-[00:01:55.494] Browser ERROR   ./app/profile/page.tsx:171:7
+[00:32:40.839] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:62:7
 Parsing ecmascript source code failed
-  169 |     <div className="flex min-h-screen flex-col md:flex-row">
-  170 |       <L
-> 171 |       <main className="flex-1 p-4 pb-20 md:ml-64 md:p-8 md:pb-8">
-      |       ^
-  172 |         <div className="mx-auto max-w-4xl space-y-6">
-  173 |           <div className="flex items-center justify-between">
-  174 |             <h1 className="text-3xl font-bold">Profile Settings</h1>
+  60 |     <Suspense fallback={
+  61 |       <div></div>}
+> 62 |       <TransactionsContent {...props} />
+     |       ^
+  63 |     </Suspense>
+  64 |   )
+  65 | }
 
 Expression expected
-
-Import traces:
-  Client Component Browser:
-    ./app/profile/page.tsx [Client Component Browser]
-    ./app/profile/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/profile/page.tsx [Client Component SSR]
-    ./app/profile/page.tsx [Server Component]
-[00:01:55.494] Browser ERROR   ./app/profile/page.tsx:171:7
+[00:32:44.838] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:62:7
 Parsing ecmascript source code failed
-  169 |     <div className="flex min-h-screen flex-col md:flex-row">
-  170 |       <
-> 171 |       <main className="flex-1 p-4 pb-20 md:ml-64 md:p-8 md:pb-8">
-      |       ^
-  172 |         <div className="mx-auto max-w-4xl space-y-6">
-  173 |           <div className="flex items-center justify-between">
-  174 |             <h1 className="text-3xl font-bold">Profile Settings</h1>
+  60 |     <Suspense fallback={
+  61 |     <div></div>}
+> 62 |       <TransactionsContent {...props} />
+     |       ^
+  63 |     </Suspense>
+  64 |   )
+  65 | }
 
 Expression expected
-
-Import traces:
-  Client Component Browser:
-    ./app/profile/page.tsx [Client Component Browser]
-    ./app/profile/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/profile/page.tsx [Client Component SSR]
-    ./app/profile/page.tsx [Server Component]
-[00:01:55.494] Browser ERROR   ./app/profile/page.tsx:171:7
+[00:32:44.839] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:62:7
 Parsing ecmascript source code failed
-  169 |     <div className="flex min-h-screen flex-col md:flex-row">
-  170 |       <d
-> 171 |       <main className="flex-1 p-4 pb-20 md:ml-64 md:p-8 md:pb-8">
-      |       ^
-  172 |         <div className="mx-auto max-w-4xl space-y-6">
-  173 |           <div className="flex items-center justify-between">
-  174 |             <h1 className="text-3xl font-bold">Profile Settings</h1>
+  60 |     <Suspense fallback={
+  61 |     <div></div>}
+> 62 |       <TransactionsContent {...props} />
+     |       ^
+  63 |     </Suspense>
+  64 |   )
+  65 | }
 
 Expression expected
-
-Import traces:
-  Client Component Browser:
-    ./app/profile/page.tsx [Client Component Browser]
-    ./app/profile/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/profile/page.tsx [Client Component SSR]
-    ./app/profile/page.tsx [Server Component]
-[00:01:55.494] Browser ERROR   ./app/profile/page.tsx:171:7
+[00:32:45.837] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:62:7
 Parsing ecmascript source code failed
-  169 |     <div className="flex min-h-screen flex-col md:flex-row">
-  170 |       <di
-> 171 |       <main className="flex-1 p-4 pb-20 md:ml-64 md:p-8 md:pb-8">
-      |       ^
-  172 |         <div className="mx-auto max-w-4xl space-y-6">
-  173 |           <div className="flex items-center justify-between">
-  174 |             <h1 className="text-3xl font-bold">Profile Settings</h1>
+  60 |     <Suspense fallback={
+  61 |   <div></div>}
+> 62 |       <TransactionsContent {...props} />
+     |       ^
+  63 |     </Suspense>
+  64 |   )
+  65 | }
 
 Expression expected
-
-Import traces:
-  Client Component Browser:
-    ./app/profile/page.tsx [Client Component Browser]
-    ./app/profile/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/profile/page.tsx [Client Component SSR]
-    ./app/profile/page.tsx [Server Component]
-[00:01:55.494] Browser ERROR   ./app/profile/page.tsx:171:7
+[00:32:45.837] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:62:7
 Parsing ecmascript source code failed
-  169 |     <div className="flex min-h-screen flex-col md:flex-row">
-  170 |       <d
-> 171 |       <main className="flex-1 p-4 pb-20 md:ml-64 md:p-8 md:pb-8">
-      |       ^
-  172 |         <div className="mx-auto max-w-4xl space-y-6">
-  173 |           <div className="flex items-center justify-between">
-  174 |             <h1 className="text-3xl font-bold">Profile Settings</h1>
+  60 |     <Suspense fallback={
+  61 | <div></div>}
+> 62 |       <TransactionsContent {...props} />
+     |       ^
+  63 |     </Suspense>
+  64 |   )
+  65 | }
 
 Expression expected
-
-Import traces:
-  Client Component Browser:
-    ./app/profile/page.tsx [Client Component Browser]
-    ./app/profile/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/profile/page.tsx [Client Component SSR]
-    ./app/profile/page.tsx [Server Component]
-[00:01:55.494] Browser ERROR   ./app/profile/page.tsx:171:7
+[00:32:45.837] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:7
 Parsing ecmascript source code failed
-  169 |     <div className="flex min-h-screen flex-col md:flex-row">
-  170 |       <
-> 171 |       <main className="flex-1 p-4 pb-20 md:ml-64 md:p-8 md:pb-8">
-      |       ^
-  172 |         <div className="mx-auto max-w-4xl space-y-6">
-  173 |           <div className="flex items-center justify-between">
-  174 |             <h1 className="text-3xl font-bold">Profile Settings</h1>
+  59 |   return (
+  60 |     <Suspense fallback={<div></div>}
+> 61 |       <TransactionsContent {...props} />
+     |       ^
+  62 |     </Suspense>
+  63 |   )
+  64 | }
 
 Expression expected
-
-Import traces:
-  Client Component Browser:
-    ./app/profile/page.tsx [Client Component Browser]
-    ./app/profile/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/profile/page.tsx [Client Component SSR]
-    ./app/profile/page.tsx [Server Component]
-[00:01:55.560] Server  LOG      ✓ Compiled in 125ms
-[00:01:56.711] Server  LOG      ✓ Compiled in 31ms
-[00:02:03.475] Server  LOG      ✓ Compiled in 35ms
-[00:02:04.169] Server  LOG      ✓ Compiled in 26ms
-[00:02:04.453] Server  LOG      ✓ Compiled in 30ms
-[00:02:04.701] Server  LOG      ✓ Compiled in 30ms
-[00:02:05.488] Browser ERROR   ./app/profile/page.tsx:171:7
+[00:32:45.839] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:62:7
 Parsing ecmascript source code failed
-  169 |     <div className="flex min-h-screen flex-col md:flex-row">
-  170 |       <
-> 171 |       <main className="flex-1 p-4 pb-20 md:ml-64 md:p-8 md:pb-8">
-      |       ^
-  172 |         <div className="mx-auto max-w-4xl space-y-6">
-  173 |           <div className="flex items-center justify-between">
-  174 |             <h1 className="text-3xl font-bold">Profile Settings</h1>
+  60 |     <Suspense fallback={
+  61 |   <div></div>}
+> 62 |       <TransactionsContent {...props} />
+     |       ^
+  63 |     </Suspense>
+  64 |   )
+  65 | }
 
 Expression expected
-
-Import traces:
-  Client Component Browser:
-    ./app/profile/page.tsx [Client Component Browser]
-    ./app/profile/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/profile/page.tsx [Client Component SSR]
-    ./app/profile/page.tsx [Server Component]
-[00:02:05.488] Browser ERROR   ./app/profile/page.tsx:171:7
+[00:32:45.839] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:62:7
 Parsing ecmascript source code failed
-  169 |     <div className="flex min-h-screen flex-col md:flex-row">
-  170 |       <d
-> 171 |       <main className="flex-1 p-4 pb-20 md:ml-64 md:p-8 md:pb-8">
-      |       ^
-  172 |         <div className="mx-auto max-w-4xl space-y-6">
-  173 |           <div className="flex items-center justify-between">
-  174 |             <h1 className="text-3xl font-bold">Profile Settings</h1>
+  60 |     <Suspense fallback={
+  61 | <div></div>}
+> 62 |       <TransactionsContent {...props} />
+     |       ^
+  63 |     </Suspense>
+  64 |   )
+  65 | }
 
 Expression expected
-
-Import traces:
-  Client Component Browser:
-    ./app/profile/page.tsx [Client Component Browser]
-    ./app/profile/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/profile/page.tsx [Client Component SSR]
-    ./app/profile/page.tsx [Server Component]
-[00:02:05.488] Browser ERROR   ./app/profile/page.tsx:171:7
+[00:32:45.839] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:7
 Parsing ecmascript source code failed
-  169 |     <div className="flex min-h-screen flex-col md:flex-row">
-  170 |       <di
-> 171 |       <main className="flex-1 p-4 pb-20 md:ml-64 md:p-8 md:pb-8">
-      |       ^
-  172 |         <div className="mx-auto max-w-4xl space-y-6">
-  173 |           <div className="flex items-center justify-between">
-  174 |             <h1 className="text-3xl font-bold">Profile Settings</h1>
+  59 |   return (
+  60 |     <Suspense fallback={<div></div>}
+> 61 |       <TransactionsContent {...props} />
+     |       ^
+  62 |     </Suspense>
+  63 |   )
+  64 | }
 
 Expression expected
-
-Import traces:
-  Client Component Browser:
-    ./app/profile/page.tsx [Client Component Browser]
-    ./app/profile/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/profile/page.tsx [Client Component SSR]
-    ./app/profile/page.tsx [Server Component]
-[00:02:06.391] Server  LOG      ✓ Compiled in 112ms
-[00:02:06.488] Browser ERROR   ./app/profile/page.tsx:171:7
+[00:32:54.838] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:7
 Parsing ecmascript source code failed
-  169 |     <div className="flex min-h-screen flex-col md:flex-row">
-  170 |       <d
-> 171 |       <main className="flex-1 p-4 pb-20 md:ml-64 md:p-8 md:pb-8">
-      |       ^
-  172 |         <div className="mx-auto max-w-4xl space-y-6">
-  173 |           <div className="flex items-center justify-between">
-  174 |             <h1 className="text-3xl font-bold">Profile Settings</h1>
+  59 |   return (
+  60 |     <Suspense fallback={<div></div>}
+> 61 |       <TransactionsContent {...props} />}
+     |       ^
+  62 |     </Suspense>
+  63 |   )
+  64 | }
 
 Expression expected
-
-Import traces:
-  Client Component Browser:
-    ./app/profile/page.tsx [Client Component Browser]
-    ./app/profile/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/profile/page.tsx [Client Component SSR]
-    ./app/profile/page.tsx [Server Component]
-[00:02:06.488] Browser ERROR   ./app/profile/page.tsx:171:7
+[00:32:54.839] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:7
 Parsing ecmascript source code failed
-  169 |     <div className="flex min-h-screen flex-col md:flex-row">
-  170 |       <
-> 171 |       <main className="flex-1 p-4 pb-20 md:ml-64 md:p-8 md:pb-8">
-      |       ^
-  172 |         <div className="mx-auto max-w-4xl space-y-6">
-  173 |           <div className="flex items-center justify-between">
-  174 |             <h1 className="text-3xl font-bold">Profile Settings</h1>
+  59 |   return (
+  60 |     <Suspense fallback={<div></div>}
+> 61 |       <TransactionsContent {...props} />}
+     |       ^
+  62 |     </Suspense>
+  63 |   )
+  64 | }
 
 Expression expected
-
-Import traces:
-  Client Component Browser:
-    ./app/profile/page.tsx [Client Component Browser]
-    ./app/profile/page.tsx [Server Component]
-
-  Client Component SSR:
-    ./app/profile/page.tsx [Client Component SSR]
-    ./app/profile/page.tsx [Server Component]
-[00:02:06.488] Browser ERROR   ./app/profile/page.tsx:171:7
+[00:32:56.839] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:28
 Parsing ecmascript source code failed
-  169 |     <div className="flex min-h-screen flex-col md:flex-row">
-  170 |       <L
-> 171 |       <main className="flex-1 p-4 pb-20 md:ml-64 md:p-8 md:pb-8">
-      |       ^
-  172 |         <div className="mx-auto max-w-4xl space-y-6">
-  173 |           <div className="flex items-center justify-between">
-  174 |             <h1 className="text-3xl font-bold">Profile Settings</h1>
+  59 |   return (
+  60 |     <Suspense fallback={<div></div>
+> 61 |       <TransactionsContent {...props} />}
+     |                            ^
+  62 |     </Suspense>
+  63 |   )
+  64 | }
+
+Expected '}', got '{'
+[00:32:56.840] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:28
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={<div></div>
+> 61 |       <TransactionsContent {...props} />}
+     |                            ^
+  62 |     </Suspense>
+  63 |   )
+  64 | }
+
+Expected '}', got '{'
+[00:32:57.839] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:7
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={<div></div>}
+> 61 |       <TransactionsContent {...props} />}
+     |       ^
+  62 |     </Suspense>
+  63 |   )
+  64 | }
 
 Expression expected
+[00:32:57.839] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:7
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={<div></div>}
+> 61 |       <TransactionsContent {...props} />}
+     |       ^
+  62 |     </Suspense>
+  63 |   )
+  64 | }
 
-Import traces:
-  Client Component Browser:
-    ./app/profile/page.tsx [Client Component Browser]
-    ./app/profile/page.tsx [Server Component]
+Expression expected
+[00:32:59.839] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:7
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={<div></div>}
+> 61 |       <TransactionsContent {...props} />
+     |       ^
+  62 |     </Suspense>
+  63 |   )
+  64 | }
 
-  Client Component SSR:
-    ./app/profile/page.tsx [Client Component SSR]
-    ./app/profile/page.tsx [Server Component]
-[00:02:48.430] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+Expression expected
+[00:32:59.839] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:62:7
+Parsing ecmascript source code failed
+  60 |     <Suspense fallback={
+  61 | <div></div>}
+> 62 |       <TransactionsContent {...props} />
+     |       ^
+  63 |     </Suspense>
+  64 |   )
+  65 | }
+
+Expression expected
+[00:32:59.839] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:62:7
+Parsing ecmascript source code failed
+  60 |     <Suspense fallback={
+  61 |   <div></div>}
+> 62 |       <TransactionsContent {...props} />
+     |       ^
+  63 |     </Suspense>
+  64 |   )
+  65 | }
+
+Expression expected
+[00:32:59.839] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:62:7
+Parsing ecmascript source code failed
+  60 |     <Suspense fallback={
+  61 |     <div></div>}
+> 62 |       <TransactionsContent {...props} />
+     |       ^
+  63 |     </Suspense>
+  64 |   )
+  65 | }
+
+Expression expected
+[00:32:59.839] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:62:7
+Parsing ecmascript source code failed
+  60 |     <Suspense fallback={
+  61 |       <div></div>}
+> 62 |       <TransactionsContent {...props} />
+     |       ^
+  63 |     </Suspense>
+  64 |   )
+  65 | }
+
+Expression expected
+[00:32:59.839] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:18
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={<div className="fixed inset-0 flex items-center justify-center bg-background z-[100] overflow-hidden">
+> 61 |       <div></div>}
+     |                  ^
+  62 |       <TransactionsContent {...props} />
+  63 |     </Suspense>
+  64 |   )
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:32:59.839] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:7
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={<div></div>}
+> 61 |       <TransactionsContent {...props} />
+     |       ^
+  62 |     </Suspense>
+  63 |   )
+  64 | }
+
+Expression expected
+[00:32:59.839] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:62:7
+Parsing ecmascript source code failed
+  60 |     <Suspense fallback={
+  61 | <div></div>}
+> 62 |       <TransactionsContent {...props} />
+     |       ^
+  63 |     </Suspense>
+  64 |   )
+  65 | }
+
+Expression expected
+[00:32:59.839] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:62:7
+Parsing ecmascript source code failed
+  60 |     <Suspense fallback={
+  61 |   <div></div>}
+> 62 |       <TransactionsContent {...props} />
+     |       ^
+  63 |     </Suspense>
+  64 |   )
+  65 | }
+
+Expression expected
+[00:32:59.839] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:62:7
+Parsing ecmascript source code failed
+  60 |     <Suspense fallback={
+  61 |     <div></div>}
+> 62 |       <TransactionsContent {...props} />
+     |       ^
+  63 |     </Suspense>
+  64 |   )
+  65 | }
+
+Expression expected
+[00:32:59.839] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:62:7
+Parsing ecmascript source code failed
+  60 |     <Suspense fallback={
+  61 |       <div></div>}
+> 62 |       <TransactionsContent {...props} />
+     |       ^
+  63 |     </Suspense>
+  64 |   )
+  65 | }
+
+Expression expected
+[00:32:59.839] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:18
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={<div className="fixed inset-0 flex items-center justify-center bg-background z-[100] overflow-hidden">
+> 61 |       <div></div>}
+     |                  ^
+  62 |       <TransactionsContent {...props} />
+  63 |     </Suspense>
+  64 |   )
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:33:00.840] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:19
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={<div className="fixed inset-0 flex items-center justify-center bg-background z-[100] overflow-hidden">
+> 61 |       <div></div>}>
+     |                   ^
+  62 |       <TransactionsContent {...props} />
+  63 |     </Suspense>
+  64 |   )
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:33:00.840] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:18
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={<div className="fixed inset-0 flex items-center justify-center bg-background z-[100] overflow-hidden">
+> 61 |       <div></div>}>
+     |                  ^
+  62 |       <TransactionsContent {...props} />
+  63 |     </Suspense>
+  64 |   )
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:33:00.840] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:20
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={<div className="fixed inset-0 flex items-center justify-center bg-background z-[100] overflow-hidden">
+> 61 |       <div></div>>}>
+     |                    ^
+  62 |       <TransactionsContent {...props} />
+  63 |     </Suspense>
+  64 |   )
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:33:00.840] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:19
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={<div className="fixed inset-0 flex items-center justify-center bg-background z-[100] overflow-hidden">
+> 61 |       <div></div>>}>
+     |                   ^
+  62 |       <TransactionsContent {...props} />
+  63 |     </Suspense>
+  64 |   )
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:33:00.841] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:19
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={<div className="fixed inset-0 flex items-center justify-center bg-background z-[100] overflow-hidden">
+> 61 |       <div></div>}>
+     |                   ^
+  62 |       <TransactionsContent {...props} />
+  63 |     </Suspense>
+  64 |   )
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:33:00.841] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:18
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={<div className="fixed inset-0 flex items-center justify-center bg-background z-[100] overflow-hidden">
+> 61 |       <div></div>}>
+     |                  ^
+  62 |       <TransactionsContent {...props} />
+  63 |     </Suspense>
+  64 |   )
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:33:00.841] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:20
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={<div className="fixed inset-0 flex items-center justify-center bg-background z-[100] overflow-hidden">
+> 61 |       <div></div>>}>
+     |                    ^
+  62 |       <TransactionsContent {...props} />
+  63 |     </Suspense>
+  64 |   )
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:33:00.841] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:19
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={<div className="fixed inset-0 flex items-center justify-center bg-background z-[100] overflow-hidden">
+> 61 |       <div></div>>}>
+     |                   ^
+  62 |       <TransactionsContent {...props} />
+  63 |     </Suspense>
+  64 |   )
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:33:01.838] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:14
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={<div className="fixed inset-0 flex items-center justify-center bg-background z-[100] overflow-hidden">
+> 61 |       <div>>}>
+     |              ^
+  62 |       <TransactionsContent {...props} />
+  63 |     </Suspense>
+  64 |   )
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:33:01.839] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:65:1
+Parsing ecmascript source code failed
+  63 |     </Suspense>
+  64 |   )
+> 65 | }
+     | ^
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:33:01.839] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:13
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={<div className="fixed inset-0 flex items-center justify-center bg-background z-[100] overflow-hidden">
+> 61 |       <div>}>
+     |             ^
+  62 |       <TransactionsContent {...props} />
+  63 |     </Suspense>
+  64 |   )
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:33:01.839] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:65:1
+Parsing ecmascript source code failed
+  63 |     </Suspense>
+  64 |   )
+> 65 | }
+     | ^
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:33:01.839] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:12
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={<div className="fixed inset-0 flex items-center justify-center bg-background z-[100] overflow-hidden">
+> 61 |       <di>}>
+     |            ^
+  62 |       <TransactionsContent {...props} />
+  63 |     </Suspense>
+  64 |   )
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:33:01.839] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:65:1
+Parsing ecmascript source code failed
+  63 |     </Suspense>
+  64 |   )
+> 65 | }
+     | ^
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:33:01.839] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:14
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={<div className="fixed inset-0 flex items-center justify-center bg-background z-[100] overflow-hidden">
+> 61 |       <div>>}>
+     |              ^
+  62 |       <TransactionsContent {...props} />
+  63 |     </Suspense>
+  64 |   )
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:33:01.839] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:65:1
+Parsing ecmascript source code failed
+  63 |     </Suspense>
+  64 |   )
+> 65 | }
+     | ^
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:33:01.839] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:13
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={<div className="fixed inset-0 flex items-center justify-center bg-background z-[100] overflow-hidden">
+> 61 |       <div>}>
+     |             ^
+  62 |       <TransactionsContent {...props} />
+  63 |     </Suspense>
+  64 |   )
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:33:01.839] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:65:1
+Parsing ecmascript source code failed
+  63 |     </Suspense>
+  64 |   )
+> 65 | }
+     | ^
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:33:01.839] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:12
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={<div className="fixed inset-0 flex items-center justify-center bg-background z-[100] overflow-hidden">
+> 61 |       <di>}>
+     |            ^
+  62 |       <TransactionsContent {...props} />
+  63 |     </Suspense>
+  64 |   )
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:33:01.839] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:65:1
+Parsing ecmascript source code failed
+  63 |     </Suspense>
+  64 |   )
+> 65 | }
+     | ^
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:33:02.838] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:11
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={<div className="fixed inset-0 flex items-center justify-center bg-background z-[100] overflow-hidden">
+> 61 |       <d>}>
+     |           ^
+  62 |       <TransactionsContent {...props} />
+  63 |     </Suspense>
+  64 |   )
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:33:02.838] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:65:1
+Parsing ecmascript source code failed
+  63 |     </Suspense>
+  64 |   )
+> 65 | }
+     | ^
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:33:02.838] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:8
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={<div className="fixed inset-0 flex items-center justify-center bg-background z-[100] overflow-hidden">
+> 61 |       <<div className="flex flex-col items-center gap-4 px-4 w-full max-w-xs sm:max-w-sm">
+     |        ^
+  62 |         <div className="relative">
+  63 |           <img 
+  64 |             src={theme === "dark" ? "/hisaab-logo-white.png" : "/hisaab-logo-main.png"} 
+
+Expression expected
+[00:33:02.839] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:11
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={<div className="fixed inset-0 flex items-center justify-center bg-background z-[100] overflow-hidden">
+> 61 |       <d>}>
+     |           ^
+  62 |       <TransactionsContent {...props} />
+  63 |     </Suspense>
+  64 |   )
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:33:02.839] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:65:1
+Parsing ecmascript source code failed
+  63 |     </Suspense>
+  64 |   )
+> 65 | }
+     | ^
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:33:02.839] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:8
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={<div className="fixed inset-0 flex items-center justify-center bg-background z-[100] overflow-hidden">
+> 61 |       <<div className="flex flex-col items-center gap-4 px-4 w-full max-w-xs sm:max-w-sm">
+     |        ^
+  62 |         <div className="relative">
+  63 |           <img 
+  64 |             src={theme === "dark" ? "/hisaab-logo-white.png" : "/hisaab-logo-main.png"} 
+
+Expression expected
+[00:33:04.910] Server  LOG      ✓ Compiled in 117ms
+[00:33:05.339] Server  ERROR    ⨯ Error: Attempted to call useTheme() from the server but useTheme is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.
+[00:33:05.503] Server  ERROR    ⨯ Error: Attempted to call useTheme() from the server but useTheme is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.
+[00:33:06.845] Browser ERROR   uncaughtError: Error: Attempted to call useTheme() from the server but useTheme is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.
+[00:33:06.845] Browser ERROR   uncaughtError: Error: Attempted to call useTheme() from the server but useTheme is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.
+[00:33:11.267] Server  LOG      ✓ Compiled in 49ms
+[00:33:11.654] Server  ERROR    ⨯ Error: Attempted to call useTheme() from the server but useTheme is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.
+[00:33:11.835] Server  ERROR    ⨯ Error: Attempted to call useTheme() from the server but useTheme is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.
+[00:33:12.841] Browser ERROR   uncaughtError: Error: Attempted to call useTheme() from the server but useTheme is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.
+[00:33:12.844] Browser ERROR   uncaughtError: Error: Attempted to call useTheme() from the server but useTheme is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.
+[00:33:16.840] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:5
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={
+> 61 |     <<div className="fixed inset-0 flex items-center justify-center bg-background z-[100] overflow-hidden">
+     |     ^^
+  62 |       <div className="flex flex-col items-center gap-4 px-4 w-full max-w-xs sm:max-w-sm">
+  63 |         <div className="relative">
+  64 |           <img 
+
+Expression expected
+[00:33:16.840] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:5
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={
+> 61 |     <<div className="fixed inset-0 flex items-center justify-center bg-background z-[100] overflow-hidden">
+     |     ^^
+  62 |       <div className="flex flex-col items-center gap-4 px-4 w-full max-w-xs sm:max-w-sm">
+  63 |         <div className="relative">
+  64 |           <img 
+
+Expression expected
+[00:33:18.840] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:9
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={
+> 61 |     <d>}>
+     |         ^
+  62 |       <TransactionsContent {...props} />
+  63 |     </Suspense>
+  64 |   )
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:33:18.840] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:8
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={
+> 61 |     <d>}>
+     |        ^
+  62 |       <TransactionsContent {...props} />
+  63 |     </Suspense>
+  64 |   )
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:33:18.840] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:10
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={
+> 61 |     <di>}>
+     |          ^
+  62 |       <TransactionsContent {...props} />
+  63 |     </Suspense>
+  64 |   )
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:33:18.840] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:9
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={
+> 61 |     <di>}>
+     |         ^
+  62 |       <TransactionsContent {...props} />
+  63 |     </Suspense>
+  64 |   )
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:33:18.840] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:11
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={
+> 61 |     <div>}>
+     |           ^
+  62 |       <TransactionsContent {...props} />
+  63 |     </Suspense>
+  64 |   )
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:33:18.840] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:10
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={
+> 61 |     <div>}>
+     |          ^
+  62 |       <TransactionsContent {...props} />
+  63 |     </Suspense>
+  64 |   )
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:33:18.841] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:9
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={
+> 61 |     <d>}>
+     |         ^
+  62 |       <TransactionsContent {...props} />
+  63 |     </Suspense>
+  64 |   )
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:33:18.841] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:8
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={
+> 61 |     <d>}>
+     |        ^
+  62 |       <TransactionsContent {...props} />
+  63 |     </Suspense>
+  64 |   )
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:33:18.841] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:10
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={
+> 61 |     <di>}>
+     |          ^
+  62 |       <TransactionsContent {...props} />
+  63 |     </Suspense>
+  64 |   )
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:33:18.841] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:9
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={
+> 61 |     <di>}>
+     |         ^
+  62 |       <TransactionsContent {...props} />
+  63 |     </Suspense>
+  64 |   )
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:33:18.841] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:11
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={
+> 61 |     <div>}>
+     |           ^
+  62 |       <TransactionsContent {...props} />
+  63 |     </Suspense>
+  64 |   )
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:33:18.841] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:10
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={
+> 61 |     <div>}>
+     |          ^
+  62 |       <TransactionsContent {...props} />
+  63 |     </Suspense>
+  64 |   )
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:33:19.838] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:17
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={
+> 61 |     <div></div>>}>
+     |                 ^
+  62 |       <TransactionsContent {...props} />
+  63 |     </Suspense>
+  64 |   )
+
+Expression expected
+[00:33:19.838] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:17
+Parsing ecmascript source code failed
+  59 |   return (
+  60 |     <Suspense fallback={
+> 61 |     <div></div>>}>
+     |                 ^
+  62 |       <TransactionsContent {...props} />
+  63 |     </Suspense>
+  64 |   )
+
+Expression expected
+[00:33:21.653] Server  LOG      ✓ Compiled in 53ms
+[00:33:21.901] Server  ERROR    ⨯ Error: Attempted to call useTheme() from the server but useTheme is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.
+[00:33:22.801] Server  ERROR    ⨯ Error: Attempted to call useTheme() from the server but useTheme is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.
+[00:33:23.839] Browser ERROR   uncaughtError: Error: Attempted to call useTheme() from the server but useTheme is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.
+[00:33:23.839] Browser ERROR   uncaughtError: Error: Attempted to call useTheme() from the server but useTheme is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.
+[00:33:28.635] Server  LOG      ✓ Compiled in 62ms
+[00:33:28.831] Server  ERROR    ⨯ Error: Attempted to call useTheme() from the server but useTheme is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.
+[00:33:29.008] Server  ERROR    ⨯ Error: Attempted to call useTheme() from the server but useTheme is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.
+[00:33:29.528] Browser ERROR   uncaughtError: Error: Attempted to call useTheme() from the server but useTheme is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.
+[00:33:29.528] Browser ERROR   uncaughtError: Error: Attempted to call useTheme() from the server but useTheme is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.
+[00:33:29.714] Server  ERROR    ⨯ Error: Attempted to call useTheme() from the server but useTheme is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.
+[00:33:30.539] Server  ERROR    ⨯ Error: Attempted to call useTheme() from the server but useTheme is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.
+[00:33:30.544] Server  LOG      ✓ Compiled in 185ms
+[00:33:31.131] Browser ERROR   uncaughtError: Error: Attempted to call useTheme() from the server but useTheme is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.
+[00:33:31.131] Browser ERROR   uncaughtError: Error: Attempted to call useTheme() from the server but useTheme is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.
+[00:33:31.363] Server  ERROR    ⨯ Error: Attempted to call useTheme() from the server but useTheme is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.
+[00:33:31.367] Server  LOG      ✓ Compiled in 74ms
+[00:33:31.714] Server  ERROR    ⨯ Error: Attempted to call useTheme() from the server but useTheme is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.
+[00:33:31.886] Server  LOG      ✓ Compiled in 44ms
+[00:33:32.550] Browser ERROR   uncaughtError: Error: Attempted to call useTheme() from the server but useTheme is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.
+[00:33:32.550] Browser ERROR   uncaughtError: Error: Attempted to call useTheme() from the server but useTheme is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.
+[00:33:32.837] Server  ERROR    ⨯ Error: Attempted to call useTheme() from the server but useTheme is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.
+[00:33:32.843] Server  LOG      ✓ Compiled in 74ms
+[00:33:33.144] Server  ERROR    ⨯ Error: Attempted to call useTheme() from the server but useTheme is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.
+[00:33:33.840] Browser ERROR   uncaughtError: Error: Attempted to call useTheme() from the server but useTheme is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.
+[00:33:33.840] Browser ERROR   uncaughtError: Error: Attempted to call useTheme() from the server but useTheme is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.
+[00:33:41.081] Server  ERROR    ⨯ Error: Attempted to call useTheme() from the server but useTheme is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.
+[00:33:41.372] Browser ERROR   uncaughtError: Error: Attempted to call useTheme() from the server but useTheme is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.
+[00:33:46.096] Server  ERROR    ⨯ ReferenceError: useTheme is not defined
+[00:33:46.505] Server  ERROR    ⨯ ReferenceError: useTheme is not defined
+[00:33:47.844] Browser ERROR   uncaughtError: ReferenceError: useTheme is not defined
+[00:33:47.848] Browser ERROR   uncaughtError: ReferenceError: useTheme is not defined
+[00:33:48.363] Server  ERROR    ⨯ ReferenceError: useTheme is not defined
+[00:33:48.367] Server  LOG      ✓ Compiled in 47ms
+[00:33:48.638] Server  ERROR    ⨯ ReferenceError: useTheme is not defined
+[00:33:49.120] Browser ERROR   uncaughtError: ReferenceError: useTheme is not defined
+[00:33:49.841] Browser ERROR   uncaughtError: ReferenceError: useTheme is not defined
+[00:33:53.756] Server  LOG      ✓ Compiled in 46ms
+[00:33:54.059] Server  LOG      ✓ Compiled in 32ms
+[00:34:43.840] Browser ERROR   ./app/(with-auth)/dashboard/page.tsx:141:49
+Parsing ecmascript source code failed
+  139 | export default function DashboardPage(props: { searchParams: Promise<{ account?: string, dateRange?: 'current' | 'previous' }> }) {
+  140 |   return (
+> 141 |     <Suspense fallback={<<PageLoadingIndicator />>}>
+      |                                                 ^^
+  142 |       <DashboardContent {...props} />
+  143 |     </Suspense>
+  144 |   )
+
+Expression expected
+[00:34:43.841] Browser ERROR   ./app/(with-auth)/dashboard/page.tsx:141:29
+Parsing ecmascript source code failed
+  139 | export default function DashboardPage(props: { searchParams: Promise<{ account?: string, dateRange?: 'current' | 'previous' }> }) {
+  140 |   return (
+> 141 |     <Suspense fallback={<d>}>
+      |                             ^
+  142 |       <DashboardContent {...props} />
+  143 |     </Suspense>
+  144 |   )
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:34:43.841] Browser ERROR   ./app/(with-auth)/dashboard/page.tsx:141:28
+Parsing ecmascript source code failed
+  139 | export default function DashboardPage(props: { searchParams: Promise<{ account?: string, dateRange?: 'current' | 'previous' }> }) {
+  140 |   return (
+> 141 |     <Suspense fallback={<d>}>
+      |                            ^
+  142 |       <DashboardContent {...props} />
+  143 |     </Suspense>
+  144 |   )
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:34:43.841] Browser ERROR   ./app/(with-auth)/dashboard/page.tsx:141:28
+Parsing ecmascript source code failed
+  139 | export default function DashboardPage(props: { searchParams: Promise<{ account?: string, dateRange?: 'current' | 'previous' }> }) {
+  140 |   return (
+> 141 |     <Suspense fallback={<>}>
+      |                            ^
+  142 |       <DashboardContent {...props} />
+  143 |     </Suspense>
+  144 |   )
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:34:43.841] Browser ERROR   ./app/(with-auth)/dashboard/page.tsx:141:27
+Parsing ecmascript source code failed
+  139 | export default function DashboardPage(props: { searchParams: Promise<{ account?: string, dateRange?: 'current' | 'previous' }> }) {
+  140 |   return (
+> 141 |     <Suspense fallback={<>}>
+      |                           ^
+  142 |       <DashboardContent {...props} />
+  143 |     </Suspense>
+  144 |   )
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:34:43.841] Browser ERROR   ./app/(with-auth)/dashboard/page.tsx:141:29
+Parsing ecmascript source code failed
+  139 | export default function DashboardPage(props: { searchParams: Promise<{ account?: string, dateRange?: 'current' | 'previous' }> }) {
+  140 |   return (
+> 141 |     <Suspense fallback={<d>}>
+      |                             ^
+  142 |       <DashboardContent {...props} />
+  143 |     </Suspense>
+  144 |   )
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:34:43.841] Browser ERROR   ./app/(with-auth)/dashboard/page.tsx:141:28
+Parsing ecmascript source code failed
+  139 | export default function DashboardPage(props: { searchParams: Promise<{ account?: string, dateRange?: 'current' | 'previous' }> }) {
+  140 |   return (
+> 141 |     <Suspense fallback={<d>}>
+      |                            ^
+  142 |       <DashboardContent {...props} />
+  143 |     </Suspense>
+  144 |   )
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:34:43.841] Browser ERROR   ./app/(with-auth)/dashboard/page.tsx:141:30
+Parsing ecmascript source code failed
+  139 | export default function DashboardPage(props: { searchParams: Promise<{ account?: string, dateRange?: 'current' | 'previous' }> }) {
+  140 |   return (
+> 141 |     <Suspense fallback={<di>}>
+      |                              ^
+  142 |       <DashboardContent {...props} />
+  143 |     </Suspense>
+  144 |   )
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:34:43.841] Browser ERROR   ./app/(with-auth)/dashboard/page.tsx:141:29
+Parsing ecmascript source code failed
+  139 | export default function DashboardPage(props: { searchParams: Promise<{ account?: string, dateRange?: 'current' | 'previous' }> }) {
+  140 |   return (
+> 141 |     <Suspense fallback={<di>}>
+      |                             ^
+  142 |       <DashboardContent {...props} />
+  143 |     </Suspense>
+  144 |   )
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:34:43.844] Browser ERROR   ./app/(with-auth)/dashboard/page.tsx:141:49
+Parsing ecmascript source code failed
+  139 | export default function DashboardPage(props: { searchParams: Promise<{ account?: string, dateRange?: 'current' | 'previous' }> }) {
+  140 |   return (
+> 141 |     <Suspense fallback={<<PageLoadingIndicator />>}>
+      |                                                 ^^
+  142 |       <DashboardContent {...props} />
+  143 |     </Suspense>
+  144 |   )
+
+Expression expected
+[00:34:43.846] Browser ERROR   ./app/(with-auth)/dashboard/page.tsx:141:29
+Parsing ecmascript source code failed
+  139 | export default function DashboardPage(props: { searchParams: Promise<{ account?: string, dateRange?: 'current' | 'previous' }> }) {
+  140 |   return (
+> 141 |     <Suspense fallback={<d>}>
+      |                             ^
+  142 |       <DashboardContent {...props} />
+  143 |     </Suspense>
+  144 |   )
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:34:43.846] Browser ERROR   ./app/(with-auth)/dashboard/page.tsx:141:28
+Parsing ecmascript source code failed
+  139 | export default function DashboardPage(props: { searchParams: Promise<{ account?: string, dateRange?: 'current' | 'previous' }> }) {
+  140 |   return (
+> 141 |     <Suspense fallback={<d>}>
+      |                            ^
+  142 |       <DashboardContent {...props} />
+  143 |     </Suspense>
+  144 |   )
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:34:43.846] Browser ERROR   ./app/(with-auth)/dashboard/page.tsx:141:28
+Parsing ecmascript source code failed
+  139 | export default function DashboardPage(props: { searchParams: Promise<{ account?: string, dateRange?: 'current' | 'previous' }> }) {
+  140 |   return (
+> 141 |     <Suspense fallback={<>}>
+      |                            ^
+  142 |       <DashboardContent {...props} />
+  143 |     </Suspense>
+  144 |   )
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:34:43.846] Browser ERROR   ./app/(with-auth)/dashboard/page.tsx:141:27
+Parsing ecmascript source code failed
+  139 | export default function DashboardPage(props: { searchParams: Promise<{ account?: string, dateRange?: 'current' | 'previous' }> }) {
+  140 |   return (
+> 141 |     <Suspense fallback={<>}>
+      |                           ^
+  142 |       <DashboardContent {...props} />
+  143 |     </Suspense>
+  144 |   )
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:34:43.846] Browser ERROR   ./app/(with-auth)/dashboard/page.tsx:141:29
+Parsing ecmascript source code failed
+  139 | export default function DashboardPage(props: { searchParams: Promise<{ account?: string, dateRange?: 'current' | 'previous' }> }) {
+  140 |   return (
+> 141 |     <Suspense fallback={<d>}>
+      |                             ^
+  142 |       <DashboardContent {...props} />
+  143 |     </Suspense>
+  144 |   )
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:34:43.846] Browser ERROR   ./app/(with-auth)/dashboard/page.tsx:141:28
+Parsing ecmascript source code failed
+  139 | export default function DashboardPage(props: { searchParams: Promise<{ account?: string, dateRange?: 'current' | 'previous' }> }) {
+  140 |   return (
+> 141 |     <Suspense fallback={<d>}>
+      |                            ^
+  142 |       <DashboardContent {...props} />
+  143 |     </Suspense>
+  144 |   )
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:34:43.846] Browser ERROR   ./app/(with-auth)/dashboard/page.tsx:141:30
+Parsing ecmascript source code failed
+  139 | export default function DashboardPage(props: { searchParams: Promise<{ account?: string, dateRange?: 'current' | 'previous' }> }) {
+  140 |   return (
+> 141 |     <Suspense fallback={<di>}>
+      |                              ^
+  142 |       <DashboardContent {...props} />
+  143 |     </Suspense>
+  144 |   )
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:34:43.846] Browser ERROR   ./app/(with-auth)/dashboard/page.tsx:141:29
+Parsing ecmascript source code failed
+  139 | export default function DashboardPage(props: { searchParams: Promise<{ account?: string, dateRange?: 'current' | 'previous' }> }) {
+  140 |   return (
+> 141 |     <Suspense fallback={<di>}>
+      |                             ^
+  142 |       <DashboardContent {...props} />
+  143 |     </Suspense>
+  144 |   )
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:34:44.838] Browser ERROR   ./app/(with-auth)/dashboard/page.tsx:141:29
+Parsing ecmascript source code failed
+  139 | export default function DashboardPage(props: { searchParams: Promise<{ account?: string, dateRange?: 'current' | 'previous' }> }) {
+  140 |   return (
+> 141 |     <Suspense fallback={<d>}>
+      |                             ^
+  142 |       <DashboardContent {...props} />
+  143 |     </Suspense>
+  144 |   )
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:34:44.838] Browser ERROR   ./app/(with-auth)/dashboard/page.tsx:141:28
+Parsing ecmascript source code failed
+  139 | export default function DashboardPage(props: { searchParams: Promise<{ account?: string, dateRange?: 'current' | 'previous' }> }) {
+  140 |   return (
+> 141 |     <Suspense fallback={<d>}>
+      |                            ^
+  142 |       <DashboardContent {...props} />
+  143 |     </Suspense>
+  144 |   )
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:34:44.838] Browser ERROR   ./app/(with-auth)/dashboard/page.tsx:141:28
+Parsing ecmascript source code failed
+  139 | export default function DashboardPage(props: { searchParams: Promise<{ account?: string, dateRange?: 'current' | 'previous' }> }) {
+  140 |   return (
+> 141 |     <Suspense fallback={<>}>
+      |                            ^
+  142 |       <DashboardContent {...props} />
+  143 |     </Suspense>
+  144 |   )
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:34:44.838] Browser ERROR   ./app/(with-auth)/dashboard/page.tsx:141:27
+Parsing ecmascript source code failed
+  139 | export default function DashboardPage(props: { searchParams: Promise<{ account?: string, dateRange?: 'current' | 'previous' }> }) {
+  140 |   return (
+> 141 |     <Suspense fallback={<>}>
+      |                           ^
+  142 |       <DashboardContent {...props} />
+  143 |     </Suspense>
+  144 |   )
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:34:44.838] Browser ERROR   ./app/(with-auth)/dashboard/page.tsx:141:29
+Parsing ecmascript source code failed
+  139 | export default function DashboardPage(props: { searchParams: Promise<{ account?: string, dateRange?: 'current' | 'previous' }> }) {
+  140 |   return (
+> 141 |     <Suspense fallback={<D>}>
+      |                             ^
+  142 |       <DashboardContent {...props} />
+  143 |     </Suspense>
+  144 |   )
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:34:44.838] Browser ERROR   ./app/(with-auth)/dashboard/page.tsx:141:28
+Parsing ecmascript source code failed
+  139 | export default function DashboardPage(props: { searchParams: Promise<{ account?: string, dateRange?: 'current' | 'previous' }> }) {
+  140 |   return (
+> 141 |     <Suspense fallback={<D>}>
+      |                            ^
+  142 |       <DashboardContent {...props} />
+  143 |     </Suspense>
+  144 |   )
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:34:44.838] Browser ERROR   ./app/(with-auth)/dashboard/page.tsx:141:29
+Parsing ecmascript source code failed
+  139 | export default function DashboardPage(props: { searchParams: Promise<{ account?: string, dateRange?: 'current' | 'previous' }> }) {
+  140 |   return (
+> 141 |     <Suspense fallback={<d>}>
+      |                             ^
+  142 |       <DashboardContent {...props} />
+  143 |     </Suspense>
+  144 |   )
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:34:44.838] Browser ERROR   ./app/(with-auth)/dashboard/page.tsx:141:28
+Parsing ecmascript source code failed
+  139 | export default function DashboardPage(props: { searchParams: Promise<{ account?: string, dateRange?: 'current' | 'previous' }> }) {
+  140 |   return (
+> 141 |     <Suspense fallback={<d>}>
+      |                            ^
+  142 |       <DashboardContent {...props} />
+  143 |     </Suspense>
+  144 |   )
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:34:44.838] Browser ERROR   ./app/(with-auth)/dashboard/page.tsx:141:28
+Parsing ecmascript source code failed
+  139 | export default function DashboardPage(props: { searchParams: Promise<{ account?: string, dateRange?: 'current' | 'previous' }> }) {
+  140 |   return (
+> 141 |     <Suspense fallback={<>}>
+      |                            ^
+  142 |       <DashboardContent {...props} />
+  143 |     </Suspense>
+  144 |   )
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:34:44.838] Browser ERROR   ./app/(with-auth)/dashboard/page.tsx:141:27
+Parsing ecmascript source code failed
+  139 | export default function DashboardPage(props: { searchParams: Promise<{ account?: string, dateRange?: 'current' | 'previous' }> }) {
+  140 |   return (
+> 141 |     <Suspense fallback={<>}>
+      |                           ^
+  142 |       <DashboardContent {...props} />
+  143 |     </Suspense>
+  144 |   )
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:34:44.838] Browser ERROR   ./app/(with-auth)/dashboard/page.tsx:141:29
+Parsing ecmascript source code failed
+  139 | export default function DashboardPage(props: { searchParams: Promise<{ account?: string, dateRange?: 'current' | 'previous' }> }) {
+  140 |   return (
+> 141 |     <Suspense fallback={<D>}>
+      |                             ^
+  142 |       <DashboardContent {...props} />
+  143 |     </Suspense>
+  144 |   )
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:34:44.838] Browser ERROR   ./app/(with-auth)/dashboard/page.tsx:141:28
+Parsing ecmascript source code failed
+  139 | export default function DashboardPage(props: { searchParams: Promise<{ account?: string, dateRange?: 'current' | 'previous' }> }) {
+  140 |   return (
+> 141 |     <Suspense fallback={<D>}>
+      |                            ^
+  142 |       <DashboardContent {...props} />
+  143 |     </Suspense>
+  144 |   )
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:34:45.841] Browser ERROR   ./app/(with-auth)/dashboard/page.tsx:141:28
+Parsing ecmascript source code failed
+  139 | export default function DashboardPage(props: { searchParams: Promise<{ account?: string, dateRange?: 'current' | 'previous' }> }) {
+  140 |   return (
+> 141 |     <Suspense fallback={<>}>
+      |                            ^
+  142 |       <DashboardContent {...props} />
+  143 |     </Suspense>
+  144 |   )
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:34:45.841] Browser ERROR   ./app/(with-auth)/dashboard/page.tsx:141:27
+Parsing ecmascript source code failed
+  139 | export default function DashboardPage(props: { searchParams: Promise<{ account?: string, dateRange?: 'current' | 'previous' }> }) {
+  140 |   return (
+> 141 |     <Suspense fallback={<>}>
+      |                           ^
+  142 |       <DashboardContent {...props} />
+  143 |     </Suspense>
+  144 |   )
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:34:45.841] Browser ERROR   ./app/(with-auth)/dashboard/page.tsx:141:29
+Parsing ecmascript source code failed
+  139 | export default function DashboardPage(props: { searchParams: Promise<{ account?: string, dateRange?: 'current' | 'previous' }> }) {
+  140 |   return (
+> 141 |     <Suspense fallback={<d>}>
+      |                             ^
+  142 |       <DashboardContent {...props} />
+  143 |     </Suspense>
+  144 |   )
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:34:45.841] Browser ERROR   ./app/(with-auth)/dashboard/page.tsx:141:28
+Parsing ecmascript source code failed
+  139 | export default function DashboardPage(props: { searchParams: Promise<{ account?: string, dateRange?: 'current' | 'previous' }> }) {
+  140 |   return (
+> 141 |     <Suspense fallback={<d>}>
+      |                            ^
+  142 |       <DashboardContent {...props} />
+  143 |     </Suspense>
+  144 |   )
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:34:45.841] Browser ERROR   ./app/(with-auth)/dashboard/page.tsx:141:30
+Parsing ecmascript source code failed
+  139 | export default function DashboardPage(props: { searchParams: Promise<{ account?: string, dateRange?: 'current' | 'previous' }> }) {
+  140 |   return (
+> 141 |     <Suspense fallback={<di>}>
+      |                              ^
+  142 |       <DashboardContent {...props} />
+  143 |     </Suspense>
+  144 |   )
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:34:45.841] Browser ERROR   ./app/(with-auth)/dashboard/page.tsx:141:29
+Parsing ecmascript source code failed
+  139 | export default function DashboardPage(props: { searchParams: Promise<{ account?: string, dateRange?: 'current' | 'previous' }> }) {
+  140 |   return (
+> 141 |     <Suspense fallback={<di>}>
+      |                             ^
+  142 |       <DashboardContent {...props} />
+  143 |     </Suspense>
+  144 |   )
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:34:45.843] Browser ERROR   ./app/(with-auth)/dashboard/page.tsx:141:28
+Parsing ecmascript source code failed
+  139 | export default function DashboardPage(props: { searchParams: Promise<{ account?: string, dateRange?: 'current' | 'previous' }> }) {
+  140 |   return (
+> 141 |     <Suspense fallback={<>}>
+      |                            ^
+  142 |       <DashboardContent {...props} />
+  143 |     </Suspense>
+  144 |   )
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:34:45.843] Browser ERROR   ./app/(with-auth)/dashboard/page.tsx:141:27
+Parsing ecmascript source code failed
+  139 | export default function DashboardPage(props: { searchParams: Promise<{ account?: string, dateRange?: 'current' | 'previous' }> }) {
+  140 |   return (
+> 141 |     <Suspense fallback={<>}>
+      |                           ^
+  142 |       <DashboardContent {...props} />
+  143 |     </Suspense>
+  144 |   )
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:34:45.843] Browser ERROR   ./app/(with-auth)/dashboard/page.tsx:141:29
+Parsing ecmascript source code failed
+  139 | export default function DashboardPage(props: { searchParams: Promise<{ account?: string, dateRange?: 'current' | 'previous' }> }) {
+  140 |   return (
+> 141 |     <Suspense fallback={<d>}>
+      |                             ^
+  142 |       <DashboardContent {...props} />
+  143 |     </Suspense>
+  144 |   )
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:34:45.843] Browser ERROR   ./app/(with-auth)/dashboard/page.tsx:141:28
+Parsing ecmascript source code failed
+  139 | export default function DashboardPage(props: { searchParams: Promise<{ account?: string, dateRange?: 'current' | 'previous' }> }) {
+  140 |   return (
+> 141 |     <Suspense fallback={<d>}>
+      |                            ^
+  142 |       <DashboardContent {...props} />
+  143 |     </Suspense>
+  144 |   )
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:34:45.843] Browser ERROR   ./app/(with-auth)/dashboard/page.tsx:141:30
+Parsing ecmascript source code failed
+  139 | export default function DashboardPage(props: { searchParams: Promise<{ account?: string, dateRange?: 'current' | 'previous' }> }) {
+  140 |   return (
+> 141 |     <Suspense fallback={<di>}>
+      |                              ^
+  142 |       <DashboardContent {...props} />
+  143 |     </Suspense>
+  144 |   )
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+[00:34:45.843] Browser ERROR   ./app/(with-auth)/dashboard/page.tsx:141:29
+Parsing ecmascript source code failed
+  139 | export default function DashboardPage(props: { searchParams: Promise<{ account?: string, dateRange?: 'current' | 'previous' }> }) {
+  140 |   return (
+> 141 |     <Suspense fallback={<di>}>
+      |                             ^
+  142 |       <DashboardContent {...props} />
+  143 |     </Suspense>
+  144 |   )
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[00:34:48.252] Server  LOG      ✓ Compiled in 198ms
+[00:35:32.938] Server  LOG      ✓ Compiled in 88ms
+[00:35:34.668] Server  LOG      ✓ Compiled in 54ms
+[00:35:38.850] Browser ERROR   ./app/(with-auth)/layout.tsx:15:11
+Parsing ecmascript source code failed
+  13 |         <main className="flex-1 p-4 pb-20 md:ml-64 md:p-8 md:pb-8 relative">
+  14 |           <
+> 15 |           {children}
+     |           ^
+  16 |         </main>
+  17 |       </div>
+  18 |     </LoadingProvider>
+
+Expected '</', got '{'
+[00:35:38.850] Browser ERROR   ./app/(with-auth)/layout.tsx:15:11
+Parsing ecmascript source code failed
+  13 |         <main className="flex-1 p-4 pb-20 md:ml-64 md:p-8 md:pb-8 relative">
+  14 |           <
+> 15 |           {children}
+     |           ^
+  16 |         </main>
+  17 |       </div>
+  18 |     </LoadingProvider>
+
+Expected '</', got '{'
+[00:35:40.838] Browser ERROR   ./app/(with-auth)/layout.tsx:15:12
+Parsing ecmascript source code failed
+  13 |         <main className="flex-1 p-4 pb-20 md:ml-64 md:p-8 md:pb-8 relative">
+  14 |           <P
+> 15 |           {children}
+     |            ^^^^^^^^
+  16 |         </main>
+  17 |       </div>
+  18 |     </LoadingProvider>
+
+Expected '</', got 'children'
+[00:35:40.838] Browser ERROR   ./app/(with-auth)/layout.tsx:15:12
+Parsing ecmascript source code failed
+  13 |         <main className="flex-1 p-4 pb-20 md:ml-64 md:p-8 md:pb-8 relative">
+  14 |           <Pa
+> 15 |           {children}
+     |            ^^^^^^^^
+  16 |         </main>
+  17 |       </div>
+  18 |     </LoadingProvider>
+
+Expected '</', got 'children'
+[00:35:40.838] Browser ERROR   ./app/(with-auth)/layout.tsx:15:12
+Parsing ecmascript source code failed
+  13 |         <main className="flex-1 p-4 pb-20 md:ml-64 md:p-8 md:pb-8 relative">
+  14 |           <PageLoadingIndicator
+> 15 |           {children}
+     |            ^^^^^^^^
+  16 |         </main>
+  17 |       </div>
+  18 |     </LoadingProvider>
+
+Expected '</', got 'children'
+[00:35:40.838] Browser ERROR   ./app/(with-auth)/layout.tsx:15:12
+Parsing ecmascript source code failed
+  13 |         <main className="flex-1 p-4 pb-20 md:ml-64 md:p-8 md:pb-8 relative">
+  14 |           <P
+> 15 |           {children}
+     |            ^^^^^^^^
+  16 |         </main>
+  17 |       </div>
+  18 |     </LoadingProvider>
+
+Expected '</', got 'children'
+[00:35:40.838] Browser ERROR   ./app/(with-auth)/layout.tsx:15:12
+Parsing ecmascript source code failed
+  13 |         <main className="flex-1 p-4 pb-20 md:ml-64 md:p-8 md:pb-8 relative">
+  14 |           <Pa
+> 15 |           {children}
+     |            ^^^^^^^^
+  16 |         </main>
+  17 |       </div>
+  18 |     </LoadingProvider>
+
+Expected '</', got 'children'
+[00:35:40.838] Browser ERROR   ./app/(with-auth)/layout.tsx:15:12
+Parsing ecmascript source code failed
+  13 |         <main className="flex-1 p-4 pb-20 md:ml-64 md:p-8 md:pb-8 relative">
+  14 |           <PageLoadingIndicator
+> 15 |           {children}
+     |            ^^^^^^^^
+  16 |         </main>
+  17 |       </div>
+  18 |     </LoadingProvider>
+
+Expected '</', got 'children'
+[00:35:42.833] Server  LOG      ✓ Compiled in 113ms
+[00:35:43.045] Browser ERROR   ./app/(with-auth)/layout.tsx:15:12
+Parsing ecmascript source code failed
+  13 |         <main className="flex-1 p-4 pb-20 md:ml-64 md:p-8 md:pb-8 relative">
+  14 |           <PageLoadingIndicator 
+> 15 |           {children}
+     |            ^^^^^^^^
+  16 |         </main>
+  17 |       </div>
+  18 |     </LoadingProvider>
+
+Expected '</', got 'children'
+[00:35:43.045] Browser ERROR   ./app/(with-auth)/layout.tsx:15:11
+Parsing ecmascript source code failed
+  13 |         <main className="flex-1 p-4 pb-20 md:ml-64 md:p-8 md:pb-8 relative">
+  14 |           <PageLoadingIndicator /
+> 15 |           {children}
+     |           ^
+  16 |         </main>
+  17 |       </div>
+  18 |     </LoadingProvider>
+
+Expected '</', got '{'
+[00:35:43.045] Browser ERROR   ./app/(with-auth)/layout.tsx:15:12
+Parsing ecmascript source code failed
+  13 |         <main className="flex-1 p-4 pb-20 md:ml-64 md:p-8 md:pb-8 relative">
+  14 |           <PageLoadingIndicator 
+> 15 |           {children}
+     |            ^^^^^^^^
+  16 |         </main>
+  17 |       </div>
+  18 |     </LoadingProvider>
+
+Expected '</', got 'children'
+[00:35:43.045] Browser ERROR   ./app/(with-auth)/layout.tsx:15:11
+Parsing ecmascript source code failed
+  13 |         <main className="flex-1 p-4 pb-20 md:ml-64 md:p-8 md:pb-8 relative">
+  14 |           <PageLoadingIndicator /
+> 15 |           {children}
+     |           ^
+  16 |         </main>
+  17 |       </div>
+  18 |     </LoadingProvider>
+
+Expected '</', got '{'
+[00:36:52.348] Server  LOG      ✓ Compiled in 66ms
+[00:36:52.581] Server  ERROR    ⨯ ReferenceError: theme is not defined
+[00:36:52.839] Browser ERROR   uncaughtError: ReferenceError: theme is not defined
+[00:36:56.839] Browser ERROR   ./app/(with-auth)/transactions/page.tsx:61:42
+Parsing ecmascript source code failed
+  59 |         <div className="relative">
+  60 |           <img 
+> 61 |             src="/hisaab-logo-white.png" : "/hisaab-logo-main.png"} 
+     |                                          ^
+  62 |             alt="Hisaab Logo" 
+  63 |             className="h-12 w-12 animate-pulse sm:h-16 sm:w-16"
+  64 |           />
+
+Expected '</', got ':'
+[00:37:01.247] Server  LOG      ✓ Compiled in 69ms
+[00:37:04.752] Server  LOG      ✓ Compiled in 124ms
+[00:37:40.161] Server  LOG      ✓ Compiled in 92ms
+[00:37:44.978] Server  LOG      ✓ Compiled in 84ms
+[00:37:56.251] Server  LOG      ✓ Compiled in 131ms
+[00:38:02.266] Server  LOG      ✓ Compiled in 69ms
+[00:41:15.358] Server  LOG      ✓ Compiled in 225ms
+[00:41:30.905] Server  LOG      ✓ Compiled in 55ms
+[00:41:47.988] Server  LOG      ✓ Compiled in 51ms
+[00:42:01.741] Server  LOG      ✓ Compiled in 68ms
+[00:42:16.447] Server  LOG      ✓ Compiled in 55ms
+[00:42:32.957] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:42:32.978] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:42:32.978] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:42:32.978] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:42:32.978] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:42:32.978] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:42:32.978] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+[00:42:32.978] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
        please check the style of container, or the props width(100%) and height(100%),
        or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
        height and width.
-[00:02:48.430] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:02:48.430] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:02:48.430] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:02:48.430] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:02:48.430] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:02:48.430] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:02:48.430] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:02:55.974] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:02:55.974] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:02:55.974] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:02:55.975] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:02:55.975] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:02:55.975] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:02:55.975] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:02:55.975] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:03:37.138] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./components/layout/loading-overlay.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
-[00:03:37.143] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./components/layout/loading-overlay.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
-[00:03:37.162] Server  LOG      ✓ Compiled in 154ms
-[00:03:40.449] Server  WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:03:40.451] Server  WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:03:40.451] Server  WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:03:40.452] Server  WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:03:41.492] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:03:41.492] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:03:41.492] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:03:41.492] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:03:41.492] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:03:41.492] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:03:41.492] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:03:41.493] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:04:02.176] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./components/layout/loading-overlay.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
-[00:04:02.193] Server  LOG      ✓ Compiled in 115ms
-[00:04:04.392] Server  WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:04:04.392] Server  WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:04:04.393] Server  WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:04:04.393] Server  WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:04:05.493] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:04:05.493] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:04:05.493] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:04:05.493] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:04:05.493] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:04:05.493] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:04:05.493] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:04:05.493] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:04:31.944] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./components/layout/loading-overlay.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
-[00:04:31.956] Server  LOG      ✓ Compiled in 102ms
-[00:04:37.219] Server  WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:04:37.220] Server  WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:04:37.220] Server  WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:04:37.221] Server  WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:04:38.491] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:04:38.491] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:04:38.491] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:04:38.491] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:04:38.491] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:04:38.491] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:04:38.491] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:04:38.491] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:06:49.535] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:06:49.536] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:06:49.536] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:06:49.536] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:06:49.536] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:06:49.536] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:06:49.536] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:06:49.536] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:07:11.321] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./components/layout/loading-overlay.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
-[00:07:11.346] Server  LOG      ✓ Compiled in 71ms
-[00:07:19.189] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:07:19.189] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:07:19.189] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:07:19.190] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:07:19.190] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:07:19.190] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:07:19.190] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:07:19.190] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:07:50.428] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
-[00:07:50.428] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
-[00:08:09.253] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
-[00:08:09.254] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
-[00:09:59.818] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./components/layout/loading-overlay.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
-[00:09:59.819] Server  LOG      ✓ Compiled in 148ms
-[00:10:13.872] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:10:13.872] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:10:13.872] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:10:13.872] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:10:13.872] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:10:13.872] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:10:13.872] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:10:13.872] Browser WARN    The width(-1) and height(-1) of chart should be greater than 0,
-       please check the style of container, or the props width(100%) and height(100%),
-       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
-       height and width.
-[00:11:13.708] Server  WARN     ⚠ Fast Refresh had to perform a full reload when ./components/layout/loading-overlay.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
-[00:11:13.720] Server  LOG      ✓ Compiled in 87ms

@@ -5,12 +5,11 @@ import { usePathname } from 'next/navigation'
 import { HomeIcon, PlusCircleIcon, ListIcon, BarChart3Icon, WalletIcon, LogOutIcon } from 'lucide-react'
 import { cn } from "@/lib/utils"
 import { ProfileIcon } from "./profile-icon"
-import { createClient } from '@/lib/supabase/client'
 import { useRouter } from 'next/navigation'
 import { useTheme } from "next-themes"
 import { useState, useEffect } from 'react'
-import { useSearchParams } from 'next/navigation'
 import { useLoading } from './loading-overlay'
+import { Suspense } from 'react'
 
 const navItems = [
   { href: "/dashboard", label: "Dashboard", icon: HomeIcon },
@@ -20,21 +19,23 @@ const navItems = [
   { href: "/accounts", label: "Accounts", icon: WalletIcon },
 ]
 
-export function Navigation() {
+function NavigationContent() {
   const pathname = usePathname()
   const router = useRouter()
-  const supabase = createClient()
   const { theme } = useTheme()
-  const searchParams = useSearchParams()
   const { setIsLoading } = useLoading()
   const [loadingStates, setLoadingStates] = useState<Record<string, boolean>>({})
 
   // Reset all loading states when navigation completes
   useEffect(() => {
-    setLoadingStates({})
-    // Reset global loading state when navigation completes
-    setIsLoading(false)
-  }, [pathname, searchParams, setIsLoading])
+    const timer = setTimeout(() => {
+      setLoadingStates({})
+      // Reset global loading state when navigation completes
+      setIsLoading(false)
+    }, 100) // Small delay to ensure smooth transition
+    
+    return () => clearTimeout(timer)
+  }, [pathname, setIsLoading])
 
   const handleNavigation = (href: string) => {
     // Set global loading state
@@ -124,5 +125,13 @@ export function Navigation() {
         </div>
       </div>
     </nav>
+  )
+}
+
+export function Navigation() {
+  return (
+    <Suspense fallback={null}>
+      <NavigationContent />
+    </Suspense>
   )
 }

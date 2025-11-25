@@ -53,7 +53,8 @@ async function middleware(request) {
         '/dashboard',
         '/add',
         '/transactions',
-        '/analytics'
+        '/analytics',
+        '/accounts'
     ];
     const isProtectedPath = protectedPaths.some((path)=>request.nextUrl.pathname.startsWith(path));
     // If the user is not logged in and trying to access a protected route

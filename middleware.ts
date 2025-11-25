@@ -34,7 +34,8 @@ export async function middleware(request: NextRequest) {
     '/dashboard',
     '/add',
     '/transactions',
-    '/analytics'
+    '/analytics',
+    '/accounts'
   ]
 
   const isProtectedPath = protectedPaths.some(path => 
